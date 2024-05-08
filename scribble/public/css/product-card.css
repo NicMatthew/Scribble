@@ -80,7 +80,7 @@
 
 .sell {
     font-family: Helvetica;
-    margin-left: 10px;
+    margin: 0px 10px;
     color: var(--grey);
 }
 
