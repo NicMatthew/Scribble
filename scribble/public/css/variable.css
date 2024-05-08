@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Helvetica-bold;
+    src: url(/fonts/helvet-bold.otf);
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url(/fonts/helvet-medium.otf);
+}
+
+:root {
+    --prim-1: #F2758F;
+    --prim-2: #EDC158;
+    --sec-1: #52A9CF;
+    --sec-2: #78C354;
+    --grey: #D9D9D9;
+    --dark-grey: #757575;
+    --light-blue-grey: #EEF5F6;
+    --black: #000000;
+    --white: #ffffff;
+}
