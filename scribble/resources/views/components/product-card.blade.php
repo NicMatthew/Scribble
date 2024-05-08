@@ -9,7 +9,7 @@
     <link href="/css/product-card.css" rel="stylesheet">
 </head>
 <body>
-    <a class="card">
+    <a class="card" href="">
         <div class="product-img">
             <img src="/images/pict1.jpg">
         </div>
@@ -29,9 +29,7 @@
                     <img src="/icons/star.svg">
                     <img src="/icons/star.svg">
                 </div>
-                <div class="sell">
-                    <h5>100 Terjual</h5>
-                </div>
+                <h5 class="sell">100 Terjual</h5>
             </div>
             <div class="price">
                 <h4>Rp. 35.000,00</h4>
