@@ -67,28 +67,6 @@
     --border-radius: 15px;
 }
 
-<<<<<<< Updated upstream
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-.prim-1 {
-    background-color: var(--prim-1);
-}
-
-.prim-2 {
-    background-color: var(--prim-2);
-}
-
-.sec-1 {
-    background-color: var(--sec-1);
-}
-
-.sec-2 {
-    background-color: var(--sec-2);
-}
-=======
 .h1{
     font-family: Helvetica-bold;
     font-weight: 700;
@@ -122,4 +100,24 @@
 a{
     text-decoration: none;
 }
->>>>>>> Stashed changes
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.prim-1 {
+    background-color: var(--prim-1);
+}
+
+.prim-2 {
+    background-color: var(--prim-2);
+}
+
+.sec-1 {
+    background-color: var(--sec-1);
+}
+
+.sec-2 {
+    background-color: var(--sec-2);
+}
