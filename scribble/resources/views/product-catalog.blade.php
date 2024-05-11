@@ -8,7 +8,6 @@
     <title>Product Catalog</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/product-detail.css">
-    <script src="/js/product-catalog.js"></script>
     <link
     rel="stylesheet"
     data-purpose="Layout StyleSheet"
@@ -140,22 +139,21 @@
                 <p class="b1">Correction Tape</p>
             </div>
             <div class="right-heading">
-                <div class="dropdown-sort sort-btn">
-                    <div class="left-part">
-                        <i class="fa-solid fa-arrow-up-arrow-down b3"></i>
-                        <p class="b3">Sort By</p>
+                <div class="b3 dropdown-sort">
+                    <div class="sort-btn">
+                        <div class="left-part">
+                            <i class="fa-solid fa-arrow-up-arrow-down b3"></i>
+                            <a class="b3">Sort By</p>
+                        </div>
+                        <div class="right-part">
+                            <i class="fa-solid fa-chevron-down b3"></i>
+                        </div>
+                        <ul class="dropdown-sort-content">
+                            <li class="b3"><a href="#">Top Sales</a></li>
+                            <li class="b3"><a  href="#">Lowest Price</a></li>
+                            <li class="b3"><a href="#">Highest Price</a></li>
+                        </ul>
                     </div>
-                    <div class="right-part">
-                        <i class="fa-solid fa-chevron-down b3"></i>
-                    </div>
-                </div>
-                <div class="dropdown-sort-content"> 
-                    <ul>
-                        <li class="b3"><a href="#">Price: Low to High</a></li>
-                        <li class="b3"><a  href="#">Price: High to Low</a></li>
-                        <li class="b3"><a href="#">Newest Arrivals</a></li>
-                        <li class="b3"><a href="#">Customer Reviews</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -164,4 +162,5 @@
         </div>
     </div>
 </body>
+<script src="/js/product-catalog.js"></script>
 </html>
