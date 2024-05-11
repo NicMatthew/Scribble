@@ -147,3 +147,12 @@
 .dropdown-sort.active .right-part i {
     transform: rotate(180deg);
 }
+
+/* product container */
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}

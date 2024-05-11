@@ -8,37 +8,6 @@
     <title>Product Catalog</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/product-detail.css">
-    <link
-    rel="stylesheet"
-    data-purpose="Layout StyleSheet"
-    title="Web Awesome"
-    href="/css/app-wa-a60ddbceb7292f11c9e430d067b1eb9f.css?vsn=d"
-  >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
-    >
-
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
-    >
 </head>
 <body>
     <div class="menu">
@@ -157,8 +126,20 @@
                 </div>
             </div>
         </div>
-        <div class="product-list">
-
+        <div class="product-container">
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
+            @include('components/product-card')
         </div>
     </div>
 </body>
