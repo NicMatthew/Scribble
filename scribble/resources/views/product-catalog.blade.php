@@ -104,18 +104,18 @@
             <div class="left-heading">
                 <p class="h2">Correcting Tools</p>
 
-                <i class="fa-solid fa-chevron-right b3"></i>
+                <img src="/icons/chevron-right.svg" alt="right">
                 <p class="b1">Correction Tape</p>
             </div>
             <div class="right-heading">
                 <div class="b3 dropdown-sort">
                     <div class="sort-btn">
                         <div class="left-part">
-                            <i class="fa-solid fa-arrow-up-arrow-down b3"></i>
+                            <img src="/icons/sort.svg" alt="sort">
                             <a class="b3">Sort By</p>
                         </div>
                         <div class="right-part">
-                            <i class="fa-solid fa-chevron-down b3"></i>
+                            <img src="/icons/chevron-down.svg" alt="down">
                         </div>
                         <ul class="dropdown-sort-content">
                             <li class="b3"><a href="#">Top Sales</a></li>
@@ -126,8 +126,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-container">
-            @include('components/product-card')
+        <div class="products-container">
             @include('components/product-card')
             @include('components/product-card')
             @include('components/product-card')
