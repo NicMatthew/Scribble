@@ -75,7 +75,7 @@
 
 .h2{
     font-family: Helvetica;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
 }
 
@@ -99,6 +99,10 @@
 
 a{
     text-decoration: none;
+}
+
+ul, li{
+    list-style-type: none;
 }
 
 * {
