@@ -31,3 +31,8 @@ Route::get('/product-detail', function () {
 Route::get('/cart', function () {
     return view('cart');
 }); 
+
+
+Route::get('/sign-up', function () {
+    return view('sign-up');
+}); 
