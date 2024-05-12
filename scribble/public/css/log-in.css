@@ -11,6 +11,8 @@
     display: flex;
     justify-content: center;
     background-image:url('/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     /* background-color: pink; */
     align-items: center;
     min-height: 100vh;
