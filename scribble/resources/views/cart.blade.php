@@ -53,10 +53,31 @@
             </div>
             <div class="container-product-summary">
                 <div class="container-product">
+                    <div class="container-product-title">
+                        <p>Product Details</p>
+                        <p>Quantity</p>
+                        <p>Price</p>
+                        <p>Total</p>
+                    </div>
+                    <div class="container-product-wrapper">
+                        <div class="products">
+
+                        </div>
+                    </div>
 
                 </div>
-                
+
                 <div class="container-summary">
+                    <div class="container-summary-title">
+                        <p>Summary</p>
+
+                    </div>
+                    <div class="container-summary-price">
+
+                    </div>
+                    <div class="container-summary-checkout">
+
+                    </div>
 
                 </div>
 
