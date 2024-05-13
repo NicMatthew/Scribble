@@ -24,6 +24,7 @@ Route::get('/product-catalog', function () {
 Route::get('/log-in', function () {
     return view('log-in');
 });
+
 Route::get('/product-detail', function () {
     return view('product-detail');
 });
@@ -32,6 +33,10 @@ Route::get('/cart', function () {
     return view('cart');
 }); 
 
+
+Route::get('/sign-up', function () {
+    return view('sign-up');
+}); 
 
 Route::get('/sign-up', function () {
     return view('sign-up');

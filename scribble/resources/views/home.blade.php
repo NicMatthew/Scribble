@@ -11,6 +11,7 @@
     <link href="/css/home.css" rel="stylesheet">
 </head>
 <body>
+    @include('components/navbar-before')
     <div class="banner-section">
         <div class="banner">
             <img src="/images/pict1.jpg">
