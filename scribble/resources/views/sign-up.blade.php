@@ -21,7 +21,7 @@
 
             <div class=input-box>
                 <h3>Phone Number</h3>
-                <input type="number" placeholder="Phone Number" required>
+                <input type="text" placeholder="Phone Number" required>
             </div>
 
             <div class=input-box>

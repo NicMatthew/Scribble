@@ -47,7 +47,7 @@
 
 .input-box h3{
     color: #757575;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .input-box input{
@@ -63,7 +63,7 @@
 }
 
 .input-box input::placeholder{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 input[type=date]:invalid::-webkit-datetime-edit {
