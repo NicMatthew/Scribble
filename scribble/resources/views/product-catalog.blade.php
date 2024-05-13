@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/4d9121ebec.js" crossorigin="anonymous"></script>
     <title>Product Catalog</title>
     <link rel="stylesheet" href="/css/variable.css">
-    <link rel="stylesheet" href="/css/product-detail.css">
+    <link rel="stylesheet" href="/css/product-catalog.css">
 </head>
 <body>
     <div class="menu">
