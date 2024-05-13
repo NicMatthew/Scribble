@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+    <link href="/css/variable.css" rel="stylesheet">
 </head>
     <body class="antialiased">
     <!--Main Navigation-->
@@ -24,7 +25,7 @@
             <!-- Center elements -->
             <div class="col-md-4">
             <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-                <input autocomplete="off" type="search" class="form-control" style="height: 35px;  border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
+                <input autocomplete="off" type="search" class="form-control b3" style="height: 35px;  border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
                 <img class="input-group-text border-0 d-lg-flex"  src="/icons/search.png" alt="" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer;">
             </form>
             </div>
@@ -33,7 +34,7 @@
             <!-- Right elements -->
             <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
-                <a class="btn text-white" data-mdb-ripple-init style="background-color: #F2758F; border-radius: 10px; height: 35px; display: flex; align-items: center;" href="#!" role="button">
+                <a class="btn text-white b3" data-mdb-ripple-init style="background-color: #F2758F; border-radius: 10px; height: 35px; display: flex; align-items: center;" href="#!" role="button">
                 <img src="/icons/people.png" alt="" style="width: 18px; height: 20px; margin-right: 8px;">
                 Sign Up
                 </a>

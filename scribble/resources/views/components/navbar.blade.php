@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+    <link href="/css/variable.css" rel="stylesheet">
 </head>
     <body class="antialiased">
     
@@ -25,7 +26,7 @@
             <!-- Center elements -->
             <div class="col-md-4">
             <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-                <input autocomplete="off" type="search" class="form-control" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
+                <input autocomplete="off" type="search" class="form-control b3" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
                 <img class="input-group-text border-0 d-lg-flex"  src="/icons/search.png" alt="" style="background-color: #F2758F; height: 35px; border-radius: 0 10px 10px 0; cursor: pointer;">
             </form>
             </div>
@@ -36,7 +37,7 @@
             <div class="d-flex">
                 <!-- Cart -->
                 <a class="text-reset me-3" style="display:flex; align-items: center;" href="#">
-                    <img src="/icons/cart.png" style="margin-right: 5px; height: 27px;"/>
+                    <img src="/icons/cart.png" style="margin-right: 15px; height: 27px;"/>
                 </a>
                 <!-- User -->
                 <button type="button" class="btn rounded-circle" data-mdb-ripple-init style="width: 38px; height: 35px; display:flex; align-items: center; background-color: #F2758F; cursor: pointer;">
