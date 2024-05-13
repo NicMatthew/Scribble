@@ -141,6 +141,7 @@
             @include('components/product-card')
         </div>
     </div>
+    @include('components/footer')
 </body>
 <script src="/js/product-catalog.js"></script>
 </html>

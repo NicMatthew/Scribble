@@ -7,17 +7,17 @@
     <title>Document</title>
 </head>
 <body class="antialiased">
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted mt-2" style="padding-top: 5px;">
             <section class="">
                 <div class="container text-left text-md-start mt-5">
                 <div class="row mt-3">
-                    <div class="col-md-1.5 col-lg-1.5 col-xl-1.5 mx-auto mb-4 text-center">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-center">
                         <a class="navbar-brand mx-auto" href="#">
                             <img src="/images/Scribble_Logo.png" alt="" style="max-width: 150px; height: auto;">
                         </a>
                     </div>
 
-                    <div class="col-md-1.5 col-lg-1.5 col-xl-1.5 mx-auto mb-4">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-3" style="color: black; font-size: 18px;">
                         Category
                     </h6>
@@ -47,7 +47,7 @@
                     </p>
                     </div>
 
-                    <div class="col-md-1.5 col-lg-1.5 col-xl-1.5 mx-auto mb-4">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-3" style="color: black; font-size: 18px;">
                         Company
                     </h6>
@@ -56,7 +56,7 @@
                     </p>
                     </div>
     
-                    <div class="col-md-1.5 col-lg-1.5 col-xl-1.5 mx-auto mb-4">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-3" style="color: black; font-size: 18px;">
                         Guide & Help
                     </h6>
@@ -71,7 +71,7 @@
                     </p>
                     </div>
                     
-                    <div class="col-md-1.5 col-lg-1.5 col-xl-1.5 mx-auto mb-4">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-3" style="color: black; font-size: 18px;">
                         Account
                     </h6>
@@ -92,12 +92,13 @@
                 </div>
             </section>
 
-            <hr class="mt-4 mb-1">
+            <hr class="mt-3 mb-1">
            
-            <div class="text-center pt-3 pb-4" style="color: rgba(117, 117, 117, 0.8); background-color: rgba(0, 0, 0, 0.05);">
+            <div class="text-center pt-3 pb-4" style="color: rgba(117, 117, 117, 0.8);">
                 © 2021 Scribble. All Rights reserved
             </div>
         </footer>
+
 
 
 
