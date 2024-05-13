@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
     <body class="antialiased">
+    
     <!--Main Navigation-->
     <header style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <!-- Jumbotron -->
@@ -24,8 +25,8 @@
             <!-- Center elements -->
             <div class="col-md-4">
             <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-                <input autocomplete="off" type="search" class="form-control" style="height: 35px;  border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
-                <img class="input-group-text border-0 d-lg-flex"  src="/icons/search.png" alt="" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer;">
+                <input autocomplete="off" type="search" class="form-control" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
+                <img class="input-group-text border-0 d-lg-flex"  src="/icons/search.png" alt="" style="background-color: #F2758F; height: 35px; border-radius: 0 10px 10px 0; cursor: pointer;">
             </form>
             </div>
             <!-- Center elements -->
@@ -33,10 +34,14 @@
             <!-- Right elements -->
             <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
-                <a class="btn text-white" data-mdb-ripple-init style="background-color: #F2758F; border-radius: 10px; height: 35px; display: flex; align-items: center;" href="#!" role="button">
-                <img src="/icons/people.png" alt="" style="width: 18px; height: 20px; margin-right: 8px;">
-                Sign Up
+                <!-- Cart -->
+                <a class="text-reset me-3" style="display:flex; align-items: center;" href="#">
+                    <img src="/icons/cart.png" style="margin-right: 5px; height: 27px;"/>
                 </a>
+                <!-- User -->
+                <button type="button" class="btn rounded-circle" data-mdb-ripple-init style="width: 38px; height: 35px; display:flex; align-items: center; background-color: #F2758F; cursor: pointer;">
+                    <img src="/icons/people.png" alt="" style="width: 18px; height: 20px;">
+                </button>
             </div>
             </div>
             <!-- Right elements -->
