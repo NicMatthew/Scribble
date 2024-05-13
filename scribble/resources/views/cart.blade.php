@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="\css\cart.css">
+    <link rel="stylesheet" href="\css\variable.css">
 </head>
 <body>
     <div class="container">
@@ -54,13 +55,110 @@
             <div class="container-product-summary">
                 <div class="container-product">
                     <div class="container-product-title">
-                        <p>Product Details</p>
+                        <p class="product-details-text">Product Details</p>
                         <p>Quantity</p>
-                        <p>Price</p>
-                        <p>Total</p>
+                        <p class="price-text">Price</p>
+                        <p class="total-text">Total</p>
                     </div>
                     <div class="container-product-wrapper">
                         <div class="products">
+                            <div class="product-img">
+                                <img src="\images\marker.png" alt="">
+                            </div>
+                            <div class="product-name">
+                                <p>Spidol Marker Hitam</p>
+
+                            </div>
+                            <div class="product-quantity">
+                                <img src="\icons\prev.svg" alt="">
+                                <p>20</p>
+                                <img src="\icons\next.svg" alt="">
+                            </div>
+                            <div class="product-price">
+                                <p>Rp.100.000</p>
+
+                            </div>
+                            <div class="product-total-price">
+                                <p>Rp.100.000</p>
+                            </div>
+                            <div class="product-checkbox">
+                                <input type="checkbox">
+                            </div>
+
+                        </div>
+                        <div class="products">
+                            <div class="product-img">
+                                <img src="\images\marker.png" alt="">
+                            </div>
+                            <div class="product-name">
+                                <p>Spidol Marker Hitam</p>
+
+                            </div>
+                            <div class="product-quantity">
+                                <img src="\icons\prev.svg" alt="">
+                                <p>20</p>
+                                <img src="\icons\next.svg" alt="">
+                            </div>
+                            <div class="product-price">
+                                <p>Rp.100.000</p>
+
+                            </div>
+                            <div class="product-total-price">
+                                <p>Rp.100.000</p>
+                            </div>
+                            <div class="product-checkbox">
+                                <input type="checkbox">
+                            </div>
+
+                        </div>
+                        <div class="products">
+                            <div class="product-img">
+                                <img src="\images\marker.png" alt="">
+                            </div>
+                            <div class="product-name">
+                                <p>Spidol Marker Hitam</p>
+
+                            </div>
+                            <div class="product-quantity">
+                                <img src="\icons\prev.svg" alt="">
+                                <p>20</p>
+                                <img src="\icons\next.svg" alt="">
+                            </div>
+                            <div class="product-price">
+                                <p>Rp.100.000</p>
+
+                            </div>
+                            <div class="product-total-price">
+                                <p>Rp.100.000</p>
+                            </div>
+                            <div class="product-checkbox">
+                                <input type="checkbox">
+                            </div>
+
+                        </div>
+                        <div class="products">
+                            <div class="product-img">
+                                <img src="\images\marker.png" alt="">
+                            </div>
+                            <div class="product-name">
+                                <p>Spidol Marker Hitam</p>
+
+                            </div>
+                            <div class="product-quantity">
+                                <img src="\icons\prev.svg" alt="">
+                                <p>20</p>
+                                <img src="\icons\next.svg" alt="">
+                            </div>
+                            <div class="product-price">
+                                <p>Rp.100.000</p>
+
+                            </div>
+                            <div class="product-total-price">
+                                <p>Rp.100.000</p>
+                            </div>
+                            <div class="product-checkbox">
+                                <input type="checkbox">
+                            </div>
 
                         </div>
                     </div>
@@ -70,15 +168,33 @@
                 <div class="container-summary">
                     <div class="container-summary-title">
                         <p>Summary</p>
-
                     </div>
                     <div class="container-summary-price">
+                        <div class="prices">
+                            <p>Item 1</p>
+                            <p>Rp. 100.000</p>
+                        </div>
+                        <div class="prices">
+                            <p>Item 1</p>
+                            <p>Rp. 100.000</p>
+                        </div>
+                        <div class="prices">
+                            <p>Item 1</p>
+                            <p>Rp. 100.000</p>
+                        </div>
+                        <div class="prices">
+                            <p>Item 1</p>
+                            <p>Rp. 100.000</p>
+                        </div>
 
+                        <div class="total-price">
+                            <p>Total</p>
+                            <p>Rp. 100.000</p>
+                        </div>
                     </div>
                     <div class="container-summary-checkout">
-
+                        <p>Checkout</p>
                     </div>
-
                 </div>
 
             </div>
