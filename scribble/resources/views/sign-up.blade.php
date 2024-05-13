@@ -37,7 +37,7 @@
             <button type="submit" class="btn">Submit</button>
 
             <div class="register-link">
-                <p>Already have an account? <a href="#">Log In</a></p>
+                <p>Already have an account? <a href="/log-in">Log In</a></p>
             </div>
         </div>
     </div>
