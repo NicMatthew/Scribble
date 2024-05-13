@@ -24,13 +24,10 @@ Route::get('/product-catalog', function () {
 Route::get('/log-in', function () {
     return view('log-in');
 });
-<<<<<<< Updated upstream
 
 Route::get('/product-detail', function () {
     return view('product-detail');
 });
-=======
->>>>>>> Stashed changes
 
 Route::get('/cart', function () {
     return view('cart');
@@ -39,12 +36,8 @@ Route::get('/cart', function () {
 
 Route::get('/sign-up', function () {
     return view('sign-up');
-<<<<<<< Updated upstream
 }); 
 
 Route::get('/sign-up', function () {
     return view('sign-up');
 }); 
-=======
-});
->>>>>>> Stashed changes
