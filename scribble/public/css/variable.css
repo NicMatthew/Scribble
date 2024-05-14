@@ -68,7 +68,7 @@
 }
 
 .h1{
-    font-family: Helvetica-bold;
+    font-family: Helvetica;
     font-weight: 700;
     font-size: 48px;
 }
@@ -124,4 +124,12 @@ ul, li{
 
 .sec-2 {
     background-color: var(--sec-2);
+}
+
+.half-opacity {
+    transition: 0.3s ease-in-out;
+}
+
+.half-opacity:hover{
+    opacity: 50%;
 }

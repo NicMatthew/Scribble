@@ -38,6 +38,14 @@ Route::get('/sign-up', function () {
     return view('sign-up');
 }); 
 
-Route::get('/sign-up', function () {
-    return view('sign-up');
+Route::get('/terms', function () {
+    return view('terms');
 }); 
+
+Route::get('/about-us', function () {
+    return view('about-us');
+}); 
+
+
+
+

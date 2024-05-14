@@ -40,7 +40,7 @@
                     <img src="/icons/cart.png" style="margin-right: 15px; height: 27px;"/>
                 </a>
                 <!-- User -->
-                <button type="button" class="btn rounded-circle" data-mdb-ripple-init style="width: 38px; height: 35px; display:flex; align-items: center; background-color: #F2758F; cursor: pointer;">
+                <button type="button" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;">
                     <img src="/icons/people.png" alt="" style="width: 18px; height: 20px;">
                 </button>
             </div>
