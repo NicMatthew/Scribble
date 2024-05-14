@@ -87,7 +87,7 @@
                         <a href="" class="btn-2 mr-3" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                             <p class="mb-0 b3" style="font-weight: bold; color:white">Buy Now</p>
                         </a>
-                        <div class="wish">
+                        <div class="wishlist">
                             <img src="/icons/love-outline.svg">
                         </div>
                     </div>
@@ -101,7 +101,7 @@
 
             <div class="rating-review">
                 <p class="title-rating-review mb-1">Product Ratings</p>
-                <div class="container-rate">
+                <div class="container-rate" style="display: flex; align-items:center;">
                     <div class="rate-product">
                         <img src="/icons/star.svg" alt="">
                         <div class="rate">
@@ -112,29 +112,113 @@
                             <p class="many-users b3 mt-0 mb-0">Based on 100 reviews</p>
                         </div>
                     </div>
-                    <div class="rate-filter">
-                        <div class="dropdown-sort" style="background-color: teal;">
-                            <div class="sort-btn">
+
+                    <div class="dropdown-sort">
+                        <div class="rate-filter">
+                            <div class="left-part mr-3" style="display: flex; align-items:center; flex-direction:row">
+                                <img src="/icons/sort-review.svg" class="ml-3" alt="sort">
+                                <p class="mb-0 ml-2 b3" style="display: flex; align-items:center; color:white">Sort By</p>
+                            </div>
+                            <div class="right-part" style="display: flex; align-items:center">
+                                <img src="/icons/chevron-down.svg" class="mr-3" alt="down">
+                            </div>
+                            <ul class="dropdown-sort-content">
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg"  class="mr-2"><a href="#" style="text-decoration:none">5 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" class="mr-2"><a  href="#" style="text-decoration:none">4 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" class="mr-2"><a href="#" style="text-decoration:none">3 Star</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <!-- <div class="rate-filter">
+                        <div class="dropdown-sort">
+                            <div class="sort-btn" style="display: flex; align-items:center; flex-direction:row">
                                 <div class="left-part">
                                     <img src="/icons/sort.svg" alt="sort">
-                                    <a class="b3">Sort By</p>
+                                    <p class="mb-0 b3" style="display: flex; align-items:center">Sort By</p>
                                 </div>
                                 <div class="right-part">
                                     <img src="/icons/chevron-down.svg" alt="down">
                                 </div>
                                 <ul class="dropdown-sort-content">
-                                    <li class="b3"><a href="#">Top Sales</a></li>
-                                    <li class="b3"><a  href="#">Lowest Price</a></li>
-                                    <li class="b3"><a href="#">Highest Price</a></li>
+                                    <li class="b3"><a href="#" style="text-decoration:none">Top Sales</a></li>
+                                    <li class="b3"><a  href="#" style="text-decoration:none">Lowest Price</a></li>
+                                    <li class="b3"><a href="#" style="text-decoration:none">Highest Price</a></li>
                                 </ul>
                             </div>
                         </div>
+                    </div> -->
+
+                </div>
+                <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
+                <div class="review">
+                    <div class="review-detail">
+                        <div class="review-profile mr-3">
+                            <img src="/icons/people-review.svg" style="width: 50px; height: 50px">
+                        </div>
+                        <div class="review-detail-right">
+                            <p class="mb-1">Jesslyn Tanuwijaya</p>
+                            <div class="review-star mb-0">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-desc mb-0 mt-2">Alhamdulillah sampe dgn aman, Sesuai ekspetasi, kualitas produk baik. Karena biasa pakai yang series watercolor, pakai yang classic rasanya beda. Hasil lebih pigmented yang watercolor cuma lebih halus yang classic.</p>
+                    <div class="review-photo mt-2">
+                        <div class="review-ph1">
+
+                        </div>
+                        <div class="review-ph1">
+
+                        </div>
                     </div>
                 </div>
-                
+                <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
+                <div class="review">
+                    <div class="review-detail">
+                        <div class="review-profile mr-3">
+                            <img src="/icons/people-review.svg" style="width: 50px; height: 50px">
+                        </div>
+                        <div class="review-detail-right">
+                            <p class="mb-1">Jesslyn Tanuwijaya</p>
+                            <div class="review-star mb-0">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                                <img src="/icons/star.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-desc mb-0 mt-2">Alhamdulillah sampe dgn aman, Sesuai ekspetasi, kualitas produk baik. Karena biasa pakai yang series watercolor, pakai yang classic rasanya beda. Hasil lebih pigmented yang watercolor cuma lebih halus yang classic.</p>
+                    <div class="review-photo mt-2">
+                        <div class="review-ph1">
+
+                        </div>
+                        <div class="review-ph1">
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <div class="suggest mt-3">
+                <p class="mb-0">You May Also Like</p>
+            </div>
         </div>
+    </div>
+    <div class="product-suggest">
+        @include('components/product-card')
+        @include('components/product-card')
+        @include('components/product-card')
+        @include('components/product-card')
+        @include('components/product-card')
+        @include('components/product-card')
     </div>
     @include('components/footer')
 </body>
