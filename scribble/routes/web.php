@@ -38,10 +38,27 @@ Route::get('/shipping', function () {
     return view('shipping');
 });
 
+<<<<<<< Updated upstream
+Route::get('/terms', function () {
+    return view('terms');
+});
+
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+
+
+
+
+=======
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
-
-Route::get('/voucher', function () {
-    return view('components/voucher');
+Route::get('/terms', function () {
+    return view('terms');
 });
+
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+>>>>>>> Stashed changes
