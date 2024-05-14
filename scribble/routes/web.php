@@ -34,10 +34,11 @@ Route::get('/cart', function () {
 });
 
 
-Route::get('/sign-up', function () {
-    return view('sign-up');
-}); 
+Route::get('/shipping', function () {
+    return view('shipping');
+});
 
+<<<<<<< Updated upstream
 Route::get('/terms', function () {
     return view('terms');
 }); 
@@ -49,3 +50,8 @@ Route::get('/about-us', function () {
 
 
 
+=======
+Route::get('/sign-up', function () {
+    return view('sign-up');
+});
+>>>>>>> Stashed changes
