@@ -16,13 +16,12 @@
             </div>
             <div class="title">
                 <p>Cart</p>
-
             </div>
         </div>
         <div class="container-divider">
                 <div class="divider"></div>
             </div>
-        
+
         <div class="container-cart">
             <div class="container-step">
                 <div class="steps">
