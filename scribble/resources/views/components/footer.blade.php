@@ -54,7 +54,7 @@
                         Company
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">About us</a>
+                        <a href="/about-us" class="text-reset" style="color: #757575;">About us</a>
                     </p>
                     </div>
     
@@ -63,7 +63,7 @@
                         Guide & Help
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Terms & Conditions</a>
+                        <a href="/terms" class="text-reset" style="color: #757575;">Terms & Conditions</a>
                     </p>
                     <p class="mb-2 b3">
                         <a href="#!" class="text-reset" style="color: #757575;">FAQs</a>
