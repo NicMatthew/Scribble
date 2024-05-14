@@ -126,7 +126,11 @@
     position: absolute;
     background-color: var(--sec-1);
     min-width: 200px;
+<<<<<<< Updated upstream
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+=======
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+>>>>>>> Stashed changes
     z-index: 1;
     list-style: none;
     border-radius: 15px;
@@ -160,7 +164,12 @@
 /* product container */
 .products-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+<<<<<<< Updated upstream
+=======
+    max-width: 1100px;
+    gap: 30px;
+    margin: 0px 70px;
+>>>>>>> Stashed changes
 }

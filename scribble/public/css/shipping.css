@@ -1,0 +1,151 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.header-title {
+    font-family: Helvetica;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.back-btn {
+    position: absolute;
+    left: 60px;
+}
+
+.divider {
+    width: calc(100vw - 120px);
+    position: absolute;
+    bottom: 0px;
+    border: 0.5px solid var(--grey);
+    border-radius: 10px;
+}
+
+.steps-info {
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+    margin: 20px auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.step-counter {
+    font-family: Helvetica;
+    font-size: 1rem;
+}
+
+.step-detail {
+    font-family: Helvetica;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0px 60px;
+}
+
+.address-container {
+    padding: 30px;
+    width: calc(100%-60px);
+    height: fit-content;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--sec-1);
+    border-radius: 15px;
+}
+
+.address-info {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.address-title {
+    font-family: Helvetica;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.address-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.address-name {
+    font-family: 1.2rem;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.address-full {
+    font-family: 1rem;
+    font-family: Helvetica;
+    color: var(--white);
+}
+
+.address-select {
+    background-color: var(--white);
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--sec-1);
+}
+
+.product-payment-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-container {
+    margin: 40px 0px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-header {
+    font-size: 2rem;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.product-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-container {
+    width: 50%;
+    margin: 40px 0px;
+}
+
+.payment-header {
+    font-family: Helvetica;
+    font-size: 2rem;
+    font-weight: bold;
+}

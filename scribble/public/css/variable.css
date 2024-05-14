@@ -126,6 +126,7 @@ ul, li{
     background-color: var(--sec-2);
 }
 
+<<<<<<< Updated upstream
 .half-opacity {
     transition: 0.3s ease-in-out;
 }
@@ -133,3 +134,28 @@ ul, li{
 .half-opacity:hover{
     opacity: 50%;
 }
+=======
+.prim-1-fill {
+    color: var(--prim-1);
+}
+
+.prim-2-fill {
+    color: var(--prim-2);
+}
+
+.sec-1-fill {
+    color: var(--sec-1);
+}
+
+.sec-2-fill {
+    color: var(--sec-2);
+}
+
+.disable-fill {
+    color: var(--grey);
+}
+
+.passive {
+    opacity: 0.5;
+}
+>>>>>>> Stashed changes
