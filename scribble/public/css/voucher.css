@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 20px;
+    border: 2px solid var(--sec-2);
+    border-radius: 15px
+}
+
+.details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.voucher-name {
+    font-family: Helvetica;
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.voucher-condition {
+    font-family: Helvetica;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.voucher-period {
+    font-family: Helvetica;
+    font-size: 1rem;
+    color: var(--dark-grey);
+}
