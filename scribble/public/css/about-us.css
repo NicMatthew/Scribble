@@ -46,6 +46,7 @@
 
 .second-section{
     display: flex;
+    margin-bottom: 40vh;
 }
 
 .second-section .left  {
@@ -64,3 +65,30 @@
     color: var(--prim-1);
     padding-top: 10vh;
 }
+
+.third-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40vh;
+}
+
+.third-section h1{
+    color: var(--prim-1);
+    margin-bottom: 15vh;
+}
+
+.up img{
+    width: 25%;
+    height: 25%;
+    margin-left: 6%;
+    margin-bottom: 2%;
+}
+
+.down img{
+    width: 38%;
+    height: 38%;
+    margin-left: 8%
+}
+

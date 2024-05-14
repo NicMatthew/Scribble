@@ -31,8 +31,48 @@
         <div class="third-section">
             <h1>Our Accomplishments</h1>
             <div class="up">
-                <img src="" alt="">
+                <img src="\images\circle1.png" alt="increased sales">
+                <img src="\images\circle2.png" alt="customers">
+                <img src="\images\circle3.png" alt="our rating"> 
             </div>
+            <div class="down">
+                <img src="\images\circle4.png" alt="increased sales">
+                <img src="\images\circle5.png" alt="increased sales">
+            </div>
+        </div>
+
+        <div class="fourth-section">
+        <!-- <div class="container">
+            <img src="/images/group.png" class="banner">
+            <div class="description">
+                <div class="card">
+                    <h4>Stefanie Angeline Sanjaya</h4>
+                    <p class="nim">2602189682</p>
+                    <p class="email">stefanie.sanjaya@binus.ac.id</p>
+                </div>
+                <div class="card">
+                    <h4>Jesslyn Tanuwijaya</h4>
+                    <p class="nim">2602201265</p>
+                    <p class="email">jesslyn.tanuwijaya@binus.ac.id</p>
+                </div>
+                <div class="card">
+                    <h4>Nicholas Matthew Salim</h4>
+                    <p class="nim">2602198945</p>
+                    <p class="email">nicholas.salim007@binus.ac.id</p>
+                </div>
+                <div class="card">
+                    <h4>Hans Christian Arinardi</h4>
+                    <p class="nim">2602198932</p>
+                    <p class="email">hans.arinardi001@binus.ac.id</p>
+                </div>
+                <div class="card">
+                    <h4>Marlene Jusup</h4>
+                    <p class="nim">2602189631</p>
+                    <p class="email">marlene.jusup@binus.ac.id</p>
+                </div>
+            </div> -->
+        </div>
+
         </div>
     </div>
 
