@@ -59,13 +59,48 @@
                     <div class="payment-header">Payment Details</div>
                     <div class="payment-list">
                         <div class="list">
-                            <div class="payment-name">
+                            <div class="payment-name">Subtotal produk</div>
+                            <div class="payment-price">Rp. 100.000</div>
                         </div>
-                        <div class="list"></div>
-                        <div class="list"></div>
+                        <div class="list">
+                            <div class="payment-name">Biaya pengiriman</div>
+                            <div class="payment-price">Rp. 5.000</div>
+                        </div>
+                        <div class="list">
+                            <div class="payment-name">Discount</div>
+                            <div class="payment-price">Rp. 0</div>
+                        </div>
+                        <div class="list">
+                            <div class="payment-name final">Total payment</div>
+                            <div class="payment-price final">Rp. 105.000</div>
+                        </div>
                     </div>
                 </div>
+                <div class="voucher-wrapper">
+                    <div class="voucher-header">
+                        <img src="/icons/voucher.svg">
+                        <div class="voucher-title">Voucher</div>
+                    </div>
+                    <div class="voucher-btn">Select</div>
+                </div>
+                <a href="" class="pay-btn">Pay Now</a>
             </div>
+        </div>
+    </div>
+    <div class="select-voucher">
+        <div class="header">
+            <div class="close-btn">
+                <img src="/icons/close.svg">
+            </div>
+            <div class="header-title">Shipping</div>
+            <hr class="divider">
+        </div>
+        <div class="voucher-list">
+            @include("components/voucher")
+            @include("components/voucher")
+            @include("components/voucher")
+            @include("components/voucher")
+            @include("components/voucher")
         </div>
     </div>
 </body>
