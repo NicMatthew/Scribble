@@ -24,28 +24,28 @@
                         Category
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Pencils</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pencils</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Pen</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pen</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Markers</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Markers</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Papers</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Papers</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Books</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Books</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Cutting Tools</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Cutting Tools</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Sticking Tools</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Sticking Tools</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Correction Tools</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Correction Tools</a>
                     </p>
                     </div>
 
@@ -54,7 +54,7 @@
                         Company
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="/about-us" class="text-reset" style="color: #757575;">About us</a>
+                        <a href="/about-us" class="text-reset half-opacity" style="color: #757575; text-decoration: none">About us</a>
                     </p>
                     </div>
     
@@ -63,13 +63,13 @@
                         Guide & Help
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="/terms" class="text-reset" style="color: #757575;">Terms & Conditions</a>
+                        <a href="/terms" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Terms & Conditions</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">FAQs</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">FAQs</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Contact us</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Contact us</a>
                     </p>
                     </div>
                     
@@ -78,16 +78,16 @@
                         Account
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Account Details</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Account Details</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Cart</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Cart</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Transaction List</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Transaction List</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset" style="color: #757575;">Wishlist</a>
+                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Wishlist</a>
                     </p>
                     </div>  
                 </div>
@@ -97,7 +97,7 @@
             <hr class="mt-3 mb-1" style="border-bottom: 1px solid #757575; width:85%; margin:auto;">
            
             <div class="text-center pt-3 pb-4 b3" style="color: rgba(117, 117, 117, 0.5);">
-                © 2021 Scribble. All Rights reserved
+                © 2024 Scribble. All Rights reserved
             </div>
         </footer>
 

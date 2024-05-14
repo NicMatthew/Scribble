@@ -125,3 +125,11 @@ ul, li{
 .sec-2 {
     background-color: var(--sec-2);
 }
+
+.half-opacity {
+    transition: 0.3s ease-in-out;
+}
+
+.half-opacity:hover{
+    opacity: 50%;
+}
