@@ -41,7 +41,7 @@
 
 
 .title p{
-    font-size: 3rem;
+    font-size: 48px;
 }
 .container-cart{
     width: 100%;
@@ -78,10 +78,10 @@
     margin: 2%;
 }
 .steps-title p{
-    font-size: 1.5rem;
+    font-size: 16px;
 }
 .steps-desc p{
-    font-size: 2rem;
+    font-size: 20px;
 }
 .container-product-summary{
     margin-top: 1%;
@@ -97,10 +97,10 @@
     /* background-color: saddlebrown; */
 }
 .container-summary{
-    width: 30%;
+    width: 20%;
     height: 50vh;
-    /* margin-right: 3%; */
-    margin-left: 3%;
+    margin-right: 3%;
+    /* margin-left: 3%; */
     /* background-color: indigo; */
     /* border: 1px solid black; */
     /* border-radius: 15px; */
@@ -111,6 +111,9 @@
 .container-product-title{
     display: flex;
     justify-content: space-around;
+}
+.container-product-title{
+    font-size: 20px;
 }
 .container-product-wrapper{
     margin: 3%;
@@ -134,7 +137,7 @@
 
 }
 .container-summary-title p{
-    font-size: 3rem;
+    font-size: 36px;
 
 }
 .container-summary-price{
@@ -151,7 +154,7 @@
     justify-content: space-between;
  }
 .prices ,.total-price p{
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 .total-price p{
     font-weight: bold;
@@ -201,7 +204,7 @@
     /* background-color: tomato; */
 }
 .product-name p{
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 .product-quantity{
     height: 100%;
@@ -216,7 +219,7 @@
     height: 40%;
 }
 .product-quantity p{
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 .product-price{
     height: 100%;
@@ -228,7 +231,7 @@
     margin-left: 3%;
 }
 .product-price p{
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .product-total-price{
