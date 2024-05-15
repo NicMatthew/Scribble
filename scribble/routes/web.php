@@ -64,3 +64,7 @@ Route::get('/about-us', function () {
 Route::get('/edit-profile', function () {
     return view('edit-profile');
 });
+
+Route::get('/transaction-list', function () {
+    return view('transaction-list');
+});

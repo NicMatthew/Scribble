@@ -11,12 +11,12 @@
 <body>
     <div class="sidebar">
         <div class="sidebar-top">
-            <a href="#" class="b2 profile">Profile</a>
-            <a href="#" class="b2 transaction-list">Transaction List</a>
-            <a href="#" class="b2 wishlist">Wishlist</a>
+            <a href="#" class="b2 profile half-opacity" style="text-decoration: none">Profile</a>
+            <a href="#" class="b2 transaction-list half-opacity" style="text-decoration: none">Transaction List</a>
+            <a href="#" class="b2 wishlist half-opacity" style="text-decoration: none">Wishlist</a>
         </div>
         <div class="sidebar-bottom">
-            <a href="#" class="b2">Log out</a>
+            <a href="#" class="b2" style="text-decoration: none">Log out</a>
         </div>
     </div>
 </body>
