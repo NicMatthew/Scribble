@@ -16,7 +16,7 @@
             <div class="back-btn" onclick="history.back()">
                 <img src="/icons/prev.svg">
             </div>
-            <div class="header-title">Shipping</div>
+            <div class="header-title">Address</div>
             <div class="plus-btn">
                 <img src="/icons/plus-address.svg">
             </div>

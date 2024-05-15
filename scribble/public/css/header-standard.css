@@ -25,16 +25,31 @@
     position: absolute;
     left: 60px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    opacity: 0.7;
 }
 
 .plus-btn {
     position: absolute;
     right: 60px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.plus-btn:hover {
+    opacity: 0.7;
 }
 
 .close-btn {
     position: absolute;
     right: 60px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
 }
