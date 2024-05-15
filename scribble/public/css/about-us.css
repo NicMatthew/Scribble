@@ -1,3 +1,10 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .text1{
     /* background-color: magenta; */
     width: 42vw;
@@ -144,6 +151,12 @@
 
 #hijau{
     color: var(--sec-2);
+}
+
+.btn{
+    background-color: var(--prim-1);
+    color: var(--white);
+    margin-bottom: 10vh;
 }
 
 /* .nim{
