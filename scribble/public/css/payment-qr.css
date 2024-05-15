@@ -1,0 +1,73 @@
+.container-payment-qr{
+    width: 100%;
+    height: 70vh;
+    /* background-color: violet; */
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.payment-qr-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    /* background-color: springgreen ; */
+}
+.payment-qr-img img{
+    /* width: 100%; */
+    /* width: fit-content; */
+    height: 100%;
+}
+
+.container-payment-info{
+    height: 35%;
+    width: 25%;
+    /* background-color: yellow; */
+}
+.container-total-payment{
+    height: 40%;
+    width: 92%;
+    background-color: var(--sec-1);
+    padding: 2%;
+    margin :2%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-total-payment p{
+    font-size: 24px;
+    color: white;
+    padding: 5%;
+}
+.container-payment-otp{
+    height: 36%;
+    padding: 2%;
+    margin :2%;
+    /* margin-top: 2%; */
+    width: 92%;
+    background-color: springgreen;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+
+}
+.input-otp{
+    height: 100%;
+    width: 75%;
+    background-color: violet;
+}
+.input-otp input{
+    height: 70%;
+    width: 90%;
+    padding: 3%;
+    border-radius: 15px;
+    font-size: 24px;
+}
+.submit-button{
+    height: 100%;
+    width: 20%;
+    background-color: wheat;
+}

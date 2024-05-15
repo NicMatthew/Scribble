@@ -53,3 +53,8 @@ Route::get('/address', function () {
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
+
+Route::get('/payment-qr', function () {
+    return view('payment-qr');
+});
+
