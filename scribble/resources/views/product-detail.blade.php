@@ -6,7 +6,7 @@
     <title>Document</title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/product-detail.css" rel="stylesheet">
-    <script src="/js/product-detail.js"></script>
+    <script src="/js/product-detail.js" defer=""></script>
 </head>
 <body>
     @include('components/navbar')
@@ -113,7 +113,7 @@
                         </div>
                     </div>
 
-                    <div class="dropdown-sort">
+                    <div class="dropdown-filter">
                         <div class="rate-filter">
                             <div class="left-part mr-3" style="display: flex; align-items:center; flex-direction:row">
                                 <img src="/icons/sort-review.svg" class="ml-3" alt="sort">
@@ -122,10 +122,12 @@
                             <div class="right-part" style="display: flex; align-items:center">
                                 <img src="/icons/chevron-down.svg" class="mr-3" alt="down">
                             </div>
-                            <ul class="dropdown-sort-content">
-                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg"  class="mr-2"><a href="#" style="text-decoration:none">5 Star</a></li>
-                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" class="mr-2"><a  href="#" style="text-decoration:none">4 Star</a></li>
-                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" class="mr-2"><a href="#" style="text-decoration:none">3 Star</a></li>
+                            <ul class="dropdown-filter-content">
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg"  style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">5 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a  href="#" style="text-decoration:none">4 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">3 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">2 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">1 Star</a></li>
                             </ul>
                         </div>
                     </div>
@@ -208,7 +210,7 @@
             </div>
 
             <div class="suggest mt-3">
-                <p class="mb-0">You May Also Like</p>
+                <p class="mb-3">You May Also Like</p>
             </div>
         </div>
     </div>
