@@ -22,42 +22,40 @@
         <div class="address">
             <div class="left-address">
                 <p style="color: var(--prim-1); font-weight:bold; font-size: 18px; margin-bottom: 5px">Rumah</p>
-                <p style="color: var(--dark-grey); font-weight:bold; font-size: 24px; margin-bottom: 5px">Hans Christian</p>
+                <p style="color: var(--dark-grey); font-weight:bold; font-size: 20px; margin-bottom: 5px">Hans Christian</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">083871929060</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kabupaten Bogor, Jawa Barat 16810</p>
             </div>
             <div class="right-address">
-                <img src="/icons/exit-address.svg" style="width: 55px; height: 55px; cursor:pointer;" alt="">
-                <img src="/icons/next.svg" style="width: 55px; height: 55px; cursor:pointer;" alt="">
+                <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/next.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
             </div>
         </div>
-
         <div class="address">
             <div class="left-address">
                 <p style="color: var(--prim-1); font-weight:bold; font-size: 18px; margin-bottom: 5px">Rumah</p>
-                <p style="color: var(--dark-grey); font-weight:bold; font-size: 24px; margin-bottom: 5px">Hans Christian</p>
+                <p style="color: var(--dark-grey); font-weight:bold; font-size: 20px; margin-bottom: 5px">Hans Christian</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">083871929060</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kabupaten Bogor, Jawa Barat 16810</p>
             </div>
             <div class="right-address">
-                <img src="/icons/exit-address.svg" style="width: 55px; height: 55px" alt="">
-                <img src="/icons/next.svg" style="width: 55px; height: 55px" alt="">
+                <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/next.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
             </div>
         </div>
-
         <div class="address">
             <div class="left-address">
                 <p style="color: var(--prim-1); font-weight:bold; font-size: 18px; margin-bottom: 5px">Rumah</p>
-                <p style="color: var(--dark-grey); font-weight:bold; font-size: 24px; margin-bottom: 5px">Hans Christian</p>
+                <p style="color: var(--dark-grey); font-weight:bold; font-size: 20px; margin-bottom: 5px">Hans Christian</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">083871929060</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kabupaten Bogor, Jawa Barat 16810</p>
             </div>
             <div class="right-address">
-                <img src="/icons/exit-address.svg" style="width: 55px; height: 55px" alt="">
-                <img src="/icons/next.svg" style="width: 55px; height: 55px" alt="">
+                <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/next.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
             </div>
         </div>
-        
+
         <div class="modal" id="modal">
             <div class="overlay">
                 <p class="b1" style="font-weight: bold; margin-bottom:15px; display:flex; align-items: center; justify-content: center">New Address</p>
@@ -87,6 +85,22 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="modal-delete" id="modal-delete">
+            <div class="overlay-2">
+                <div class="form-delete">
+                    <img src="/icons/reminder-delete.svg" style="margin-bottom:15px; display:flex; align-items: center; justify-content: center" alt="">
+                    <p class="confirm">Are you sure want to delete this address ?</p>
+                    <div class="del-add-button">
+                        <button type="submit" class="keep">Keep Address</button>
+                        <button type="submit" class="btn-del">Delete Address</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
