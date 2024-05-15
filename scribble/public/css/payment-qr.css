@@ -71,3 +71,55 @@
     width: 20%;
     background-color: wheat;
 }
+
+.header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.header-title {
+    font-family: Helvetica;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.back-btn {
+    position: absolute;
+    left: 60px;
+}
+
+.divider {
+    width: calc(100% - 120px);
+    position: absolute;
+    bottom: 0px;
+    border: 0.5px solid var(--grey);
+    border-radius: 10px;
+}
+
+.steps-info {
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+    margin: 20px auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.step-counter {
+    font-family: Helvetica;
+    font-size: 1rem;
+}
+
+.step-detail {
+    font-family: Helvetica;
+    font-size: 1.4rem;
+    font-weight: bold;
+}

@@ -7,11 +7,13 @@
     <title>Shipping</title>
     <link rel="stylesheet" href="/css/shipping.css">
     <link rel="stylesheet" href="/css/variable.css">
+    <link rel="stylesheet" href="/css/header-standard.css">
+    <link rel="stylesheet" href="/css/steps-info.css">
     <script src="/js/shipping.js" defer=""></script>
 </head>
 <body>
     <div class="header">
-        <div class="back-btn">
+        <div class="back-btn" onclick="history.back()">
             <img src="/icons/prev.svg">
         </div>
         <div class="header-title">Shipping</div>

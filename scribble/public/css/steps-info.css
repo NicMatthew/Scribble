@@ -1,0 +1,23 @@
+.steps-info {
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+    margin: 20px auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.step-counter {
+    font-family: Helvetica;
+    font-size: 1rem;
+}
+
+.step-detail {
+    font-family: Helvetica;
+    font-size: 1.4rem;
+    font-weight: bold;
+}

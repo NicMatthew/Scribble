@@ -8,7 +8,7 @@
     <link href="/css/about-us.css" rel="stylesheet">
 </head>
 <body>
-    @include('components/navbar')
+    @include('components/navbar-logo')
     <div class="container">
         <div class="first-section">
             <div class="text1">
@@ -33,7 +33,7 @@
             <div class="up">
                 <img src="\images\circle1.png" alt="increased sales">
                 <img src="\images\circle2.png" alt="customers">
-                <img src="\images\circle3.png" alt="our rating"> 
+                <img src="\images\circle3.png" alt="our rating">
             </div>
             <div class="down">
                 <img src="\images\circle4.png" alt="increased sales">
@@ -73,13 +73,13 @@
                 </div>
         </div>
 
-        
+
         <a href="/"><button type="submit" class="btn">Back To Home</button></a>
     </div>
 
 
 
     @include('components/footer')
-    
+
 </body>
 </html>

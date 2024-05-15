@@ -78,7 +78,7 @@
                 <h5>Correcting Tools</h5>
             </a>
         </div>
-        <a class="btn">
+        <a href="" class="btn">
             <h5>Explore All Products</h5>
         </a>
     </div>

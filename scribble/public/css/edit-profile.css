@@ -1,0 +1,25 @@
+body {
+    width: 100vw;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-top: 100px;
+}
+
+.header-title {
+    font-family: Helvetica;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.back-btn {
+    position: absolute;
+    left: 60px;
+}

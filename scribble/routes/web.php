@@ -41,19 +41,9 @@ Route::get('/shipping', function () {
     return view('shipping');
 });
 
-Route::get('/terms', function () {
-    return view('terms');
-});
-
-Route::get('/about-us', function () {
-    return view('about-us');
-});
-
 Route::get('/address', function () {
     return view('address');
 });
-
-
 
 Route::get('/sign-up', function () {
     return view('sign-up');
@@ -70,13 +60,7 @@ Route::get('/terms', function () {
 Route::get('/about-us', function () {
     return view('about-us');
 });
-Route::get('/sign-up', function () {
-    return view('sign-up');
-});
-Route::get('/terms', function () {
-    return view('terms');
-});
 
-Route::get('/about-us', function () {
-    return view('about-us');
+Route::get('/edit-profile', function () {
+    return view('edit-profile');
 });

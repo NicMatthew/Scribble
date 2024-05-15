@@ -7,18 +7,21 @@
     <link href="/css/variable.css" rel="stylesheet">
     <!-- <script src="https://kit.fontawesome.com/4d9121ebec.js" crossorigin="anonymous"></script> -->
     <link href="/css/address.css" rel="stylesheet">
+    <link href="/css/header-standard.css" rel="stylesheet">
     <script src="/js/address.js" defer=""></script>
 </head>
 <body>
     <div class="big-container">
         <div class="header">
-            <img src="/icons/prev.svg" style="width: 40px; height: 40px; cursor:pointer;" alt="">
-            <p class="h2">Address</p>
-            <img src="/icons/plus-address.svg" style="width: 40px; height: 40px; cursor:pointer;" alt="">
+            <div class="back-btn" onclick="history.back()">
+                <img src="/icons/prev.svg">
+            </div>
+            <div class="header-title">Shipping</div>
+            <div class="plus-btn">
+                <img src="/icons/plus-address.svg">
+            </div>
+            <hr class="divider">
         </div>
-
-        <hr class="line">
-
         <div class="address">
             <div class="left-address">
                 <p style="color: var(--prim-1); font-weight:bold; font-size: 18px; margin-bottom: 5px">Rumah</p>
@@ -97,7 +100,7 @@
                         <button type="submit" class="btn-del">Delete Address</button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 

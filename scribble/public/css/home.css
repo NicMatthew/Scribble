@@ -90,6 +90,10 @@
     text-decoration: none;
 }
 
+.category:hover {
+    text-decoration: none;
+}
+
 .wrapper {
     border-radius: 50%;
     overflow: hidden;
@@ -129,6 +133,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .products-title h2 {

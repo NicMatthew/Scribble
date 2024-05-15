@@ -6,10 +6,9 @@
     <title>Scribble | Terms & Conditions</title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/terms.css" rel="stylesheet">
-
 </head>
 <body>
-    @include('components/navbar')
+    @include('components/navbar-logo')
     <div class="container">
         <h1>Terms and Conditions</h1>
         <p class="b3">Thank you for visiting Scribble, your one-stop shop for all things stationery! These Terms and Conditions ("Terms") govern your use of our website and the services we offer (collectively, the "Service").
@@ -25,7 +24,7 @@
             <p class="b3">When you place an order, you agree to pay the listed price for the products you select, including any applicable taxes and shipping fees.</p>
             <p class="b3">We offer a variety of payment methods, which are subject to change at our discretion.</p>
             <p class="b3">We reserve the right to cancel your order at any time if the product is unavailable, there is a pricing error, or for any other reason.
-</p>        
+</p>
         </div>
 
         <div class="text-box">
