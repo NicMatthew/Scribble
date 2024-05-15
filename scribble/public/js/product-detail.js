@@ -1,14 +1,7 @@
-// const dropdownSortBtn = document.querySelector(".dropdown-sort");
-// const dropdownContent = document.querySelector(".dropdown-sort-content");
 
-// dropdownSortBtn.addEventListener("click", function () {
-//     dropdownSortBtn.classList.toggle("active");
-// });
+const dropdownFilterBtn = document.querySelector(".dropdown-filter");
+const dropdownContent = document.querySelector(".dropdown-filter-content");
 
-const dropdownSortBtn = document.querySelector(".dropdown-sort");
-const dropdownContent = document.querySelector(".dropdown-sort-content");
-
-dropdownSortBtn.addEventListener("click", function () {
-    dropdownSortBtn.classList.toggle("active");
-    dropdownContent.classList.toggle("active");
+dropdownFilterBtn.addEventListener("click", function () {
+    dropdownFilterBtn.classList.toggle("active");
 });

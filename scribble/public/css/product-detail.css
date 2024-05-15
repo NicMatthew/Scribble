@@ -299,13 +299,13 @@
     padding: 10px 0 10px 0;
 }
 
-.dropdown-sort {
+.dropdown-filter {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
 
-.dropdown-sort .right-part img {
+.dropdown-filter .right-part img {
     transition: transform 0.5s ease-in-out;
 }
 
@@ -313,7 +313,7 @@
     cursor: pointer;
 }
 
-.dropdown-sort-content {
+.dropdown-filter-content {
     display: none;
     position: absolute;
     background-color: var(--sec-1);
@@ -325,27 +325,27 @@
     text-align: center;
 }
 
-.dropdown-sort-content li {
+.dropdown-filter-content li {
     padding: 10px 15px 10px 15px;
 }
 
-.dropdown-sort-content a {
+.dropdown-filter-content a {
     color: var(--white);
     transition: 0.3s ease-in-out;
 }
 
-.dropdown-sort-content a:hover {
+.dropdown-filter-content a:hover {
     opacity: 50%;
     color: var(--white);
 }
 
-.dropdown-sort.active .dropdown-sort-content {
+.dropdown-filter.active .dropdown-filter-content {
     display: block;
-    top: calc(100% + 10px); /* Menggeser ke bawah dari dropdown-sort */
+    top: calc(100% + 10px); 
     left: 0;
 }
 
-.dropdown-sort.active .right-part img {
+.dropdown-filter.active .right-part img {
     transform: rotate(180deg);
 }
 
