@@ -1,0 +1,271 @@
+body {
+    width: 100vw;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.header-title {
+    font-family: Helvetica;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.back-btn {
+    position: absolute;
+    left: 60px;
+}
+
+.divider {
+    width: calc(100% - 120px);
+    position: absolute;
+    bottom: 0px;
+    border: 0.5px solid var(--grey);
+    border-radius: 10px;
+}
+
+.steps-info {
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+    margin: 20px auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.step-counter {
+    font-family: Helvetica;
+    font-size: 1rem;
+}
+
+.step-detail {
+    font-family: Helvetica;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0px 60px;
+}
+
+.address-container {
+    padding: 30px;
+    width: calc(100%-60px);
+    height: fit-content;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--sec-1);
+    border-radius: 15px;
+}
+
+.address-info {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.address-title {
+    font-family: Helvetica;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.address-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.address-name {
+    font-size: 1.1rem;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.address-full {
+    font-family: 1rem;
+    font-family: Helvetica;
+    color: var(--white);
+}
+
+.address-select {
+    background-color: var(--white);
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--sec-1);
+}
+
+.product-payment-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-container {
+    margin: 40px 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-header {
+    font-size: 2rem;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.product-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-container {
+    width: 45%;
+    height: fit-content;
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-wrapper {
+    padding: 30px;
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+}
+
+.payment-header {
+    font-family: Helvetica;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.payment-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.payment-name {
+    font-family: Helvetica;
+    font-size: 1.1rem;
+    color: var(--dark-grey);
+}
+
+.payment-price {
+    font-family: Helvetica;
+    font-size: 1.1rem;
+    color: var(--dark-grey);
+}
+
+.final {
+    color: var(--prim-2);
+    font-weight: bold;
+}
+
+.voucher-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 15px;
+    background-color: var(--sec-2);
+}
+
+.voucher-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.voucher-title {
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.voucher-btn {
+    padding: 10px 30px;
+    background-color: var(--white);
+    color: var(--sec-2);
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.pay-btn {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--prim-1);
+    color: var(--white);
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 60px;
+}
+
+.select-voucher {
+    position: fixed;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding-bottom: 60px;
+    border-radius: 15px;
+}
+
+.voucher-list {
+    height: 60vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+}
