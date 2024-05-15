@@ -103,10 +103,10 @@
                 <p class="title-rating-review mb-1">Product Ratings</p>
                 <div class="container-rate" style="display: flex; align-items:center;">
                     <div class="rate-product">
-                        <img src="/icons/star.svg" alt="">
+                        <img src="/icons/star-sharper.svg" alt="">
                         <div class="rate">
                             <div class="rating-numb">
-                                <p class="main-rate h1 mb-0">4.7</p>
+                                <p class="main-rate mb-0">4.7</p>
                                 <p class="standard b3 mb-0">/5</p>
                             </div>
                             <p class="many-users b3 mt-0 mb-0">Based on 100 reviews</p>

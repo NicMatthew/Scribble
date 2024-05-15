@@ -18,17 +18,17 @@
         <hr class="divider">
     </div>
     <div class="steps-info">
-        <div class="step prim-1-fill disable-fill">
+        <div class="step prim-1-fill passive">
             <div class="step-counter">Step 1</div>
             <div class="step-detail">Cart</div>
         </div>
         <img src="/icons/chevron-right.svg" class="step-icon">
-        <div class="step sec-1-fill passive">
+        <div class="step sec-1-fill">
             <div class="step-counter">Step 2</div>
             <div class="step-detail">Shipping</div>
         </div>
         <img src="/icons/chevron-right.svg" class="step-icon">
-        <div class="step sec-2-fill">
+        <div class="step sec-2-fill disable-fill">
             <div class="step-counter">Step 3</div>
             <div class="step-detail">Payment</div>
         </div>

@@ -33,6 +33,9 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
+Route::get('/sidebar', function () {
+    return view('/components/sidebar');
+});
 
 Route::get('/shipping', function () {
     return view('shipping');
