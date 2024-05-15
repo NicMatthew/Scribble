@@ -42,37 +42,35 @@
         </div>
 
         <div class="fourth-section">
-        <!-- <div class="container">
-            <img src="/images/group.png" class="banner">
-            <div class="description">
-                <div class="card">
-                    <h4>Stefanie Angeline Sanjaya</h4>
-                    <p class="nim">2602189682</p>
-                    <p class="email">stefanie.sanjaya@binus.ac.id</p>
+                <h1>Our Team</h1>
+                <img src="/images/group.jpg" class="banner">
+                <div class="description">
+                    <div class="cards">
+                        <b3 id="jingga">Stefanie Angeline Sanjaya</b3>
+                        <p class="nim">2602189682</p>
+                        <p class="role">Scrum Master</p>
+                    </div>
+                    <div class="cards">
+                        <b3 id="biru">Jesslyn Tanuwijaya</b3>
+                        <p class="nim">2602201265</p>
+                        <p class="role">Developer Team</p>
+                    </div>
+                    <div class="cards">
+                        <b3 id="hijau">Nicholas Matthew Salim</b3>
+                        <p class="nim">2602198945</p>
+                        <p class="role">Developer Team</p>
+                    </div>
+                    <div class="cards">
+                        <b3 id="jingga">Hans Christian Arinardi</b3>
+                        <p class="nim">2602198932</p>
+                        <p class="role">Product Owner</p>
+                    </div>
+                    <div class="cards">
+                        <b3 id="biru">Marlene Jusup</b3>
+                        <p class="nim">2602189631</p>
+                        <p class="role">Developer Team</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Jesslyn Tanuwijaya</h4>
-                    <p class="nim">2602201265</p>
-                    <p class="email">jesslyn.tanuwijaya@binus.ac.id</p>
-                </div>
-                <div class="card">
-                    <h4>Nicholas Matthew Salim</h4>
-                    <p class="nim">2602198945</p>
-                    <p class="email">nicholas.salim007@binus.ac.id</p>
-                </div>
-                <div class="card">
-                    <h4>Hans Christian Arinardi</h4>
-                    <p class="nim">2602198932</p>
-                    <p class="email">hans.arinardi001@binus.ac.id</p>
-                </div>
-                <div class="card">
-                    <h4>Marlene Jusup</h4>
-                    <p class="nim">2602189631</p>
-                    <p class="email">marlene.jusup@binus.ac.id</p>
-                </div>
-            </div> -->
-        </div>
-
         </div>
     </div>
 
