@@ -38,7 +38,6 @@ Route::get('/shipping', function () {
     return view('shipping');
 });
 
-<<<<<<< Updated upstream
 Route::get('/terms', function () {
     return view('terms');
 });
@@ -53,7 +52,6 @@ Route::get('/address', function () {
 
 
 
-=======
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
@@ -64,4 +62,3 @@ Route::get('/terms', function () {
 Route::get('/about-us', function () {
     return view('about-us');
 });
->>>>>>> Stashed changes
