@@ -7,6 +7,7 @@
     <title>Shipping</title>
     <link rel="stylesheet" href="/css/shipping.css">
     <link rel="stylesheet" href="/css/variable.css">
+    <script src="/js/shipping.js" defer=""></script>
 </head>
 <body>
     <div class="header">
@@ -81,26 +82,28 @@
                         <img src="/icons/voucher.svg">
                         <div class="voucher-title">Voucher</div>
                     </div>
-                    <div class="voucher-btn">Select</div>
+                    <div class="voucher-btn" id="voucher-btn">Select</div>
                 </div>
                 <a href="" class="pay-btn">Pay Now</a>
             </div>
         </div>
     </div>
-    <div class="select-voucher">
-        <div class="header">
-            <div class="close-btn">
-                <img src="/icons/close.svg">
+    <div class="modal" id="modal">
+        <div class="select-voucher">
+            <div class="header">
+                <div class="close-btn" id="close-btn">
+                    <img src="/icons/close.svg">
+                </div>
+                <div class="header-title">Discount</div>
+                <hr class="divider">
             </div>
-            <div class="header-title">Shipping</div>
-            <hr class="divider">
-        </div>
-        <div class="voucher-list">
-            @include("components/voucher")
-            @include("components/voucher")
-            @include("components/voucher")
-            @include("components/voucher")
-            @include("components/voucher")
+            <div class="voucher-list">
+                @include("components/voucher")
+                @include("components/voucher")
+                @include("components/voucher")
+                @include("components/voucher")
+                @include("components/voucher")
+            </div>
         </div>
     </div>
 </body>
