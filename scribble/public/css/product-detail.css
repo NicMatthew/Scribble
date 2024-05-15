@@ -326,7 +326,10 @@
 }
 
 .dropdown-filter-content li {
-    padding: 10px 15px 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px 5px 10px;
 }
 
 .dropdown-filter-content a {
@@ -341,16 +344,13 @@
 
 .dropdown-filter.active .dropdown-filter-content {
     display: block;
-    top: calc(100% + 10px); 
+    top: calc(100% + 3px); 
     left: 0;
 }
 
 .dropdown-filter.active .right-part img {
     transform: rotate(180deg);
 }
-
-
-
 
 .review{
     display: flex;
@@ -406,10 +406,9 @@
 
 .product-suggest{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 80px;
-    padding-right: 80px;
+    gap: 30px;
+    margin: 0px 150px;
     padding-bottom: 50px;
 }

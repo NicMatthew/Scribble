@@ -123,9 +123,11 @@
                                 <img src="/icons/chevron-down.svg" class="mr-3" alt="down">
                             </div>
                             <ul class="dropdown-filter-content">
-                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg"  class="mr-2"><a href="#" style="text-decoration:none">5 Star</a></li>
-                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" class="mr-2"><a  href="#" style="text-decoration:none">4 Star</a></li>
-                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" class="mr-2"><a href="#" style="text-decoration:none">3 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg"  style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">5 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a  href="#" style="text-decoration:none">4 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">3 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">2 Star</a></li>
+                                <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">1 Star</a></li>
                             </ul>
                         </div>
                     </div>
@@ -208,7 +210,7 @@
             </div>
 
             <div class="suggest mt-3">
-                <p class="mb-0">You May Also Like</p>
+                <p class="mb-3">You May Also Like</p>
             </div>
         </div>
     </div>
