@@ -1,9 +1,9 @@
 .sidebar{
-    max-width: 200px;
-    max-height: 800px;
+    max-width: 250px;
+    max-height: 700px;
     display: flex;
     flex-direction: column;
-    gap: 400px;
+    gap: 350px;
     border: 2px solid var(--grey);
     border-radius: 15px;
     padding: 25px;
@@ -16,18 +16,21 @@
 }
 
 .profile:hover{
-    color: var(--white);
-    background-color: var(--sec-1);
+    opacity: 50%;
+    color: var(--black);
+    transition: 0.3s ease-in-out;
 }
 
 .transaction-list:hover{
-    color: var(--white);
-    background-color: var(--sec-2);
+    opacity: 50%;
+    color: var(--black);
+    transition: 0.3s ease-in-out;
 }
 
 .wishlist:hover{
-    color: var(--white);
-    background-color: var(--prim-2);
+    opacity: 50%;
+    color: var(--black);
+    transition: 0.3s ease-in-out;
 }
 
 .sidebar-top{
@@ -47,4 +50,10 @@
     background-color: var(--prim-1);
     padding: 10px 65px 10px 65px;
     border-radius: 15px;
+}
+
+.sidebar-bottom a:hover{
+    opacity: 0.8;
+    color: var(--white);
+    transition: 0.3s ease-in-out;
 }

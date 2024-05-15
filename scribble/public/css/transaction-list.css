@@ -1,0 +1,41 @@
+.transaction-list{
+    background-color: var(--sec-2);
+}
+
+.content{
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px 0 50px 0;
+    display: flex;
+    gap: 50px;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.content-right-side{
+    border: 2px solid var(--grey);
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px;
+}
+
+.content-header{
+    display: flex;
+    gap: 400px;
+    align-items: center;
+}
+
+.content-header-left, .content-header-right{
+    display: flex;
+    gap: 10px;
+    justify-items: center;
+}
+
+.status{
+    padding: 10px 20px 10px 20px;
+    background-color: var(--prim-2);
+    color: var(--white);
+    text-align: center;
+    border-radius: 15px;
+}
