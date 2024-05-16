@@ -8,8 +8,8 @@
     <link href="/css/variable.css" rel="stylesheet">
 </head>
 <body class="antialiased">
-    <hr class="mt-0" style="border-bottom: 1px solid #757575;">
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted mt-2" style="padding-top: 5px;">
+    {{-- <hr class="mt-0" style="border-bottom: 1px solid #757575;"> --}}
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted mt-2" style="padding-top: 5px; border-top: 1px solid #757575;">
             <section class="">
                 <div class="container text-left text-md-start mt-4">
                 <div class="row mt-3">

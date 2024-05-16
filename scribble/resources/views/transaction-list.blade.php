@@ -18,7 +18,7 @@
         </div>
         <div class="right-side">
             <div class="title">
-                <p class="h1">Transaction List</p>
+                <p class="h2">Transaction List</p>
             </div>
             <div class="content-right-side">
                 <div class="order">
@@ -178,6 +178,19 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-delete" id="modal-delete">
+        <div class="overlay-2">
+            <div class="form-delete">
+                <img src="/icons/reminder-delete.svg" class="exclaimation-mark" alt="">
+                <p class="confirm">Are you sure you want to cancel your order?</p>
+                <p class="confirm-desc">This action cannot be undone</p>
+                <div class="del-add-button">
+                    <button type="submit" class="keep">Keep Order</button>
+                    <button type="submit" class="btn-del">Cancel Order</button>
                 </div>
             </div>
         </div>
