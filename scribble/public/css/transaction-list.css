@@ -1,6 +1,9 @@
 .transaction-list{
     background-color: var(--sec-2);
 }
+.sidebar-top .transaction-list{
+    color: white;
+}
 
 .content{
     max-width: 1300px;
