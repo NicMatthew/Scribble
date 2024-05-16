@@ -1,5 +1,5 @@
 .sidebar{
-    top: 0;
+    top: 100px;
     position: sticky;
     max-width: 250px;
     display: flex;
@@ -15,24 +15,6 @@
     color: var(--black);
     border-radius: 15px;
 }
-
-/* .profile:hover{
-    opacity: 50%;
-    color: var(--black);
-    transition: 0.3s ease-in-out;
-}
-
-.transaction-list:hover{
-    opacity: 50%;
-    color: var(--black);
-    transition: 0.3s ease-in-out;
-}
-
-.wishlist:hover{
-    opacity: 50%;
-    color: var(--black);
-    transition: 0.3s ease-in-out;
-} */
 
 .sidebar-top{
     display: flex;

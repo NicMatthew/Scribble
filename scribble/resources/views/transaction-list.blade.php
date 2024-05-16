@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/css/transaction-list.css">
 </head>
 <body>
-    @include('components/navbar-logo')
+    <div class="navbar">
+        @include('components/navbar-logo')
+    </div>
     <div class="content">
         <div class="left-side">
             @include('components/sidebar')
