@@ -82,7 +82,7 @@
                 <div class="voucher-wrapper">
                     <div class="voucher-header">
                         <img src="/icons/voucher.svg">
-                        <div class="voucher-title">Voucher</div>
+                        <div class="voucher-title" id="voucher-title">Voucher</div>
                     </div>
                     <div class="voucher-btn" id="voucher-btn">Select</div>
                 </div>

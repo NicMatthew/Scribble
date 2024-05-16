@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="profile-wrapper">
-                <img src="/images/pict1.jpg" class="profile-pict">
+                <img src="/images/pict1.jpg" class="profile-pict" id="profile-pict">
                 <img src="/icons/edit.svg" class="edit-btn" id="edit-btn">
             </div>
         </div>

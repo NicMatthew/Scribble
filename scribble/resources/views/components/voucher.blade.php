@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="/css/variable.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="">
         <img src="/icons/voucher-green.svg" class="">
         <div class="details-info">
             <div class="voucher-name">Disc 30%</div>
             <div class="voucher-condition">Minimal Transaksi 200k</div>
             <div class="voucher-period">1 Jan 2024 - 14 Jan 2024</div>
         </div>
-        <img src="/icons/next-green.svg">
+        <img src="/icons/next-green.svg" class="voucher-next">
     </div>
 </body>
 </html>
