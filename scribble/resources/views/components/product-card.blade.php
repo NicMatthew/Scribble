@@ -9,7 +9,7 @@
     <link href="/css/product-card.css" rel="stylesheet">
 </head>
 <body>
-    <a class="card" href="">
+    <a class="product-card" href="">
         <div class="product-img">
             <img src="/images/pict1.jpg">
         </div>

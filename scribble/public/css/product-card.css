@@ -3,21 +3,22 @@
     padding: 0px;
 }
 
-.card {
+.product-card {
     display: flex;
     flex-direction: column;
     width: 240px;
     height: fit-content;
     border: 2px solid var(--grey);
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: var(--white);
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
 
-.card:hover {
+.product-card:hover {
     text-decoration: none;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
 }
 
 .product-img {
