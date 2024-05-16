@@ -1,6 +1,7 @@
 .sidebar{
+    top: 0;
+    position: sticky;
     max-width: 250px;
-    max-height: 700px;
     display: flex;
     flex-direction: column;
     gap: 350px;
@@ -15,7 +16,7 @@
     border-radius: 15px;
 }
 
-.profile:hover{
+/* .profile:hover{
     opacity: 50%;
     color: var(--black);
     transition: 0.3s ease-in-out;
@@ -31,7 +32,7 @@
     opacity: 50%;
     color: var(--black);
     transition: 0.3s ease-in-out;
-}
+} */
 
 .sidebar-top{
     display: flex;
