@@ -101,6 +101,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: sticky;
+    top: 100px;
 }
 
 .payment-wrapper {
