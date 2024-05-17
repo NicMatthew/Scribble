@@ -68,6 +68,11 @@ Route::get('/edit-profile', function () {
 Route::get('/transaction-list', function () {
     return view('transaction-list');
 });
+
 Route::get('/faq', function () {
     return view('faq');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 });

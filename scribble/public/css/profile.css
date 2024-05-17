@@ -1,0 +1,100 @@
+.profile{
+    background-color: var(--sec-1);
+}
+
+.sidebar-top .profile{
+    color: white;   
+}
+
+.sidebar-top .transaction-list:hover{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar-top .wishlist:hover{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.content{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px 0 50px 0;
+    display: flex;
+    gap: 50px;
+}
+
+.right-side{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 100px;
+    gap: 50px;
+}
+
+.content-right-side{
+    display: flex;
+    gap: 300px;
+    align-items: center;
+}
+
+.icon img{
+    width: 120%;
+}
+
+.profile-data{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.part-of-profile-data{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.profile-data-content{
+    text-align: left;
+}
+
+.profile-data-header{
+    margin-bottom: 5px;
+    color: var(--grey);
+}
+
+.pass{
+    padding-left: 2px;
+}
+
+.pass img{
+    margin-right: 5px;
+}
+
+.profile-wrapper {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.profile-pict {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.edit-profile-btn{
+    background-color: var(--prim-1);
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px;
+    color: var(--white);
+}
+
+.edit-profile-btn:hover{
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
