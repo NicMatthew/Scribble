@@ -94,10 +94,10 @@
             <div class="overlay-2">
                 <div class="form-delete">
                     <img src="/icons/reminder-delete.svg" style="margin-bottom:15px; display:flex; align-items: center; justify-content: center" alt="">
-                    <p class="confirm">Are you sure want to delete this address ?</p>
+                    <p class="confirm b1">Are you sure want to delete this address ?</p>
                     <div class="del-add-button">
-                        <button type="submit" class="keep">Keep Address</button>
-                        <button type="submit" class="btn-del">Delete Address</button>
+                        <button type="submit" class="keep b2">Keep Address</button>
+                        <button type="submit" class="btn-del b2">Delete Address</button>
                     </div>
                 </div>
 
