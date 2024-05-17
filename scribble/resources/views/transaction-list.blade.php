@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div class="cancellation">
-                            <a href="#" class="cancel-btn">
+                            <a href="#" class="cancel-btn" id="cancel-btn">
                                 <img src="/icons/cancel-order.svg" alt="tes">
                                 <p class="b2 cancel-text">Cancel</p>
                             </a>

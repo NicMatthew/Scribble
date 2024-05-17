@@ -1,15 +1,16 @@
-
 const modal = document.getElementById("modal-delete");
-const btnOpen = document.getElementById("cancel-btn");
-const btnKeepOrder = document.querySelector(".keep"); // Using querySelector to target the first matching element
+const cancelBtns = document.querySelectorAll(".cancel-btn"); // Selects all elements
 
-// Open the modal when the button is clicked
-btnOpen.addEventListener("click", function() {
-  console.log("Button clicked!");
-  modal.classList.remove("hidden"); // Remove the "hidden" class to show the modal
+// Open the modal when any cancel button is clicked (loop through elements)
+cancelBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+        console.log("Cancel button clicked!");
+        modal.classList.remove("hidden");
+    });
 });
 
-// Close the modal when the "Keep Order" button is clicked
+// Close the modal when the "Keep Order" button is clicked (unchanged)
+const btnKeepOrder = document.querySelector(".keep");
 btnKeepOrder.addEventListener("click", function() {
-  modal.classList.add("hidden"); // Add the "hidden" class to hide the modal
+    modal.classList.add("hidden");
 });
