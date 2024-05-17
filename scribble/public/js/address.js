@@ -1,3 +1,4 @@
+//munculin overlay tambah alamat
 const plusAddressImg = document.querySelector(
     '.header img[src="/icons/plus-address.svg"]'
 );
@@ -6,13 +7,12 @@ plusAddressImg.addEventListener("click", function () {
     modal.classList.add("active");
 });
 
+//munculin overlay edit alamat
 const nextButtons = document.querySelectorAll(
-    '.right-address img[src="/icons/next.svg"]'
+    '.right-address img[src="/icons/edit.svg"]'
 );
-// Tambahkan event listener untuk setiap tombol "Next"
 nextButtons.forEach((nextButton) => {
     nextButton.addEventListener("click", function () {
-        // Tampilkan modal
         document.getElementById("modal").classList.add("active");
     });
 });
@@ -21,30 +21,35 @@ cancelButton.addEventListener("click", function () {
     modal.classList.remove("active");
 });
 
-// Ambil tombol "Exit Address"
+//munculin overlay validasi mau apus ato engga
 const exitAddressImgs = document.querySelectorAll('.right-address img[src="/icons/exit-address.svg"]');
-// Ambil elemen modal-delete
 const modalDelete = document.getElementById("modal-delete");
-// Tambahkan event listener untuk setiap tombol "Exit Address"
 exitAddressImgs.forEach((exitImg) => {
     exitImg.addEventListener("click", function () {
-        // Tampilkan modal-delete
         modalDelete.classList.add("active");
     });
 });
-// Ambil semua tombol "Cancel" di dalam modal-delete
-const cancelButtons = document.querySelectorAll("#modal-delete .cancel");
-// Tambahkan event listener untuk setiap tombol "Cancel"
-cancelButtons.forEach((cancelButton) => {
-    cancelButton.addEventListener("click", function () {
-        // Sembunyikan modal-delete
-        modalDelete.classList.remove("active");
-    });
-});
-// Ambil tombol "Keep Address"
+// //cancel edit
+// const cancelButtons = document.querySelectorAll("#modal-delete .cancel");
+// cancelButtons.forEach((cancelButton) => {
+//     cancelButton.addEventListener("click", function () {
+//         modalDelete.classList.remove("active");
+//     });
+// });
+
+//keep address
 const keepButton = document.querySelector('.keep');
-// Tambahkan event listener untuk tombol "Keep Address"
 keepButton.addEventListener("click", function () {
-    // Sembunyikan overlay-2
     modalDelete.classList.remove("active");
+});
+
+//tanda addres kepilih
+document.addEventListener("DOMContentLoaded", function () {
+    var addressDivs = document.querySelectorAll(".address");
+
+    addressDivs.forEach(function (addressDiv) {
+        addressDiv.addEventListener("click", function () {
+            this.classList.toggle("active-border");
+        });
+    });
 });

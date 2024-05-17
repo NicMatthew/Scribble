@@ -31,7 +31,7 @@
             </div>
             <div class="right-address">
                 <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
-                <img src="/icons/next.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
             </div>
         </div>
         <div class="address">
@@ -43,7 +43,7 @@
             </div>
             <div class="right-address">
                 <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
-                <img src="/icons/next.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
             </div>
         </div>
         <div class="address">
@@ -55,7 +55,7 @@
             </div>
             <div class="right-address">
                 <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
-                <img src="/icons/next.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
             </div>
         </div>
 
