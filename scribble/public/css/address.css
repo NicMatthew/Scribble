@@ -161,9 +161,6 @@
     padding-bottom: 2vh;
     padding-left: 2vh;
     cursor: pointer;
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 14px;
 }
 
 .btn-del {
@@ -178,8 +175,6 @@
     margin-top: 2.5vh;
     padding: 2vh;
     cursor: pointer;
-    font-family: Helvetica;
-    font-size: 15px;
 }
 
 .keep {
@@ -195,14 +190,9 @@
     margin-top: 2.5vh;
     padding: 2vh;
     cursor: pointer;
-    font-family: Helvetica;
-    font-size: 14px;
 }
 
 .confirm {
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -221,8 +211,6 @@
     padding-bottom: 2vh;
     padding-left: 2vh;
     cursor: pointer;
-    font-family: Helvetica;
-    font-size: 14px;
 }
 
 .modal {

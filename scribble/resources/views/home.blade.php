@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="bullet-container">
-            <div class="bullet"></div>
+            <div class="bullet active-bullet"></div>
             <div class="bullet"></div>
             <div class="bullet"></div>
         </div>

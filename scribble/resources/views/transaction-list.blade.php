@@ -7,6 +7,7 @@
     <title>Transaction List</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/transaction-list.css">
+    <script src="/js/transaction-list.js" defer></script>
 </head>
 <body>
     <div class="navbar">
@@ -93,7 +94,7 @@
                             </div>
                         </div>
                         <div class="cancellation">
-                            <a href="#" class="cancel-btn">
+                            <a href="#" class="cancel-btn" id="cancel-btn">
                                 <img src="/icons/cancel-order.svg" alt="tes">
                                 <p class="b2 cancel-text">Cancel</p>
                             </a>
@@ -172,7 +173,7 @@
                             </div>
                         </div>
                         <div class="cancellation">
-                            <a href="#" class="cancel-btn">
+                            <a href="#" class="cancel-btn" id="cancel-btn">
                                 <img src="/icons/cancel-order.svg" alt="tes">
                                 <p class="b2 cancel-text">Cancel</p>
                             </a>
@@ -182,15 +183,15 @@
             </div>
         </div>
     </div>
-    <div class="modal-delete" id="modal-delete">
+    <div class="modal-delete hidden" id="modal-delete">
         <div class="overlay-2">
             <div class="form-delete">
                 <img src="/icons/reminder-delete.svg" class="exclaimation-mark" alt="">
-                <p class="confirm">Are you sure you want to cancel your order?</p>
-                <p class="confirm-desc">This action cannot be undone</p>
+                <p class="confirm b1">Are you sure you want to cancel your order?</p>
+                <p class="confirm-desc b3">This action cannot be undone</p>
                 <div class="del-add-button">
-                    <button type="submit" class="keep">Keep Order</button>
-                    <button type="submit" class="btn-del">Cancel Order</button>
+                    <button type="submit" class="keep b2">Keep Order</button>
+                    <button type="submit" class="btn-del b2">Cancel Order</button>
                 </div>
             </div>
         </div>

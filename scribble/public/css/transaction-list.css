@@ -142,7 +142,7 @@
 }
 
 .buy-again-btn:hover, .cancel-btn:hover{
-    opacity: 80%;
+    opacity: 70%;
     transition: 0.3s ease-in-out;
 }
 
@@ -169,4 +169,93 @@
     display: flex; 
     align-items: center; 
     justify-content: center;
+}
+
+.modal-delete {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  z-index: 100;
+  overflow-y: auto;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.overlay-2 {
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    padding: 37px 40px 37px 40px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: wheat; */
+    width: 100%;
+}
+
+.confirm {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.confirm-desc{
+    color: var(--dark-grey);
+}
+
+.hidden {
+    display: none;
+}
+
+.keep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: white;
+    color: var(--sec-2);
+    border-color: var(--sec-2);
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 2.5vh;
+    padding: 2vh;
+    cursor: pointer;
+}
+
+.btn-del {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: var(--prim-1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 2.5vh;
+    padding: 2vh;
+    cursor: pointer;
+}
+
+.btn-del:hover, .keep:hover{
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+
+.del-add-button {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    align-items: center;
+    justify-content: space-around;
 }

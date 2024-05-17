@@ -48,13 +48,22 @@
                         <div class="input-otp">
                             <input type="text" placeholder="Input OTP Code">
                         </div>
-                        <div class="submit-button">
-
+                        <div class="submit-button" id="submit-button">
+                            <img src="/icons/next.svg" alt="">
                         </div>
 
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
+        <div id="overlay">
+            <div class="payment-success">
+                <a class="continue-button" href="/">
+                    <p>Continue</p>
+                </a>
+            </div>
+        </div>
+
+        <script src="\js\payment-qr.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
     width: 42vw;
     height: 50px;
     margin-top: 20vh;
-    margin-left: 10vw;
+    /* margin-left: 5vw; */
 }
 
 #orange{
@@ -48,18 +48,19 @@
 }
 
 .first-section{
-    margin-bottom: 40vh;
+    margin-bottom: 25vh;
+    /* position: absolute; */
 }
 
 .second-section{
     display: flex;
-    margin-bottom: 40vh;
+    margin-bottom: 25vh;
 }
 
 .second-section .left  {
     width: 55vw;
     height: fit-content;
-    margin-left: 9vw;
+    /* margin-left: 9vw; */
     /* background-color: antiquewhite; */
 }
 
@@ -78,7 +79,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40vh;
+    margin-bottom: 25vh;
 }
 
 .third-section h1{
@@ -143,20 +144,40 @@
 
 #jingga{
     color: var(--prim-2);
+    text-align: center;
 }
 
 #biru{
     color: var(--sec-1);
+    text-align: center
 }
 
 #hijau{
     color: var(--sec-2);
+    text-align: center
 }
 
-.btn{
+.btn-bthome{
     background-color: var(--prim-1);
     color: var(--white);
     margin-bottom: 10vh;
+    border: none;
+    padding: 7px 35px 7px 35px;
+    border-radius: 15px;
+    font-weight: 600;
+    /* padding-left: 10px; */
+}
+
+.btn-bthome:hover{
+    opacity: 0.8;
+}
+
+.nim{
+    text-align: center
+}
+
+.role{
+    text-align: center
 }
 
 /* .nim{
