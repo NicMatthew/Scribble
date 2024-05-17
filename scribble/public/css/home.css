@@ -53,6 +53,11 @@
     height: 15px;
     border-radius: 15px;
     margin: 0px 5px;
+    background-color: var(--grey);
+}
+
+.active-bullet {
+    background-color: var(--prim-1);
 }
 
 .categories-section {
@@ -93,7 +98,7 @@
 
 .category:hover {
     text-decoration: none;
-    transform: translateY(-3px);
+    opacity: 0.7;
 }
 
 .wrapper {
@@ -119,7 +124,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .btn h5 {
@@ -132,8 +136,7 @@
 }
 
 .btn h5:hover {
-    box-shadow: 0px 2px 10px rgba(242, 117, 143, 0.5);
-    transform: translateY(-3px);
+    opacity: 0.7;
 }
 
 .products-section {

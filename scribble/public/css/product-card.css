@@ -59,6 +59,7 @@
     font-size: 1.2rem;
     color: var(--black);
     font-weight: bold;
+    margin: 0px;
 }
 
 .wish {
@@ -70,7 +71,7 @@
 }
 
 .wish img {
-    padding: 10px;
+    padding: 7px;
 }
 
 .rating-sell {

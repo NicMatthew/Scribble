@@ -68,8 +68,7 @@ body {
 }
 
 .address-select:hover {
-    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.4);
-    transform: translateY(-3px);
+    opacity: 0.8;
 }
 
 .product-payment-container {
@@ -190,8 +189,7 @@ body {
 }
 
 .voucher-btn:hover {
-    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.4);
-    transform: translateY(-3px);
+    opacity: 0.8;
 }
 
 .pay-btn {
