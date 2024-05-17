@@ -74,7 +74,7 @@
         </div>
 
 
-        <a href="/"><button type="submit" class="btn">Back To Home</button></a>
+        <a href="/"><button type="submit" class="btn-bthome">Back To Home</button></a>
     </div>
 
 
