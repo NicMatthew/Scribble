@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/product-detail.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="/js/product-detail.js" defer=""></script>
 </head>
 <body>
@@ -17,26 +18,32 @@
         <div class="right">
             <div class="product">
                 <div class="left-photo">
-                        <div class="main">
+                    <div class="main">
+                        
+                    </div>
 
+                    <div class="wrapper">
+                        <i id="left" class="fa-solid fa-angle-left"></i>
+                        <div class="carousel">
+                            <img src="/images/img1.svg" alt="img">
+                            <img src="/images/img2.svg" alt="img">
+                            <img src="/images/img3.svg" alt="img">
+                            <img src="/images/img4.svg" alt="img">
+                            <img src="/images/img5.svg" alt="img">
+                            <img src="/images/img2.svg" alt="img">
+                            <img src="/images/img3.svg" alt="img">
+                            <img src="/images/img2.svg" alt="img">
+                            <img src="/images/img3.svg" alt="img">
                         </div>
-                        <div class="photo-detail">
-                            <div class="ph-1">
-
-                            </div>
-                            <div class="ph-2">
-
-                            </div>
-                            <div class="ph-3">
-
-                            </div>
-                        </div>
+                        <i id="right" class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
+
                 <div class="right-detail">
                     <div class="title-product mb-0">
                         <p class="mb-0">Zebra Highlighter FM-1 Mild</p>
                     </div>
-                    <div class="rating-sell mb-1" style="display: flex; align-items:center">
+                    <div class="rating-sell mb-1 mt-0" style="display: flex; align-items:center">
                         <div class="rating mb-0">
                             <img src="/icons/star.svg">
                             <img src="/icons/star.svg">
