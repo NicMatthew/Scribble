@@ -49,6 +49,7 @@
                             <input type="text" placeholder="Input OTP Code">
                         </div>
                         <div class="submit-button">
+                            <img src="/icons/next.svg" alt="">
 
                         </div>
 

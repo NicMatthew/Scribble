@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     width: 30%;
-    height: 60%;
+    height: 80%;
     /* background-color: springgreen ; */
 }
 .payment-qr-img img{
@@ -27,28 +27,33 @@
     /* background-color: yellow; */
 }
 .container-total-payment{
-    height: 40%;
-    width: 92%;
+    height: 25%;
+    width: 90%;
     background-color: var(--sec-1);
+    /* background-color: black; */
     padding: 2%;
     margin :2%;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.7);
+
 }
 .container-total-payment p{
-    font-size: 24px;
+    font-size: 36px;
     color: white;
     padding: 5%;
+    font-family: Helvetica;
+    font-weight: bold;
 }
 .container-payment-otp{
-    height: 36%;
+    height: 30%;
     padding: 2%;
-    margin :2%;
+    /* margin :2%; */
     /* margin-top: 2%; */
     width: 92%;
-    background-color: springgreen;
+    /* background-color: springgreen; */
     display: flex;
     flex-direction: row;
     gap: 5%;
@@ -57,19 +62,27 @@
 .input-otp{
     height: 100%;
     width: 75%;
-    background-color: violet;
+    /* background-color: violet; */
 }
 .input-otp input{
     height: 70%;
-    width: 90%;
-    padding: 3%;
+    width: 95%;
+    padding: 2%;
     border-radius: 15px;
     font-size: 24px;
 }
 .submit-button{
     height: 100%;
-    width: 20%;
-    background-color: wheat;
+    width: 25%;
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--prim-1) ;
+}
+.submit-button img{
+    height: 100%;
 }
 
 .header {
