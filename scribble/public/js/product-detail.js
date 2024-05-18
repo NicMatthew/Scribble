@@ -70,3 +70,38 @@ carouselImages.forEach(image => {
         mainPhoto.innerHTML = `<img src="${imageUrl}" alt="img">`;
     });
 });
+
+
+//carousel bawah
+const carousel2 = document.querySelector(".carousel-2");
+const arrowBtns = document.querySelectorAll(".wrapper-2 i");
+const firstCardWidth = carousel2.querySelector(".card").offsetWidth;
+
+let isDragging2 = false, startX2, startScrollLeft2;
+
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel2.scrollLeft += btn.id === "left-2" ? -firstCardWidth : firstCardWidth;
+    })
+});
+
+const dragStart2 = (e) => {
+    isDragging2 = true;
+    carousel2.classList.add("dragging2");
+    startX2 = e.pageX;
+    startScrollLeft2 = carousel2.scrollLeft;
+}
+
+const dragging2 = (e) => {
+    if (!isDragging2) return;
+    carousel2.scrollLeft = startScrollLeft2 - (e.pageX - startX2);
+}
+
+const dragStop2 = () => {
+    isDragging2 = false;
+    carousel2.classList.remove("dragging2");
+};
+
+carousel2.addEventListener("mousedown", dragStart2);
+carousel2.addEventListener("mousemove", dragging2);
+document.addEventListener("mouseup", dragStop2);

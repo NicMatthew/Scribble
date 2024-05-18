@@ -221,14 +221,53 @@
             </div>
         </div>
     </div>
+
     <div class="product-suggest">
-        @include('components/product-card')
-        @include('components/product-card')
-        @include('components/product-card')
-        @include('components/product-card')
-        @include('components/product-card')
-        @include('components/product-card')
+        <div class="wrapper-2">
+            <i id ="left-2" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel-2">
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+                <li class="card">
+                    @include('components/product-card')
+                </li>
+            </ul>
+            <i id ="right-2" class="fa-solid fa-angle-right"></i>
+        </div>
     </div>
+
+    <!-- <div class="product-suggest">
+        <div class="wrapper-2">
+            <div class="carousel-2">
+                @include('components/product-card')
+                @include('components/product-card')
+                @include('components/product-card')
+                @include('components/product-card')
+            </div>
+        </div>
+        @include('components/product-card')
+        @include('components/product-card')
+        @include('components/product-card')
+        @include('components/product-card')
+    </div> -->
+
+
     @include('components/footer')
 </body>
 </html>
