@@ -43,13 +43,19 @@ keepButton.addEventListener("click", function () {
     modalDelete.classList.remove("active");
 });
 
+let addressActive = null
+
 //tanda addres kepilih
 document.addEventListener("DOMContentLoaded", function () {
     var addressDivs = document.querySelectorAll(".address");
 
     addressDivs.forEach(function (addressDiv) {
         addressDiv.addEventListener("click", function () {
+            if (addressActive != null) {
+                addressActive.classList.remove("active-border")
+            }
             this.classList.toggle("active-border");
+            addressActive = this
         });
     });
 });
