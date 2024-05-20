@@ -54,9 +54,9 @@
 
                             </div>
                             <div class="product-quantity">
-                                <img src="\icons\prev.svg" alt="">
+                                <img src="\icons\minus.svg" alt="">
                                 <p>20</p>
-                                <img src="\icons\next.svg" alt="">
+                                <img src="\icons\plus.svg" alt="">
                             </div>
                             <div class="product-price">
                                 <p>Rp.100.000</p>
@@ -79,9 +79,9 @@
 
                             </div>
                             <div class="product-quantity">
-                                <img src="\icons\prev.svg" alt="">
+                                <img src="\icons\minus.svg" alt="">
                                 <p>20</p>
-                                <img src="\icons\next.svg" alt="">
+                                <img src="\icons\plus.svg" alt="">
                             </div>
                             <div class="product-price">
                                 <p>Rp.100.000</p>
@@ -104,9 +104,9 @@
 
                             </div>
                             <div class="product-quantity">
-                                <img src="\icons\prev.svg" alt="">
+                                <img src="\icons\minus.svg" alt="">
                                 <p>20</p>
-                                <img src="\icons\next.svg" alt="">
+                                <img src="\icons\plus.svg" alt="">
                             </div>
                             <div class="product-price">
                                 <p>Rp.100.000</p>
@@ -129,9 +129,9 @@
 
                             </div>
                             <div class="product-quantity">
-                                <img src="\icons\prev.svg" alt="">
+                                <img src="\icons\minus.svg" alt="">
                                 <p>20</p>
-                                <img src="\icons\next.svg" alt="">
+                                <img src="\icons\plus.svg" alt="">
                             </div>
                             <div class="product-price">
                                 <p>Rp.100.000</p>
