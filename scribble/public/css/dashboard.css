@@ -1,0 +1,87 @@
+.main-content {
+    position: relative;
+    width: calc(100vw - 390px);
+    top: 40px;
+    left: 350px;
+    background-color: aqua;
+    margin-right: 40px;
+}
+
+.content-header {
+    width: 100%;
+}
+
+.header-title {
+    font-family: Helvetica;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.content-line {
+    width: 100%;
+    border: 1px solid var(--black);
+    margin-top: 20px;
+}
+
+.content-wrapper {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-left {
+    width: 55%;
+    background-color: aquamarine;
+    height: 500px;
+}
+
+.content-overview {
+    width: calc(100% - 60px);
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 15px;
+}
+
+.content-title {
+    font-size: 1.6rem;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.overview-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overview {
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--prim-2);
+    border-radius: 10px;
+}
+
+.value {
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.description {
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.content-right {
+    width: 45%;
+    background-color: firebrick;
+    height: 500px;
+}
