@@ -1,32 +1,46 @@
+*{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.body{
+    /* overflow-y: hidden; */
+}
 .sidebar{
     /* padding: 10%; */
-    margin: 10%;
-    /* position: sticky; */
-    max-width: 250px;
+    margin-top: 7%;
+    margin-left: 3%;
+    position: fixed;
+    /* max-width: 250px; */
+    width: 15%;
     display: flex;
     flex-direction: column;
-    gap: 350px;
+    justify-content: space-between;
+    /* gap: 350px; */
     border: 2px solid var(--grey);
     border-radius: 15px;
     padding: 25px;
+    height: 70vh;
 }
 
 .sidebar-top a{
     padding: 10px 12px 10px 12px;
     color: var(--black);
     border-radius: 15px;
+    font-weight: bold;
+    /* background-color: antiquewhite; */
 }
 
 .sidebar-top{
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
-    gap: 10px;
+    gap: 20px;
 }
 
 .sidebar-bottom{
     display: flex;
     justify-content: center;
+    
 }
 
 .sidebar-bottom a{
@@ -40,4 +54,83 @@
     opacity: 0.7;
     color: var(--white);
     transition: 0.3s ease-in-out;
+}
+.container-faq{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: row;
+    align-items: flex-end; */
+    /* background-color: black; */
+}
+.content-faq{
+    margin-top: 7%;
+    width: 85%;
+    margin-left: 22%;
+    height: fit-content;
+    /* background-color: aqua; */
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+.title-faq p{
+    font-size: 48px;
+    font-family: Helvetica;
+    font-weight: bold;  
+    color: var(--prim-1);
+    margin-bottom: 2%;
+}
+.faq-question-subheader p{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    margin-left: 2px;
+}
+
+.faq-questions{
+    width: 80%;
+    outline: 2px solid black;
+    border-radius: 15px;
+    padding: 2%;
+    margin-bottom: 2%;
+    margin-left: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.faq-questions img{
+    height: 100%;
+    width:  40px;
+
+}
+
+.faq-questions p{
+    font-weight: normal;
+}
+#blue *{
+    color: var(--sec-1);
+}
+#blue div{
+    outline: 2px solid var(--sec-1);
+}
+
+#green *{
+    color: var(--sec-2);
+}
+#green div{
+    outline: 2px solid var(--sec-2);
+}
+#yellow *{
+    color: var(--prim-2);
+}
+#yellow div{
+    outline: 2px solid var(--prim-2);
+    
+}
+#pink *{
+    color: var(--prim-1);
+}
+#pink div{
+    outline: 2px solid var(--prim-1);
 }

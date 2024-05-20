@@ -12,15 +12,140 @@
     @include('\components\navbar-logo')
     <div class="container-faq">
         <div class="sidebar">
-        <div class="sidebar-top">
-            <a href="#" class="b2 profile" style="text-decoration: none">Profile</a>
-            <a href="#" class="b2 transaction-list" style="text-decoration: none">Transaction List</a>
-            <a href="#" class="b2 wishlist" style="text-decoration: none">Wishlist</a>
+            <div class="sidebar-top">
+                <a href="#" class="b2" style="text-decoration: none">Purchase</a>
+                <a href="#" class="b2" style="text-decoration: none">Delivery</a>
+                <a href="#" class="b2" style="text-decoration: none">My Account</a>
+                <a href="#" class="b2" style="text-decoration: none">Wishlist</a>
+                <a href="#" class="b2" style="text-decoration: none">Others</a>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="b2" style="text-decoration: none">Back to home</a>
+            </div>
         </div>
-        <div class="sidebar-bottom">
-            <a href="#" class="b2" style="text-decoration: none">Log out</a>
+
+        <div class="content-faq">
+            <div class="title-faq">
+                <p>Frequently Asked Question</p>
+            </div>
+            <div class="faq-question-subheader" id="blue">
+                <p>Purchase</p>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                    
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="faq-question-subheader" id="green">
+                <p>Delivery</p>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="faq-question-subheader" id="yellow">
+                <p>Purchase</p>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="faq-question-subheader" id="pink">
+                <p>Purchase</p>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+            </div>
+            <div class="faq-question-subheader" id="blue">
+                <p>Purchase</p>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+                <div class="faq-questions">
+                    <p>You are sold out online, do you still have it available?</p>
+                    <img src="\icons\chevron-down-solid.svg" alt="">
+                </div>
+            </div>
+
         </div>
-    </div>
     </div>
     
 </body>
