@@ -66,7 +66,7 @@
                         <a href="/terms" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Terms & Conditions</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">FAQs</a>
+                        <a href="/faq" class="text-reset half-opacity" style="color: #757575; text-decoration: none">FAQs</a>
                     </p>
                     <p class="mb-2 b3">
                         <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Contact us</a>
