@@ -80,3 +80,6 @@ Route::get('/profile', function () {
 Route::get('/review', function () {
     return view('review');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
