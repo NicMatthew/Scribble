@@ -3,6 +3,10 @@ body {
     position: relative;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .main-content {
     max-width: 1000px;
     margin: 40px auto;

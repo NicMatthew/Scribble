@@ -9,7 +9,7 @@
 </head>
 <body>
     @include('components/navbar-logo')
-    <div class="container">
+    <div class="containers">
         <div class="first-section">
             <div class="text1">
                 <p class="h2">We believe that stationery is <mark id='orange'>more</mark> than just supplies.</p>

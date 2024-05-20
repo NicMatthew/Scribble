@@ -80,9 +80,9 @@
                     </div>
                     <div class="quantity mb-1">
                         <div class="plus-minus" style="display:flex; align-items: center;">
-                            <img src="/icons/minus-icon.svg" style="width: 22px; height: 22px">
+                            <img src="/icons/minus.svg" style="width: 22px; height: 22px">
                             <p class="mb-0 ml-2 mr-2">1</p>
-                            <img src="/icons/plus-icon.svg" style="width: 22px; height: 22px" alt="">
+                            <img src="/icons/plus.svg" style="width: 22px; height: 22px" alt="">
                         </div>
                         <p class="mb-0 ml-3 b3" style="color: rgba(117,117,117,0.75);">19 pieces available</p>
                     </div>
