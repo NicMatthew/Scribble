@@ -76,3 +76,7 @@ Route::get('/faq', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/review', function () {
+    return view('review');
+});
