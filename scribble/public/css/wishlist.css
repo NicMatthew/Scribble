@@ -1,0 +1,48 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wishlist{
+    background-color: var(--prim-2);
+}
+
+.sidebar-top .wishlist{
+    color: white;
+}
+
+.sidebar-top .profile:hover{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar-top .transaction-list:hover{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.content{
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px 0 50px 0;
+    display: flex;
+    gap: 50px;
+}
+
+.title{
+    background-color: wheat;
+    margin-bottom: 30px;
+}
+
+.title-detail{
+    margin-top: 5px;
+    color: var(--prim-1);
+}
+
+.content-right-side{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: auto;
+}

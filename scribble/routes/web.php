@@ -83,3 +83,7 @@ Route::get('/review', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
+});
