@@ -9,7 +9,7 @@
     align-items: center;
     padding: 20px 30px;
     gap: 20px;
-    border: 2px solid var(--sec-2);
+    border: 2px solid var(--grey);
     border-radius: 15px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
@@ -21,6 +21,11 @@
 
 .wrapper:hover .voucher-next {
     margin-left: 20px;
+}
+
+.selected-voucher {
+    border: 2px solid var(--sec-2);
+
 }
 
 .details-info {
