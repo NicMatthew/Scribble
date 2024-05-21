@@ -205,7 +205,7 @@
         </div>
         <div class="add-discount-container" id="add-discount-container">
             <div class="header">
-                <div class="close-btn" id="close-btn">
+                <div class="close-btn" id="close-btn-disc">
                     <img src="/icons/close.svg">
                 </div>
                 <div class="header-title">Add Discount</div>
@@ -239,8 +239,25 @@
                 <div class="add-new-disc">Add Discount</div>
             </form>
         </div>
-        <div class="add-banner-container">
-            
+        <div class="add-banner-container" id="add-banner-container">
+            <div class="header">
+                <div class="close-btn" id="close-btn-banner">
+                    <img src="/icons/close.svg">
+                </div>
+                <div class="header-title">Add Banner</div>
+                <hr class="divider">
+            </div>
+            <div class="banner-wrapper">
+                <form name="" method="POST" class="banner-form">
+                    <div class="banner-import">Import Image</div>
+                    <input type="file" accept="image/*" name="bannerImage" class="banner-image" id="banner-image">
+                </form>
+                <div class="banner-preview" id="banner-preview">
+                    <img src="#" class="img-preview" id="img-preview">
+                    <img src="/icons/exit-address.svg" class="close-preview" id="close-preview">
+                    <div class="submit-banner">Add Banner</div>
+                </div>
+            </div>
         </div>
     </div>
     <form name="" method="POST" class="hide">
