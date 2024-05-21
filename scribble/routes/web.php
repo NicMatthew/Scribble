@@ -91,3 +91,7 @@ Route::get('/wishlist', function () {
 Route::get('/product-admin', function () {
     return view('/admin/product-admin');
 });
+
+Route::get('/order-admin', function () {
+    return view('/admin/order-admin');
+});

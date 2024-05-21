@@ -1,0 +1,95 @@
+body{
+    background-color: #6DBDB0;
+}
+
+.order-content {
+    position: relative;
+    width: calc(100vw - 390px);
+    top: 40px;
+    left: 350px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title p, .all-orders-title, .total-orders{
+    color: var(--white);
+}
+
+hr{
+    border: 1px solid var(--white);
+}
+
+.title-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 15px;
+}
+
+th, td {
+    padding: 10px 50px 10px 0;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.all-orders{
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.head th{
+    font-weight: 700;
+}
+
+table tr { 
+    border-bottom: 2px solid var(--grey);
+}
+
+table .head { 
+    border-bottom: 2px solid var(--dark-grey);
+}
+  
+.action-btn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.proceed-btn, .cancel-btn{
+    padding: 10px 15px 10px 15px;
+    background-color: var(--sec-2);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+}
+
+.proceed-btn:hover{
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cancel-btn:hover{
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cancel-btn{
+    background-color: var(--prim-1);
+}
+
+.table-navigation{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}

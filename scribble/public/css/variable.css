@@ -89,16 +89,19 @@
     --border-radius: 15px;
 }
 
+
 .h1{
     font-family: Helvetica;
     font-weight: 700;
     font-size: 48px;
+    letter-spacing: 1.5px;
 }
 
 .h2{
     font-family: Helvetica;
     font-weight: 700;
     font-size: 36px;
+    letter-spacing: 1.5px;
 }
 
 .b1{
