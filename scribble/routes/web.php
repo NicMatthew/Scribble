@@ -81,7 +81,7 @@ Route::get('/review', function () {
     return view('review');
 });
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('/admin/dashboard');
 });
 
 Route::get('/wishlist', function () {
@@ -89,5 +89,5 @@ Route::get('/wishlist', function () {
 });
 
 Route::get('/product-admin', function () {
-    return view('product-admin');
+    return view('/admin/product-admin');
 });
