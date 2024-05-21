@@ -27,11 +27,13 @@
     box-shadow: 1px 5px 10px #757575;
 }
 
-.wrapper h1{
-    font-size: 2rem;
-    text-align: center;
+.wrapper img{
+    width: 40%;
     margin-bottom: 4vh;
-    /* margin-left: 2vw; */
+    /* text-align: center; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wrapper .input-box{

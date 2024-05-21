@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <h1>Log In</h1>
+            <img src="\images\Scribble_Logo.png" alt="Scribble's Logo">
             <div class=input-box>
                 <h3>Email</h3>
                 <input type="text" placeholder="Email" required>
@@ -19,7 +19,7 @@
                 <input type="password" placeholder="Password" required>
             </div>
 
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn">Log In</button>
 
             <div class="register-link">
                 <p>Don't have an account? <a href="/sign-up">Sign Up</a></p>
