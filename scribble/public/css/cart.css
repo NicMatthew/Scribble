@@ -53,11 +53,13 @@
     display: flex;
     justify-content: space-around;
 }
-.container-product-title{
+.container-product-title p{
     font-size: 20px;
+    color: var(--dark-grey);
 }
 .container-product-wrapper{
-    margin: 3%;
+    margin-left: 3%;
+    margin-top: 2%;
     width: 100%;
     height: fit-content;
     gap: 10%;
@@ -127,7 +129,7 @@
     height: 12vh;
     /* background-color: blue; */
     /* margin-top: 2%; */
-    border: 1px solid black;
+    border: 1px solid var(--dark-grey);
     border-radius: 15px;
     padding: 1%;
     display: flex;
@@ -163,7 +165,7 @@
     gap: 10%;
 }
 .product-quantity img{
-    height: 40%;
+    height: 30%;
 }
 .product-quantity p{
     font-size: 24px;
