@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/product-admin.css">
 </head>
 <body>
+    <div class="background">
     @include("components/sidebar-admin")
     <div class="main-content">
         <div class="content-header">
@@ -22,9 +23,10 @@
             <p class="all-prods">All Products</p>
         </div>
 
-        <div class="bottom-content">
+        <div class="sub-content">
             <p class="total">Total Products: 1</p>
-            <div class="table">
+        </div>
+        <div class="bottom-content">
                 <div class="table-title">
                     <p class="title-num">No</p>
                     <p class="title-id">Product ID</p>
@@ -34,9 +36,107 @@
                     <p class="title-stock">Stock</p>
                     <p class="title-price">Price</p>
                 </div>
-            </div>
-
+                <hr class="content-line-table">
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
+                <div class="table-content-hr">
+                    <div class="table-content">
+                        <p class="cont-num">1</p>
+                        <p class="cont-id">OD001</p>
+                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
+                        <p class="cont-cat">Marker</p>
+                        <p class="cont-var">Black</p>
+                        <p class="cont-stock">20</p>
+                        <p class="cont-price">Rp. 50.000</p>
+                        <img src="\images\3-bullets.png" alt="">
+                        
+                    </div>
+                    <hr class="content-line-hr">
+                </div>
         </div>
+    </div>
     </div>
     
 </body>
