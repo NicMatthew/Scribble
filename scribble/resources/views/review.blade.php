@@ -52,7 +52,7 @@
                             <span class="icon"><img src="/icons/photo-review.svg" alt="Photo Icon"></span>
                         </label>
                         <div class="preview-container">
-                            <span id="remove-photo" class="remove-icon">&times;</span>
+                            <img id="remove-photo" src="/icons/exit-address.svg" class="remove-icon"></img>
                             <img id="photo-preview" src="#" alt="Photo Preview">
                         </div>
                     </div>

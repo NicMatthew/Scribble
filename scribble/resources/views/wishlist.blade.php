@@ -7,6 +7,7 @@
     <title>Transaction List</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/wishlist.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <div class="navbar">
@@ -31,7 +32,6 @@
                 @include('components/product-card')
                 @include('components/product-card')
             </div>
-
     </div>
 </body>
 </html>
