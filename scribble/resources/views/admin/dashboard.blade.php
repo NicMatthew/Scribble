@@ -7,6 +7,8 @@
     <title>Dashboard Admin</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/header-standard.css">
+    <script src="/js/dashboard.js" defer=""></script>
 </head>
 <body>
     @include("components/sidebar-admin")
@@ -64,12 +66,185 @@
                             </div>
                         </div>
                     </div>
-                    <div class="discount-add">Add Discount</div>
+                    <div class="discount-add" id="discount-add">Add Discount</div>
                 </div>
             </div>
             <div class="content-right">
+                <div class="top-sales-container">
+                    <div class="content-title">Top Sales</div>
+                    <div class="sales-header">
+                        <div class="sub-header">Product</div>
+                        <div class="sub-header">Earnings</div>
+                    </div>
+                    <div class="top-sales-wrapper">
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                        <div class="sales">
+                            <div class="sales-product">
+                                <img src="/images/pict1.jpg" class="sales-img">
+                                <div class="sales-title">Pencil</div>
+                            </div>
+                            <div class="total-earn">Rp. 100.000</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="banner-container">
+            <div class="content-title">Banner</div>
+            <div class="banner-wrapper">
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/images/group.jpg" class="banner-img">
+                    <div class="banner-remove">
+                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="discount-add" id="banner-add">Add Banner</div>
+        </div>
     </div>
+    <div class="modal" id="modal">
+        <div class="message-container" id="message-container">
+            <img src="/icons/reminder-delete.svg">
+            <div class="alert-message">Are you sure you want to remove this item?</div>
+            <div class="alert-hint">This action cannot be undone</div>
+            <div class="btn-container">
+                <div class="cancel-btn" id="cancel-btn">Cancel</div>
+                <div class="rem-btn" id="rem-btn">Remove</div>
+            </div>
+        </div>
+        <div class="add-discount-container" id="add-discount-container">
+            <div class="header">
+                <div class="close-btn" id="close-btn">
+                    <img src="/icons/close.svg">
+                </div>
+                <div class="header-title">Add Discount</div>
+                <hr class="divider">
+            </div>
+            <form class="add-discount-wrapper">
+                <div class="input-wrapper">
+                    <div class="input-name">Discount name</div>
+                    <input type="text" class="input-field" placeholder="Discount name">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-name">Start date</div>
+                    <input type="date" class="input-field">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-name">End date</div>
+                    <input type="date" class="input-field">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-name">Discount value</div>
+                    <input type="text" class="input-field" placeholder="IDR/%">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-name">Discount type</div>
+                    <input type="text" class="input-field" placeholder="Shipment / Total Payment">
+                </div>
+                <div class="input-wrapper">
+                    <div class="input-name">Discount category product</div>
+                    <input type="text" class="input-field" placeholder="Category product">
+                </div>
+                <div class="add-new-disc">Add Discount</div>
+            </form>
+        </div>
+        <div class="add-banner-container">
+            
+        </div>
+    </div>
+    <form name="" method="POST" class="hide">
+        <input type="text" name="">
+    </form>
 </body>
 </html>
