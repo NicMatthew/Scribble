@@ -31,6 +31,40 @@
                     </div>
                 </div>
                 <div class="content-discount">
+                    <div class="content-title">Discount</div>
+                    <div class="discount-wrapper">
+                        <div class="discount">
+                            @include("components/voucher")
+                            <div class="discount-remove">
+                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                            </div>
+                        </div>
+                        <div class="discount">
+                            @include("components/voucher")
+                            <div class="discount-remove">
+                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                            </div>
+                        </div>
+                        <div class="discount">
+                            @include("components/voucher")
+                            <div class="discount-remove">
+                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                            </div>
+                        </div>
+                        <div class="discount">
+                            @include("components/voucher")
+                            <div class="discount-remove">
+                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                            </div>
+                        </div>
+                        <div class="discount">
+                            @include("components/voucher")
+                            <div class="discount-remove">
+                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discount-add">Add Discount</div>
                 </div>
             </div>
             <div class="content-right">

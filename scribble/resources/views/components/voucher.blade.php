@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrapper" id="">
-        <img src="/icons/voucher-green.svg" class="">
+        <img src="/icons/voucher-green.svg" class="voucher-img">
         <div class="details-info">
             <div class="voucher-name">Disc 30%</div>
             <div class="voucher-condition">Minimal Transaksi 200k</div>
