@@ -87,3 +87,7 @@ Route::get('/dashboard', function () {
 Route::get('/wishlist', function () {
     return view('wishlist');
 });
+
+Route::get('/product-admin', function () {
+    return view('product-admin');
+});

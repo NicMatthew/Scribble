@@ -39,7 +39,7 @@
             <div class="container-product-summary">
                 <div class="container-product">
                     <div class="container-product-title">
-                        <p class="product-details-text">Product Details</p>
+                    zq1    <p class="product-details-text">Product Details</p>
                         <p>Quantity</p>
                         <p class="price-text">Price</p>
                         <p class="total-text">Total</p>
