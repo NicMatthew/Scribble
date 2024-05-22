@@ -7,14 +7,18 @@
     font-family: Helvetica;
     /* overflow-y: hidden; */
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 .background{
-    background-image:url('/images/background.png');
+    /* background-image:url('/images/background.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: #F3C3B7;
     min-height: 100vh;
     overflow-x: hidden;
-    /* overflow-y: hi; */
+    overflow-y: hidden;
 }
 
 .main-content {
@@ -27,6 +31,7 @@
     margin-right: 40px;
     /* overflow-y: scroll; */
     overflow-x: hidden;
+    margin-bottom: 5%;
 }
 
 /* .main-content::-webkit-scrollbar{
@@ -230,4 +235,6 @@
     margin-left: 1.5vw;
 }
 
+/* .table-content-hr .content-line-hr :last-child{
 
+} */
