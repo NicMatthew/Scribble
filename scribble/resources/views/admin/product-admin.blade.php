@@ -6,6 +6,7 @@
     <title>Admin's Page | Product </title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/product-admin.css">
+    <script src="\js\product-admin.js" defer=""></script>
 </head>
 <body>
     <div class="background">
@@ -46,8 +47,18 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
@@ -60,8 +71,18 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
@@ -74,8 +95,18 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
@@ -88,8 +119,18 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
@@ -102,8 +143,18 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
@@ -116,8 +167,18 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
@@ -130,14 +191,25 @@
                         <p class="cont-var">Black</p>
                         <p class="cont-stock">20</p>
                         <p class="cont-price">Rp. 50.000</p>
-                        <img src="\images\3-bullets.png" alt="">
-                        
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                        </div>
                     </div>
                     <hr class="content-line-hr">
                 </div>
         </div>
     </div>
     </div>
+
     
 </body>
 </html>
