@@ -55,30 +55,27 @@
                             <p class="mb-0 b3">(50 reviews) | 100 Terjual</p>
                         </div> 
                     </div>
-                    <div class="price-product mb-1 b2">
+                    <div class="price-product mb-1 b2" style="display: flex; align-items:center">
                         <p class="mb-0">Rp. 12.500,00</p>
                     </div>
-                    <div class="variant mb-2">
-                        <p class="mb-0 mr-2 b3" style="width: 15%; color: rgba(117,117,117,0.75);">Variant : </p>
+                    <div class="variant mb-2 mt-1" style="display: flex; align-items:center">
+                        <p class="mb-0 mr-1 b3" style="width: 14%; color: rgba(117,117,117,0.75);">Variant : </p>
                         <div class="var-opt">
-                            <a href="" class="btn-var mr-3" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                            <a href="" class="btn-var" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                                 <p class="mb-0" style="color:var(--dark-grey)">Pink</p>
                             </a>
-                            <a href="" class="btn-var mr-3" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                            <a href="" class="btn-var" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                                 <p class="mb-0" style="color:var(--dark-grey)">Blue</p>
                             </a>
-                            <a href="" class="btn-var mr-3" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                            <a href="" class="btn-var" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                                 <p class="mb-0" style="color:var(--dark-grey)">Green</p>
                             </a>
-                            <a href="" class="btn-var mr-3" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
-                                <p class="mb-0" style="color:var(--dark-grey)">Green</p>
-                            </a>
-                            <a href="" class="btn-var mr-3" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                            <a href="" class="btn-var" style="font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                                 <p class="mb-0" style="color:var(--dark-grey)">Green</p>
                             </a>
                         </div>
                     </div>
-                    <div class="quantity mb-1">
+                    <div class="quantity mb-1 mt-1">
                         <div class="plus-minus" style="display:flex; align-items: center;">
                             <img src="/icons/minus.svg" style="width: 22px; height: 22px">
                             <p class="mb-0 ml-2 mr-2">1</p>

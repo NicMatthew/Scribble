@@ -185,6 +185,7 @@
 
 .variant{
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -192,11 +193,12 @@
 
 .var-opt{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     flex-direction: row;
     font-size: 14px;
     font-family: helvetica-light;
-   
+    gap: 10px;
 }
 
 .btn-var{
