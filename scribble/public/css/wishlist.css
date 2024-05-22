@@ -40,10 +40,15 @@
 }
 
 .content-right-side{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     gap: auto;
     gap: 20px;
+}
+
+.right-side {
+    max-width: 70%;
 }

@@ -7,6 +7,7 @@
     <title></title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/product-card.css" rel="stylesheet">
+    <script src="/js/product-card.js" defer=""></script>
 </head>
 <body>
     <a class="product-card" href="">
@@ -17,7 +18,7 @@
         <div class="product-details">
             <div class="title-wish">
                 <h3 class="product-title">Sinar Dunia Buku Tulis 38 lembar</h3>
-                <div class="wish">
+                <div class="wish" onclick="return false">
                     <img src="/icons/love-outline.svg">
                 </div>
             </div>
