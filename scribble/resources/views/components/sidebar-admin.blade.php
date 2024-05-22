@@ -30,7 +30,7 @@
         <div class="sidebar-bottom">
             <a href="" class="sidebar-menu">
                 <img src="/icons/exit.svg">
-                <div class="menu-text">Products</div>
+                <div class="menu-text">Log out</div>
             </a>
         </div>
     </div>

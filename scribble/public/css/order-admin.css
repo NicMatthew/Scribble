@@ -2,6 +2,10 @@ body{
     background-color: #6DBDB0;
 }
 
+.sidebar-menus .order-page {
+    filter: none;
+}
+
 .order-content {
     position: relative;
     width: calc(100vw - 390px);
