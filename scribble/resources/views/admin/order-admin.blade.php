@@ -7,6 +7,7 @@
     <title>Order Management</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/order-admin.css">
+    <script src="/js/order-admin.js" defer=""></script>
 </head>
 <body>
     @include("components/sidebar-admin")
@@ -38,10 +39,10 @@
                         <td class="b2">Rp 100.000</td>
                         <td>
                             <div class="action-btn">
-                                <form action="https://google.com">
+                                <form action="#">
                                     <input type="submit" value="Proceed" class="proceed-btn b2"/>
                                 </form>
-                                <form action="https://google.com">
+                                <form action="#">
                                     <input type="submit" value="Cancel" class="cancel-btn b2"/>
                                 </form>
                             </div>
@@ -55,10 +56,10 @@
                         <td class="b2">Rp 100.000</td>
                         <td>
                             <div class="action-btn">
-                                <form action="https://google.com">
+                                <form action="#">
                                     <input type="submit" value="Proceed" class="proceed-btn b2"/>
                                 </form>
-                                <form action="https://google.com">
+                                <form action="#">
                                     <input type="submit" value="Cancel" class="cancel-btn b2"/>
                                 </form>
                             </div>
@@ -72,19 +73,70 @@
                         <td class="b2">Rp 100.000</td>
                         <td>
                             <div class="action-btn">
-                                <form action="https://google.com">
+                                <form action="#">
+                                    <input type="button" value="Proceed" class="proceed-btn b2"/>
+                                </form>
+                                <form action="#">
+                                    <input type="button" value="Cancel" class="cancel-btn b2"/>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="data">
+                        <td class="b2">1</td>
+                        <td class="b2">OD001</td>
+                        <td class="b2">5 May 2024</td>
+                        <td class="b2">Packaged</td>
+                        <td class="b2">Rp 100.000</td>
+                        <td>
+                            <div class="action-btn">
+                                <form action="#">
                                     <input type="submit" value="Proceed" class="proceed-btn b2"/>
                                 </form>
-                                <form action="https://google.com">
+                                <form action="#">
                                     <input type="submit" value="Cancel" class="cancel-btn b2"/>
                                 </form>
                             </div>
                         </td>
+                    </tr>
+                    <tr class="data">
+                        <td class="b2">1</td>
+                        <td class="b2">OD001</td>
+                        <td class="b2">5 May 2024</td>
+                        <td class="b2">Finished</td>
+                        <td class="b2">Rp 100.000</td>
+                        {{-- <td class="b2"></td> --}}
                     </tr>
                 </table>
                 <div class="table-navigation">
                     <a href="#"><img src="/icons/previous-icon-order-admin.svg" alt=""></a>
                     <a href="#"><img src="/icons/next-icon-order-admin.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-delete hidden" id="modal-delete">
+        <div class="overlay-2">
+            <div class="form-delete">
+                <img src="/icons/reminder-delete.svg" class="exclaimation-mark" alt="">
+                <p class="confirm b1">Are you sure you want to cancel your order?</p>
+                <p class="confirm-desc b3">This action cannot be undone</p>
+                <div class="del-add-button">
+                    <button type="submit" class="keep b2">Keep Order</button>
+                    <button type="submit" class="btn-del b2">Cancel Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-proceed hidden" id="modal-proceed">
+        <div class="overlay-2">
+            <div class="form-delete">
+                <img src="/icons/reminder-delete.svg" class="exclaimation-mark" alt="">
+                <p class="confirm b1">Are you sure you want to proceed order?</p>
+                <p class="confirm-desc b3">This action cannot be undone</p>
+                <div class="del-add-button">
+                    <button type="submit" class="keep2 b2">Keep Order</button>
+                    <button type="submit" class="btn-proceed b2">Proceed Order</button>
                 </div>
             </div>
         </div>
