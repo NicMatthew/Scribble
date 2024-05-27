@@ -8,6 +8,7 @@
     <title>Product Catalog</title>
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/product-catalog.css">
+    <script src="/js/product-card.js" defer=""></script>
 </head>
 <body>
     @include('components/navbar')

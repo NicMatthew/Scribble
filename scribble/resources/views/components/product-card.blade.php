@@ -7,7 +7,6 @@
     <title></title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/product-card.css" rel="stylesheet">
-    <script src="/js/product-card.js" defer=""></script>
 </head>
 <body>
     <a class="product-card" href="">

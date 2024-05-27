@@ -8,6 +8,7 @@
     <link href="/css/product-detail.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="/js/product-detail.js" defer=""></script>
+    <script src="/js/product-card.js" defer=""></script>
 </head>
 <body>
     @include('components/navbar')
@@ -19,7 +20,7 @@
             <div class="product">
                 <div class="left-photo">
                     <div class="main">
-                        
+
                     </div>
 
                     <div class="wrapper">
@@ -53,7 +54,7 @@
                         </div>
                         <div class="review-sold" style="display: flex; align-items:center">
                             <p class="mb-0 b3">(50 reviews) | 100 Terjual</p>
-                        </div> 
+                        </div>
                     </div>
                     <div class="price-product mb-1 b2" style="display: flex; align-items:center">
                         <p class="mb-0">Rp. 12.500,00</p>
@@ -135,7 +136,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
 
                     <!-- <div class="rate-filter">
                         <div class="dropdown-sort">

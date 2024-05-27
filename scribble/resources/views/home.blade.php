@@ -7,6 +7,7 @@
     <title>Home | Scribble</title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
+    <script src="/js/product-card.js" defer=""></script>
 </head>
 <body>
     @include('components/navbar-before')
