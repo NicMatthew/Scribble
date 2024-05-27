@@ -1,9 +1,11 @@
 *{
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden; */
+
+    
 }
-.body{
+html{
     /* overflow-y: hidden; */
+    scroll-padding-top: 100px;
 }
 .sidebar{
     /* padding: 10%; */
@@ -27,10 +29,12 @@
     color: var(--black);
     border-radius: 15px;
     font-weight: bold;
+    
     /* background-color: antiquewhite; */
 }
 
 .sidebar-top{
+    
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
@@ -56,16 +60,18 @@
     transition: 0.3s ease-in-out;
 }
 .container-faq{
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     display: flex;
     /* flex-direction: row;
     align-items: flex-end; */
     /* background-color: black; */
+    /* overflow-x: hidden; */
 }
 .content-faq{
     margin-top: 7%;
     width: 85%;
+    
     margin-left: 22%;
     height: fit-content;
     /* background-color: aqua; */
@@ -73,6 +79,7 @@
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
+    
 }
 .title-faq p{
     font-size: 48px;
@@ -80,6 +87,11 @@
     font-weight: bold;  
     color: var(--prim-1);
     margin-bottom: 2%;
+}
+.faq-question-subheader{
+    /* scroll-margin-top: 300px;
+*/
+    /* margin-top: -100px; */
 }
 .faq-question-subheader p{
     font-size: 24px;
@@ -108,29 +120,38 @@
 .faq-questions p{
     font-weight: normal;
 }
-#blue *{
+#purchase *{
     color: var(--sec-1);
+    /* scroll-margin-top: 120px; */
 }
-#blue div{
+#purchase div{
     outline: 2px solid var(--sec-1);
+    /* scroll-margin-top: 100px; */
 }
 
-#green *{
+#delivery *{
     color: var(--sec-2);
 }
-#green div{
+#delivery div{
     outline: 2px solid var(--sec-2);
 }
-#yellow *{
+#myaccount *{
     color: var(--prim-2);
 }
-#yellow div{
+#myaccount div{
     outline: 2px solid var(--prim-2);
     
 }
-#pink *{
+#wishlist *{
     color: var(--prim-1);
 }
-#pink div{
+#wishlist div{
     outline: 2px solid var(--prim-1);
+}
+
+#others *{
+    color: var(--sec-2);
+}
+#others div{
+    outline: 2px solid var(--sec-2);
 }
