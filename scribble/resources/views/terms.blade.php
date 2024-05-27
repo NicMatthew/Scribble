@@ -6,6 +6,7 @@
     <title>Scribble | Terms & Conditions</title>
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/terms.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
 </head>
 <body>
     @include('components/navbar-logo')

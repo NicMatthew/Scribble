@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/variable.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
     <!-- <script src="https://kit.fontawesome.com/4d9121ebec.js" crossorigin="anonymous"></script> -->
     <link href="/css/review.css" rel="stylesheet">
     <link href="/css/header-standard.css" rel="stylesheet">
@@ -37,7 +38,7 @@
                 </div>
                 <div class="right-column">
                     <div class="rating-section">
-                        <p>Rating :</p>
+                        <p style="font-family: Helvetica">Rating :</p>
                         <div class="stars">
                             <img src="/icons/star-empty.svg" alt="">
                             <img src="/icons/star-empty.svg" alt="">

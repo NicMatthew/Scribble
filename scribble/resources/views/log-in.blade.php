@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scribble | Log In</title>
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="\css\log-in.css">
 </head>
 <body>
@@ -26,6 +27,6 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 </html>

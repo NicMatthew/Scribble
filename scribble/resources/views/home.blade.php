@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home | Scribble</title>
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
     <script src="/js/product-card.js" defer=""></script>

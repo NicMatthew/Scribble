@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scribble | About Us</title>
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/about-us.css" rel="stylesheet">
 </head>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link href="/css/variable.css" rel="stylesheet">
 </head>
 <body class="antialiased">
@@ -57,7 +58,7 @@
                         <a href="/about-us" class="text-reset half-opacity" style="color: #757575; text-decoration: none">About us</a>
                     </p>
                     </div>
-    
+
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text fw-bold mb-3 b2" style="color: #1C1C1C; font-weight: bold;">
                         Guide & Help
@@ -72,7 +73,7 @@
                         <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Contact us</a>
                     </p>
                     </div>
-                    
+
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text fw-bold mb-3 b2" style="color: #1C1C1C; font-weight: bold;">
                         Account
@@ -89,13 +90,13 @@
                     <p class="mb-2 b3">
                         <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Wishlist</a>
                     </p>
-                    </div>  
+                    </div>
                 </div>
                 </div>
             </section>
 
             <hr class="mt-3 mb-1" style="border-bottom: 1px solid #757575; width:85%; margin:auto;">
-           
+
             <div class="text-center pt-3 pb-4 b3" style="color: rgba(117, 117, 117, 0.5);">
                 © 2024 Scribble. All Rights reserved
             </div>

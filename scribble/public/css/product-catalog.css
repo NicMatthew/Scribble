@@ -9,7 +9,7 @@
 .menu {
     display: flex;
     gap: 10px;
-    background-color: var(--sec-1);
+    background-color: var(--prim-1);
     justify-content: center;
 }
 
@@ -17,12 +17,12 @@
     display: block;
     color: var(--white);
     padding: 15px;
-    background-color: var(--sec-1);
+    background-color: var(--prim-1);
 }
 
 .dropdown-trigger a:hover {
     background-color: white;
-    color: var(--sec-1); /* Assuming a variable for text color */
+    color: var(--prim-1); /* Assuming a variable for text color */
 }
 
 .dropdown {

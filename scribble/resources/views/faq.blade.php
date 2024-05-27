@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="\css\variable.css">
     <link rel="stylesheet" href="\css\faq.css">
 </head>
@@ -37,7 +38,7 @@
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
                     <img src="\icons\chevron-down-solid.svg" alt="">
-                    
+
                 </div>
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
@@ -147,6 +148,6 @@
 
         </div>
     </div>
-    
+
 </body>
 </html>
