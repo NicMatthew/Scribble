@@ -32,6 +32,7 @@
         <div class="review-container">
             <form id="review-form" action="/submit-review" method="POST" enctype="multipart/form-data">
                 <div class="left-column">
+                    <div class="additional-class"></div>
                     <textarea name="review" class="review-text" placeholder="Write your review here"></textarea>
                 </div>
                 <div class="right-column">
@@ -66,6 +67,6 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 </html>
