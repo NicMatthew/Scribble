@@ -38,117 +38,192 @@
                 </div>
             </div>
             <div class="container-product-summary">
-                <div class="container-product">
-                    <div class="container-product-title">
-                        <p class="product-details-text">Product Details</p>
-                        <p>Quantity</p>
-                        <p class="price-text">Price</p>
-                        <p class="total-text">Total</p>
-                    </div>
-                    <div class="container-product-wrapper">
-                        <div class="products">
-                            <div class="product-img">
-                                <img src="\images\marker.png" alt="">
-                            </div>
-                            <div class="product-name">
-                                <p>Spidol Marker Hitam</p>
+                <table>
+                    <tr class="container-product-title">
+                        <th class="product-details-text">Product Details</th>
+                        <th class="quantity-text">Quantity</th>
+                        <th class="price-text">Price</th>
+                        <th class="total-text">Total</th>
+                        <th></th>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                            </div>
-                            <div class="product-quantity">
-                                <img src="\icons\minus.svg" alt="">
-                                <p>20</p>
-                                <img src="\icons\plus.svg" alt="">
-                            </div>
-                            <div class="product-price">
-                                <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
 
-                            </div>
-                            <div class="product-total-price">
-                                <p>Rp.100.000</p>
-                            </div>
-                            <div class="product-checkbox">
-                                <input type="checkbox">
-                            </div>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                        </div>
-                        <div class="products">
-                            <div class="product-img">
-                                <img src="\images\marker.png" alt="">
-                            </div>
-                            <div class="product-name">
-                                <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
 
-                            </div>
-                            <div class="product-quantity">
-                                <img src="\icons\minus.svg" alt="">
-                                <p>20</p>
-                                <img src="\icons\plus.svg" alt="">
-                            </div>
-                            <div class="product-price">
-                                <p>Rp.100.000</p>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                            </div>
-                            <div class="product-total-price">
-                                <p>Rp.100.000</p>
-                            </div>
-                            <div class="product-checkbox">
-                                <input type="checkbox">
-                            </div>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
 
-                        </div>
-                        <div class="products">
-                            <div class="product-img">
-                                <img src="\images\marker.png" alt="">
-                            </div>
-                            <div class="product-name">
-                                <p>Spidol Marker Hitam</p>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                            </div>
-                            <div class="product-quantity">
-                                <img src="\icons\minus.svg" alt="">
-                                <p>20</p>
-                                <img src="\icons\plus.svg" alt="">
-                            </div>
-                            <div class="product-price">
-                                <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
 
-                            </div>
-                            <div class="product-total-price">
-                                <p>Rp.100.000</p>
-                            </div>
-                            <div class="product-checkbox">
-                                <input type="checkbox">
-                            </div>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                        </div>
-                        <div class="products">
-                            <div class="product-img">
-                                <img src="\images\marker.png" alt="">
-                            </div>
-                            <div class="product-name">
-                                <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
 
-                            </div>
-                            <div class="product-quantity">
-                                <img src="\icons\minus.svg" alt="">
-                                <p>20</p>
-                                <img src="\icons\plus.svg" alt="">
-                            </div>
-                            <div class="product-price">
-                                <p>Rp.100.000</p>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                            </div>
-                            <div class="product-total-price">
-                                <p>Rp.100.000</p>
-                            </div>
-                            <div class="product-checkbox">
-                                <input type="checkbox">
-                            </div>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
 
-                        </div>
-                    </div>
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
 
-                </div>
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
+
+                    </tr>
+                    <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>Spidol Marker Hitam</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>20</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp.100.000</p>
+
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp.100.000</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
+
+                    </tr>
+
+                </table>
 
                 <div class="container-summary">
                     <div class="container-summary-title">
