@@ -24,6 +24,10 @@ body{
     /* overflow-y: hidden; */
 }
 
+.sidebar-menus .product-page {
+    filter: none;
+}
+
 .main-content {
     position: relative;
     width: calc(100vw - 390px);
@@ -48,12 +52,12 @@ body{
 .the-title{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;   
+    justify-content: space-between;
 }
 
 .header-title {
     font-family: Helvetica;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: var(--white);
 }
@@ -67,7 +71,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    padding: 1vh 1vw 1vh 1vw; 
+    padding: 1vh 1vw 1vh 1vw;
 }
 
 .new-prod-btn img{
@@ -89,7 +93,7 @@ body{
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--white);
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
 }
 
 .content-line {
@@ -99,17 +103,20 @@ body{
 }
 
 /* SUB CONTENT */
-/* .sub-content{
-    background-color: antiquewhite;
-} */
+.sub-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+}
 
 .total{
     display: flex;
     justify-content: flex-end;
-    margin-right: 3vw;
-    margin-top: 2vh;
+    /* margin-right: 3vw;
+    margin-top: 2vh; */
     font-family: Helvetica;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     color: var(--white);
 }
 
@@ -193,7 +200,7 @@ body{
 }
 
 .table-content p{
-    font-family: Helvetica; 
+    font-family: Helvetica;
 }
 
 .cont-num{

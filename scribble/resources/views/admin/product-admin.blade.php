@@ -21,10 +21,10 @@
                 </a>
             </div>
             <hr class="content-line">
-            <p class="all-prods">All Products</p>
         </div>
 
         <div class="sub-content">
+            <p class="all-prods">All Products</p>
             <p class="total">Total Products: 1</p>
         </div>
         <div class="bottom-content">
@@ -210,6 +210,6 @@
     </div>
     </div>
 
-    
+
 </body>
 </html>

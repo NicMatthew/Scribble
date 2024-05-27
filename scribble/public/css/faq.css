@@ -1,7 +1,7 @@
 *{
-    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
 
-    
+
 }
 html{
     /* overflow-y: hidden; */
@@ -29,12 +29,12 @@ html{
     color: var(--black);
     border-radius: 15px;
     font-weight: bold;
-    
+
     /* background-color: antiquewhite; */
 }
 
 .sidebar-top{
-    
+
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
@@ -44,6 +44,7 @@ html{
 .sidebar-bottom{
     display: flex;
     justify-content: center;
+
     align-items: center;
     width: 100%;
     height: 10%;
@@ -80,7 +81,7 @@ html{
 .content-faq{
     margin-top: 7%;
     width: 85%;
-    
+
     margin-left: 22%;
     height: fit-content;
     /* background-color: aqua; */
@@ -88,12 +89,12 @@ html{
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
-    
+
 }
 .title-faq p{
     font-size: 48px;
     font-family: Helvetica;
-    font-weight: bold;  
+    font-weight: bold;
     color: var(--prim-1);
     margin-bottom: 2%;
 }
@@ -105,6 +106,7 @@ html{
 .faq-question-subheader p{
     font-size: 24px;
     font-weight: bold;
+    font-family: Helvetica;
     margin-bottom: 2%;
     margin-left: 2px;
 }
@@ -118,6 +120,7 @@ html{
     margin-left: 2px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 .faq-questions img{
@@ -128,6 +131,8 @@ html{
 
 .faq-questions p{
     font-weight: normal;
+    font-family: Helvetica;
+    margin: 0px;
 }
 #purchase *{
     color: var(--sec-1);
@@ -149,7 +154,7 @@ html{
 }
 #myaccount div{
     outline: 2px solid var(--prim-2);
-    
+
 }
 #wishlist *{
     color: var(--prim-1);
