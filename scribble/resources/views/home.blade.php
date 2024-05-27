@@ -9,21 +9,23 @@
     <link href="/css/variable.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
     <script src="/js/product-card.js" defer=""></script>
+    <script src="/js/home.js" defer=""></script>
 </head>
 <body>
     @include('components/navbar-before')
     <div class="banner-section">
         <div class="banner">
-            <img src="/images/pict1.jpg">
+            <div class="banner-img" id="banner-carousel">
+                <img src="/images/pict1.jpg">
+                <img src="/images/background.png">
+                <img src="/images/group.jpg">
+            </div>
             <div class="prev-next">
-                <img src="/icons/prev.svg">
-                <img src="/icons/next.svg">
+                <img src="/icons/prev.svg" id="prev-btn">
+                <img src="/icons/next.svg" id="next-btn">
             </div>
         </div>
-        <div class="bullet-container">
-            <div class="bullet active-bullet"></div>
-            <div class="bullet"></div>
-            <div class="bullet"></div>
+        <div class="bullet-container" id="bullet-container">
         </div>
     </div>
     <div class="categories-section">
