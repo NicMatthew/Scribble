@@ -1,5 +1,6 @@
 *{
     scroll-behavior: smooth;
+    user-select: none;
 
 
 }
@@ -117,11 +118,27 @@ html{
     border-radius: 15px;
     padding: 2%;
     margin-bottom: 2%;
-    margin-left: 2px;
+    /* margin-left: 2px; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    /* background-color: black; */
+}
+.faq-answers{
+    position: relative;
+    z-index: 1;
+    /* background-color: violet; */
+    width: 80%;
+    padding: 2%;
+    overflow: hidden;
+    padding-top: -2%;
+    /* padding-top: 3%; */
+    border-radius: 15px;
+    margin-bottom: 2%;
+    display: none;
+    
 }
 .faq-questions img{
     height: 100%;
@@ -169,3 +186,5 @@ html{
 #others div{
     outline: 2px solid var(--sec-1);
 }
+
+
