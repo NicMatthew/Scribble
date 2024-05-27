@@ -42,4 +42,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var reviewTextarea = document.querySelector(".review-text");
+    var additionalClassDiv = document.querySelector(".additional-class");
+
+    reviewTextarea.addEventListener("focus", function () {
+        additionalClassDiv.style.display = "none";
+    });
+
+    reviewTextarea.addEventListener("input", function () {
+        additionalClassDiv.style.display = "none";
+    });
+});
+
 
