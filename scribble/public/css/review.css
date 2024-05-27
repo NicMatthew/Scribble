@@ -107,7 +107,7 @@ form {
     resize: none;
 }
 
-.additional-class::after {
+.additional-class {
     width: 20px;
     height: 20px;
     content: "";
