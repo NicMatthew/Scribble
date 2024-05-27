@@ -89,6 +89,7 @@ form {
 .left-column {
     width: 60%;
     padding-right: 30px;
+    position: relative;
 }
 
 .review-text {
@@ -102,18 +103,21 @@ form {
     font-size: 16px;
     font-family: Helvetica;
     position: relative;
+    background-color: transparent;
+    resize: none;
 }
 
-.review-text::after {
+.additional-class {
+    width: 20px;
+    height: 20px;
+    content: "";
     color: var(--sec-1);
     background-image: url('/icons/review.svg');
     background-repeat: no-repeat;
     background-position: right center;
-    padding-right: 10px;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    /* padding-top: 4px; */
+    top: 20px;
+    right: 50px;
 }
 
 *:focus {
