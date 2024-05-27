@@ -44,14 +44,23 @@ html{
 .sidebar-bottom{
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    width: 100%;
+    height: 10%;
 }
 
 .sidebar-bottom a{
     color: var(--white);
     background-color: var(--prim-1);
-    padding: 10px 65px 10px 65px;
+    height: 100%;
+    /* text-align: center; */
+    width: 100%;
+    font-size: 20px;
+    /* padding: 10px 65px 10px 65px; */
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar-bottom a:hover{

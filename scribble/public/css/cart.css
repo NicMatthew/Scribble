@@ -211,7 +211,7 @@
 .product-checkbox input{
     height: 30%;
     width: 30%;
-    accent-color: green;
+    accent-color: var(--sec-1);
 }
 .step1{
     color: var(--prim-1);
