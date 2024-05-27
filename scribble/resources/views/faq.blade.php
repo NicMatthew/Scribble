@@ -13,11 +13,11 @@
     <div class="container-faq">
         <div class="sidebar">
             <div class="sidebar-top">
-                <a href="#" class="b2" style="text-decoration: none">Purchase</a>
-                <a href="#" class="b2" style="text-decoration: none">Delivery</a>
-                <a href="#" class="b2" style="text-decoration: none">My Account</a>
-                <a href="#" class="b2" style="text-decoration: none">Wishlist</a>
-                <a href="#" class="b2" style="text-decoration: none">Others</a>
+                <a href="#purchase" class="b2" style="text-decoration: none">Purchase</a>
+                <a href="#delivery" class="b2" style="text-decoration: none">Delivery</a>
+                <a href="#myaccount" class="b2" style="text-decoration: none">My Account</a>
+                <a href="#wishlist" class="b2" style="text-decoration: none">Wishlist</a>
+                <a href="#others" class="b2" style="text-decoration: none">Others</a>
             </div>
             <div class="sidebar-bottom">
                 <a href="#" class="b2" style="text-decoration: none">Back to home</a>
@@ -28,7 +28,7 @@
             <div class="title-faq">
                 <p>Frequently Asked Question</p>
             </div>
-            <div class="faq-question-subheader" id="blue">
+            <div class="faq-question-subheader" id="purchase">
                 <p>Purchase</p>
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
@@ -52,7 +52,7 @@
                     <img src="\icons\chevron-down-solid.svg" alt="">
                 </div>
             </div>
-            <div class="faq-question-subheader" id="green">
+            <div class="faq-question-subheader" id="delivery">
                 <p>Delivery</p>
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
@@ -75,8 +75,8 @@
                     <img src="\icons\chevron-down-solid.svg" alt="">
                 </div>
             </div>
-            <div class="faq-question-subheader" id="yellow">
-                <p>Purchase</p>
+            <div class="faq-question-subheader" id="myaccount">
+                <p>My Account</p>
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
                     <img src="\icons\chevron-down-solid.svg" alt="">
@@ -98,8 +98,8 @@
                     <img src="\icons\chevron-down-solid.svg" alt="">
                 </div>
             </div>
-            <div class="faq-question-subheader" id="pink">
-                <p>Purchase</p>
+            <div class="faq-question-subheader" id="wishlist">
+                <p>Wishlist</p>
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
                     <img src="\icons\chevron-down-solid.svg" alt="">
@@ -121,8 +121,8 @@
                     <img src="\icons\chevron-down-solid.svg" alt="">
                 </div>
             </div>
-            <div class="faq-question-subheader" id="blue">
-                <p>Purchase</p>
+            <div class="faq-question-subheader" id="others">
+                <p>Others</p>
                 <div class="faq-questions">
                     <p>You are sold out online, do you still have it available?</p>
                     <img src="\icons\chevron-down-solid.svg" alt="">
