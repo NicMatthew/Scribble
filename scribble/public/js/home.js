@@ -57,3 +57,23 @@ bullArr.forEach(bull => {
 });
 
 setBanner(0)
+
+// Function to start the timer
+function startTimer() {
+    timerId = setInterval(() => {
+      setBanner(bullCounter + 1); // Change to next slide every 3 seconds
+    }, 7000); // Time interval in milliseconds
+  }
+  
+  // Function to stop the timer (optional)
+  function stopTimer() {
+    if (timerId !== null) {
+      clearInterval(timerId);
+      timerId = null;
+    }
+  }
+  
+  // Start the timer on page load
+  startTimer();
+  
+  // You can also add logic to stop/restart the timer on hover or other events
