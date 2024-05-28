@@ -29,25 +29,27 @@
             <p class="total">Total Products: 1</p>
         </div>
         <div class="bottom-content">
-                <div class="table-title">
-                    <p class="title-num">No</p>
-                    <p class="title-id">Product ID</p>
-                    <p class="title-name">Name</p>
-                    <p class="title-cat">Category</p>
-                    <p class="title-var">Variant</p>
-                    <p class="title-stock">Stock</p>
-                    <p class="title-price">Price</p>
-                </div>
-                <hr class="content-line-table">
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+            <table>
+                <tr class="title">
+                    <th>No</th>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Variant</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <!-- <th>Button</th> -->
+                </tr>
+                <!-- <hr class="content-line-table"> -->
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -59,19 +61,19 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -83,19 +85,19 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -107,19 +109,19 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -131,19 +133,19 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -155,19 +157,19 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -179,19 +181,19 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
-                <div class="table-content-hr">
-                    <div class="table-content">
-                        <p class="cont-num">1</p>
-                        <p class="cont-id">OD001</p>
-                        <p class="cont-name">Zebra Highlighter FM-1 Mild</p>
-                        <p class="cont-cat">Marker</p>
-                        <p class="cont-var">Black</p>
-                        <p class="cont-stock">20</p>
-                        <p class="cont-price">Rp. 50.000</p>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -203,10 +205,70 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                        </div>
                     </div>
-                    <hr class="content-line-hr">
-                </div>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                    </div>
+                    </td>
+                    
+                </tr>
+                <tr class="data">
+                    <td>1</td>
+                    <td>0D001</td>
+                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
+                    <td>Marker</td>
+                    <td>Black</td>
+                    <td>20</td>
+                    <td>Rp 50.000</td>
+                    <td>
+                        <img src="\images\3-bullets.png" alt="" class="more-btn">
+                        <div class="edit-delete-popup" id="popup">
+                            <div class="edit">
+                                <img src="\images\pencil-i.png" alt="">
+                                <p>Edit</p>
+                            </div>
+                            <hr class="line">
+                            <div class="delete">
+                                <img src="\images\trash.png" alt="">
+                                <p>Delete</p>
+                            </div>
+                    </div>
+                    </td>
+                    
+                </tr>
+                
+            
+      
+               
+            
+           
+    
+                
+                
+                
+            </table>
+
         </div>
     </div>
     </div>
