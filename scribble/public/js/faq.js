@@ -13,6 +13,11 @@ function clickQuestion(id) {
     else {
         questions[id].style.marginBottom = "2%";
         answers[id].style.display = "none";
-        
+
     }
 }
+var i = 1
+function add(id){
+    return id+1;
+}
+setTimeout(console.log(add(i)),2000)
