@@ -28,7 +28,7 @@
     height: 300px;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    transition: 1s ease-in-out;
+    transition: scroll-left 2s ease-in-out;
 }
 
 .banner-img img {
@@ -53,6 +53,10 @@
 .prev-next img {
     height: 40px;
     width: 40px;
+    cursor: pointer;
+}
+
+.prev-next img:hover{
     cursor: pointer;
 }
 

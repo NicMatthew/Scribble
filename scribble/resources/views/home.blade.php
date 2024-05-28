@@ -16,9 +16,11 @@
     <div class="banner-section">
         <div class="banner">
             <div class="banner-img" id="banner-carousel">
-                <img src="/images/pict1.jpg">
-                <img src="/images/background.png">
-                <img src="/images/group.jpg">
+                <img src="/images/banner (1).png">
+                <img src="/images/banner (2).png">
+                <img src="/images/banner (6).png">
+                <img src="/images/banner (7).png">
+                <img src="/images/banner (5).png">
             </div>
             <div class="prev-next">
                 <img src="/icons/prev.svg" id="prev-btn">
