@@ -9,38 +9,39 @@
 </head>
 <body>
     <div class="container">
-        <div class="wrapper">
+        <form class="wrapper" name="sign-in-form" method="POST" action="{{route("createUser")}}">
+            @csrf
             <img src="\images\Scribble_Logo.png" alt="Scribble's Logo">
             <div class=input-box>
                 <h3>Name</h3>
-                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Name" name="name" required>
             </div>
             <div class="input-box">
                 <h3>Date of Birth</h3>
-                <input type="date" placeholder="Date of Birth" required>
+                <input type="date" placeholder="Date of Birth" name="DOB" required>
             </div>
 
             <div class=input-box>
                 <h3>Phone Number</h3>
-                <input type="text" placeholder="Phone Number" required>
+                <input type="text" placeholder="Phone Number" name="phoneNumber" required>
             </div>
 
             <div class=input-box>
                 <h3>Email</h3>
-                <input type="text" placeholder="Email" required>
+                <input type="email" placeholder="Email" name="email" required>
             </div>
 
             <div class="input-box">
                 <h3>Password</h3>
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" name="password" required>
             </div>
 
             <button type="submit" class="btn">Sign Up</button>
 
             <div class="register-link">
-                <p>Already have an account? <a href="/log-in">Log In</a></p>
+                <p>Already have an account? <a href="{{route("log-in")}}">Log In</a></p>
             </div>
-        </div>
+        </form>
     </div>
 
 </body>

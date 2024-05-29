@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('cart_details', function (Blueprint $table) {
             $table->foreignId('ProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("ProductID")->on('products');
-            $table->foreignId('UserID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("UserID")->on('user');
+            $table->foreignId('UserID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("UserID")->on('users');
             $table->foreignId('VariantID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VariantID")->on('variants');
             $table->integer('Quantity');
             $table->primary(['ProductID','UserID','VariantID']);

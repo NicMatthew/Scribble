@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id('TransactionID');
-            $table->foreignId('UserID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("UserID")->on('user');
+            $table->foreignId('UserID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("UserID")->on('users');
             $table->foreignId('VoucherShipmentID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VoucherShipmentID")->on('voucher_shipments');
             $table->date('TransactionDate');
             $table->string('TransactionStatus');

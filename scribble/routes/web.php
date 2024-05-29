@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\signinController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,13 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get("/sign-in", [signinController::class, "signin"])->name("sign-in");
+Route::post("/sign-in/create", [signinController::class, "createUser"])->name("createUser");
+Route::get("/log-in", [signinController::class, "login"])->name("log-in");
+Route::post("/log-in", [signinController::class, "authenticate"])->name("authenticate");
+
 Route::get('/product-catalog', function () {
     return view('product-catalog');
-});
-
-Route::get('/log-in', function () {
-    return view('log-in');
 });
 
 Route::get('/product-detail', function () {
@@ -43,10 +45,6 @@ Route::get('/shipping', function () {
 
 Route::get('/address', function () {
     return view('address');
-});
-
-Route::get('/sign-up', function () {
-    return view('sign-up');
 });
 
 Route::get('/payment-qr', function () {
