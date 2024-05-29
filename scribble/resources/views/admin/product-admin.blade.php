@@ -49,7 +49,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -61,7 +61,7 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
@@ -73,7 +73,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -85,7 +85,7 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
@@ -97,7 +97,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -109,7 +109,7 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
@@ -121,7 +121,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -133,7 +133,7 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
@@ -145,7 +145,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -157,7 +157,7 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
@@ -169,7 +169,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -181,10 +181,11 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
+                
                 <tr class="data">
                     <td>1</td>
                     <td>0D001</td>
@@ -193,7 +194,7 @@
                     <td>Black</td>
                     <td>20</td>
                     <td>Rp 50.000</td>
-                    <td>
+                    <td class="container-edit">
                         <img src="\images\3-bullets.png" alt="" class="more-btn">
                         <div class="edit-delete-popup" id="popup">
                             <div class="edit">
@@ -205,55 +206,7 @@
                                 <img src="\images\trash.png" alt="">
                                 <p>Delete</p>
                             </div>
-                    </div>
-                    </td>
-                    
-                </tr>
-                <tr class="data">
-                    <td>1</td>
-                    <td>0D001</td>
-                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
-                    <td>Marker</td>
-                    <td>Black</td>
-                    <td>20</td>
-                    <td>Rp 50.000</td>
-                    <td>
-                        <img src="\images\3-bullets.png" alt="" class="more-btn">
-                        <div class="edit-delete-popup" id="popup">
-                            <div class="edit">
-                                <img src="\images\pencil-i.png" alt="">
-                                <p>Edit</p>
-                            </div>
-                            <hr class="line">
-                            <div class="delete">
-                                <img src="\images\trash.png" alt="">
-                                <p>Delete</p>
-                            </div>
-                    </div>
-                    </td>
-                    
-                </tr>
-                <tr class="data">
-                    <td>1</td>
-                    <td>0D001</td>
-                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
-                    <td>Marker</td>
-                    <td>Black</td>
-                    <td>20</td>
-                    <td>Rp 50.000</td>
-                    <td>
-                        <img src="\images\3-bullets.png" alt="" class="more-btn">
-                        <div class="edit-delete-popup" id="popup">
-                            <div class="edit">
-                                <img src="\images\pencil-i.png" alt="">
-                                <p>Edit</p>
-                            </div>
-                            <hr class="line">
-                            <div class="delete">
-                                <img src="\images\trash.png" alt="">
-                                <p>Delete</p>
-                            </div>
-                    </div>
+                        </div>
                     </td>
                     
                 </tr>
