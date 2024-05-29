@@ -25,15 +25,7 @@ class signinController extends Controller
         $user->ImageUser = $defaultProfilePicture;
         $user->PhoneNumberUser = $validated["phoneNumber"];
         $user->save();
-        // User::create([
-        //     "NameUser" => $validated["name"],
-        //     "EmailUser" => $validated["email"],
-        //     "PasswordUser" => Hash::make($validated["password"]),
-        //     "DOBUser" => $validated["DOB"],
-        //     "RoleUser" => 1,
-        //     "ImageUser" => $defaultProfilePicture,
-        //     "PhoneNumberUser" => $validated["phoneNumber"]
-        // ]);
+
         return redirect()->route("log-in");
     }
 
@@ -46,13 +38,14 @@ class signinController extends Controller
         $validated["EmailUser"] = $validated["email"];
         unset($validated["_token"]);
         unset($validated["email"]);
-        // dd($validated);
 
         if (auth()->attempt($validated)) {
             request()->session()->regenerate();
 
             return redirect("/profile");
         }
-        return redirect("/");
+        return redirect()->route("log-in")->withErrors([
+            "message" => "No matching email with the password!"
+        ]);
     }
 }

@@ -35,7 +35,7 @@
             <!-- Right elements -->
             <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
-                <a class="btn text-white b3" data-mdb-ripple-init style="background-color: #F2758F; border-radius: 10px; height: 35px; display: flex; align-items: center;" href="#!" role="button">
+                <a class="btn text-white b3" data-mdb-ripple-init style="background-color: #F2758F; border-radius: 10px; height: 35px; display: flex; align-items: center;" href="{{route("sign-in")}}" role="button">
                 <img src="/icons/people.png" alt="" style="width: 18px; height: 20px; margin-right: 8px;">
                 Sign Up
                 </a>

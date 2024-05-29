@@ -24,8 +24,10 @@
     border-radius: 15px;
     background-color: white;
     padding: 5vh 2vw;
-    box-shadow: 1px 5px 10px #757575;
-
+    box-shadow: 1px 5px 10px rgba(117, 117, 117, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .wrapper h1{
@@ -44,11 +46,10 @@
 }
 
 .input-box{
-    width: 95%;
+    width: calc(100% - 4vw);
     height: 10vh;
     align-items: center;
     justify-content: center;
-    margin-left: 2vw;
     margin-top: 1.5vh;
     /* background-color: lawngreen; */
     /* margin: 1vh 1vw; */
@@ -60,12 +61,12 @@
 }
 
 .input-box input{
-    width: 80%;
+    width: calc(100% - 2vw);
     background-color: #EEF5F6;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     outline: none;
-    margin-top: 1vh;
+    margin-top: 5px;
     padding-top:1.5vh ;
     padding-bottom: 1.5vh;
     padding-left: 1vw;
@@ -87,17 +88,18 @@ input[type=date]:invalid::-webkit-datetime-edit {
 
 
 .wrapper .btn{
-    width: 83.5%;
+    width: calc(100% - 4vw);
     background-color: #F2758F;
     color: white;
     border-radius: 15px;
     border: none;
     /* margin: 1vh 1vw; */
-    margin-left: 2vw;
     margin-top: 2.5vh;
     padding-top:1.5vh ;
     padding-bottom: 1.5vh;
-    padding-left: 2vh;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -109,7 +111,8 @@ input[type=date]:invalid::-webkit-datetime-edit {
 }
 
 .register-link{
-    font-size: 0.7rem;
+    width: calc(100% - 4vw);
+    font-size: 0.9rem;
     text-align: right;
     margin-top: 2vh;
 }
@@ -125,4 +128,15 @@ input[type=date]:invalid::-webkit-datetime-edit {
 
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+.alert input {
+    outline: 1.5px solid #FF0000;
+}
+
+.alert p{
+    font-family: Helvetica;
+    font-size: 0.9rem;
+    color: #FF0000;
+    margin-top: 5px;
 }

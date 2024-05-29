@@ -6,37 +6,38 @@
     <title>Sign Up</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="\css\sign-up.css">
+    <script src="/js/sign-in.js" defer=""></script>
 </head>
 <body>
     <div class="container">
         <form class="wrapper" name="sign-in-form" method="POST" action="{{route("createUser")}}">
             @csrf
             <img src="\images\Scribble_Logo.png" alt="Scribble's Logo">
-            <div class=input-box>
+            <div class="input-box">
                 <h3>Name</h3>
-                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Name" name="name" id="name" required>
             </div>
             <div class="input-box">
                 <h3>Date of Birth</h3>
-                <input type="date" placeholder="Date of Birth" name="DOB" required>
+                <input type="date" placeholder="Date of Birth" name="DOB" id="dob" required>
             </div>
 
-            <div class=input-box>
+            <div class="input-box">
                 <h3>Phone Number</h3>
-                <input type="text" placeholder="Phone Number" name="phoneNumber" required>
+                <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber" required>
             </div>
 
-            <div class=input-box>
+            <div class="input-box">
                 <h3>Email</h3>
-                <input type="email" placeholder="Email" name="email" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
             </div>
 
             <div class="input-box">
                 <h3>Password</h3>
-                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="Password" name="password" id="password" required>
             </div>
 
-            <button type="submit" class="btn">Sign Up</button>
+            <div class="btn" id="submit-btn">Sign Up</div>
 
             <div class="register-link">
                 <p>Already have an account? <a href="{{route("log-in")}}">Log In</a></p>

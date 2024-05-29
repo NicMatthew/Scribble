@@ -6,6 +6,7 @@
     <title>Scribble | Log In</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="\css\log-in.css">
+    <script src="/js/log-in.js" defer=""></script>
 </head>
 <body>
     <div class="container">
@@ -14,15 +15,17 @@
             <img src="\images\Scribble_Logo.png" alt="Scribble's Logo">
             <div class=input-box>
                 <h3>Email</h3>
-                <input type="text" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Email" name="email" id="email" required>
             </div>
             <div class="input-box">
                 <h3>Password</h3>
-                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="Password" name="password" id="password" required>
             </div>
 
-            <button type="submit" class="btn">Log In</button>
-
+            <div type="submit" class="btn" id="submit-btn">Log In</div>
+            @error('message')
+                <div class="alert-message">{{$message}}</div>
+            @enderror
             <div class="register-link">
                 <p>Don't have an account? <a href="{{route("sign-in")}}">Sign In</a></p>
             </div>

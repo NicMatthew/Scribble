@@ -25,6 +25,9 @@
     background-color: white;
     padding: 5vh 2vw;
     box-shadow: 1px 5px 10px #757575;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .wrapper img{
@@ -37,11 +40,10 @@
 }
 
 .wrapper .input-box{
-    width: 100%;
+    width: calc(100% - 4vw);
     height: 10vh;
     align-items: center;
     justify-content: center;
-    margin-left: 2vw;
     margin-top: 1.5vh;
     /* background-color: lawngreen; */
     /* margin: 1vh 1vw; */
@@ -49,13 +51,13 @@
 
 .input-box h3{
     color: #757575;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .input-box input{
-    width: 80%;
+    width: calc(100% - 2vh);
     background-color: #EEF5F6;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     outline: none;
     margin-top: 1vh;
@@ -69,17 +71,18 @@
 }
 
 .wrapper .btn{
-    width: 83.5%;
+    width: calc(100% - 4vw);
     background-color: #F2758F;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     /* margin: 1vh 1vw; */
-    margin-left: 2vw;
     margin-top: 2.5vh;
     padding-top:1.5vh ;
     padding-bottom: 1.5vh;
-    padding-left: 2vh;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -91,7 +94,8 @@
 }
 
 .register-link{
-    font-size: 0.7rem;
+    width: calc(100% - 4vw);
+    font-size: 0.9rem;
     text-align: right;
     margin-top: 2vh;
 }
@@ -107,4 +111,22 @@
 
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+.alert input {
+    outline: 1.5px solid #FF0000;
+}
+
+.alert p{
+    font-family: Helvetica;
+    font-size: 0.9rem;
+    color: #FF0000;
+    margin-top: 5px;
+}
+
+.alert-message {
+    font-family: Helvetica;
+    font-size: 0.9rem;
+    color: #FF0000;
+    margin-top: 5px;
 }
