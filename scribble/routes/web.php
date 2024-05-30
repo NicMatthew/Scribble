@@ -26,6 +26,7 @@ Route::post("/log-in", [signinController::class, "authenticate"])->name("authent
 
 Route::get('/profile', [UserController::class, 'showProfile'])->middleware('auth');
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
+Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
 
 Route::get('/product-catalog', function () {
     return view('product-catalog');
