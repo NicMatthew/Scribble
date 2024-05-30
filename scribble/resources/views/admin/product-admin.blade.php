@@ -28,7 +28,7 @@
 
         <div class="sub-content">
             <p class="all-prods">All Products</p>
-            <p class="total">Total Products: 1</p>
+            <p class="total">Total Products: {{ count($products) }}</p>
         </div>
         <div class="bottom-content">
             <table>
@@ -43,36 +43,46 @@
                     <!-- <th>Button</th> -->
                 </tr>
                 <!-- <hr class="content-line-table"> -->
-                <tr class="data">
-                    <td>1</td>
-                    <td>0D001</td>
-                    <td class="prod-name">Zebra Highlighter FM-1 Mild</td>
-                    <td>Marker</td>
-                    <td>Black</td>
-                    <td>20</td>
-                    <td>Rp 50.000</td>
-                    <td class="container-edit">
-                        <img src="\images\3-bullets.png" alt="" class="more-btn">
-                        <div class="edit-delete-popup" id="popup">
-                            <div class="edit">
-                                <img src="\images\pencil-i.png" alt="">
-                                <p>Edit</p>
-                            </div>
-                            <hr class="line">
-                            <div class="delete">
-                                <img src="\images\trash.png" alt="">
-                                <p>Delete</p>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                @if ($products == null)
+                    
+                @else
+                    <div class="hide">{{ $count = 0  }}</div>
+                    @foreach ($products as $product)
+                        <tr class="data">
+                            <div class="hide">{{ $count =  $count + 1  }}</div>
+                            <td>{{ $count }}</td>
+                            <td>{{ $product->ProductID }}</td>
+                            <td class="prod-name">{{ $product->NameProduct }}</td>
+                            <td>{{ $product->NameCategory }}</td>
+                            <td>{{ $product->VariantName }}</td>
+                            <td>{{ $product->Stock }}</td>
+                            <td>{{ $product->Price }}</td>
+                            <td class="container-edit">
+                                <img src="\images\3-bullets.png" alt="" class="more-btn">
+                                <div class="edit-delete-popup" id="popup">
+                                    <div class="edit">
+                                        <img src="\images\pencil-i.png" alt="">
+                                        <p>Edit</p>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="delete">
+                                        <img src="\images\trash.png" alt="">
+                                        <p>Delete</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    @endforeach
+                    
+                @endif
             </table>
 
         </div>
     </div>
     </div>
-        <div class="modal show" id="modal">
-            <div class="add-discount-container show" id="add-discount-container">
+        <div class="modal" id="modal">
+            <div class="add-discount-container" id="add-discount-container">
             <div class="header">
                 <div class="close-btn" id="close-btn-disc">
                     <img src="/icons/close.svg">
@@ -87,20 +97,13 @@
                     <input type="text" class="input-field" placeholder="Product Name" name="ProductName">
                 </div>
                 <div class="input-wrapper">
-                    <div class="input-name">Product Category</div>
-                    <select class="input-field" name="ProductCategory">
-                        <option value="Pens">Pens</option>
-                        <option value="Pencils">Pencils</option>
-                        <option value="Markers">Markers</option>
-                        <option value="Papers">Papers</option>
-                        <option value="Books">Books</option>
-                        <option value="Cutting Tools">Cutting Tools</option>
-                        <option value="Correcting Tools">Correcting Tools</option>
-                    </select>
-                </div>
-                <div class="input-wrapper">
                     <div class="input-name">Product Sub Category</div>
-                    <input type="text" class="input-field" placeholder="Product Sub Category" name="ProductSubCategory">
+                    <select class="input-field" name="ProductSubCategory">
+                        <option value="" disabled selected>Choose Category</option>
+                        @foreach ($subcategories as $subcategory)
+                            <option value="{{ $subcategory->NameSubCategory }}">{{ $subcategory->NameSubCategory }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="input-wrapper">
                     <div class="input-name">Product Variant</div>

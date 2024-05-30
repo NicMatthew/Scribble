@@ -404,6 +404,9 @@ body {
     flex-direction: column;
     gap: 5px;
 }
+.input-wrapper select{
+    width: 100%;
+}
 
 .input-name {
     font-family: Helvetica;

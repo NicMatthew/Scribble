@@ -216,6 +216,9 @@ table{
 .show {
     display: flex;
 }
+.hide{
+    display: none;
+}
 
 .up {
     top: -10px;
