@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\signinController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -86,11 +87,10 @@ Route::get('/dashboard', function () {
 Route::get('/wishlist', function () {
     return view('wishlist');
 });
-
-Route::get('/product-admin', function () {
-    return view('/admin/product-admin');
-});
-
 Route::get('/order-admin', function () {
     return view('/admin/order-admin');
 });
+
+
+Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
+Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
