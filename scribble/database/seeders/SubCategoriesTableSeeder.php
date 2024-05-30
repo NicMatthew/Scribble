@@ -51,16 +51,16 @@ class SubCategoriesTableSeeder extends Seeder
             ['CategoryProductID' => 6, 'NameSubCategory' => 'Rotary cutters', 'created_at' => now(), 'updated_at' => now()],
 
             // Sticking Tools Subcategories
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Glue sticks', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Liquid glue', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Tape', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Glue dots', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Glue sticks', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Liquid glue', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Tape', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Glue dots', 'created_at' => now(), 'updated_at' => now()],
 
             // Correcting Tools Subcategories
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'White out correction tape', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Correction fluid', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Erasers', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Correction pens', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'White out correction tape', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction fluid', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Erasers', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction pens', 'created_at' => now(), 'updated_at' => now()],
         ]);
     }
 }

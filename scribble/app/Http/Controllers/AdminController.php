@@ -30,14 +30,20 @@ class AdminController extends Controller
         $newProduct = new Product(); 
         $newProductEntry = new ProductEntry(); 
         $newVariants = new Variant();
+        // dd($products['ProductSubCategory']);
+        
+        $testProduct = Product::select("NameProduct")
+        ->where("products.NameProduct","=",$products["ProductName"])->get()->first();
 
-        $newProduct->NameProduct= $products["ProductName"];
-        $newProduct->Rating= 0;
-        $newProduct->DescriptionProduct= $products["ProductDescription"];
-        $newProduct->SubCategoryProductID = SubCategory::select("SubCategoryProductID")
-        ->where("sub_categories.NameSubCategory","=",$products['ProductSubCategory'])->get()->first()->value('SubCategoryProductID');
-        // harus save new product dulu baru bisa lanjut 
-        $newProduct->save();
+        if($testProduct == null){
+            $newProduct->NameProduct= $products["ProductName"];
+            $newProduct->Rating= 0;
+            $newProduct->DescriptionProduct= $products["ProductDescription"];
+            $newProduct->SubCategoryProductID = SubCategory::select("SubCategoryProductID")
+            ->where("sub_categories.NameSubCategory","=",$products['ProductSubCategory'])->get()->value('SubCategoryProductID');
+            // harus save new product dulu baru bisa lanjut 
+            $newProduct->save();
+        }
 
         $testVariant = Variant::select("VariantName")
         ->where("variants.VariantName","=",$products["ProductVariant"])->get()->first();
@@ -52,14 +58,14 @@ class AdminController extends Controller
             // variant udah ada
 
         }
-        
-        
-
         $newProductEntry->ProductID = Product::select("ProductID")
-        ->where("products.NameProduct","=",$products['ProductName'])->get()->first()->value("ProductID");
-
+        ->where("products.NameProduct","=",$products['ProductName'])->get()->value("ProductID");
+        // dd($products["ProductName"]);
         $newProductEntry->VariantID = Variant::select("VariantID")
-        ->where("variants.VariantName","=",$products["ProductVariant"])->get()->first()->value("VariantID");
+        ->where("variants.VariantName","=",$products["ProductVariant"])->get()->value("VariantID");
+
+
+        // dd($newProductEntry->VariantID);
 
         $newProductEntry->Stock = $products["ProductStock"];
         $newProductEntry->Price = $products["ProductPrice"];
