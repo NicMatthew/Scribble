@@ -29,7 +29,7 @@
                         </div>
                         <div class="profile-data-content">
                             <p class="b2 profile-data-header">Name</p>
-                            <p class="b1">Matthew</p>
+                            <p class="b1">{{ $user->NameUser }}</p>
                         </div>
                     </div>
                     <div class="part-of-profile-data">
@@ -38,7 +38,7 @@
                         </div>
                         <div class="profile-data-content">
                             <p class="b2 profile-data-header">Email</p>
-                            <p class="b1">matthew@gmail.com</p>
+                            <p class="b1">{{ $user->EmailUser }}</p>
                         </div>
                     </div>
                     <div class="part-of-profile-data">
@@ -47,7 +47,7 @@
                         </div>
                         <div class="profile-data-content">
                             <p class="b2 profile-data-header">Date of Birth</p>
-                            <p class="b1">24 January 2000</p>
+                            <p class="b1">{{ $user->DOBUser }}</p>
                         </div>
                     </div>
                     <div class="part-of-profile-data">
@@ -56,7 +56,7 @@
                         </div>
                         <div class="profile-data-content">
                             <p class="b2 profile-data-header">Phone Number</p>
-                            <p class="b1">08123456789</p>
+                            <p class="b1">{{ $user->PhoneNumberUser }}</p>
                         </div>
                     </div>
                     <div class="part-of-profile-data">
@@ -80,10 +80,10 @@
                 </div>
                 <div class="profile-pic">
                     <div class="profile-wrapper">
-                        <img src="/images/pict1.jpg" class="profile-pict" id="profile-pict">
+                        <img src="{{ $user->ImageUser }}" class="profile-pict" id="profile-pict">
                     </div>
                     <div class="edit-button-wrapper">
-                        <a href="#" class="b2 edit-profile-btn">
+                        <a href="{{ route("edit-profile") }}" class="b2 edit-profile-btn">
                             Edit Profile
                         </a>
                     </div>

@@ -42,9 +42,36 @@ for (let i = 0; i < moreButton.length; i++) {
 
 
 
-// moreButton.addEventListener("click", otpTrue, true);
+let addDisc = document.getElementById("product-add");
+let discRemBtns = document.querySelectorAll(".discount-remove");
+let modal = document.getElementById("modal");
+let cancelBtn = document.getElementById("cancel-btn");
+let msgContainer = document.getElementById("message-container");
+let closeDiscBtn = document.getElementById("close-btn-disc");
+let discContainer = document.getElementById("add-discount-container");
+let bannerContainer = document.getElementById("add-banner-container");
 
-// function otpTrue() {
-//     // alert("Hi");
-//     popup.style.display = "block"
-// }
+
+
+discRemBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        modal.classList.add("show");
+        msgContainer.classList.add("show");
+    });
+});
+
+addDisc.addEventListener("click", (e) => {
+    modal.classList.add("show");
+    discContainer.classList.add("show");
+});
+
+
+closeDiscBtn.addEventListener("click", (e) => {
+    modal.classList.remove("show");
+    discContainer.classList.remove("show");
+});
+
+
+
+
+

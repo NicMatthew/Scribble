@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\signinController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +24,10 @@ Route::get("/sign-in", [signinController::class, "signin"])->name("sign-in");
 Route::post("/sign-in/create", [signinController::class, "createUser"])->name("createUser");
 Route::get("/log-in", [signinController::class, "login"])->name("log-in");
 Route::post("/log-in", [signinController::class, "authenticate"])->name("authenticate");
+
+Route::get('/profile', [UserController::class, 'showProfile'])->middleware('auth');
+Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
+Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
 
 Route::get('/product-catalog', function () {
     return view('product-catalog');
@@ -71,10 +77,6 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-
 Route::get('/review', function () {
     return view('review');
 });
@@ -85,11 +87,10 @@ Route::get('/dashboard', function () {
 Route::get('/wishlist', function () {
     return view('wishlist');
 });
-
-Route::get('/product-admin', function () {
-    return view('/admin/product-admin');
-});
-
 Route::get('/order-admin', function () {
     return view('/admin/order-admin');
 });
+
+
+Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
+Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
