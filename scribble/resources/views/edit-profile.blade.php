@@ -24,23 +24,23 @@
             <div class="data-details">
                 <div class="input-row">
                     <div class="input-name">Name</div>
-                    <input type="text" placeholder="Name" class="input-field" name="name" value="{{ $user->NameUser }}">
+                    <input type="text" placeholder="Name" class="input-field" name="name" id="name" value="{{ $user->NameUser }}">
                 </div>
                 <div class="input-row">
                     <div class="input-name">Date of Birth</div>
-                    <input type="date" placeholder="Date of Birth" class="input-field" name="dob" value="{{ $user->DOBUser }}">
+                    <input type="date" placeholder="Date of Birth" class="input-field" id="dob" name="dob" value="{{ $user->DOBUser }}">
                 </div>
                 <div class="input-row">
                     <div class="input-name">Phone Number</div>
-                    <input type="text" placeholder="Phone Number" class="input-field" name="phoneNumber" value="{{ $user->PhoneNumberUser }}">
+                    <input type="text" placeholder="Phone Number" class="input-field" id="phoneNumber" name="phoneNumber" value="{{ $user->PhoneNumberUser }}">
                 </div>
                 <div class="input-row">
                     <div class="input-name">Email</div>
-                    <input type="text" placeholder="Email" class="input-field" name="email"  value="{{ $user->EmailUser }}">
+                    <input type="text" placeholder="Email" class="input-field" name="email" id="email"  value="{{ $user->EmailUser }}">
                 </div>
                 <div class="input-row">
                     <div class="input-name">Password</div>
-                    <input type="password" class="input-field password-input" name="password" value="••••••••">
+                    <input type="password" class="input-field password-input" name="password" id="password" value="••••••••">
                 </div>
             </div>
             <div class="profile-wrapper">
@@ -50,7 +50,7 @@
         </div>
         <input type="file" accept="image/*" name="image" class="input-image" id="input-image">
         <!-- <div class="submit-btn">Confirm</div> -->
-        <button type="submit" class="submit-btn">Confirm</button>
+        <div type="submit" class="submit-btn" id="submit-btn">Confirm</div>
     </form>
 </body>
 </html>
