@@ -32,13 +32,11 @@ class SubCategoriesTableSeeder extends Seeder
             ['CategoryProductID' => 3, 'NameSubCategory' => 'Highlighters', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 3, 'NameSubCategory' => 'Paint markers', 'created_at' => now(), 'updated_at' => now()],
 
-            // Papers Subcategories
+            // Books & Papers Subcategories
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Writing paper', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Printing paper', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Specialty paper', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Sticky notes', 'created_at' => now(), 'updated_at' => now()],
-
-            // Books Subcategories
             ['CategoryProductID' => 5, 'NameSubCategory' => 'Notebooks', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 5, 'NameSubCategory' => 'Planners', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 5, 'NameSubCategory' => 'Sketchbooks', 'created_at' => now(), 'updated_at' => now()],
@@ -46,21 +44,25 @@ class SubCategoriesTableSeeder extends Seeder
 
             // Cutting Tools Subcategories
             ['CategoryProductID' => 6, 'NameSubCategory' => 'Scissors', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Craft knives', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Pinking shears', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Rotary cutters', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 6, 'NameSubCategory' => 'Cutters', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 6, 'NameSubCategory' => 'Sharpeners', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 6, 'NameSubCategory' => 'Punch hole', 'created_at' => now(), 'updated_at' => now()],
 
             // Sticking Tools Subcategories
             ['CategoryProductID' => 7, 'NameSubCategory' => 'Glue sticks', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 7, 'NameSubCategory' => 'Liquid glue', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 7, 'NameSubCategory' => 'Tape', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Glue dots', 'created_at' => now(), 'updated_at' => now()],
 
             // Correcting Tools Subcategories
-            ['CategoryProductID' => 8, 'NameSubCategory' => 'White out correction tape', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction tape', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction fluid', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 8, 'NameSubCategory' => 'Erasers', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction pens', 'created_at' => now(), 'updated_at' => now()],
+
+            // Others Subcategories
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Pencil cases', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Rulers', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Staplers', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Organizers', 'created_at' => now(), 'updated_at' => now()],
         ]);
     }
 }

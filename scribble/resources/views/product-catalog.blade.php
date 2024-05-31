@@ -97,7 +97,7 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Others</a>
                 <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Pencil Case</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Pencil Cases</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Rulers</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Staplers</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Organizers (file organizer, desk organizer)</a></li>
