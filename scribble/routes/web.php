@@ -18,12 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name("home");
 
 Route::get("/sign-in", [signinController::class, "signin"])->name("sign-in");
 Route::post("/sign-in/create", [signinController::class, "createUser"])->name("createUser");
 Route::get("/log-in", [signinController::class, "login"])->name("log-in");
 Route::post("/log-in", [signinController::class, "authenticate"])->name("authenticate");
+Route::post("/log-out", [signinController::class, "logout"])->name("log-out");
 
 Route::get('/profile', [UserController::class, 'showProfile'])->middleware('auth');
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");

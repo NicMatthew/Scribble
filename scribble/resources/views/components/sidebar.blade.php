@@ -16,9 +16,10 @@
             <a href="#" class="b2 transaction-list" style="text-decoration: none">Transaction List</a>
             <a href="#" class="b2 wishlist" style="text-decoration: none">Wishlist</a>
         </div>
-        <div class="sidebar-bottom">
-            <a href="#" class="b2" style="text-decoration: none">Log out</a>
-        </div>
+        <form class="sidebar-bottom" name="" action="{{route("log-out")}}" method="POST">
+            @csrf
+            <button class="b2" style="text-decoration: none" type="submit">Log out</button>
+        </form>
     </div>
 </body>
 </html>
