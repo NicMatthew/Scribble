@@ -143,6 +143,7 @@ body {
     margin: 40px 0px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    border: none;
 }
 
 .submit-btn:hover {
