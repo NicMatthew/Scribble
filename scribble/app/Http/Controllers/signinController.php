@@ -33,6 +33,15 @@ class signinController extends Controller
         return view("log-in");
     }
 
+    public function logout() {
+        auth()->logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect()->route("home");
+    }
+
     public function authenticate() {
         $validated = request()->all();
         $validated["EmailUser"] = $validated["email"];
