@@ -49,22 +49,15 @@
         </ul>
         <ul class="b3 dropdown">
             <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Papers</a>
+                <a href="#" style="text-decoration:none">Books & Papers</a>
                 <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Writing paper (lined, unlined, different sizes)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Printing paper (letter size, A4 size, cardstock)</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Writing paper (lined, unlined)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Printing paper</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Specialty paper (tracing paper, origami paper, watercolor paper)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sticky notes (various sizes and colors)</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Books</a>
-                <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Notebooks (spiral bound, composition notebooks, journals)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Planners (daily planners, weekly planners, bullet journals)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sketchbooks (hardcover, softcover, different paper types)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Sticky notes</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Notebooks (spiral bound, journals)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Planners (daily planners, weekly planners)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Sketchbooks (hardcover, softcover)</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Guestbooks (wedding guestbooks, memory books)</a></li>
                 </ul>
             </li>
@@ -73,10 +66,10 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Cutting Tools</a>
                 <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Scissors (straight edge, fabric scissors, decorative scissors)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Craft knives (exacto knives, utility knives)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Pinking shears (for creating decorative edges)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Rotary cutters (for quilting, scrapbooking)</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Scissors (straight edge, fabric scissors, decorative scissors, pinking shears)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Cutters (craft knives, utility knives)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Sharpeners (Manual, Electric)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Punch Hole</a></li>
                 </ul>
             </li>
         </ul>
@@ -87,7 +80,6 @@
                     <li class="b3"><a href="#" style="text-decoration:none">Glue sticks (permanent, temporary)</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Liquid glue (white glue, school glue)</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Tape (scotch tape, masking tape, double-sided tape)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Glue dots (permanent, removable)</a></li>
                 </ul>
             </li>
         </ul>
@@ -96,8 +88,19 @@
                 <a href="#" style="text-decoration:none">Correcting Tools</a>
                 <ul class="dropdown-content">
                     <li class="b3"> <a href="#" style="text-decoration:none">Correction tape</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Correction fluid (liquid white out)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Correction fluid</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Erasers (vinyl erasers, kneaded erasers, electric erasers)</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="b3 dropdown">
+            <li class="dropdown-trigger">
+                <a href="#" style="text-decoration:none">Others</a>
+                <ul class="dropdown-content">
+                    <li class="b3"> <a href="#" style="text-decoration:none">Pencil Case</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Rulers</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Staplers</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Organizers (file organizer, desk organizer)</a></li>
                 </ul>
             </li>
         </ul>
