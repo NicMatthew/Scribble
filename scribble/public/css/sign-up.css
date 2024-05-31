@@ -1,9 +1,6 @@
 *{
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-family: Helvetica;
 }
 
@@ -51,6 +48,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 1.5vh;
+    position: relative;
     /* background-color: lawngreen; */
     /* margin: 1vh 1vw; */
 }
@@ -71,6 +69,7 @@
     padding-bottom: 1.5vh;
     padding-left: 1vw;
     padding-right: 1vw;
+    font-size: 0.9rem;
 }
 
 .input-box input::placeholder{
@@ -139,4 +138,14 @@ input[type=date]:invalid::-webkit-datetime-edit {
     font-size: 0.9rem;
     color: #FF0000;
     margin-top: 5px;
+}
+
+.input-box .pass-eye {
+    width: fit-content;
+    height: 1rem;
+    position: absolute;
+    right: 0px;
+    bottom: 1.5vh;
+    margin: 0px;
+    cursor: pointer;
 }
