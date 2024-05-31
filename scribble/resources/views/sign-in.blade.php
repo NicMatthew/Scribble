@@ -34,7 +34,10 @@
 
             <div class="input-box">
                 <h3>Password</h3>
-                <input type="password" placeholder="Password" name="password" id="password" required>
+                <div style="position: relative;">
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <img src="/icons/eyes-close.svg" id="pass-eye" class="pass-eye">
+                </div>
             </div>
 
             <div class="btn" id="submit-btn">Sign Up</div>
