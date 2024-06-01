@@ -1,6 +1,7 @@
 let email = document.getElementById("email")
 let password = document.getElementById("password")
 let submitBtn = document.getElementById("submit-btn")
+let passEye = document.getElementById("pass-eye")
 let alertArr = []
 
 function removeAllAlert() {
@@ -26,7 +27,7 @@ submitBtn.addEventListener("click", (e)=>{
     }
 
     if (password.value.length == 0) {
-        let parEl = password.parentElement
+        let parEl = password.parentElement.parentElement
         let alert = document.createElement("p")
         alert.innerHTML = "Password can't be empty!"
 
@@ -37,5 +38,16 @@ submitBtn.addEventListener("click", (e)=>{
 
     if (alertArr.length == 0) {
         document.forms["login-form"].submit()
+    }
+})
+
+
+passEye.addEventListener("click", (e)=>{
+    if (password.type == "password") {
+        password.type = "text"
+        passEye.src = "/icons/eyes-open.svg"
+    } else {
+        password.type = "password"
+        passEye.src = "/icons/eyes-close.svg"
     }
 })

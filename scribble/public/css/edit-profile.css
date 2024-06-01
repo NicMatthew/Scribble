@@ -153,3 +153,10 @@ body {
 .input-image {
     display: none;
 }
+
+.alert p {
+    font-family: Helvetica;
+    font-size: 0.9rem;
+    color: #FF0000;
+    margin-top: 5px;
+}

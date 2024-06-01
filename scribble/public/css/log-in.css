@@ -1,9 +1,6 @@
 *{
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-family: Helvetica;
 }
 
@@ -64,10 +61,11 @@
     padding-top:1.5vh ;
     padding-bottom: 1.5vh;
     padding-left: 2vh;
+    font-size: 0.9rem;
 }
 
 .input-box input::placeholder{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .wrapper .btn{
@@ -129,4 +127,14 @@
     font-size: 0.9rem;
     color: #FF0000;
     margin-top: 5px;
+}
+
+.input-box .pass-eye {
+    width: fit-content;
+    height: 1rem;
+    position: absolute;
+    right: 0px;
+    bottom: 1.5vh;
+    margin: 0px;
+    cursor: pointer;
 }
