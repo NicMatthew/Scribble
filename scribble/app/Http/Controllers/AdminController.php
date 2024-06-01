@@ -26,7 +26,11 @@ class AdminController extends Controller
         ]);
     }
     public function product_add(){
-        $products = request()->all();
+        
+        // dd(request()->hasFile('ProductImages'));
+        dd(request()->file('ProductImages'));
+        
+        $products = request()->all(); 
         $newProduct = new Product(); 
         $newProductEntry = new ProductEntry(); 
         $newVariants = new Variant();

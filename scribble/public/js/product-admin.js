@@ -72,5 +72,3 @@ closeDiscBtn.addEventListener("click", (e) => {
 });
 
 
-
-
