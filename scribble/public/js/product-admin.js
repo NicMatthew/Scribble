@@ -72,3 +72,48 @@ closeDiscBtn.addEventListener("click", (e) => {
 });
 
 
+document.getElementById("uploadImage").addEventListener("change", function () {
+    const fileList = this.files;
+    const fileLabel = document.getElementById("fileLabel");
+    const fileListElement = document.getElementById("fileList");
+    fileListElement.innerHTML = "";
+
+    if (fileList.length === 0) {
+        fileLabel.textContent = "No Image Selected";
+    } else {
+        fileLabel.textContent = `${fileList.length} file(s) selected`;
+        for (let i = 0; i < fileList.length; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = fileList[i].name;
+
+            const removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.setAttribute("data-index", i);
+            removeButton.addEventListener("click", function (event) {
+                const index = parseInt(event.target.getAttribute("data-index"));
+                removeFile(index);
+            });
+
+            listItem.appendChild(removeButton);
+            fileListElement.appendChild(listItem);
+        }
+    }
+});
+
+function removeFile(index) {
+    const fileInput = document.getElementById("uploadImage");
+    const dataTransfer = new DataTransfer();
+
+    const fileList = fileInput.files;
+    for (let i = 0; i < fileList.length; i++) {
+        if (i !== index) {
+            dataTransfer.items.add(fileList[i]);
+        }
+    }
+
+    fileInput.files = dataTransfer.files;
+
+    // Trigger the change event to update the file list display
+    const event = new Event("change");
+    fileInput.dispatchEvent(event);
+}

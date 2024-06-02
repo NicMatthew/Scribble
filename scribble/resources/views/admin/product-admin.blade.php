@@ -113,6 +113,7 @@
                         <label class="input-name">Product Images</label>
                         <input type="file" class="input-field" name="ProductImages[]" id="uploadImage" title=" " multiple=>
                         <label for="uploadImage" id="fileLabel">No Image Selected</label>
+                        <ul id="fileList"></ul>
                     </div>
                     <div class="input-wrapper" id="uploadedImage">
                         <div class="image-container" id="imageContainer"></div>
