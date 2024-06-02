@@ -12,28 +12,35 @@
 <body>
     <a class="product-card" href="">
         <div class="product-img">
-            <img src="/images/pict1.jpg">
+            <img src="{{ $product->ProductImage}}">
         </div>
         <hr class="divider">
         <div class="product-details">
             <div class="title-wish">
-                <h3 class="product-title">Sinar Dunia Buku Tulis 38 lembar</h3>
+                <h3 class="product-title">{{ $product->NameProduct}}</h3>
                 <div class="wish" onclick="return false">
                     <img src="/icons/love-outline.svg">
                 </div>
             </div>
             <div class="rating-sell">
                 <div class="rating">
+                @for ($i = 0; $i < 5; $i++)
+                    @if ($i < $product->Rating)
+                        <img src="/icons/star.svg">
+                    @else
+                        <img src="/icons/star.svg">
+                    @endif
+                @endfor
+                    <!-- <img src="/icons/star.svg">
                     <img src="/icons/star.svg">
                     <img src="/icons/star.svg">
                     <img src="/icons/star.svg">
-                    <img src="/icons/star.svg">
-                    <img src="/icons/star.svg">
+                    <img src="/icons/star.svg"> -->
                 </div>
                 <h5 class="sell">100 Terjual</h5>
             </div>
             <div class="price">
-                <h4>Rp. 35.000,00</h4>
+                <h4>{{ $product-> Price}}</h4>
             </div>
         </div>
     </a>

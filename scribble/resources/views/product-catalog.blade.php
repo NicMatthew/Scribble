@@ -132,6 +132,7 @@
             </div>
         </div>
         <div class="products-container">
+<<<<<<< Updated upstream
             @if (isset($searchResults))
             <ul class="list-group">
                 @foreach ($searchResults as $product)
@@ -156,6 +157,11 @@
             @include('components/product-card')
             @include('components/product-card')
             @include('components/product-card')
+=======
+            @foreach ($products as $product)
+                @include('components/product-card')
+            @endforeach
+>>>>>>> Stashed changes
         </div>
     </div>
     @include('components/footer')

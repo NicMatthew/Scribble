@@ -77,6 +77,16 @@
                 </table>
 
             </div>
+
+            <div class="delete-overlay" id="confirmDelete">
+                <div class="do-content">
+                    <p>Are you sure you want to delete this product?</p>
+                    <div class="do-buttons">
+                        <button id="confirmDeleteYes">Close</button>
+                        <button id="confirmDeleteNo">Delete</button>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
             <div class="modal" id="modal">

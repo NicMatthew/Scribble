@@ -1,10 +1,15 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\signinController;
 use App\Http\Controllers\UserController;
+<<<<<<< Updated upstream
 use App\Http\Controllers\ProductController;
 
+=======
+use App\Models\Product;
+>>>>>>> Stashed changes
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,9 +39,15 @@ Route::post('/profile/update', [UserController::class, 'updateProfile'])->middle
 Route::get('/product-catalog', [ProductController::class, 'searchProducts'])->name('search-products');
 // Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show'); 
 
+<<<<<<< Updated upstream
 // Route::get('/product-catalog', function () {
 //     return view('product-catalog');
 // });
+=======
+
+Route::get("/product-catalog", [ProductController::class, "product_catalog"])->name("product_catalog");
+
+>>>>>>> Stashed changes
 
 Route::get('/product-detail', function () {
     return view('product-detail');
