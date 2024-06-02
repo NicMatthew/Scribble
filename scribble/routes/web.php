@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\signinController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,10 +31,12 @@ Route::post("/log-out", [signinController::class, "logout"])->name("log-out");
 Route::get('/profile', [UserController::class, 'showProfile'])->middleware('auth');
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
 Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
+Route::get('/product-catalog', [ProductController::class, 'searchProducts'])->name('search-products');
+// Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show'); 
 
-Route::get('/product-catalog', function () {
-    return view('product-catalog');
-});
+// Route::get('/product-catalog', function () {
+//     return view('product-catalog');
+// });
 
 Route::get('/product-detail', function () {
     return view('product-detail');

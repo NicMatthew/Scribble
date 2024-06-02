@@ -132,6 +132,18 @@
             </div>
         </div>
         <div class="products-container">
+            @if (isset($searchResults))
+            <ul class="list-group">
+                @foreach ($searchResults as $product)
+                <li class="list-group-item">
+                    <a href="{{ route('product-show', $product->name) }}">{{ $product->name }}</a>
+                </li>
+                @endforeach
+                @if (count($searchResults) === 0)
+                    <li class="list-group-item text-muted">No products found</li>
+                @endif
+            </ul>
+            @endif
             @include('components/product-card')
             @include('components/product-card')
             @include('components/product-card')
