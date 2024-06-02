@@ -72,9 +72,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            
                         @endforeach
-                        
                     @endif
                 </table>
 

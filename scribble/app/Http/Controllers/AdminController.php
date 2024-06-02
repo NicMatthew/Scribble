@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductEntry;
+use App\Models\ProductImage;
 use App\Models\SubCategory;
 use App\Models\Variant;
 use Illuminate\Http\Request;
@@ -28,12 +29,13 @@ class AdminController extends Controller
     public function product_add(){
         
         // dd(request()->hasFile('ProductImages'));
-        dd(request()->file('ProductImages'));
+        // dd(request()->file('ProductImages'));
         
         $products = request()->all(); 
         $newProduct = new Product(); 
         $newProductEntry = new ProductEntry(); 
         $newVariants = new Variant();
+        
         // dd($products['ProductSubCategory']);
         
         $testProduct = Product::select("NameProduct")
@@ -76,7 +78,21 @@ class AdminController extends Controller
 
         $newProductEntry->save();
 
-        
+        if(request()->hasFile('ProductImages')){
+            $images = request()->file('ProductImages');
+            foreach($images as $image){
+                $newProductImage = new ProductImage();
+                $imageBase64 = base64_encode(file_get_contents($image->getRealPath()));
+                $newProductImage->Image = 'data:'.$image->getClientMimeType().';base64,'.$imageBase64;
+                
+                $newProductImage->ProductID = Product::select("ProductID")
+                ->where("products.NameProduct","=",$products['ProductName'])->get()->value("ProductID");
+                $newProductImage->VariantID = Variant::select("VariantID")
+                ->where("variants.VariantName","=",$products["ProductVariant"])->get()->value("VariantID");
+                $newProductImage->save();
+            }
+        }
+
         return $this->product_admin();
     }
     

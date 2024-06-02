@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('ImageProductID');
             $table->foreignId('VariantID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VariantID")->on('variants');
             $table->foreignId('ProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("ProductID")->on('products');
-            $table->string('Image');
+            $table->longText('Image');
             $table->timestamps();
         });
     }
