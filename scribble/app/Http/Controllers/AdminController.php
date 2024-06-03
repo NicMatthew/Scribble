@@ -96,4 +96,22 @@ class AdminController extends Controller
         return $this->product_admin();
     }
     
+    public function product_update(){
+        $product = Product::find(request('ProductID'));
+
+        if ($product) {
+            $product->NameProduct = request('ProductName');
+            $product->NameCategory = request('ProductSubCategory');
+            $product->VariantName = request('ProductVariant');
+            $product->Description = request('ProductDescription');
+            $product->Stock = request('ProductStock');
+            $product->Price = request('ProductPrice');
+
+            $product->save();
+
+            return redirect()->back()->with('success', 'Product updated successfully!');
+        }
+
+        return redirect()->back()->with('error', 'Product not found!');
+    }
 }
