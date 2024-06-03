@@ -57,25 +57,25 @@
                 <div class="wrapper prim-2">
                     <img src="/images/paper.png">
                 </div>
-                <h5>Papers</h5>
+                <h5>Books & Papers</h5>
             </a>
             <a class="category" href="">
                 <div class="wrapper prim-2">
                     <img src="/images/book.png">
                 </div>
-                <h5>Books</h5>
+                <h5>Others</h5>
             </a>
             <a class="category" href="">
                 <div class="wrapper sec-1">
                     <img src="/images/cutter.png">
                 </div>
-                <h5>Cutter</h5>
+                <h5>Cutting Tools</h5>
             </a>
             <a class="category" href="">
                 <div class="wrapper sec-2">
                     <img src="/images/glue.png">
                 </div>
-                <h5>Glue</h5>
+                <h5>Sticking Tools</h5>
             </a>
             <a class="category" href="">
                 <div class="wrapper prim-1">
@@ -84,28 +84,19 @@
                 <h5>Correcting Tools</h5>
             </a>
         </div>
-        <a href="" class="btn">
+        <form action="{{ route('product_catalog') }}" method="GET" class="btn">
+            <input type="hidden" name="show_all" value="true">
             <h5>Explore All Products</h5>
-        </a>
+        </form>
     </div>
     <div class="products-section">
         <div class="products-title">
-            <h2>Best Sellers</h2>
+            <h2>New Arrivals</h2>
         </div>
         <div class="products-container">
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
-            @include('components/product-card')
+            @foreach ($products as $product)
+                @include('components/product-card')
+            @endforeach
         </div>
     </div>
     @include('components/footer')

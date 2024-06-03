@@ -132,9 +132,24 @@
             </div>
         </div>
         <div class="products-container">
-            @foreach ($products as $product)
+            @if ($searchTerm && $products->isEmpty())
+                <p class="alert alert-warning">{{ $message }}</p>
+            @endif
+
+            @if ($products->isNotEmpty())
+                <ul class="product-list">
+                    @foreach ($products as $product)
+                        <li>
+                            @include('components/product-card')
+                        </li>
+                    @endforeach
+                </ul>
+            @else
+                <p>No products found.</p>
+            @endif
+            {{-- @foreach ($products as $product)
                 @include('components/product-card')
-            @endforeach
+            @endforeach --}}
         </div>
     </div>
     @include('components/footer')

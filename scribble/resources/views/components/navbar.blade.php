@@ -26,7 +26,8 @@
 
             <!-- Center elements -->
             <div class="col-md-4">
-            <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0" action="{{ route('search-products') }}" method="GET">
+                {{-- action="{{ route('product-catalog') }}" method="GET" --}}
+            <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
                 @csrf
                 <input autocomplete="off" type="search" class="form-control b3" id="search_term" name="search_term" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
                 <input type="submit"><img class="input-group-text border-0 d-lg-flex"  src="/icons/search.png" alt="" style="background-color: #F2758F; height: 35px; border-radius: 0 10px 10px 0; cursor: pointer;">
