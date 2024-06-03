@@ -18,7 +18,7 @@
         </div>
         <form class="sidebar-bottom" name="" action="{{route("log-out")}}" method="POST">
             @csrf
-            <button class="b2" style="text-decoration: none" type="submit">Log out</button>
+            <button class="b2 log-out-btn" style="text-decoration: none" type="submit">Log out</button>
         </form>
     </div>
 </body>

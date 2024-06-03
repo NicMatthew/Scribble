@@ -49,3 +49,14 @@
     height: fit-content;
     line-height: 24px;
 }
+
+.log-out-btn {
+    outline: none;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: var(--prim-1);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
