@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< Updated upstream
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\ProductImage;
+use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 
 class ProductController extends Controller
@@ -16,14 +18,8 @@ class ProductController extends Controller
         $searchResults = Product::where('name', 'like', "%".strtolower($searchTerm)."%")->get();
 
         return view('product-catalog', compact('searchResults', 'searchTerm'));
-=======
-use App\Models\Product;
-use App\Models\ProductImage;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+    }
 
-class ProductController extends Controller
-{
     public function product_catalog(){
         $products = Product::selectRaw('NameProduct, products.ProductID, Rating, MIN(price) as Price')
         ->join('product_entries','products.ProductID','=','product_entries.ProductID')
@@ -45,6 +41,5 @@ class ProductController extends Controller
         // ->join('product_images','products.ProductID','=','product_images.ProductID')
         return view('product-catalog',
         ['products' => $products]);
->>>>>>> Stashed changes
     }
 }
