@@ -9,10 +9,13 @@ function clickQuestion(id) {
         // kondisi masih blm ke klik
         questions[id].style.marginBottom = "2px"
         answers[id].style.display = "flex"
+        questions[id].lastElementChild.style.transform = "rotate(180deg)"
+        console.log(questions[id].lastElementChild);
     }
     else {
         questions[id].style.marginBottom = "2%";
         answers[id].style.display = "none";
+        questions[id].lastElementChild.style.transform = "rotate(0deg)";
 
     }
 }

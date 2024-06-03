@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/css/variable.css">
         <link rel="stylesheet" href="/css/product-admin.css">
         <link rel="stylesheet" href="/css/header-standard.css">
-        <link rel="stylesheet" href="/css/dashboard.css">
+
         <script src="/js/product-admin.js" defer=""></script>
     </head>
     <body>
@@ -17,7 +17,7 @@
         <div class="main-content">
             <div class="content-header">
                 <div class="the-title">
-                    <div class="header-title">Products Management</div>
+                    <div class="header-title" style="color: white">Products Management</div>
                     <div class="new-prod-btn" id="product-add">
                         <img src="\images\only-plus.png" alt="Plus">
                         <p class="new-prod-txt">New Product</p>
@@ -25,7 +25,6 @@
                 </div>
                 <hr class="content-line">
             </div>
-
             <div class="sub-content">
                 <p class="all-prods">All Products</p>
                 <p class="total">Total Products: {{ count($products) }}</p>
@@ -78,7 +77,7 @@
 
             </div>
 
-            <div class="delete-overlay" id="confirmDelete">
+            <div class="delete-overlay hide" id="confirmDelete">
                 <div class="do-content">
                     <p>Are you sure you want to delete this product?</p>
                     <div class="do-buttons">
@@ -144,8 +143,8 @@
 
         </div>
 
-        <div class="overlay" id="edit-overlay"></div>
-            <div class="popup" id="edit-popup">
+        <div class="overlay hide" id="edit-overlay"></div>
+            <div class="popup hide" id="edit-popup">
                 <div class="header">
                     <div class="close-btn" id="close-btn-edit">
                         <img src="/icons/close.svg">
