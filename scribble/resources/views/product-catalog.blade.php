@@ -18,10 +18,10 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Pens</a>
                 <ul class="dropdown-content">
-                    <li class="b3"><a href="#" style="text-decoration:none">Ballpoint pens (gel pens, rollerball pens)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Fountain pens (cartridge, bottled ink)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Marker pens (permanent, highlighters)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Specialty pens (fineliners, calligraphy pens, erasable pens)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Ballpoint pens</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Fountain pens</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Marker pens</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Specialty pens</a></li>
                 </ul>
             </li>
         </ul>
@@ -29,10 +29,10 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Pencils</a>
                 <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Woodcase pencils (graphite hardness grades)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Mechanical pencils (lead sizes, lead colors)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Colored pencils (artist grade, student grade)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Charcoal pencils (sketching, drawing)</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Woodcase pencils</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Mechanical pencils</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Colored pencils</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Charcoal pencils</a></li>
                 </ul>
             </li>
         </ul>
@@ -40,10 +40,10 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Markers</a>
                 <ul class="dropdown-content">
-                    <li class="b3"><a href="#" style="text-decoration:none">Permanent markers (fine tip, broad tip)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Dry erase markers (chisel tip, bullet tip)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Highlighters (fluorescent colors, different tip widths)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Paint markers (acrylic, oil-based)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Permanent markers</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Dry erase markers</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Highlighters</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Paint markers</a></li>
                 </ul>
             </li>
         </ul>
@@ -51,14 +51,14 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Books & Papers</a>
                 <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Writing paper (lined, unlined)</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Writing paper</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Printing paper</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Specialty paper (tracing paper, origami paper, watercolor paper)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Specialty paper</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Sticky notes</a></li>
-                    <li class="b3"> <a href="#" style="text-decoration:none">Notebooks (spiral bound, journals)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Planners (daily planners, weekly planners)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sketchbooks (hardcover, softcover)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Guestbooks (wedding guestbooks, memory books)</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Notebooks</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Planners</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Sketchbooks</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Guestbooks</a></li>
                 </ul>
             </li>
         </ul>
@@ -66,9 +66,9 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Cutting Tools</a>
                 <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Scissors (straight edge, fabric scissors, decorative scissors, pinking shears)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Cutters (craft knives, utility knives)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sharpeners (Manual, Electric)</a></li>
+                    <li class="b3"> <a href="#" style="text-decoration:none">Scissors</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Cutters</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Sharpeners</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Punch Hole</a></li>
                 </ul>
             </li>
@@ -77,9 +77,9 @@
             <li class="dropdown-trigger">
                 <a href="#" style="text-decoration:none">Sticking Tools</a>
                 <ul class="dropdown-content">
-                    <li class="b3"><a href="#" style="text-decoration:none">Glue sticks (permanent, temporary)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Liquid glue (white glue, school glue)</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Tape (scotch tape, masking tape, double-sided tape)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Glue sticks</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Liquid glue</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Tape</a></li>
                 </ul>
             </li>
         </ul>
@@ -89,7 +89,7 @@
                 <ul class="dropdown-content">
                     <li class="b3"> <a href="#" style="text-decoration:none">Correction tape</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Correction fluid</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Erasers (vinyl erasers, kneaded erasers, electric erasers)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Erasers</a></li>
                 </ul>
             </li>
         </ul>
@@ -100,7 +100,7 @@
                     <li class="b3"> <a href="#" style="text-decoration:none">Pencil Cases</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Rulers</a></li>
                     <li class="b3"><a href="#" style="text-decoration:none">Staplers</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Organizers (file organizer, desk organizer)</a></li>
+                    <li class="b3"><a href="#" style="text-decoration:none">Organizers</a></li>
                 </ul>
             </li>
         </ul>
@@ -137,13 +137,9 @@
             @endif
 
             @if ($products->isNotEmpty())
-                <ul class="product-list">
                     @foreach ($products as $product)
-                        <li>
                             @include('components/product-card')
-                        </li>
                     @endforeach
-                </ul>
             @else
                 <p>No products found.</p>
             @endif

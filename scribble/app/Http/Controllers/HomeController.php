@@ -12,7 +12,7 @@ class HomeController extends Controller
                 ->join('product_entries', 'products.ProductID', '=', 'product_entries.ProductID')
                 ->groupBy('ProductID')
                 ->orderBy('products.created_at', 'desc') // Order by created_at descending (newest first)
-                ->limit(9) // Limit to 9 results
+                ->limit(8) // Limit to 9 results
                 ->get();
 
             foreach ($products as $product) {
