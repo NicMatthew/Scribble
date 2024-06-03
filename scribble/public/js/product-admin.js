@@ -117,3 +117,50 @@ function removeFile(index) {
     const event = new Event("change");
     fileInput.dispatchEvent(event);
 }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".edit").forEach((editBtn) => {
+        editBtn.addEventListener("click", function () {
+            // Tampilkan overlay dan pop-up
+            document.getElementById("edit-overlay").style.display = "block";
+            document.getElementById("edit-popup").style.display = "block";
+
+            // Ambil data produk dari baris tabel
+            let productRow = this.closest("tr");
+            let productID =
+                productRow.querySelector("td:nth-child(2)").textContent;
+            let productName =
+                productRow.querySelector(".prod-name").textContent;
+            let productSubCategory =
+                productRow.querySelector("td:nth-child(4)").textContent;
+            let productVariant =
+                productRow.querySelector("td:nth-child(5)").textContent;
+            let productStock =
+                productRow.querySelector("td:nth-child(6)").textContent;
+            let productPrice =
+                productRow.querySelector("td:nth-child(7)").textContent;
+
+            // Isi form dengan data produk
+            document.getElementById("editProductID").value = productID;
+            document.getElementById("editProductName").value = productName;
+            document.getElementById("editProductSubCategory").value =
+                productSubCategory;
+            document.getElementById("editProductVariant").value =
+                productVariant;
+            document.getElementById("editProductStock").value = productStock;
+            document.getElementById("editProductPrice").value = productPrice;
+        });
+    });
+
+    // Event listener untuk menutup pop-up
+    document
+        .getElementById("close-btn-edit")
+        .addEventListener("click", function () {
+            document.getElementById("edit-overlay").style.display = "none";
+            document.getElementById("edit-popup").style.display = "none";
+        });
+});

@@ -402,3 +402,52 @@ input[type='file'] {
     font-size: 16px;
     cursor: pointer;
 } 
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    z-index: 1000;
+}
+
+.popup {
+    display: block;
+    /* position: relative; */
+    /* top: 50%; */
+    /* top: 0; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 800px;
+    padding: 20px;
+    z-index: 1001;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 1.2em;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.close-btn {
+    cursor: pointer;
+}

@@ -143,5 +143,57 @@
             </div>
 
         </div>
+
+        <div class="overlay" id="edit-overlay"></div>
+            <div class="popup" id="edit-popup">
+                <div class="header">
+                    <div class="close-btn" id="close-btn-edit">
+                        <img src="/icons/close.svg">
+                    </div>
+                    <div class="header-title">Edit Product</div>
+                    <hr class="divider">
+                   </div>
+                <!-- Form edit product -->
+                <form class="edit-product-form" method="POST" action="{{ route('product_update') }}" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="ProductID" id="editProductID">
+            <div class="input-wrapper">
+                <div class="input-name">Product Name</div>
+                <input type="text" class="input-field" placeholder="Product Name" name="ProductName" id="editProductName">
+            </div>
+            <div class="input-wrapper">
+                <div class="input-name">Product Sub Category</div>
+                <select class="input-field" name="ProductSubCategory" id="editProductSubCategory">
+                    <option value="" disabled>Choose Category</option>
+                    @foreach ($subcategories as $subcategory)
+                        <option value="{{ $subcategory->NameSubCategory }}">{{ $subcategory->NameSubCategory }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <div class="input-name">Product Variant</div>
+                <input type="text" class="input-field" placeholder="Product Variant" name="ProductVariant" id="editProductVariant">
+            </div>
+            <div class="input-wrapper">
+                <label class="input-name">Product Images</label>
+                <input type="file" class="input-field" name="ProductImages[]" id="editUploadImage" title=" " accept="image/*" multiple>
+                <label for="editUploadImage" id="editFileLabel">No Image Selected</label>
+                <ul id="editFileList"></ul>
+            </div>
+            <div class="input-wrapper">
+                <div class="input-name">Product Description</div>
+                <input type="text" class="input-field" placeholder="Product Description" name="ProductDescription" id="editProductDescription">
+            </div>
+            <div class="input-wrapper">
+                <div class="input-name">Product Stock</div>
+                <input type="text" class="input-field" placeholder="Product Stock" name="ProductStock" id="editProductStock">
+            </div>
+            <div class="input-wrapper">
+                <div class="input-name">Product Price</div>
+                <input type="text" class="input-field" placeholder="Product Price" name="ProductPrice" id="editProductPrice">
+            </div>
+            <input class="save-edit-product" type="submit" value="Save Changes">
+        </form>
+            </div>
     </body>
     </html>

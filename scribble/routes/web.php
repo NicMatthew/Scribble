@@ -110,3 +110,4 @@ Route::get('/order-admin', function () {
 
 Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
 Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
+Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
