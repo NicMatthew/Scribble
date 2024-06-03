@@ -34,13 +34,27 @@ class UserController extends Controller
         //     'password' => bcrypt($request->password),
         // ]);
 
-        $userData = [
+        if($request->password == "••••••••"){
+            $userData = [
+            'NameUser' => $request->name,
+            'DOBUser' => $request->dob,
+            'PhoneNumberUser' => $request->phoneNumber,
+            'EmailUser' => $request->email
+            ];
+
+        }
+        else{
+            $userData = [
             'NameUser' => $request->name,
             'DOBUser' => $request->dob,
             'PhoneNumberUser' => $request->phoneNumber,
             'EmailUser' => $request->email,
             'password' => Hash::make($request->password)
-        ];
+            ];
+        }
+
+        
+        // dd($userData);
 
         // Cek apakah ada file gambar yang diunggah
         if ($request->hasFile('image')) {
