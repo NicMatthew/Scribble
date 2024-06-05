@@ -12,7 +12,7 @@
     <script src="/js/home.js" defer=""></script>
 </head>
 <body>
-    @include('components/navbar-before')
+    @include('components/navbar')
     <div class="banner-section">
         <div class="banner">
             <div class="banner-img" id="banner-carousel">

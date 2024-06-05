@@ -51,7 +51,7 @@ class signinController extends Controller
         if (auth()->attempt($validated)) {
             request()->session()->regenerate();
 
-            return redirect("/profile");
+            return redirect()->route("home");
         }
         return redirect()->route("log-in")->withErrors([
             "message" => "No matching email with the password!"

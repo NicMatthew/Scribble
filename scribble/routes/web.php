@@ -31,12 +31,12 @@ Route::get("/log-in", [signinController::class, "login"])->name("log-in");
 Route::post("/log-in", [signinController::class, "authenticate"])->name("authenticate");
 Route::post("/log-out", [signinController::class, "logout"])->name("log-out");
 
-Route::get('/profile', [UserController::class, 'showProfile'])->middleware('auth');
+Route::get('/profile', [UserController::class, 'showProfile'])->name("profile")->middleware('auth');
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
 Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
 // Route::get('/product-catalog', [ProductController::class, 'product_catalog1'])->name('product-catalog');
 Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show'); 
+// Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show');
 
 // Route::get('/product-catalog', function () {
 //     return view('product-catalog');
