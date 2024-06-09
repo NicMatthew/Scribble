@@ -59,20 +59,14 @@
                 </div>
                 <h5>Books & Papers</h5>
             </a>
-            <a class="category" href="{{ route('product-catalog', ['category' => 'Others']) }}">
-                <div class="wrapper prim-2">
-                    <img src="/images/book.png">
-                </div>
-                <h5>Others</h5>
-            </a>
             <a class="category" href="{{ route('product-catalog', ['category' => 'Cutting Tools']) }}">
-                <div class="wrapper sec-1">
+                <div class="wrapper prim-2">
                     <img src="/images/cutter.png">
                 </div>
                 <h5>Cutting Tools</h5>
             </a>
             <a class="category" href="{{ route('product-catalog', ['category' => 'Sticking Tools']) }}">
-                <div class="wrapper sec-2">
+                <div class="wrapper sec-1">
                     <img src="/images/glue.png">
                 </div>
                 <h5>Sticking Tools</h5>
@@ -83,10 +77,19 @@
                 </div>
                 <h5>Correcting Tools</h5>
             </a>
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Others']) }}">
+                <div class="wrapper sec-2">
+                    <img src="/images/book.png">
+                </div>
+                <h5>Others</h5>
+            </a>
         </div>
+        <!-- <button href="{{ route('product_catalog') }}" class="btn" type="submit">
+            <h5>Explore All Products</h5>
+        </button> -->
         <form action="{{ route('product_catalog') }}" method="GET" class="btn">
             <input type="hidden" name="show_all" value="true">
-            <h5>Explore All Products</h5>
+            <button type="submit" class="h5">Explore All Products</button>
         </form>
     </div>
     <div class="products-section">

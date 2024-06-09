@@ -41,7 +41,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //     return view('product-catalog');
 // });
 
-Route::get("/product-catalog", [ProductController::class, "product_catalog"])->name("product_catalog");
+// Route::get("/product-catalog", [ProductController::class, "product_catalog"])->name("product_catalog");
+Route::get('/product-catalog', [ProductController::class, 'showAllProducts'])->name('product_catalog');
 Route::get('/product-catalog/{category}', [ProductController::class, 'showCategory'])->name('product-catalog');
 Route::get('/search', [ProductController::class, 'search']);
 

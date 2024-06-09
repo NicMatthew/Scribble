@@ -122,4 +122,23 @@ class ProductController extends Controller
         // return view('product-catalog', compact('products', 'categoryName'));
     }
 
+    public function showAllProducts(Request $request)
+    {
+        // Fetch all products with their images and entries
+        $products = Product::with(['images', 'entries'])->get();
+
+        // Add the first image and the minimum price to the main product object
+        foreach ($products as $product) {
+            // Adding the first image
+            $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+            // Adding the minimum price
+            $product->Price = $product->entries->min('Price') ?? 'N/A';
+        }
+
+        $categoryName = null;
+        $search = null; 
+        return view('product-catalog', compact('products', 'categoryName', 'search'));
+    }
+
 }
