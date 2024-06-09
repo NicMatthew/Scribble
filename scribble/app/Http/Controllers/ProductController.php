@@ -10,13 +10,17 @@ use Illuminate\Support\Arr;
 
 class ProductController extends Controller
 {
-    public function searchProducts(Request $request)
+    public function search(Request $request)
     {
-        $searchTerm = $request->input('search_term');
+        $search = $request->search;
+        $products = Product::where(function($query) use ($search){
 
-        $searchResults = Product::where('name', 'like', "%".strtolower($searchTerm)."%")->get();
+            $query->where('NameProduct', 'like', "%$search%");
 
-        return view('product-catalog', compact('searchResults', 'searchTerm'));
+        })
+        ->get();
+        return view('product-catalog', compact('products', 'search'));
+
     }
 
     public function product_catalog(){

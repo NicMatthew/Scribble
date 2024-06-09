@@ -132,8 +132,8 @@
             </div>
         </div>
         <div class="products-container">
-            @if ($searchTerm && $products->isEmpty())
-                <p class="alert alert-warning">{{ $message }}</p>
+            @if ($search && $products->isEmpty())
+                <p class="alert alert-warning"> Product not found </p>
             @endif
 
             @if ($products->isNotEmpty())

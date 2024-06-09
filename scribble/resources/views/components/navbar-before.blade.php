@@ -25,12 +25,11 @@
 
             <!-- Center elements -->
             <div class="col-md-4">
-                <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-                    <input autocomplete="off" type="search" class="form-control b3"  id="search_term" name="search_term" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
-                    {{-- action="{{ route('product-catalog') }}" method="GET" --}}
-                    <a href="" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer; width: 50px">
+                <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0" method="get" action="/search">
+                    <input autocomplete="off" type="search" class="form-control b3"  id="search_term" name="search" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" value="{{isset($search) ? $search : ''}}"/>
+                    <button type="submit" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer; width: 50px; border:none">
                         <img src="/icons/search.png" alt="Search" style="width:50%; padding-top: 5px">
-                    </a>
+                    </button>
                 </form>
             </div>
             <!-- Center elements -->

@@ -43,6 +43,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // });
 
 Route::get("/product-catalog", [ProductController::class, "product_catalog1"])->name("product_catalog");
+Route::get('/search', [ProductController::class, 'search']);
 
 
 Route::get('/product-detail', function () {
