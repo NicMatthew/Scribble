@@ -141,10 +141,10 @@ input[type=date]:invalid::-webkit-datetime-edit {
 }
 
 .input-box .pass-eye {
-    width: fit-content;
+    width: 20px;
     height: 1rem;
     position: absolute;
-    right: 0px;
+    right: 15px;
     bottom: 1.5vh;
     margin: 0px;
     cursor: pointer;

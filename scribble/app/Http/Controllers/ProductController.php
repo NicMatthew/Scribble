@@ -6,32 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\SubCategory;
 use Illuminate\Support\Arr;
 
 
 class ProductController extends Controller
 {
-    public function search(Request $request)
-    {
-    $search = $request->search;
-    $products = Product::where('NameProduct', 'like', "%$search%")
-                        ->with(['images', 'entries']) // Eager load images and entries
-                        ->get();
-
-    // Add the first image and the minimum price to the main product object
-    foreach ($products as $product) {
-        // Adding the first image
-        $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-        // Adding the minimum price
-        $product->Price = $product->entries->min('Price');
-    }
-
-    $categoryName = null;
-
-    return view('product-catalog', compact('products', 'categoryName', 'search'));
-    }
-
     public function product_catalog(){
         $products = Product::selectRaw('NameProduct, products.ProductID, Rating, MIN(price) as Price')
         ->join('product_entries','products.ProductID','=','product_entries.ProductID')
@@ -79,29 +59,143 @@ class ProductController extends Controller
         }
 
         $search = null;
+        $categories = Category::all();
+        $subcategories = SubCategory::all();
 
-        return view('product-catalog', compact('products', 'categoryName', 'search'));
+        return view('product-catalog', compact('products', 'categoryName', 'search','categories','subcategories'));
 
         // return view('product-catalog', compact('products', 'categoryName'));
     }
 
     public function showAllProducts(Request $request)
     {
-        // Fetch all products with their images and entries
-        $products = Product::with(['images', 'entries'])->get();
+        $selected = null;
+        if($request->search != null){
+            if($request->category != null || $request->category != ""){
+                $search = $request->search;
+                $category = $request->category;
+                $products = Product::where('NameProduct', 'like', "%$search%")
+                                    ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+                                    ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
+                                    ->where("NameCategory","=",$category)
+                                    ->with(['images', 'entries']) // Eager load images and entries
+                                    ->get();
 
-        // Add the first image and the minimum price to the main product object
-        foreach ($products as $product) {
-            // Adding the first image
-            $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+                // Add the first image and the minimum price to the main product object
+                foreach ($products as $product) {
+                    // Adding the first image
+                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
 
-            // Adding the minimum price
-            $product->Price = $product->entries->min('Price') ?? 'N/A';
+                    // Adding the minimum price
+                    $product->Price = $product->entries->min('Price');
+                }
+
+            }
+            elseif ($request->sub_category != null || $request->sub_category != ""){
+                $search = $request->search;
+                $subcategory = $request->sub_category;
+                $products = Product::where('NameProduct', 'like', "%$search%")
+                                    ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+                                    ->where("NameSubCategory","=",$subcategory)
+                                    ->with(['images', 'entries']) // Eager load images and entries
+                                    ->get();
+
+                // Add the first image and the minimum price to the main product object
+                foreach ($products as $product) {
+                    // Adding the first image
+                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+                    // Adding the minimum price
+                    $product->Price = $product->entries->min('Price');
+                }
+
+            }
+            else{
+                $search = $request->search;
+                $products = Product::where('NameProduct', 'like', "%$search%")
+                                    ->with(['images', 'entries']) // Eager load images and entries
+                                    ->get();
+
+                // Add the first image and the minimum price to the main product object
+                foreach ($products as $product) {
+                    // Adding the first image
+                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+                    // Adding the minimum price
+                    $product->Price = $product->entries->min('Price');
+                }
+
+                $categoryName = null;
+
+            }
+   
         }
+        else{
+            if($request->category != null || $request->category != ""){
+                $category = $request->category;
+                $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+                                    ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
+                                    ->where("NameCategory","=",$category)
+                                    ->with(['images', 'entries']) // Eager load images and entries
+                                    ->get();
 
-        $categoryName = null;
-        $search = null; 
-        return view('product-catalog', compact('products', 'categoryName', 'search'));
+                // Add the first image and the minimum price to the main product object
+                foreach ($products as $product) {
+                    // Adding the first image
+                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+                    // Adding the minimum price
+                    $product->Price = $product->entries->min('Price');
+                }
+
+            }
+            elseif ($request->sub_category != null || $request->sub_category != ""){
+                $search = $request->search;
+                $subcategory = $request->sub_category;
+                $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+                                    ->where("NameSubCategory","=",$subcategory)
+                                    ->with(['images', 'entries']) // Eager load images and entries
+                                    ->get();
+
+                // Add the first image and the minimum price to the main product object
+                foreach ($products as $product) {
+                    // Adding the first image
+                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+                    // Adding the minimum price
+                    $product->Price = $product->entries->min('Price');
+                }
+
+            }
+            else{
+                $search = $request->search;
+                $products = Product::with(['images', 'entries']) // Eager load images and entries
+                                    ->get();
+
+                // Add the first image and the minimum price to the main product object
+                foreach ($products as $product) {
+                    // Adding the first image
+                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+                    // Adding the minimum price
+                    $product->Price = $product->entries->min('Price');
+                }
+
+                $categoryName = null;
+
+            }
+        }
+        $search = $request->search;
+        $category_select = $request->category;
+        if($category_select == null){
+            $category_select = Category::join("sub_categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")->get()->first()->NameCategory;
+        }
+        $subcategory_select = $request->sub_category;
+        $categories = Category::all();
+        $subcategories = SubCategory::all();
+        // dd($category);
+        return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select'));
+        
     }
 
 }

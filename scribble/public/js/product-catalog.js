@@ -4,3 +4,29 @@ const dropdownContent = document.querySelector(".dropdown-sort-content");
 dropdownSortBtn.addEventListener("click", function () {
     dropdownSortBtn.classList.toggle("active");
 });
+
+var categories = document.getElementsByClassName("category_select");
+var subcategories = document.getElementsByClassName("sub_category_select");
+var form = document.getElementById("form_catalog")
+
+categories = Array.prototype.slice.call(categories)
+subcategories = Array.prototype.slice.call(subcategories);
+
+console.log(categories)
+
+categories.forEach(category => {
+    category.addEventListener("click", (e) => {
+        form.children[0].setAttribute('value', category.innerHTML)
+        form.children[1].setAttribute("value", "");
+        document.forms["form_catalog"].submit();
+        // console.log(category.innerHTML)
+    })
+});
+subcategories.forEach((subcategory) => {
+    subcategory.addEventListener("click", (e) => {
+        form.children[1].setAttribute("value", subcategory.innerText);
+        form.children[0].setAttribute("value", "");
+        document.forms["form_catalog"].submit()
+    });
+});
+

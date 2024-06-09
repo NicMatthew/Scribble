@@ -14,103 +14,27 @@
 <body>
     @include('components/navbar')
     <div class="menu mb-0">
+        @foreach ($categories as $category)
         <ul class="b3 dropdown">
             <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Pens</a>
+                <a onclick="return false" style="text-decoration:none" class="category_select">{{ $category->NameCategory }}</a>
                 <ul class="dropdown-content">
-                    <li class="b3"><a href="#" style="text-decoration:none">Ballpoint pens</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Fountain pens</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Marker pens</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Specialty pens</a></li>
+                    @foreach ($subcategories as $subcategory)
+                    @if($category->CategoryProductID == $subcategory->CategoryProductID)
+                    <li class="b3 sub_category_select"><a href="#" style="text-decoration:none" >{{ $subcategory->NameSubCategory }}</a></li>
+                    @endif
+                    @endforeach
                 </ul>
             </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Pencils</a>
-                <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Woodcase pencils</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Mechanical pencils</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Colored pencils</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Charcoal pencils</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Markers</a>
-                <ul class="dropdown-content">
-                    <li class="b3"><a href="#" style="text-decoration:none">Permanent markers</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Dry erase markers</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Highlighters</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Paint markers</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Books & Papers</a>
-                <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Writing paper</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Printing paper</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Specialty paper</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sticky notes</a></li>
-                    <li class="b3"> <a href="#" style="text-decoration:none">Notebooks</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Planners</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sketchbooks</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Guestbooks</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Cutting Tools</a>
-                <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Scissors</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Cutters</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Sharpeners</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Punch Hole</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Sticking Tools</a>
-                <ul class="dropdown-content">
-                    <li class="b3"><a href="#" style="text-decoration:none">Glue sticks</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Liquid glue</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Tape</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Correcting Tools</a>
-                <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Correction tape</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Correction fluid</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Erasers</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="b3 dropdown">
-            <li class="dropdown-trigger">
-                <a href="#" style="text-decoration:none">Others</a>
-                <ul class="dropdown-content">
-                    <li class="b3"> <a href="#" style="text-decoration:none">Pencil Cases</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Rulers</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Staplers</a></li>
-                    <li class="b3"><a href="#" style="text-decoration:none">Organizers</a></li>
-                </ul>
-            </li>
-        </ul>
+        </ul> 
+        @endforeach
     </div>
     <div class="content">
         <div class="heading">
             <div class="left-heading">
-                <p class="h2">{{ $categoryName ?? 'All Products' }}</p>
+                <p class="h2">{{ $category_select ?? 'All Products' }}</p>
                 <img src="/icons/chevron-right.svg" alt="right">
-                <p class="b1">Correction Tape</p>
+                <p class="b1">{{ $subcategory_select }}</p>
             </div>
             <div class="right-heading">
                 <div class="b3 dropdown-sort">
@@ -147,6 +71,12 @@
         </div>
     </div>
     @include('components/footer')
+    <form id="form_catalog" style="display: none" name="form_catalog" method="GET" action="{{ route("product_catalog") }}">
+        <input type="text" name="category" value="">
+        <input type="text" name="sub_category" value="">
+        <input type="text" name="search" value="{{ $search }}">
+        <input type="text" name="sorting" value="">
+    </form>
 </body>
 <script src="/js/product-catalog.js"></script>
 </html>
