@@ -142,7 +142,7 @@
                     @endforeach
             @else
                 <p>No products found.</p>
-            @endif
+            @endif            
         </div>
     </div>
     @include('components/footer')

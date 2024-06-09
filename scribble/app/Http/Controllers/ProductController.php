@@ -107,7 +107,11 @@ class ProductController extends Controller
             $product->Price = $product->entries->min('Price');
         }
 
-        return view('product-catalog', compact('products', 'categoryName'));
+        $search = null;
+
+        return view('product-catalog', compact('products', 'categoryName', 'search'));
+
+        // return view('product-catalog', compact('products', 'categoryName'));
     }
 
 }
