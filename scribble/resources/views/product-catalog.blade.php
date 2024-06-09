@@ -108,7 +108,7 @@
     <div class="content">
         <div class="heading">
             <div class="left-heading">
-                <p class="h2">Pens</p>
+                <p class="h2">{{ $categoryName }}</p>
                 <img src="/icons/chevron-right.svg" alt="right">
                 <p class="b1">Correction Tape</p>
             </div>

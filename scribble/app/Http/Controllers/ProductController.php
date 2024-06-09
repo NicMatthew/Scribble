@@ -20,8 +20,9 @@ class ProductController extends Controller
 
         })
         ->get();
-        return view('product-catalog', compact('products', 'search'));
+        $categoryName = null;
 
+        return view('product-catalog', compact('products', 'categoryName', 'search'));
     }
 
     public function product_catalog(){
