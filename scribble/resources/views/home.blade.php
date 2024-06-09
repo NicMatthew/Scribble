@@ -84,10 +84,13 @@
                 <h5>Correcting Tools</h5>
             </a>
         </div>
-        <form action="{{ route('product_catalog') }}" method="GET" class="btn">
+        <a href="{{ route('product_catalog') }}" class="btn">
+            <h5>Explore All Products</h5>
+        </a>
+        <!-- <form action="{{ route('product_catalog') }}" method="GET" class="btn">
             <input type="hidden" name="show_all" value="true">
             <h5>Explore All Products</h5>
-        </form>
+        </form> -->
     </div>
     <div class="products-section">
         <div class="products-title">
