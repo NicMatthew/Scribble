@@ -55,43 +55,6 @@ class ProductController extends Controller
         ['products' => $products]);
     }
 
-    public function product_catalog1(Request $request)
-    {
-        $searchTerm = $request->input('search_term');
-        $showall = $request->has('show_all'); // Check for "show_all" hidden field
-
-        $productsQuery = Product::selectRaw('NameProduct, products.ProductID, Rating, MIN(price) as Price')
-            ->join('product_entries', 'products.ProductID', '=', 'product_entries.ProductID')
-            ->groupBy('ProductID');
-
-        if (!$showall && $searchTerm) {
-            // Search case
-            $productsQuery->where('name', 'like', "%".strtolower($searchTerm)."%");
-        }
-
-        $products = $productsQuery->get();
-
-        // Efficient product image attachment
-        $products = $products->map(function ($product) {
-            $image = Product::join('product_images', 'products.ProductID', '=', 'product_images.ProductID')
-                ->where('products.ProductID', $product->ProductID)
-                ->get()
-                ->first();
-
-            if ($image) { // Check if image exists before adding
-                $product->ProductImage = $image->Image;
-            }
-
-            return $product;
-        });
-
-        $message = ''; // Initialize message for product not found
-        if ($searchTerm && $products->isEmpty()) {
-            $message = 'Product not found.';
-        }
-
-        return view('product-catalog', compact('products', 'searchTerm', 'message'));
-    }
 
     public function showCategory($categoryName)
     {
