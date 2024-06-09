@@ -133,15 +133,16 @@
         </div>
         <div class="products-container">
             @if ($search && $products->isEmpty())
-                <p class="alert alert-warning"> Product not found </p>
+            <div class="container-error-msg">
+                <img src="/icons/error-icon-2.png" alt="">
+                <p class="notFoundMsg b1"> Product not found </p>
+            </div>
             @endif
 
             @if ($products->isNotEmpty())
                     @foreach ($products as $product)
                         @include('components/product-card', ['product' => $product])
                     @endforeach
-            @else
-                <p>No products found.</p>
             @endif            
         </div>
     </div>

@@ -26,12 +26,12 @@
 
             <!-- Center elements -->
             <div class="col-md-4">
-                {{-- action="{{ route('product-catalog') }}" method="GET" --}}
-            <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
-                @csrf
-                <input autocomplete="off" type="search" class="form-control b3" id="search_term" name="search_term" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" />
-                <input type="submit"><img class="input-group-text border-0 d-lg-flex"  src="/icons/search.png" alt="" style="background-color: #F2758F; height: 35px; border-radius: 0 10px 10px 0; cursor: pointer;">
-            </form>
+                <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0" method="get" action="/search">
+                    <input autocomplete="off" type="search" class="form-control b3"  id="search_term" name="search" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" value="{{isset($search) ? $search : ''}}"/>
+                    <button type="submit" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer; width: 50px; border:none">
+                        <img src="/icons/search.png" alt="Search" style="width:50%; padding-top: 5px">
+                    </button>
+                </form>
             </div>
             <!-- Center elements -->
 
