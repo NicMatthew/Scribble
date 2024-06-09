@@ -13,16 +13,23 @@ class ProductController extends Controller
 {
     public function search(Request $request)
     {
-        $search = $request->search;
-        $products = Product::where(function($query) use ($search){
+    $search = $request->search;
+    $products = Product::where('NameProduct', 'like', "%$search%")
+                        ->with(['images', 'entries']) // Eager load images and entries
+                        ->get();
 
-            $query->where('NameProduct', 'like', "%$search%");
+    // Add the first image and the minimum price to the main product object
+    foreach ($products as $product) {
+        // Adding the first image
+        $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
 
-        })
-        ->get();
-        $categoryName = null;
+        // Adding the minimum price
+        $product->Price = $product->entries->min('Price');
+    }
 
-        return view('product-catalog', compact('products', 'categoryName', 'search'));
+    $categoryName = null;
+
+    return view('product-catalog', compact('products', 'categoryName', 'search'));
     }
 
     public function product_catalog(){
