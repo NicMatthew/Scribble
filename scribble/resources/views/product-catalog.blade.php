@@ -108,7 +108,7 @@
     <div class="content">
         <div class="heading">
             <div class="left-heading">
-                <p class="h2">Correcting Tools</p>
+                <p class="h2">Pens</p>
                 <img src="/icons/chevron-right.svg" alt="right">
                 <p class="b1">Correction Tape</p>
             </div>
@@ -138,14 +138,11 @@
 
             @if ($products->isNotEmpty())
                     @foreach ($products as $product)
-                            @include('components/product-card')
+                        @include('components/product-card', ['product' => $product])
                     @endforeach
             @else
                 <p>No products found.</p>
             @endif
-            {{-- @foreach ($products as $product)
-                @include('components/product-card')
-            @endforeach --}}
         </div>
     </div>
     @include('components/footer')

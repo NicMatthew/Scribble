@@ -35,9 +35,15 @@ Route::get('/profile', [UserController::class, 'showProfile'])->name("profile")-
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
 Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get("/product-catalog", [ProductController::class, "product_catalog1"])->name("product_catalog");
-Route::get('/search', [ProductController::class, 'search']);
+// Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show');
 
+// Route::get('/product-catalog', function () {
+//     return view('product-catalog');
+// });
+
+Route::get("/product-catalog", [ProductController::class, "product_catalog"])->name("product_catalog");
+Route::get('/product-catalog/{category}', [ProductController::class, 'showCategory'])->name('product-catalog');
+Route::get('/search', [ProductController::class, 'search']);
 
 Route::get('/product-detail', function () {
     return view('product-detail');

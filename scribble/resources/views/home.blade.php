@@ -35,49 +35,49 @@
             <h2>Categories</h2>
         </div>
         <div class="categories-container">
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Pens']) }}">
                 <div class="wrapper sec-2">
                     <img src="/images/pen.png">
                 </div>
                 <h5>Pens</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Pencils']) }}">
                 <div class="wrapper prim-1">
                     <img src="/images/pencil.png">
                 </div>
                 <h5>Pencils</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Markers']) }}">
                 <div class="wrapper sec-1">
                     <img src="/images/marker.png">
                 </div>
                 <h5>Markers</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Books & Papers']) }}">
                 <div class="wrapper prim-2">
                     <img src="/images/paper.png">
                 </div>
                 <h5>Books & Papers</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Others']) }}">
                 <div class="wrapper prim-2">
                     <img src="/images/book.png">
                 </div>
                 <h5>Others</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Cutting Tools']) }}">
                 <div class="wrapper sec-1">
                     <img src="/images/cutter.png">
                 </div>
                 <h5>Cutting Tools</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Sticking Tools']) }}">
                 <div class="wrapper sec-2">
                     <img src="/images/glue.png">
                 </div>
                 <h5>Sticking Tools</h5>
             </a>
-            <a class="category" href="">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Correcting Tools']) }}">
                 <div class="wrapper prim-1">
                     <img src="/images/tape-ex.png">
                 </div>
@@ -95,7 +95,7 @@
         </div>
         <div class="products-container">
             @foreach ($products as $product)
-                @include('components/product-card')
+                @include('components/product-card', ['product' => $product])
             @endforeach
         </div>
     </div>

@@ -12,7 +12,9 @@
 <body>
     <a class="product-card" href="">
         <div class="product-img">
-            <img src="{{ $product->ProductImage}}">
+            <!-- <img src="{{ $product->images->first()->image_path }}" alt="{{ $product->NameProduct }}"> -->
+             <img src="{{ $product->ProductImage }}" alt="{{ $product->NameProduct }}">
+            <!-- <img src="{{ $product->ProductImage }}"> -->
         </div>
         <hr class="divider">
         <div class="product-details">
