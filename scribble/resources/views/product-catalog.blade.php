@@ -47,9 +47,9 @@
                             <img src="/icons/chevron-down.svg" alt="down">
                         </div>
                         <ul class="dropdown-sort-content">
-                            <li class="b3"><a href="#" style="text-decoration:none">Top Sales</a></li>
-                            <li class="b3"><a  href="#" style="text-decoration:none">Lowest Price</a></li>
-                            <li class="b3"><a href="#" style="text-decoration:none">Highest Price</a></li>
+                            <li class="b3 sorting"><a href="#" style="text-decoration:none">Top Sales</a></li>
+                            <li class="b3 sorting"><a  href="#" style="text-decoration:none">Lowest Price</a></li>
+                            <li class="b3 sorting"><a href="#" style="text-decoration:none">Highest Price</a></li>
                         </ul>
                     </div>
                 </div>

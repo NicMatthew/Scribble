@@ -7,10 +7,12 @@ dropdownSortBtn.addEventListener("click", function () {
 
 var categories = document.getElementsByClassName("category_select");
 var subcategories = document.getElementsByClassName("sub_category_select");
+var sort = document.getElementsByClassName('sorting')
 var form = document.getElementById("form_catalog")
 
 categories = Array.prototype.slice.call(categories)
 subcategories = Array.prototype.slice.call(subcategories);
+sort = Array.prototype.slice.call(sort);
 
 console.log(categories)
 
@@ -29,4 +31,12 @@ subcategories.forEach((subcategory) => {
         document.forms["form_catalog"].submit()
     });
 });
+
+sort.forEach((sorting) => {
+    sorting.addEventListener("click", (e) => {
+        form.children[3].setAttribute("value", sorting.innerText);
+        document.forms["form_catalog"].submit();
+    });
+});
+
 

@@ -193,6 +193,21 @@ class ProductController extends Controller
         $subcategory_select = $request->sub_category;
         $categories = Category::all();
         $subcategories = SubCategory::all();
+
+        if($request->sorting != null || $request->sorting != ""){
+            $sorting = $request->sorting;
+            if($sorting=="Lowest Price"){
+                $products = $products->sortBy('Price');
+
+            }elseif($sorting=="Highest Price"){
+                $products = $products->sortByDesc('Price');
+            }
+            elseif($sorting=="Top Sales"){
+                // masih menunggu transaksi
+
+            }
+
+        }
         // dd($category);
         return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select'));
         
