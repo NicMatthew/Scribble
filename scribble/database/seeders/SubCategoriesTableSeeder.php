@@ -37,26 +37,26 @@ class SubCategoriesTableSeeder extends Seeder
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Printing paper', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Specialty paper', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 4, 'NameSubCategory' => 'Sticky notes', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 5, 'NameSubCategory' => 'Notebooks', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 5, 'NameSubCategory' => 'Planners', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 5, 'NameSubCategory' => 'Sketchbooks', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 5, 'NameSubCategory' => 'Guestbooks', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 4, 'NameSubCategory' => 'Notebooks', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 4, 'NameSubCategory' => 'Planners', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 4, 'NameSubCategory' => 'Sketchbooks', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 4, 'NameSubCategory' => 'Guestbooks', 'created_at' => now(), 'updated_at' => now()],
 
             // Cutting Tools Subcategories
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Scissors', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Cutters', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Sharpeners', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 6, 'NameSubCategory' => 'Punch hole', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 5, 'NameSubCategory' => 'Scissors', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 5, 'NameSubCategory' => 'Cutters', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 5, 'NameSubCategory' => 'Sharpeners', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 5, 'NameSubCategory' => 'Punch hole', 'created_at' => now(), 'updated_at' => now()],
 
             // Sticking Tools Subcategories
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Glue sticks', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Liquid glue', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 7, 'NameSubCategory' => 'Tape', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 6, 'NameSubCategory' => 'Glue sticks', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 6, 'NameSubCategory' => 'Liquid glue', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 6, 'NameSubCategory' => 'Tape', 'created_at' => now(), 'updated_at' => now()],
 
             // Correcting Tools Subcategories
-            ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction tape', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 8, 'NameSubCategory' => 'Correction fluid', 'created_at' => now(), 'updated_at' => now()],
-            ['CategoryProductID' => 8, 'NameSubCategory' => 'Erasers', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Correction tape', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Correction fluid', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 7, 'NameSubCategory' => 'Erasers', 'created_at' => now(), 'updated_at' => now()],
 
             // Others Subcategories
             ['CategoryProductID' => 8, 'NameSubCategory' => 'Pencil cases', 'created_at' => now(), 'updated_at' => now()],

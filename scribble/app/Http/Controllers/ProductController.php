@@ -187,12 +187,13 @@ class ProductController extends Controller
         }
         $search = $request->search;
         $category_select = $request->category;
-        if($category_select == null){
-            $category_select = Category::join("sub_categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")->get()->first()->NameCategory;
-        }
         $subcategory_select = $request->sub_category;
+        if($category_select == null && $subcategory_select != null){
+            $category_select = Category::join("sub_categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")->where("sub_categories.NameSubCategory", $subcategory_select)->get()->first()->NameCategory;
+        }
         $categories = Category::all();
         $subcategories = SubCategory::all();
+        $sorting = $request->sorting;
 
         if($request->sorting != null || $request->sorting != ""){
             $sorting = $request->sorting;
@@ -209,7 +210,7 @@ class ProductController extends Controller
 
         }
         // dd($category);
-        return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select'));
+        return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting'));
         
     }
 

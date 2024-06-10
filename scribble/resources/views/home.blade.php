@@ -84,11 +84,11 @@
                 <h5>Others</h5>
             </a>
         </div>
-        <!-- <button href="{{ route('product_catalog') }}" class="btn" type="submit">
+        <!-- <button href="{{ route('product-catalog') }}" class="btn" type="submit">
             <h5>Explore All Products</h5>
         </button> -->
-        <form action="{{ route('product_catalog') }}" method="GET" class="btn">
-            <input type="hidden" name="show_all" value="true">
+        <form action="{{ route('product-catalog') }}" method="GET" class="btn">
+            {{-- <input type="hidden" name="show_all" value="true"> --}}
             <button type="submit" class="h5">Explore All Products</button>
         </form>
     </div>

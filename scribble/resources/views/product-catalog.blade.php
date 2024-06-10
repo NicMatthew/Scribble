@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/product-catalog.css">
     <script src="/js/product-card.js" defer=""></script>
+    <style>
+        .dropdown-trigger a{
+            color: white;
+        }
+    </style>
 </head>
 <body>
     @include('components/navbar')
@@ -17,11 +22,11 @@
         @foreach ($categories as $category)
         <ul class="b3 dropdown">
             <li class="dropdown-trigger">
-                <a onclick="return false" style="text-decoration:none" class="category_select">{{ $category->NameCategory }}</a>
+                <p onclick="return false" class="category_select">{{ $category->NameCategory }}</p>
                 <ul class="dropdown-content">
                     @foreach ($subcategories as $subcategory)
                     @if($category->CategoryProductID == $subcategory->CategoryProductID)
-                    <li class="b3 sub_category_select"><a href="#" style="text-decoration:none" >{{ $subcategory->NameSubCategory }}</a></li>
+                    <li class="b3 sub_category_select">{{ $subcategory->NameSubCategory }}</li>
                     @endif
                     @endforeach
                 </ul>
@@ -33,15 +38,17 @@
         <div class="heading">
             <div class="left-heading">
                 <p class="h2">{{ $category_select ?? 'All Products' }}</p>
-                <img src="/icons/chevron-right.svg" alt="right">
-                <p class="b1">{{ $subcategory_select }}</p>
+                @if($subcategory_select != null || $subcategory_select != "")
+                    <img src="/icons/chevron-right.svg" alt="right">
+                    <p class="b1">{{ $subcategory_select }}</p>
+                @endif
             </div>
             <div class="right-heading">
                 <div class="b3 dropdown-sort">
                     <div class="sort-btn">
                         <div class="left-part">
                             <img src="/icons/sort.svg" alt="sort">
-                            <p class="mb-0 b3" style="display: flex; align-items:center">Sort By</p>
+                            <p class="mb-0 b3" style="display: flex; align-items:center" id="sort_title">{{ $sorting ?? "Sort By"}}</p>
                         </div>
                         <div class="right-part">
                             <img src="/icons/chevron-down.svg" alt="down">
@@ -71,11 +78,11 @@
         </div>
     </div>
     @include('components/footer')
-    <form id="form_catalog" style="display: none" name="form_catalog" method="GET" action="{{ route("product_catalog") }}">
-        <input type="text" name="category" value="">
-        <input type="text" name="sub_category" value="">
+    <form id="form_catalog" style="display: none" name="form_catalog" method="GET" action="{{ route("product-catalog") }}">
+        <input type="text" name="category" value="{{$category_select}}">
+        <input type="text" name="sub_category" value="{{$subcategory_select}}">
         <input type="text" name="search" value="{{ $search }}">
-        <input type="text" name="sorting" value="">
+        <input type="text" name="sorting" value="{{$sorting}}">
     </form>
 </body>
 <script src="/js/product-catalog.js"></script>
