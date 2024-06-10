@@ -45,7 +45,7 @@
                     <div class="address-full">Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kabupaten Bogor, Jawa Barat 16810</div>
                 </div>
             </div>
-            <a href="" class="address-select">Select</a>
+            <a href="address" class="address-select">Select</a>
         </div>
         <div class="product-payment-container">
             <div class="product-container">

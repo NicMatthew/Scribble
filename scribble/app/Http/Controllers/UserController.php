@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Address;
 use App\User;
 
 class UserController extends Controller
@@ -77,5 +78,11 @@ class UserController extends Controller
         }
 
         return redirect('/profile');
+    }
+
+    public function showAddresses($userId)
+    {
+        $addresses = Address::where('UserID', $userId)->get();
+        return view('address', ['addresses' => $addresses]);
     }
 }

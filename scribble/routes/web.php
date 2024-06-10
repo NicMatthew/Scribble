@@ -5,7 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\signinController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\AddressController;
 
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -41,10 +41,14 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //     return view('product-catalog');
 // });
 
-// Route::get("/product-catalog", [ProductController::class, "product_catalog"])->name("product_catalog");
 Route::get('/product-catalog', [ProductController::class, 'showAllProducts'])->name('product-catalog');
-// Route::get('/product-catalog/{category}', [ProductController::class, 'showCategory'])->name('product-catalog');
 Route::get('/search', [ProductController::class, 'search']);
+
+Route::get('/addresses/{userId}', [UserController::class, 'showAddresses'])->name('show-addresses');
+Route::post('/add/address', [AddressController::class, 'addAddress'])->name('add-address');
+Route::delete('/address/{addressId}', [AddressController::class, 'deleteAddress'])->name('delete-address');
+
+
 
 Route::get('/product-detail', function () {
     return view('product-detail');
@@ -62,9 +66,9 @@ Route::get('/shipping', function () {
     return view('shipping');
 });
 
-Route::get('/address', function () {
-    return view('address');
-});
+// Route::get('/address', function () {
+//     return view('address');
+// });
 
 Route::get('/payment-qr', function () {
     return view('payment-qr');
