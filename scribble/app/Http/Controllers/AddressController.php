@@ -38,5 +38,6 @@ class AddressController extends Controller
     {
         $address = Address::where('AddressID', $addressId)->firstOrFail();
         $address->delete();
+        return back();
     }
 }

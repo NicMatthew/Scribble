@@ -33,7 +33,7 @@
             </div>
             <div class="right-address">
                 <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
-                <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
+                <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" class="edit-btn" alt="">
             </div>
         </div>
         @endforeach
