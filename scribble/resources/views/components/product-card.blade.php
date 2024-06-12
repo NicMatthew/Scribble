@@ -10,7 +10,7 @@
     <link href="/css/product-card.css" rel="stylesheet">
 </head>
 <body>
-    <a class="product-card" href="">
+    <a class="product-card" href="{{route("product-catalog")."/".$product->ProductID}}">
         <div class="product-img">
             <!-- <img src="{{ $product->images->first()->image_path }}" alt="{{ $product->NameProduct }}"> -->
              <img src="{{ $product->ProductImage }}" alt="{{ $product->NameProduct }}">
@@ -42,7 +42,7 @@
                 <h5 class="sell">100 Terjual</h5>
             </div>
             <div class="price">
-                <h4>{{ $product-> Price}}</h4>
+                <h4>Rp. {{ number_format($product-> Price, 0)}}</h4>
             </div>
         </div>
     </a>

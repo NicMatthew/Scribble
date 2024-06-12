@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('variants', function (Blueprint $table) {
             $table->id('VariantID');
             $table->string('VariantName');
+            $table->longText('DescriptionVariant');
             $table->timestamps();
         });
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductEntry;
 use App\Models\ProductImage;
 use App\Models\SubCategory;
 use Illuminate\Support\Arr;
@@ -12,42 +13,20 @@ use Illuminate\Support\Arr;
 
 class ProductController extends Controller
 {
-    public function product_catalog(){
-        $products = Product::selectRaw('NameProduct, products.ProductID, Rating, MIN(price) as Price')
-        ->join('product_entries','products.ProductID','=','product_entries.ProductID')
-        ->groupBy('ProductID')->get();
+    public function showProductDetail($productID) {
+        $selectedProduct = Product::where("ProductID", $productID)->first();
+        $variants = ProductEntry::join("variants", "variants.VariantID", "=", "product_entries.VariantID")
+                                ->join("product_images", "product_images.VariantID", "=", "product_entries.VariantID")
+                                ->where("product_images.ProductID", $productID)
+                                ->get();
 
-        // $products = (array) $products;
-
-        
-        foreach($products as $product){
-            $image = Product::join('product_images','products.ProductID','=','product_images.ProductID')
-            ->where('products.ProductID',$product->ProductID)->get()->first();
-            $imageArray = array('ProductImage' => $image);
-
-            $product["ProductImage"] = $image->Image;
-
+        // dd($product);
+        if ($selectedProduct == null) {
+            return redirect()->route("product-catalog");
         }
 
-
-        // ->join('product_images','products.ProductID','=','product_images.ProductID')
-        return view('product-catalog',
-        ['products' => $products]);
-    }
-
-
-    public function showCategory($categoryName)
-    {
-        // Fetch category based on name
-        $category = Category::where('NameCategory', $categoryName)->firstOrFail();
-
-        // Fetch sub-categories under this category
-        $subCategoryIds = $category->subCategories->pluck('SubCategoryProductID')->toArray();
-
-        // Fetch products that belong to these sub-categories, including images and entries
-        $products = Product::with(['images', 'entries'])
-            ->whereIn('SubCategoryProductID', $subCategoryIds)
-            ->get();
+        $products = Product::with(['images', 'entries']) // Eager load images and entries
+                            ->get();
 
         // Add the first image and the minimum price to the main product object
         foreach ($products as $product) {
@@ -56,18 +35,12 @@ class ProductController extends Controller
 
             // Adding the minimum price
             $product->Price = $product->entries->min('Price');
-        }
+        };
 
-        $search = null;
-        $categories = Category::all();
-        $subcategories = SubCategory::all();
-
-        return view('product-catalog', compact('products', 'categoryName', 'search','categories','subcategories'));
-
-        // return view('product-catalog', compact('products', 'categoryName'));
+        // dd($products);
+        return view("product-detail", compact("selectedProduct", "variants", "products"));
     }
-
-    public function showAllProducts(Request $request)
+    public function showAllProducts (Request $request)
     {
         $selected = null;
         if($request->search != null){
@@ -128,7 +101,7 @@ class ProductController extends Controller
                 $categoryName = null;
 
             }
-   
+
         }
         else{
             if($request->category != null || $request->category != ""){
@@ -211,7 +184,5 @@ class ProductController extends Controller
         }
         // dd($category);
         return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting'));
-        
     }
-
 }

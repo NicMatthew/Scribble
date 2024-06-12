@@ -27,27 +27,26 @@ class AdminController extends Controller
         ]);
     }
     public function product_add(){
-        
+
         // dd(request()->hasFile('ProductImages'));
         // dd(request()->file('ProductImages'));
-        
-        $products = request()->all(); 
-        $newProduct = new Product(); 
-        $newProductEntry = new ProductEntry(); 
+
+        $products = request()->all();
+        $newProduct = new Product();
+        $newProductEntry = new ProductEntry();
         $newVariants = new Variant();
-        
+
         // dd($products['ProductSubCategory']);
-        
+
         $testProduct = Product::select("NameProduct")
         ->where("products.NameProduct","=",$products["ProductName"])->get()->first();
 
         if($testProduct == null){
             $newProduct->NameProduct= $products["ProductName"];
             $newProduct->Rating= 0;
-            $newProduct->DescriptionProduct= $products["ProductDescription"];
             $newProduct->SubCategoryProductID = SubCategory::select("SubCategoryProductID")
             ->where("sub_categories.NameSubCategory","=",$products['ProductSubCategory'])->get()->value('SubCategoryProductID');
-            // harus save new product dulu baru bisa lanjut 
+            // harus save new product dulu baru bisa lanjut
             $newProduct->save();
         }
 
@@ -58,6 +57,7 @@ class AdminController extends Controller
         if($testVariant == null){
             // variant baru
             $newVariants->VariantName = $products["ProductVariant"];
+            $newVariants->DescriptionVariant = $products["ProductDescription"];
             $newVariants->save();
         }
         else{
@@ -84,7 +84,7 @@ class AdminController extends Controller
                 $newProductImage = new ProductImage();
                 $imageBase64 = base64_encode(file_get_contents($image->getRealPath()));
                 $newProductImage->Image = 'data:'.$image->getClientMimeType().';base64,'.$imageBase64;
-                
+
                 $newProductImage->ProductID = Product::select("ProductID")
                 ->where("products.NameProduct","=",$products['ProductName'])->get()->value("ProductID");
                 $newProductImage->VariantID = Variant::select("VariantID")
@@ -95,7 +95,7 @@ class AdminController extends Controller
 
         return $this->product_admin();
     }
-    
+
     public function product_update(){
         $product = Product::find(request('ProductID'));
 

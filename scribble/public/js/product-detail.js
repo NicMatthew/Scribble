@@ -1,3 +1,67 @@
+// get data from laravel
+variants = variants
+
+// set sesuai variant
+const carousel = document.querySelector(".carousel"), arrowIcons = document.querySelectorAll(".wrapper i");
+const priceDisplay = document.getElementById("price-display")
+const variantOpt = document.querySelectorAll(".variantOpt")
+const mainPhoto = document.getElementById("main-photo")
+const quantityDisp = document.getElementById("quantity-display")
+const plusBtn = document.getElementById("plus-btn")
+const minusBtn = document.getElementById("minus-btn")
+const availableDisp = document.getElementById("available-quan-disp")
+const productDesc = document.getElementById("product-desc")
+let selectedVariant = -1;
+
+variants.forEach(variant => {
+    let image = document.createElement("img")
+    image.src = variant.Image
+
+    carousel.appendChild(image)
+});
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function setVariant(idx) {
+    if (selectedVariant != -1) {
+        variantOpt[selectedVariant].classList.remove("selected-variant")
+    }
+
+    priceDisplay.innerText = "Rp. " + numberWithCommas(variants[idx].Price)
+    mainPhoto.firstChild.src = variants[idx].Image
+    variantOpt[idx].classList.add("selected-variant")
+    availableDisp.innerText = variants[idx].Stock + " pieces available"
+    quantityDisp.innerText = 1
+    productDesc.innerText = variants[idx].DescriptionVariant
+    selectedVariant = idx
+}
+
+for (let i = 0; i < variantOpt.length; i++) {
+    variantOpt[i].addEventListener("click", (e)=>{
+        setVariant(i)
+    })
+}
+
+setVariant(0)
+
+// quantity adjust
+function setQuantity(val) {
+    currQuantity = parseInt(quantityDisp.innerText)
+    if (currQuantity+val > 0 && currQuantity+val <= variants[selectedVariant].Stock) {
+        quantityDisp.innerText = parseInt(quantityDisp.innerText) + val
+    }
+}
+
+plusBtn.addEventListener("click", (e)=>{
+    setQuantity(1)
+})
+
+minusBtn.addEventListener("click", (e)=>{
+    setQuantity(-1)
+})
+
 const dropdownFilterBtn = document.querySelector(".dropdown-filter");
 const dropdownContent = document.querySelector(".dropdown-filter-content");
 
@@ -5,13 +69,11 @@ dropdownFilterBtn.addEventListener("click", function () {
     dropdownFilterBtn.classList.toggle("active");
 });
 
-const carousel = document.querySelector(".carousel"),
-    firstImg = carousel.querySelectorAll("img")[0];
-arrowIcons = document.querySelectorAll(".wrapper i");
-
 let isDragStart = false,
     prevPageX,
     prevScrollLeft;
+
+let firstImg = carousel.children[0]
 
 const showHideIcons = () => {
     // let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
@@ -56,7 +118,6 @@ carousel.addEventListener("mousemove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 
 // Mengambil elemen gambar utama dan carousel
-const mainPhoto = document.querySelector('.left-photo .main');
 const carouselImages = document.querySelectorAll('.left-photo .carousel img');
 
 // Menetapkan gambar pertama sebagai gambar default di dalam elemen main

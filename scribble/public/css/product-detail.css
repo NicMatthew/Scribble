@@ -57,6 +57,7 @@
     border: 1px solid var(--grey); /* Atur lebar dan warna border sesuai kebutuhan Anda */
     box-sizing: border-box;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .main img {
@@ -178,6 +179,10 @@
     align-items: center;
 }
 
+.rating img {
+    height: 70%;
+}
+
 .review-sold{
     height: 100%;
     align-items: center;
@@ -206,6 +211,7 @@
     border-style:solid;
 	border-width: 1px;
     border-color: var(--dark-grey);
+    cursor: pointer;
 }
 
 .quantity{
@@ -363,11 +369,11 @@
 }
 
 .rate-filter{
-    display: flex; 
-    align-items:center; 
-    flex-direction:row; 
-    background-color: var(--sec-1); 
-    border-radius:15px; 
+    display: flex;
+    align-items:center;
+    flex-direction:row;
+    background-color: var(--sec-1);
+    border-radius:15px;
     padding: 10px 0 10px 0;
 }
 
@@ -416,7 +422,7 @@
 
 .dropdown-filter.active .dropdown-filter-content {
     display: block;
-    top: calc(100% + 3px); 
+    top: calc(100% + 3px);
     left: 0;
 }
 
@@ -524,7 +530,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 100px);
-    gap: 70px;
+    gap: 20px;
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -561,3 +567,12 @@
     justify-content: center; */
 }
 
+.selected-variant {
+    background-color: var(--sec-1);
+    color: var(--white);
+    border: 1px solid var(--sec-1);
+}
+
+.btn-quantity {
+    cursor: pointer;
+}
