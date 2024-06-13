@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Variant extends Model
 {
     use HasFactory;
+
+    public function entry()
+    {
+        return $this->hasOne(ProductEntry::class, 'VariantID', 'VariantID');
+    }
 }

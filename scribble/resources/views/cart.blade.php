@@ -46,7 +46,33 @@
                         <th class="total-text">Total</th>
                         <th></th>
                     </tr>
+
+                    @foreach ($cartItems as $item)
                     <tr class="products">
+                        <td class="product-details">
+                            <img src="\images\marker.png" alt="">
+                            <p>{{ $item->product->NameProduct }}</p>
+                            <p>{{ $item->variant->VariantName }}</p>
+                        </td>
+                        <td class="product-quantity">
+                            <img src="\icons\minus.svg" alt="">
+                            <p>{{ $item->Quantity }}</p>
+                            <img src="\icons\plus.svg" alt="">
+                        </td>
+                        <td class="product-price">
+                            <p>Rp. {{ number_format($item->variant->entry->Price ?? 0, 0, ',', '.') }}</p>
+
+                        </td>
+                        <td class="product-total-price">
+                            <p>Rp. {{ number_format($item->variant->entry->Price*$item->Quantity ?? 0, 0, ',', '.') }}</p>
+                        </td>
+                        <td class="product-checkbox">
+                            <input type="checkbox">
+                        </td>
+
+                    </tr>   
+                    @endforeach
+                    {{-- <tr class="products">
                         <td class="product-details">
                             <img src="\images\marker.png" alt="">
                             <p>Spidol Marker Hitam</p>
@@ -221,7 +247,7 @@
                             <input type="checkbox">
                         </td>
 
-                    </tr>
+                    </tr> --}}
 
                 </table>
 
