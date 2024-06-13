@@ -79,7 +79,7 @@
                             @csrf 
                             <input type="text" name="product_id" value="{{ $selectedProduct->ProductID }}">
                             <input type="text" name="quantity" value="" id="quantity-input"> 
-                            {{-- <input type="number" name="price" value="" id="price-input">  --}}
+                            <input type="number" name="price" value="" id="price-input"> 
                             <input type="number" name="user_id" value="{{ auth()->id() }}">
                             <input type="text" name="var" value="" id="variant-input">
                         </form>

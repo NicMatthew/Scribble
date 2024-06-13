@@ -32,7 +32,7 @@ function setVariant(idx) {
         variantOpt[selectedVariant].classList.remove("selected-variant")
     }
 
-    priceInput.value = variants[idx].Price;
+    priceInput.value = variants[idx].Price
     priceDisplay.innerText = "Rp. " + numberWithCommas(variants[idx].Price)
     mainPhoto.firstChild.src = variants[idx].Image
     variantOpt[idx].classList.add("selected-variant")
