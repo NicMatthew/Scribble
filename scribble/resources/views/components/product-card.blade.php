@@ -20,9 +20,18 @@
         <div class="product-details">
             <div class="title-wish">
                 <h3 class="product-title">{{ $product->NameProduct}}</h3>
-                <div class="wish" onclick="return false">
+                <form action="{{ route('wishlist-toggle') }}" method="POST" name="wish-form">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->ProductID }}">
+                    <input type="hidden" name="url" value="" id="urlInput">
+                    
+                    <button class="wish" >
+                        <img src="/icons/love-outline.svg" alt="Add to Wishlist">
+                    </button>
+                </form>
+                {{-- <div class="wish" onclick="return false">
                     <img src="/icons/love-outline.svg">
-                </div>
+                </div> --}}
             </div>
             <div class="rating-sell">
                 <div class="rating">

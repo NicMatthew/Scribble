@@ -8,7 +8,9 @@ use App\Models\Product;
 use App\Models\ProductEntry;
 use App\Models\ProductImage;
 use App\Models\SubCategory;
+use App\Models\Wishlist;
 use Illuminate\Support\Arr;
+use Auth;
 
 
 class ProductController extends Controller
@@ -38,7 +40,12 @@ class ProductController extends Controller
         };
 
         // dd($products);
-        return view("product-detail", compact("selectedProduct", "variants", "products"));
+
+        // Get wishlist product IDs
+        $user = Auth::user();
+        $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
+
+        return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs"));
     }
     public function showAllProducts (Request $request)
     {
@@ -182,7 +189,66 @@ class ProductController extends Controller
             }
 
         }
+
+        // Get wishlist product IDs
+        $user = Auth::user();
+        $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
         // dd($category);
-        return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting'));
+        return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting','wishlistProductIDs'));
     }
+
+    // public function addToWishlist(Request $request)
+    // {
+    //     $user = Auth::user();
+    //     $productId = $request->input('product_id');
+
+    //     $NewWishlist= new Wishlist();
+    //     $NewWishlist->UserID = $user->UserID;
+    //     $NewWishlist->ProductID = $productId;
+
+    //     $NewWishlist->save();
+
+    //     return redirect()->to($request->url);
+    // }
+
+    public function toggleWishlist(Request $request)
+    {
+        $user = Auth::user();
+        $productId = $request->input('product_id');
+
+        $wishlistItem = Wishlist::where('UserID', $user->UserID)->where('ProductID', $productId)->first();
+
+        if ($wishlistItem) {
+            $wishlistItem->delete();
+        } else {
+            $NewWishlist = new Wishlist();
+            $NewWishlist->UserID = $user->UserID;
+            $NewWishlist->ProductID = $productId;
+            $NewWishlist->save();
+        }
+
+        return redirect()->to($request->url);
+    }
+
+    public function showWishlist()
+    {
+        $user = Auth::user();
+        $wishlistProducts = Product::join("wishlists","wishlists.ProductID","=","products.ProductID")
+        // ->join("product_images", "product_images.VariantID", "=", "product_entries.VariantID")
+        ->where("UserID", $user->UserID)->get();
+
+        return view('wishlist', compact('wishlistProducts'));
+    }
+
+    // public function removeFromWishlist(Request $request)
+    // {
+    //     $user = Auth::user();
+    //     $productId = $request->input('product_id');
+
+    //     Wishlist::where('UserID', $user->UserID)->where('ProductID', $productId)->delete();
+
+    //     return redirect()->to($request->url);
+    // }
+
+
 }

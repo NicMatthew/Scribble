@@ -53,4 +53,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(Address::class, 'UserID'); // UserID is the foreign key in the addresses table
     }
+
+    public function wishlist()
+    {
+        return $this->belongsToMany(Product::class, 'wishlists', 'user_id', 'product_id');
+    }
+
+    
 }

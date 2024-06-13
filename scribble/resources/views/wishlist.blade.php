@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Transaction List</title>
+    <title>Wishlist</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/wishlist.css">
@@ -22,17 +22,12 @@
         <div class="right-side">
             <div class="title">
                 <p class="h2">My Wishlist</p>
-                <p class="b3 title-detail">19 stuffs on your wishlist</p>
+                <p class="b3 title-detail">{{ $wishlistProducts->count() }} items on your wishlist</p>
             </div>
             <div class="content-right-side">
-                @include('components/product-card')
-                @include('components/product-card')
-                @include('components/product-card')
-                @include('components/product-card')
-                @include('components/product-card')
-                @include('components/product-card')
-                @include('components/product-card')
-                @include('components/product-card')
+                @foreach($wishlistProducts as $product)
+                    @include('components/product-card', ['product' => $product])
+                @endforeach
             </div>
     </div>
 </body>

@@ -113,3 +113,8 @@ Route::get('/order-admin', function () {
 Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
 Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
 Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
+
+// Route::post('/wishlist/add', [ProductController::class, 'addToWishlist'])->name('wishlist-add');
+Route::get('/wishlist', [ProductController::class, 'showWishlist'])->name('wishlist-index');
+
+Route::post('/wishlist-toggle', [ProductController::class, 'toggleWishlist'])->name('wishlist-toggle');
