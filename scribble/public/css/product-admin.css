@@ -206,7 +206,7 @@ table{
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     border-radius: 15px;
     position: absolute;
-    /* top: 100px; */
+    top: -10px;
     left: -130px;
     z-index: 1000;
     display: none;

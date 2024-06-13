@@ -20,10 +20,12 @@ class AdminController extends Controller
         ->get();
         $categories = Category::all();
         $subcategories = SubCategory::all();
+        $product = null;
         return view('/admin/product-admin',
         [
             'products' =>$products,
-            'subcategories' => $subcategories
+            'subcategories' => $subcategories,
+            "product" => $product
         ]);
     }
     public function product_add(){
@@ -94,6 +96,37 @@ class AdminController extends Controller
         }
 
         return $this->product_admin();
+    }
+    public function product_find(){
+        $ProductID = request()->ProductID;
+        $VariantName = request()->VariantName;
+        $product = null;
+
+        if($ProductID !=null && $VariantName!=null){
+            $product = ProductEntry::join('products','products.ProductID','=','product_entries.ProductID')
+            ->join('variants','variants.VariantID','=','product_entries.VariantID')
+            ->join('sub_categories','sub_categories.SubCategoryProductID','=','products.SubCategoryProductID')
+            ->join('categories','categories.CategoryProductID','=','sub_categories.CategoryProductID')
+            ->where("products.ProductID", $ProductID)
+            ->where("VariantName",$VariantName)
+            ->get();
+        }
+
+        $products = ProductEntry::join('products','products.ProductID','=','product_entries.ProductID')
+        ->join('variants','variants.VariantID','=','product_entries.VariantID')
+        ->join('sub_categories','sub_categories.SubCategoryProductID','=','products.SubCategoryProductID')
+        ->join('categories','categories.CategoryProductID','=','sub_categories.CategoryProductID')
+        ->get();
+        $categories = Category::all();
+        $subcategories = SubCategory::all();
+        // dd($product);
+        return view('/admin/product-admin',
+        [
+            'products' =>$products,
+            'subcategories' => $subcategories,
+            "product" => $product
+        ]);
+
     }
 
     public function product_update(){
