@@ -11,8 +11,22 @@ class CartController extends Controller
 {
     public function index()
     {
-        // Logika untuk menampilkan halaman keranjang belanja
-        return view('cart'); // Gantilah 'cart.index' dengan nama view yang sesuai
+        $user_id = Auth::id();
+        // dd($user_id);
+        // $cartItems = CartDetail::where('UserID', $user_id)
+        // ->with('product', 'user', 'variant')
+        // ->get();
+        // $cartItems = CartDetail::where('UserID', $user_id)
+        // ->with('product.entries', 'variant')
+        // ->get();
+
+        $cartItems = CartDetail::where('UserID', $user_id)
+                    ->with('product', 'user', 'variant.entry') // Memuat relasi entry dari variant
+                    ->get();
+        // $cartItems = CartDetail::where('UserID', $user_id)->get();
+        // dd($cartItems);
+
+        return view('cart', compact('cartItems'));
     }
 
     // public function addToCart(Request $request)
