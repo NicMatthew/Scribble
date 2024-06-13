@@ -168,3 +168,25 @@ const dragStop2 = () => {
 carousel2.addEventListener("mousedown", dragStart2);
 carousel2.addEventListener("mousemove", dragging2);
 document.addEventListener("mouseup", dragStop2);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const addToCartBtn = document.getElementById("add-to-cart-btn");
+
+    addToCartBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // Mencegah tindakan default dari anchor link
+
+        // Memeriksa status login pengguna dari elemen data
+        const isLoggedIn =
+            document.getElementById("login-status").dataset.loggedIn === "true";
+
+        if (isLoggedIn) {
+            // Pengguna sudah login, arahkan ke halaman keranjang
+            window.location.href = "/cart";
+        } else {
+            // Pengguna belum login, arahkan ke halaman login
+            window.location.href = "/log-in";
+        }
+    });
+});
+

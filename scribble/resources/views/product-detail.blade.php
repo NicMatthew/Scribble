@@ -13,6 +13,7 @@
 </head>
 <body>
     @include('components/navbar')
+    <div id="login-status" data-logged-in="{{ auth()->check() ? 'true' : 'false' }}"></div>
     <div class="big-container">
         <div class="back-button">
             <img src="/icons/prev.svg" alt="">
@@ -70,7 +71,7 @@
                         <p class="mb-0 ml-3 b3" style="color: rgba(117,117,117,0.75);" id="available-quan-disp">19 pieces available</p>
                     </div>
                     <div class="check-out">
-                        <a href="" class="btn mr-2" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                        <a href="" id="add-to-cart-btn" class="btn mr-2" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                             <img src="/icons/cart-product-detail.svg" alt="">
                             <p class="mb-0 ml-2 b3" style="font-weight: bold; color:white">Add to Cart</p>
                         </a>
