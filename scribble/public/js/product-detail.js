@@ -11,6 +11,9 @@ const plusBtn = document.getElementById("plus-btn")
 const minusBtn = document.getElementById("minus-btn")
 const availableDisp = document.getElementById("available-quan-disp")
 const productDesc = document.getElementById("product-desc")
+let quanInput = document.getElementById("quantity-input")
+let variantInput = document.getElementById("variant-input")
+let priceInput = document.getElementById("price-input")
 let selectedVariant = -1;
 
 variants.forEach(variant => {
@@ -29,6 +32,7 @@ function setVariant(idx) {
         variantOpt[selectedVariant].classList.remove("selected-variant")
     }
 
+    priceInput.value = variants[idx].Price;
     priceDisplay.innerText = "Rp. " + numberWithCommas(variants[idx].Price)
     mainPhoto.firstChild.src = variants[idx].Image
     variantOpt[idx].classList.add("selected-variant")
@@ -36,6 +40,9 @@ function setVariant(idx) {
     quantityDisp.innerText = 1
     productDesc.innerText = variants[idx].DescriptionVariant
     selectedVariant = idx
+    setQuantity(0)
+
+    variantInput.value = variants[idx].VariantID;
 }
 
 for (let i = 0; i < variantOpt.length; i++) {
@@ -50,6 +57,7 @@ setVariant(0)
 function setQuantity(val) {
     currQuantity = parseInt(quantityDisp.innerText)
     if (currQuantity+val > 0 && currQuantity+val <= variants[selectedVariant].Stock) {
+        quanInput.setAttribute("value", parseInt(quantityDisp.innerText) + val);
         quantityDisp.innerText = parseInt(quantityDisp.innerText) + val
     }
 }
@@ -61,6 +69,7 @@ plusBtn.addEventListener("click", (e)=>{
 minusBtn.addEventListener("click", (e)=>{
     setQuantity(-1)
 })
+
 
 const dropdownFilterBtn = document.querySelector(".dropdown-filter");
 const dropdownContent = document.querySelector(".dropdown-filter-content");
@@ -182,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isLoggedIn) {
             // Pengguna sudah login, arahkan ke halaman keranjang
-            window.location.href = "/cart";
+            document.forms["add-to-cart-form"].submit();
         } else {
             // Pengguna belum login, arahkan ke halaman login
             window.location.href = "/log-in";

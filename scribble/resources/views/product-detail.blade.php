@@ -71,10 +71,18 @@
                         <p class="mb-0 ml-3 b3" style="color: rgba(117,117,117,0.75);" id="available-quan-disp">19 pieces available</p>
                     </div>
                     <div class="check-out">
-                        <a href="" id="add-to-cart-btn" class="btn mr-2" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                        <div id="add-to-cart-btn" class="btn mr-2" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                             <img src="/icons/cart-product-detail.svg" alt="">
                             <p class="mb-0 ml-2 b3" style="font-weight: bold; color:white">Add to Cart</p>
-                        </a>
+                        </div>
+                        <form action="{{ route('cart.add') }}" method="POST" id="add-to-cart-form" style="display: none" name="add-to-cart-form">
+                            @csrf 
+                            <input type="text" name="product_id" value="{{ $selectedProduct->ProductID }}">
+                            <input type="text" name="quantity" value="" id="quantity-input"> 
+                            {{-- <input type="number" name="price" value="" id="price-input">  --}}
+                            <input type="number" name="user_id" value="{{ auth()->id() }}">
+                            <input type="text" name="var" value="" id="variant-input">
+                        </form>
                         <a href="" class="btn-2 mr-3" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                             <p class="mb-0 b3" style="font-weight: bold; color:white">Buy Now</p>
                         </a>
