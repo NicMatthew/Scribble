@@ -25,7 +25,7 @@ class AdminController extends Controller
         [
             'products' =>$products,
             'subcategories' => $subcategories,
-            "product" => $product
+            "product_edit" => $product
         ]);
     }
     public function product_add(){
@@ -46,6 +46,7 @@ class AdminController extends Controller
         if($testProduct == null){
             $newProduct->NameProduct= $products["ProductName"];
             $newProduct->Rating= 0;
+            $newProduct->DescriptionProduct = $products["ProductDescription"];
             $newProduct->SubCategoryProductID = SubCategory::select("SubCategoryProductID")
             ->where("sub_categories.NameSubCategory","=",$products['ProductSubCategory'])->get()->value('SubCategoryProductID');
             // harus save new product dulu baru bisa lanjut
@@ -59,7 +60,7 @@ class AdminController extends Controller
         if($testVariant == null){
             // variant baru
             $newVariants->VariantName = $products["ProductVariant"];
-            $newVariants->DescriptionVariant = $products["ProductDescription"];
+            // $newVariants->DescriptionVariant = $products["ProductDescription"];
             $newVariants->save();
         }
         else{
@@ -109,8 +110,9 @@ class AdminController extends Controller
             ->join('categories','categories.CategoryProductID','=','sub_categories.CategoryProductID')
             ->where("products.ProductID", $ProductID)
             ->where("VariantName",$VariantName)
-            ->get();
+            ->get()->first();
         }
+        // dd($product);
 
         $products = ProductEntry::join('products','products.ProductID','=','product_entries.ProductID')
         ->join('variants','variants.VariantID','=','product_entries.VariantID')
@@ -124,27 +126,34 @@ class AdminController extends Controller
         [
             'products' =>$products,
             'subcategories' => $subcategories,
-            "product" => $product
+            "product_edit" => $product
         ]);
 
     }
 
-    public function product_update(){
-        $product = Product::find(request('ProductID'));
+    public function product_edit(){
+        // dd(request()->all());
+        // updating product
+        $newsubcategoryid = SubCategory::where("NameSubCategory", request()->ProductSubCategory)->get()->first()->SubCategoryProductID;
+        // dd($newsubcategoryid);
+        Product::where("ProductID",request()->ProductID)
+        ->update(["NameProduct" => request()->ProductName,
+                "DescriptionProduct" => request()->ProductDescription,
+                "SubCategoryProductID" => $newsubcategoryid,
+            
+        ]);
+        // updating variant
+        Variant::where("VariantID",request()->VariantID)
+        ->update(["VariantName" => request()->ProductVariant]);
 
-        if ($product) {
-            $product->NameProduct = request('ProductName');
-            $product->NameCategory = request('ProductSubCategory');
-            $product->VariantName = request('ProductVariant');
-            $product->Description = request('ProductDescription');
-            $product->Stock = request('ProductStock');
-            $product->Price = request('ProductPrice');
+        // updating stock and price
+        ProductEntry::where("ProductID",request()->ProductID)
+        ->where("VariantID",request()->VariantID)
+        ->update(["Stock" => request()->ProductStock,
+                "Price" => request()->ProductPrice,
+    ]);
 
-            $product->save();
 
-            return redirect()->back()->with('success', 'Product updated successfully!');
-        }
-
-        return redirect()->back()->with('error', 'Product not found!');
+        return redirect()->route('product_admin');
     }
 }

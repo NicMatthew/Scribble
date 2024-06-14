@@ -12,9 +12,10 @@
         <script src="/js/product-admin.js" defer=""></script>
     </head>
     <body>
-        @if($product != null)
+        {{-- @dd($product_edit) --}}
+        @if($product_edit != null)
             <script>
-            let product = {!! json_encode($product->toArray()) !!}
+            let product = {!! json_encode($product_edit->toArray()) !!}
             </script>
         @else
         <script>
@@ -22,7 +23,7 @@
         </script>
             
         @endif
-        {{-- @dd($product) --}}
+        {{-- @dd($product_edit) --}}
         <div class="background">
         @include("components/sidebar-admin")
         <div class="main-content">
@@ -154,6 +155,7 @@
 
         </div>
         {{-- EDIT PRODUCT --}}
+        @if ($product_edit != null)
         <div class="modal" id="modal-edit">
             <div class="add-discount-container" id="edit-discount-container">
                 <div class="header">
@@ -163,16 +165,16 @@
                     <div class="header-title">Edit Product</div>
                     <hr class="divider">
                 </div>
-                <form class="add-discount-wrapper" name="" method="POST" action="{{ route("product_add") }}" enctype="multipart/form-data">
+                <form class="add-discount-wrapper" name="" method="POST" action="{{ route("product-edit") }}" enctype="multipart/form-data">
                     @csrf
                     <div class="input-wrapper">
                         <div class="input-name">Product Name</div>
-                        <input type="text" class="input-field" placeholder="Product Name" name="ProductName">
+                        <input type="text" class="input-field" placeholder="Product Name" name="ProductName" id="ProductName" value="{{ $product_edit->NameProduct }}">
                     </div>
                     <div class="input-wrapper">
                         <div class="input-name">Product Sub Category</div>
                         <select class="input-field" name="ProductSubCategory">
-                            <option value="" disabled selected>Choose Category</option>
+                            <option value="{{ $product->NameSubCategory }}" selected id="ProductSubCategory">{{ $product_edit->NameSubCategory }}</option>
                             @foreach ($subcategories as $subcategory)
                                 <option value="{{ $subcategory->NameSubCategory }}">{{ $subcategory->NameSubCategory }}</option>
                             @endforeach
@@ -180,35 +182,30 @@
                     </div>
                     <div class="input-wrapper">
                         <div class="input-name">Product Variant</div>
-                        <input type="text" class="input-field" placeholder="Product Variant" name="ProductVariant">
-                    </div>
-                    <div class="input-wrapper">
-                        <label class="input-name">Product Images</label>
-                        <input type="file" class="input-field" name="ProductImages[]" id="uploadImage" title=" " accept="image/*" multiple>
-                        <label for="uploadImage" id="fileLabel">No Image Selected</label>
-                        <ul id="fileList"></ul>
-                    </div>
-                    <div class="input-wrapper" id="uploadedImage">
-                        <div class="image-container" id="imageContainer"></div>
+                        <input type="text" class="input-field" placeholder="Product Variant" name="ProductVariant" id="ProductVariant" value="{{ $product_edit->VariantName }}">
                     </div>
                     <div class="input-wrapper">
                         <div class="input-name">Product Description</div>
-                        <input type="text" class="input-field" placeholder="Product Description" name="ProductDescription">
+                        <input type="text" class="input-field" placeholder="Product Description" name="ProductDescription" id="ProductDescription" value="{{ $product_edit->DescriptionProduct}}">
                     </div>
                     <div class="input-wrapper">
                         <div class="input-name">Product Stock</div>
-                        <input type="text" class="input-field" placeholder="Product Stock" name="ProductStock">
+                        <input type="text" class="input-field" placeholder="Product Stock" name="ProductStock" id="ProductStock" value="{{ $product_edit->Stock }}">
                     </div>
                     <div class="input-wrapper">
                         <div class="input-name">Product Price</div>
-                        <input type="text" class="input-field" placeholder="Product Price" name="ProductPrice">
+                        <input type="text" class="input-field" placeholder="Product Price" name="ProductPrice" id="ProductPrice" value="{{ $product_edit->Price }}">
                     </div>
+                    <input type="hidden" value="{{ $product_edit->ProductID }}" name="ProductID">
+                    <input type="hidden" value="{{ $product_edit->VariantID }}" name="VariantID">
                     <input class="add-new-disc" placeholder="Add Product" type="submit">
                 </form>
             </div>
 
-        </div>
-        <form action="{{ route("edit-product") }}" name="form-edit">
+        </div> 
+            
+        @endif
+        <form action="{{ route("product-find") }}" name="form-edit">
             <input type="hidden" value="" name="ProductID" id="ProductID">
             <input type="hidden" value="" name="VariantName" id="VariantName">
         </form>

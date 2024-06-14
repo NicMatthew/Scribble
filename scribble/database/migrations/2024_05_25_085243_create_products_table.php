@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('ProductID');
             $table->string('NameProduct');
             $table->float('Rating');
+            $table->longText("DescriptionProduct");
             $table->foreignId('SubCategoryProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("SubCategoryProductID")->on('sub_categories');
             $table->timestamps();
         });

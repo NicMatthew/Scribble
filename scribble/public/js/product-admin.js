@@ -147,6 +147,12 @@ document
     });
 
 
+let ProductName = document.getElementById("ProductName")
+let ProductSubCategory = document.getElementById("ProductSubCategory");
+let ProductVariant = document.getElementById("ProductVariant");
+let ProductDescription = document.getElementById("ProductDescription");
+let ProductStock = document.getElementById("ProductStock");
+let ProductPrice = document.getElementById("ProductPrice");
 
 if (product != null) {
     modalEdit.classList.add("show");

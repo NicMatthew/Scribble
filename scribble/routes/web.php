@@ -111,7 +111,8 @@ Route::get('/order-admin', function () {
 
 
 Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
-Route::get("/product-admin", [AdminController::class, "product_find"])->name("edit-product");
+Route::get("/product-admin/find", [AdminController::class, "product_find"])->name("product-find");
+Route::post("/product-admin/edit", [AdminController::class, "product_edit"])->name("product-edit");
 Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
 Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
 
