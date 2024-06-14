@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Wishlist;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -12,8 +14,21 @@ class HomeController extends Controller
         // Fetch latest 8 products, including images and entries
         $products = Product::with(['images', 'entries'])
             ->orderBy('created_at', 'desc')
-            ->limit(8)
             ->get();
+
+        foreach($products as $product) {
+            $wish = Wishlist::where('UserID', Auth::user()->UserID)
+            ->where('ProductID', $product->ProductID)
+            ->first();
+
+            if ($wish != null) {
+                $product->inWishlist = true;
+            } else {
+                $product->inWishlist = null;
+            }
+        }
+
+        // dd($products);
 
         // Add the first image and the minimum price to the main product object
         foreach ($products as $product) {
@@ -23,6 +38,7 @@ class HomeController extends Controller
             // Adding the minimum price
             $product->Price = $product->entries->min('Price');
         }
+        // if(auth())
 
         return view('home', ['products' => $products]);
     }
