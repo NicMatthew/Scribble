@@ -120,47 +120,37 @@ function removeFile(index) {
 
 
 
+let modalEdit = document.getElementById("modal-edit");
+let editContainer = document.getElementById("edit-discount-container");
+let ProductForm = document.getElementById("ProductID")
+let VariantForm = document.getElementById("VariantName");
 
+document.querySelectorAll(".edit").forEach((editBtn) => {
+    editBtn.addEventListener("click", function () {
+        // Tampilkan overlay dan pop-up
+        var ProductID = editBtn.parentElement.parentElement.parentElement.children[1].innerHTML
+        var VariantName = editBtn.parentElement.parentElement.parentElement.children[4].innerHTML;
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".edit").forEach((editBtn) => {
-        editBtn.addEventListener("click", function () {
-            // Tampilkan overlay dan pop-up
-            document.getElementById("edit-overlay").style.display = "block";
-            document.getElementById("edit-popup").style.display = "block";
+        ProductForm.value = ProductID
+        VariantForm.value = VariantName
 
-            // Ambil data produk dari baris tabel
-            let productRow = this.closest("tr");
-            let productID =
-                productRow.querySelector("td:nth-child(2)").textContent;
-            let productName =
-                productRow.querySelector(".prod-name").textContent;
-            let productSubCategory =
-                productRow.querySelector("td:nth-child(4)").textContent;
-            let productVariant =
-                productRow.querySelector("td:nth-child(5)").textContent;
-            let productStock =
-                productRow.querySelector("td:nth-child(6)").textContent;
-            let productPrice =
-                productRow.querySelector("td:nth-child(7)").textContent;
+        document.forms["form-edit"].submit()  
+    });
+});
 
-            // Isi form dengan data produk
-            document.getElementById("editProductID").value = productID;
-            document.getElementById("editProductName").value = productName;
-            document.getElementById("editProductSubCategory").value =
-                productSubCategory;
-            document.getElementById("editProductVariant").value =
-                productVariant;
-            document.getElementById("editProductStock").value = productStock;
-            document.getElementById("editProductPrice").value = productPrice;
-        });
+// Event listener untuk menutup pop-up
+document
+    .getElementById("close-btn-edit")
+    .addEventListener("click", function () {
+        modalEdit.classList.remove("show");
+        editContainer.classList.remove("show");
     });
 
-    // Event listener untuk menutup pop-up
-    document
-        .getElementById("close-btn-edit")
-        .addEventListener("click", function () {
-            document.getElementById("edit-overlay").style.display = "none";
-            document.getElementById("edit-popup").style.display = "none";
-        });
-});
+
+
+if (product != null) {
+    modalEdit.classList.add("show");
+    editContainer.classList.add("show");
+    // lastActive.classList.remove("show");
+    lastActive = null;
+}

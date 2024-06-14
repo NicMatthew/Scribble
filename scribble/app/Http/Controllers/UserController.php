@@ -54,7 +54,7 @@ class UserController extends Controller
             ];
         }
 
-        
+
         // dd($userData);
 
         // Cek apakah ada file gambar yang diunggah
@@ -72,7 +72,7 @@ class UserController extends Controller
 
         // // Lakukan pembaruan profil
         // $user->update($userData);
-        
+
         if (!empty($userData)) {
             $user->update($userData);
         }
@@ -83,6 +83,7 @@ class UserController extends Controller
     public function showAddresses($userId)
     {
         $addresses = Address::where('UserID', $userId)->get();
+        // dd($addresses);
         return view('address', ['addresses' => $addresses]);
     }
 }
