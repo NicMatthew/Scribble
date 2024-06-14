@@ -58,6 +58,9 @@ Route::get('/product-detail', function () {
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+Route::put('/cart/{product_id}/{variant_id}/{user_id}', [CartController::class, 'update'])->name('cart.update');
+
+// Route::put('/cart/{cartDetail}', [CartController::class, 'update'])->name('cart.update');
 
 Route::get('/sidebar', function () {
     return view('/components/sidebar');
