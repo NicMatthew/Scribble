@@ -13,4 +13,9 @@ class Variant extends Model
     {
         return $this->hasOne(ProductEntry::class, 'VariantID', 'VariantID');
     }
+
+    public function images() {
+        return $this->hasMany(ProductImage::class, 'VariantID', 'VariantID');
+    }
+
 }

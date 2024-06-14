@@ -219,7 +219,11 @@ class ProductController extends Controller
         $wishlistItem = Wishlist::where('UserID', $user->UserID)->where('ProductID', $productId)->first();
 
         if ($wishlistItem) {
-            $wishlistItem->delete();
+            Wishlist::where('UserID', $user->UserID)
+                    ->where('ProductID', $productId)
+                    ->delete();
+        // if ($wishlistItem) {
+        //     $wishlistItem->delete();
         } else {
             $NewWishlist = new Wishlist();
             $NewWishlist->UserID = $user->UserID;
@@ -230,18 +234,31 @@ class ProductController extends Controller
         return redirect()->to($request->url);
     }
 
-    public function showWishlist()
-    {
-        $user = Auth::user();
-        $wishlistProducts = Product::join("wishlists","wishlists.ProductID","=","products.ProductID")
-        // ->join("product_images", "product_images.VariantID", "=", "product_entries.VariantID")
-        ->where("UserID", $user->UserID)->get();
+    
 
-        return view('wishlist', compact('wishlistProducts'));
+    public function showWishlist()
+{
+    $user = Auth::user();
+    
+    // Get wishlist products with their images and entries
+    $wishlistProducts = Product::with(['images', 'entries'])
+        ->join("wishlists", "wishlists.ProductID", "=", "products.ProductID")
+        ->where("UserID", $user->UserID)
+        ->select('products.*')
+        ->get();
+
+    // Add the first image and the minimum price to each product in the wishlist
+    foreach ($wishlistProducts as $product) {
+        $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+        $product->Price = $product->entries->min('Price');
+        $product->inWishlist = true;
     }
 
+    return view('wishlist', compact('wishlistProducts'));
+}
+
     // public function removeFromWishlist(Request $request)
-    // {
+    // {    
     //     $user = Auth::user();
     //     $productId = $request->input('product_id');
 

@@ -47,7 +47,7 @@ Route::get('/product-catalog/{productID}', [ProductController::class, 'showProdu
 
 Route::get('/addresses/{userId}', [UserController::class, 'showAddresses'])->name('show-addresses');
 Route::post('/add/address', [AddressController::class, 'addAddress'])->name('add-address');
-Route::delete('/address/{addressId}', [AddressController::class, 'deleteAddress'])->name('delete-address');
+Route::delete('/address', [AddressController::class, 'deleteAddress'])->name('delete-address');
 
 
 
@@ -58,6 +58,9 @@ Route::get('/product-detail', function () {
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+Route::put('/cart/{product_id}/{variant_id}/{user_id}', [CartController::class, 'update'])->name('cart.update');
+
+// Route::put('/cart/{cartDetail}', [CartController::class, 'update'])->name('cart.update');
 
 Route::get('/sidebar', function () {
     return view('/components/sidebar');
