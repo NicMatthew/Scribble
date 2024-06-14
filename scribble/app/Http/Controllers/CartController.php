@@ -13,12 +13,33 @@ class CartController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        $cartItems = CartDetail::where('UserID', $user_id)
-                    ->with('product', 'user', 'variant.entry')
-                    ->get();
+        $cartItems = DB::table('cart_details as cd')
+                        ->join('products as p', 'cd.ProductID', '=', 'p.ProductID')
+                        ->join('variants as v', 'cd.VariantID', '=', 'v.VariantID')
+                        ->join('users as u', 'cd.UserID', '=', 'u.UserID')
+                        ->leftJoin('product_entries as pe', function($join) {
+                            $join->on('v.VariantID', '=', 'pe.VariantID')
+                                ->on('p.ProductID', '=', 'pe.ProductID');
+                        })
+                        ->leftJoin('product_images as pi', function($join) {
+                            $join->on('p.ProductID', '=', 'pi.ProductID')
+                                ->on('v.VariantID', '=', 'pi.VariantID');
+                        })
+                        ->where('cd.UserID', $user_id)
+                        ->select('cd.*', 'p.*', 'v.*', 'u.*', 'pe.*', 'pi.*')
+                        ->get();
 
         return view('cart', compact('cartItems'));
     }
+    // public function index()
+    // {
+    //     $user_id = Auth::id();
+    //     $cartItems = CartDetail::where('UserID', $user_id)
+    //                 ->with('product', 'user', 'variant.entry')
+    //                 ->get();
+
+    //     return view('cart', compact('cartItems'));
+    // }
 
     public function addToCart(Request $request)
     {

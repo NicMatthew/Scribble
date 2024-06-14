@@ -52,10 +52,12 @@
                     <tr class="products">
                         <td class="product-details">
                             {{-- <img src="data:image/png;base64,{{ $item->image }}" alt="Product Image"> --}}
-                            <img src="\images\marker.png" alt="">
+                            <img src="{{ $item->Image }}" alt="">
+                            {{-- <img src="\images\marker.png" alt=""> --}}
                             <div class="detail-cart">
-                                <p>{{ $item->product->NameProduct }}</p>
-                                <p class="var-cart"> var : {{ $item->variant->VariantName }}</p>
+                                {{-- <p>{{ $item->product->NameProduct }}</p> --}}
+                                <p>{{$item->NameProduct}}</p>
+                                <p class="var-cart"> var : {{ $item->VariantName }}</p>
                             </div>
                         </td>
                         {{-- <td class="product-quantity">
@@ -74,11 +76,12 @@
                             </form>
                         </td>
                         <td class="product-price">
-                            <p>Rp. {{ number_format($item->variant->entry->Price ?? 0, 0, ',', '.') }}</p>
-
+                            {{-- <p>Rp. {{ number_format($item->variant->entry->Price ?? 0, 0, ',', '.') }}</p> --}}
+                            <p>Rp. {{ number_format($item->Price ?? 0, 0, ',', '.') }}</p>
                         </td>
                         <td class="product-total-price">
-                            <p>Rp. {{ number_format($item->variant->entry->Price*$item->Quantity ?? 0, 0, ',', '.') }}</p>
+                            {{-- <p>Rp. {{ number_format($item->variant->entry->Price*$item->Quantity ?? 0, 0, ',', '.') }}</p> --}}
+                            <p>Rp. {{ number_format($item->Price*$item->Quantity ?? 0, 0, ',', '.') }}</p>
                         </td>
                         {{-- <td class="product-checkbox">
                             <input type="checkbox">
