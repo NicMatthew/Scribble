@@ -247,16 +247,30 @@
     height: 40px;
 }
 
-.wishlist{
+/* .wish{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.wishlist img{
+.wish img{
     width: 25px;
+} */
+
+.wishlist img{
+    width: 150px;
+}
+.wishlist button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
 }
 
+.wishlist button:focus {
+    outline: none;
+}
 .description{
     width: 100%;
     height: fit-content;

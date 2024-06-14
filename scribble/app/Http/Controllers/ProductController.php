@@ -10,13 +10,26 @@ use App\Models\ProductImage;
 use App\Models\SubCategory;
 use App\Models\Wishlist;
 use Illuminate\Support\Arr;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 
 class ProductController extends Controller
 {
     public function showProductDetail($productID) {
         $selectedProduct = Product::where("ProductID", $productID)->first();
+        
+        if(Auth::check()){
+            $wish = Wishlist::where('UserID', Auth::user()->UserID)
+            ->where('ProductID', $selectedProduct->ProductID)
+            ->first();
+
+            if ($wish != null) {
+                $selectedProduct->inWishlist = true;
+            } else {
+                $selectedProduct->inWishlist = null;
+            }
+        }
+
         $variants = ProductEntry::join("variants", "variants.VariantID", "=", "product_entries.VariantID")
                                 ->join("product_images", "product_images.VariantID", "=", "product_entries.VariantID")
                                 ->where("product_images.ProductID", $productID)
@@ -39,11 +52,15 @@ class ProductController extends Controller
             $product->Price = $product->entries->min('Price');
         };
 
+
         // dd($products);
 
         // Get wishlist product IDs
-        $user = Auth::user();
-        $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
+        $wishlistProductIDs=null;
+        if(Auth::check()){
+            $wishlistProductIDs = Wishlist::where('UserID', Auth::id())->pluck('ProductID')->toArray();
+        }
+        
 
         return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs"));
     }
