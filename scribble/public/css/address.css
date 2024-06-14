@@ -213,7 +213,7 @@
     margin-bottom: 5px;
 }
 
-.cancel {
+.cancel, .cancel-edit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,7 +230,7 @@
     cursor: pointer;
 }
 
-.modal {
+.modal, .modal-edit, .modal-delete{
     background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
@@ -241,7 +241,7 @@
     justify-content: center;
 }
 
-.modal-delete {
+/* .modal-delete {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
@@ -250,7 +250,7 @@
     overflow-y: scroll;
     align-items: flex-start;
     justify-content: center;
-}
+} */
 
 .active {
     display: flex;

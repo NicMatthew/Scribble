@@ -34,6 +34,22 @@ class AddressController extends Controller
         return back();
     }
 
+    public function editAddress()
+    {
+        // $addressId = $request->addressID;
+        Address::where('AddressID', request()->addressID)
+        ->update([
+            "AddressName" => request()->address_name,
+            "RecipientName" => request()->recipient_name,
+            "PostCode" => request()->post_code,
+            "FullAddress" => request()->full_address,
+            "PhoneNumber" => request()->phone_number
+        ]);
+
+         // Redirect back to the page where the form was submitted
+         return back();
+    }
+
     public function deleteAddress(Request $request)
     {
         $addressId = $request->addressID;

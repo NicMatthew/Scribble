@@ -20,6 +20,10 @@
         <div class="header-title">Shipping</div>
         <hr class="divider">
     </div>
+    {{-- @php
+        $selectedAddressName = isset($_COOKIE['selectedAddressName']) ? $_COOKIE['selectedAddressName'] : null;
+        $selectedFullAddress = isset($_COOKIE['selectedFullAddress']) ? $_COOKIE['selectedFullAddress'] : null;
+    @endphp --}}
     <div class="steps-info">
         <div class="step prim-1-fill passive">
             <div class="step-counter">Step 1</div>
@@ -41,6 +45,12 @@
             <div class="address-info">
                 <div class="address-title">Destination Address</div>
                 <div class="address-detail">
+                    {{-- @if ($selectedAddressName && $selectedFullAddress)
+                        <div class="address-name">{{ $selectedAddressName }}</div>
+                        <div class="address-full">{{ $selectedFullAddress }}</div>
+                    @else
+                        <div class="address-name">No address selected</div>
+                    @endif --}}
                     <div class="address-name">Rumah Talenta BCA</div>
                     <div class="address-full">Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kabupaten Bogor, Jawa Barat 16810</div>
                 </div>

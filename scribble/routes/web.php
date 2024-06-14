@@ -48,6 +48,7 @@ Route::get('/product-catalog/{productID}', [ProductController::class, 'showProdu
 Route::get('/addresses/{userId}', [UserController::class, 'showAddresses'])->name('show-addresses');
 Route::post('/add/address', [AddressController::class, 'addAddress'])->name('add-address');
 Route::delete('/address', [AddressController::class, 'deleteAddress'])->name('delete-address');
+Route::post('/editAddress', [AddressController::class, 'editAddress'])->name('edit-address');
 
 
 
