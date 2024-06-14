@@ -16,7 +16,8 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        foreach($products as $product) {
+        if(Auth::check()){
+            foreach($products as $product) {
             $wish = Wishlist::where('UserID', Auth::user()->UserID)
             ->where('ProductID', $product->ProductID)
             ->first();
@@ -26,6 +27,7 @@ class HomeController extends Controller
             } else {
                 $product->inWishlist = null;
             }
+        }
         }
 
         // dd($products);
