@@ -31,6 +31,8 @@ class CartController extends Controller
 
         return view('cart', compact('cartItems'));
     }
+
+
     // public function index()
     // {
     //     $user_id = Auth::id();
@@ -38,6 +40,13 @@ class CartController extends Controller
     //                 ->with('product', 'user', 'variant.entry')
     //                 ->get();
 
+    //     foreach ($cartItems as $item) {
+    //         $productImages = ProductImage::where('ProductID', $item->ProductID)
+    //                         ->where('VariantID', $item->VariantID)
+    //                         ->get();
+
+    //         $item->product->images = $productImages;
+    //     }
     //     return view('cart', compact('cartItems'));
     // }
 
