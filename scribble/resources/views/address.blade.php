@@ -12,6 +12,7 @@
     <script src="/js/address.js" defer=""></script>
 </head>
 <body>
+    {{-- @dd(count($addresses)) --}}
     <div class="big-container">
         <div class="header">
             <div class="back-btn" onclick="history.back()">
@@ -31,7 +32,7 @@
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">{{ $address->PhoneNumber}}</p>
                 <p style="color: var(--dark-grey); font-size: 18px; margin-bottom: 5px">{{ $address ->FullAddress}}</p>
             </div>
-            <div class="right-address">
+            <div class="right-address" id="{{ $address->AddressID }}">
                 <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
                 <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" class="edit-btn" alt="">
             </div>
@@ -104,8 +105,9 @@
                     <div class="del-add-button">
                         <button type="submit" class="keep b2">Keep Address</button>
 
-                        <form action="{{ route('delete-address', $address->AddressID) }}" method="POST">
+                        <form action="{{ route('delete-address') }}" method="POST">
                             @csrf
+                            <input type="hidden" value="" name="addressID" id="addressID">
                             @method('DELETE')
                             <button type="submit" class="btn-del b2">Delete Address</button>
                         </form>

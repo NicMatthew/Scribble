@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/steps-info.css">
     <link rel="stylesheet" href="/css/header-standard.css">
+    <script src="/js/cart.js" defer=""></script>
     <title>Document</title>
 </head>
 <body>
@@ -50,14 +51,26 @@
                     @foreach ($cartItems as $item)
                     <tr class="products">
                         <td class="product-details">
+                            {{-- <img src="data:image/png;base64,{{ $item->image }}" alt="Product Image"> --}}
                             <img src="\images\marker.png" alt="">
                             <p>{{ $item->product->NameProduct }}</p>
                             <p>{{ $item->variant->VariantName }}</p>
                         </td>
-                        <td class="product-quantity">
+                        {{-- <td class="product-quantity">
                             <img src="\icons\minus.svg" alt="">
                             <p>{{ $item->Quantity }}</p>
                             <img src="\icons\plus.svg" alt="">
+                        </td> --}}
+                        <td class="product-quantity">
+                            <form action="{{ route('cart.update', ['product_id' => $item->ProductID, 'variant_id' => $item->VariantID, 'user_id' => $item->UserID]) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <img src="\icons\minus.svg" alt="" class="btn-quantity" data-action="minus">
+                                <input type="hidden" name="quantity" value="{{ $item->Quantity }}">
+                                <p>{{ $item->Quantity }}</p>
+                                <img src="\icons\plus.svg" alt="" class="btn-quantity" data-action="plus">
+                                <button type="submit">Update Quantity</button>
+                            </form>
                         </td>
                         <td class="product-price">
                             <p>Rp. {{ number_format($item->variant->entry->Price ?? 0, 0, ',', '.') }}</p>
@@ -66,8 +79,11 @@
                         <td class="product-total-price">
                             <p>Rp. {{ number_format($item->variant->entry->Price*$item->Quantity ?? 0, 0, ',', '.') }}</p>
                         </td>
-                        <td class="product-checkbox">
+                        {{-- <td class="product-checkbox">
                             <input type="checkbox">
+                        </td> --}}
+                        <td class="product-checkbox">
+                            <input type="checkbox" onclick="updateSummary(this)">
                         </td>
 
                     </tr>   
@@ -94,6 +110,7 @@
                         </td>
 
                     </tr>
+                    
                     <tr class="products">
                         <td class="product-details">
                             <img src="\images\marker.png" alt="">
@@ -116,142 +133,26 @@
                         </td>
 
                     </tr>
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr> --}}
-
+                    --}}
                 </table>
 
-                <div class="container-summary">
+                <div class="container-summary" id="summaryContainer" style="display: none;">
+                    <div class="container-summary-title">
+                        <p>Summary</p>
+                    </div>
+                    <div class="container-summary-price" id="summaryItems">
+                        <!-- Summary items will be added dynamically here -->
+                        <div class="total-price" id="summaryTotal">
+                            <p>Total</p>
+                            <p>Rp. 0</p>
+                        </div>
+                    </div>
+                    <div class="container-summary-checkout">
+                        <p>Checkout</p>
+                    </div>
+                </div>
+
+                {{-- <div class="container-summary">
                     <div class="container-summary-title">
                         <p>Summary</p>
                     </div>
@@ -281,7 +182,7 @@
                     <div class="container-summary-checkout">
                         <p>Checkout</p>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>

@@ -26,7 +26,7 @@ class AddressController extends Controller
         $address->PhoneNumber = $validatedData['phone_number'];
         $address->FullAddress = $validatedData['full_address'];
         $address->PostCode = $validatedData['post_code'];
-    
+
         $address->UserID = auth()->id();
         $address->save();
 
@@ -34,8 +34,9 @@ class AddressController extends Controller
         return back();
     }
 
-    public function deleteAddress($addressId)
+    public function deleteAddress(Request $request)
     {
+        $addressId = $request->addressID;
         $address = Address::where('AddressID', $addressId)->firstOrFail();
         $address->delete();
         return back();

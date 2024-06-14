@@ -24,8 +24,10 @@ cancelButton.addEventListener("click", function () {
 //munculin overlay validasi mau apus ato engga
 const exitAddressImgs = document.querySelectorAll('.right-address img[src="/icons/exit-address.svg"]');
 const modalDelete = document.getElementById("modal-delete");
+const addressID = document.getElementById("addressID")
 exitAddressImgs.forEach((exitImg) => {
     exitImg.addEventListener("click", function () {
+        addressID.value = exitImg.parentElement.id
         modalDelete.classList.add("active");
     });
 });
