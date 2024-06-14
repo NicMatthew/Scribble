@@ -53,8 +53,10 @@
                         <td class="product-details">
                             {{-- <img src="data:image/png;base64,{{ $item->image }}" alt="Product Image"> --}}
                             <img src="\images\marker.png" alt="">
-                            <p>{{ $item->product->NameProduct }}</p>
-                            <p>{{ $item->variant->VariantName }}</p>
+                            <div class="detail-cart">
+                                <p>{{ $item->product->NameProduct }}</p>
+                                <p class="var-cart"> var : {{ $item->variant->VariantName }}</p>
+                            </div>
                         </td>
                         {{-- <td class="product-quantity">
                             <img src="\icons\minus.svg" alt="">
@@ -62,14 +64,13 @@
                             <img src="\icons\plus.svg" alt="">
                         </td> --}}
                         <td class="product-quantity">
-                            <form action="{{ route('cart.update', ['product_id' => $item->ProductID, 'variant_id' => $item->VariantID, 'user_id' => $item->UserID]) }}" method="POST">
+                            <form action="{{ route('cart.update', ['product_id' => $item->ProductID, 'variant_id' => $item->VariantID, 'user_id' => $item->UserID]) }}" method="POST" class="form-quantity">
                                 @csrf
                                 @method('PUT')
                                 <img src="\icons\minus.svg" alt="" class="btn-quantity" data-action="minus">
                                 <input type="hidden" name="quantity" value="{{ $item->Quantity }}">
                                 <p>{{ $item->Quantity }}</p>
-                                <img src="\icons\plus.svg" alt="" class="btn-quantity" data-action="plus">
-                                <button type="submit">Update Quantity</button>
+                                <img src="\icons\plus.svg" alt="" class="btn-quantity" data-action="plus">  
                             </form>
                         </td>
                         <td class="product-price">

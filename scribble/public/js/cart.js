@@ -1,21 +1,48 @@
-document.querySelectorAll('.btn-quantity').forEach(button => {
-        button.addEventListener('click', function() {
-            let action = this.getAttribute('data-action');
-            let quantityInput = this.parentElement.querySelector('p');
-            let formInput = this.parentElement.children[3];
-            console.log(formInput)
-            let currentQuantity = parseInt(quantityInput.innerText);
+// document.querySelectorAll('.btn-quantity').forEach(button => {
+//         button.addEventListener('click', function() {
+//             let action = this.getAttribute('data-action');
+//             let quantityInput = this.parentElement.querySelector('p');
+//             let formInput = this.parentElement.children[3];
+//             console.log(formInput)
+//             let currentQuantity = parseInt(quantityInput.innerText);
 
-            if (action === 'minus') {
-                if (currentQuantity > 1) {
-                    quantityInput.innerText = currentQuantity - 1;
-                    formInput.value = currentQuantity - 1;
-                }
-            } else if (action === 'plus') {
-                quantityInput.innerText = currentQuantity + 1;
-                 formInput.value = currentQuantity + 1;
+//             if (action === 'minus') {
+//                 if (currentQuantity > 1) {
+//                     quantityInput.innerText = currentQuantity - 1;
+//                     formInput.value = currentQuantity - 1;
+//                 }
+//             } else if (action === 'plus') {
+//                 quantityInput.innerText = currentQuantity + 1;
+//                  formInput.value = currentQuantity + 1;
+//             }
+//         });
+// });
+
+document.querySelectorAll(".btn-quantity").forEach((button) => {
+    button.addEventListener("click", function () {
+        let action = this.getAttribute("data-action");
+        let quantityInput = this.parentElement.querySelector("p");
+        let formInput = this.parentElement.querySelector(
+            'input[name="quantity"]'
+        );
+        let currentQuantity = parseInt(quantityInput.innerText);
+
+        if (action === "minus") {
+            if (currentQuantity > 1) {
+                quantityInput.innerText = currentQuantity - 1;
+                formInput.value = currentQuantity - 1;
+            } else {
+                quantityInput.innerText = 0; // Set kuantitas ke 0 jika mencoba mengurangi di bawah 1
+                formInput.value = 0; // Set nilai input tersembunyi menjadi 0
             }
-        });
+        } else if (action === "plus") {
+            quantityInput.innerText = currentQuantity + 1;
+            formInput.value = currentQuantity + 1;
+        }
+
+        // Submit form secara otomatis setelah mengubah kuantitas
+        this.closest("form").submit();
+    });
 });
     
 document.addEventListener("DOMContentLoaded", function () {

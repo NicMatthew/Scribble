@@ -63,12 +63,20 @@ class CartController extends Controller
         if ($cartDetail) {
             // Hitung quantity baru
             $quantity = $request->quantity;
-
-            // Update quantity di CartDetail
-            CartDetail::where('ProductID', $product_id)
-                                ->where('VariantID', $variant_id)
-                                ->where('UserID', $user_id)
-                                ->update(["Quantity" => $quantity]);
+            if ($quantity == 0) {
+                // Hapus item dari keranjang
+                CartDetail::where('ProductID', $product_id)
+                        ->where('VariantID', $variant_id)
+                        ->where('UserID', $user_id)
+                        ->delete();
+            }else{
+                // Update quantity di CartDetail
+                CartDetail::where('ProductID', $product_id)
+                        ->where('VariantID', $variant_id)
+                        ->where('UserID', $user_id)
+                        ->update(["Quantity" => $quantity]);
+            }
+            
         } 
         // Redirect atau berikan respons sesuai kebutuhan
         return redirect()->back()->with('success', 'Quantity updated successfully.');
