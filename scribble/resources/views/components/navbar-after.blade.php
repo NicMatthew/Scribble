@@ -42,9 +42,9 @@
                 <!-- <a class="text-reset me-3" style="display:flex; align-items: center;" href="#">
                     <img src="/icons/cart.png" style="margin-right: 15px; height: 27px;"/>
                 </a> -->
-                 <a class="text-reset me-3 position-relative" style="display:flex; align-items: center; justify-content:center;" href="#">
+                 <a  href="{{ route('cart.index') }}" class="text-reset me-3 position-relative" style="display:flex; align-items: center; justify-content:center;">
                     <img src="/icons/cart.svg" style="margin-right: 18px; height: 30px;"/>
-                    <span class="badge position-absolute" style="background-color: var(--prim-1); color: var(--white); border-style:solid; border-color:var(--prim-1); top: 7px; right: 19px; transform: translate(50%, -50%); border-radius: 50%;">8</span>
+                    <span class="badge position-absolute" style="background-color: var(--prim-1); color: var(--white); border-style:solid; border-color:var(--prim-1); top: 7px; right: 19px; transform: translate(50%, -50%); border-radius: 50%;">{{ $totalUniqueItemsInCart }}</span>
                 </a>
                 <!-- User -->
                 <button type="button" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;">

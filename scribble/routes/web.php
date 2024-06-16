@@ -7,7 +7,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
-
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
