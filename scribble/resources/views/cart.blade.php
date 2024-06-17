@@ -70,7 +70,7 @@
                                 @csrf
                                 @method('PUT')
                                 <img src="\icons\minus.svg" alt="" class="btn-quantity" data-action="minus">
-                                <input type="hidden" name="quantity" value="{{ $item->Quantity }}">
+                                <input type="hidden" name="quantity" value="{{ $item->Quantity }}" data-stock="{{ $item->Stock }}">
                                 <p>{{ $item->Quantity }}</p>
                                 <img src="\icons\plus.svg" alt="" class="btn-quantity" data-action="plus">  
                             </form>

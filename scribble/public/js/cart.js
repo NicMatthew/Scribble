@@ -26,21 +26,23 @@ document.querySelectorAll(".btn-quantity").forEach((button) => {
             'input[name="quantity"]'
         );
         let currentQuantity = parseInt(quantityInput.innerText);
+        let stock = parseInt(formInput.getAttribute("data-stock"));
 
         if (action === "minus") {
             if (currentQuantity > 1) {
                 quantityInput.innerText = currentQuantity - 1;
                 formInput.value = currentQuantity - 1;
             } else {
-                quantityInput.innerText = 0; // Set kuantitas ke 0 jika mencoba mengurangi di bawah 1
-                formInput.value = 0; // Set nilai input tersembunyi menjadi 0
+                quantityInput.innerText = 0; 
+                formInput.value = 0; 
             }
         } else if (action === "plus") {
-            quantityInput.innerText = currentQuantity + 1;
-            formInput.value = currentQuantity + 1;
+            if (currentQuantity < stock) {
+                quantityInput.innerText = currentQuantity + 1;
+                formInput.value = currentQuantity + 1;
+            }
         }
 
-        // Submit form secara otomatis setelah mengubah kuantitas
         this.closest("form").submit();
     });
 });
