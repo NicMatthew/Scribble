@@ -45,6 +45,15 @@ function setVariant(idx) {
     variantInput.value = variants[idx].VariantID;
 }
 
+let tempVar = null
+for (let i = variantOpt.length-1; i >= 0; i--) {
+    if (tempVar == variantOpt[i].innerText) {
+        variantOpt[i].remove()
+    } else {
+        tempVar = variantOpt[i].innerText
+    }
+}
+
 for (let i = 0; i < variantOpt.length; i++) {
     variantOpt[i].addEventListener("click", (e)=>{
         setVariant(i)
