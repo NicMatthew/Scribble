@@ -76,10 +76,10 @@
                                 <p class="mb-0 ml-2 b3" style="font-weight: bold; color:white">Add to Cart</p>
                             </div>
                             <form action="{{ route('cart.add') }}" method="POST" id="add-to-cart-form" style="display: none" name="add-to-cart-form">
-                                @csrf 
+                                @csrf
                                 <input type="text" name="product_id" value="{{ $selectedProduct->ProductID }}">
-                                <input type="text" name="quantity" value="" id="quantity-input"> 
-                                <input type="number" name="price" value="" id="price-input"> 
+                                <input type="text" name="quantity" value="" id="quantity-input">
+                                <input type="number" name="price" value="" id="price-input">
                                 <input type="number" name="user_id" value="{{ auth()->id() }}">
                                 <input type="text" name="var" value="" id="variant-input">
                             </form>
@@ -92,7 +92,7 @@
                                     <input type="hidden" name="product_id" value="{{ $selectedProduct->ProductID }}">
                                     <input type="hidden" name="url" value="" id="urlInput">
                                     <button class="wish">
-                                        <img src="{{ $selectedProduct->inWishlist ? '/icons/love-fill.svg' : '/icons/love-outline.svg' }}" alt="Toggle Wishlist">                    
+                                        <img src="{{ $selectedProduct->inWishlist ? '/icons/love-fill.svg' : '/icons/love-outline.svg' }}" alt="Toggle Wishlist">
                                     </button>
                                 </form>
                             </div>
@@ -102,7 +102,7 @@
 
                 <div class="description">
                     <p class="title-desc mb-1">Product Description</p>
-                    <p class="product-desc mb-0" id="product-desc">Pensil warna klasik yang dibuat dengan teknologi Jerman ini hadir dengan fitur warna yang cerah, non toxic hingga aman untuk anak-anak, tidak mudah patah, serta ramah lingkungan. Setiap pensil memberikan pengalaman seni yang kreatif dan menyenangkan dengan palet warna yang hidup dan menarik. Dengan kualitas yang tahan lama dan bahan yang ramah lingkungan, produk ini menjadi pilihan sempurna bagi anak-anak yang ingin menggali bakat seni mereka sekaligus menjunjung nilai-nilai keberlanjutan. Tersedia dalam kemasan 12, 24, 36 dan 48 warna. </p>
+                    <p class="product-desc mb-0" id="product-desc">{{ $selectedProduct->DescriptionProduct }}</p>
                 </div>
 
                 <div class="rating-review">

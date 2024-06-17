@@ -4,7 +4,7 @@ variants = variants
 // set sesuai variant
 const carousel = document.querySelector(".carousel"), arrowIcons = document.querySelectorAll(".wrapper i");
 const priceDisplay = document.getElementById("price-display")
-const variantOpt = document.querySelectorAll(".variantOpt")
+let variantOpt = document.querySelectorAll(".variantOpt")
 const mainPhoto = document.getElementById("main-photo")
 const quantityDisp = document.getElementById("quantity-display")
 const plusBtn = document.getElementById("plus-btn")
@@ -38,7 +38,6 @@ function setVariant(idx) {
     variantOpt[idx].classList.add("selected-variant")
     availableDisp.innerText = variants[idx].Stock + " pieces available"
     quantityDisp.innerText = 1
-    productDesc.innerText = variants[idx].DescriptionVariant
     selectedVariant = idx
     setQuantity(0)
 
@@ -53,6 +52,12 @@ for (let i = variantOpt.length-1; i >= 0; i--) {
         tempVar = variantOpt[i].innerText
     }
 }
+
+variantOpt = document.querySelectorAll(".variantOpt")
+if (!variantOpt[0].classList.contains("selected-variant")) {
+    variantOpt[0].classList.add("selected-variant")
+}
+
 
 for (let i = 0; i < variantOpt.length; i++) {
     variantOpt[i].addEventListener("click", (e)=>{
