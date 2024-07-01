@@ -27,7 +27,7 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-function setVariant(idx) {
+function setVariant(idx, varID) {
     if (selectedVariant != -1) {
         variantOpt[selectedVariant].classList.remove("selected-variant")
     }
@@ -41,7 +41,7 @@ function setVariant(idx) {
     selectedVariant = idx
     setQuantity(0)
 
-    variantInput.value = variants[idx].VariantID;
+    variantInput.value = variants[varID].VariantID;
 }
 
 let tempVar = null
@@ -61,11 +61,17 @@ if (!variantOpt[0].classList.contains("selected-variant")) {
 
 for (let i = 0; i < variantOpt.length; i++) {
     variantOpt[i].addEventListener("click", (e)=>{
-        setVariant(i)
+        varId = null;
+        variants.forEach(variant => {
+            if (variant.VariantName == variantOpt[i].firstElementChild.innerText) {
+                varId = variant.VariantID
+            }
+        });
+        setVariant(i, varId)
     })
 }
 
-setVariant(0)
+setVariant(0, 1)
 
 // quantity adjust
 function setQuantity(val) {

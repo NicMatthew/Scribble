@@ -18,6 +18,9 @@
 //         });
 // });
 
+let summaryItemsContainer = document.getElementById("summaryItems");
+let temp = summaryItemsContainer.firstElementChild
+
 document.querySelectorAll(".btn-quantity").forEach((button) => {
     button.addEventListener("click", function () {
         let action = this.getAttribute("data-action");
@@ -54,8 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function updateSummary() {
     let summaryContainer = document.getElementById("summaryContainer");
-    let summaryItemsContainer = document.getElementById("summaryItems");
-    let summaryTotal = document.getElementById("summaryTotal");
+    summaryItemsContainer = document.getElementById("summaryItems");
     console.log(summaryTotal)
     let selectedItems = document.querySelectorAll(
         'input[type="checkbox"]:checked'
@@ -67,8 +69,12 @@ function updateSummary() {
     selectedItems.forEach(function (item, index) {
         let productDetails = item.closest(".products");
         let productName = productDetails.querySelector(
-            ".product-details p:first-of-type"
+            ".product-details p:last-of-type"
         ).textContent;
+        let awalan = productDetails.querySelector(
+            ".product-details p:first-of-type"
+        ).textContent
+        productName = awalan + " - " + productName.substring(7)
         let productPrice = productDetails
             .querySelector(".product-total-price p")
             .textContent.trim()
@@ -86,16 +92,18 @@ function updateSummary() {
         summaryItemsContainer.appendChild(newItem);
     });
 
+    summaryItemsContainer.appendChild(temp)
+
     let formattedTotalPrice = formatCurrency(totalPrice);
 
-    summaryTotal.firstElementChild.innerText = `Total ${formattedTotalPrice}</p>`;
+    summaryTotal.lastElementChild.innerText = `${formattedTotalPrice}`;
 
     if (selectedItems.length > 0) {
         summaryContainer.style.display = "block";
     } else {
         summaryContainer.style.display = "block"; // Tetap tampilkan summaryContainer
-        summaryItemsContainer.innerHTML = "<p>No items selected</p>"; // Tampilkan pesan default jika tidak ada item yang dipilih
-        summaryTotal.innerHTML = `<p>Total</p><p>Rp. 0</p>`; // Reset total harga
+        // summaryItemsContainer.innerHTML = "<p>No items selected</p>"; // Tampilkan pesan default jika tidak ada item yang dipilih
+        // summaryTotal.innerHTML = `<p>Total</p><p>Rp. 0</p>`; // Reset total harga
     }
 }
 

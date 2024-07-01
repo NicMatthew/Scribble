@@ -14,20 +14,24 @@ class CartController extends Controller
     {
         $user_id = Auth::id();
         $cartItems = DB::table('cart_details as cd')
-                        ->join('products as p', 'cd.ProductID', '=', 'p.ProductID')
-                        ->join('variants as v', 'cd.VariantID', '=', 'v.VariantID')
-                        ->join('users as u', 'cd.UserID', '=', 'u.UserID')
-                        ->leftJoin('product_entries as pe', function($join) {
-                            $join->on('v.VariantID', '=', 'pe.VariantID')
-                                ->on('p.ProductID', '=', 'pe.ProductID');
-                        })
-                        ->leftJoin('product_images as pi', function($join) {
-                            $join->on('p.ProductID', '=', 'pi.ProductID')
-                                ->on('v.VariantID', '=', 'pi.VariantID');
-                        })
-                        ->where('cd.UserID', $user_id)
-                        ->select('cd.*', 'p.*', 'v.*', 'u.*', 'pe.*', 'pi.*')
-                        ->get();
+            ->join('products as p', 'cd.ProductID', '=', 'p.ProductID')
+            ->join('variants as v', 'cd.VariantID', '=', 'v.VariantID')
+            ->join('users as u', 'cd.UserID', '=', 'u.UserID')
+            ->leftJoin('product_entries as pe', function ($join) {
+                $join->on('v.VariantID', '=', 'pe.VariantID')
+                    ->on('p.ProductID', '=', 'pe.ProductID');
+            })
+            ->leftJoin(DB::raw('(SELECT ProductID, VariantID, MIN(ImageProductID) as ImageProductID FROM product_images GROUP BY ProductID, VariantID) as pi_min'), function ($join) {
+                $join->on('p.ProductID', '=', 'pi_min.ProductID')
+                    ->on('v.VariantID', '=', 'pi_min.VariantID');
+            })
+            ->leftJoin('product_images as pi', function ($join) {
+                $join->on('pi_min.ImageProductID', '=', 'pi.ImageProductID');
+            })
+            ->where('cd.UserID', $user_id)
+            ->select('cd.*', 'p.*', 'v.*', 'u.*', 'pe.*', 'pi.*') // Pilih kolom yang diperlukan
+            ->groupBy('p.ProductID', 'v.VariantID', 'u.UserID', 'v.VariantName', 'pi.ImageProductID') // Sesuaikan kolom group by sesuai kebutuhan
+            ->get();
 
         return view('cart', compact('cartItems'));
     }
@@ -58,10 +62,10 @@ class CartController extends Controller
         $user_id = Auth::id();
 
         $cartDetail = CartDetail::where('ProductID', $product_id)
-                                ->where('VariantID', $variant_id)
-                                ->where('UserID', $user_id)
-                                ->first();
-        
+            ->where('VariantID', $variant_id)
+            ->where('UserID', $user_id)
+            ->first();
+
         // Jika record tidak ditemukan, buat baru
         if ($cartDetail == null) {
             $NewcartDetail = new CartDetail();
@@ -73,9 +77,9 @@ class CartController extends Controller
         } else {
             $quantity = $quantity + $cartDetail->Quantity;
             CartDetail::where('ProductID', $product_id)
-                                ->where('VariantID', $variant_id)
-                                ->where('UserID', $user_id)
-                                ->update(["Quantity" => $quantity]);
+                ->where('VariantID', $variant_id)
+                ->where('UserID', $user_id)
+                ->update(["Quantity" => $quantity]);
         }
 
         // Redirect ke halaman keranjang atau halaman lain yang sesuai
@@ -86,9 +90,9 @@ class CartController extends Controller
     {
         // Ambil data CartDetail yang sesuai
         $cartDetail = CartDetail::where('ProductID', $product_id)
-                                ->where('VariantID', $variant_id)
-                                ->where('UserID', $user_id)
-                                ->first();
+            ->where('VariantID', $variant_id)
+            ->where('UserID', $user_id)
+            ->first();
 
         if ($cartDetail) {
             // Hitung quantity baru
@@ -96,20 +100,18 @@ class CartController extends Controller
             if ($quantity == 0) {
                 // Hapus item dari keranjang
                 CartDetail::where('ProductID', $product_id)
-                        ->where('VariantID', $variant_id)
-                        ->where('UserID', $user_id)
-                        ->delete();
-            }else{
+                    ->where('VariantID', $variant_id)
+                    ->where('UserID', $user_id)
+                    ->delete();
+            } else {
                 // Update quantity di CartDetail
                 CartDetail::where('ProductID', $product_id)
-                        ->where('VariantID', $variant_id)
-                        ->where('UserID', $user_id)
-                        ->update(["Quantity" => $quantity]);
+                    ->where('VariantID', $variant_id)
+                    ->where('UserID', $user_id)
+                    ->update(["Quantity" => $quantity]);
             }
-            
-        } 
+        }
         // Redirect atau berikan respons sesuai kebutuhan
         return redirect()->back()->with('success', 'Quantity updated successfully.');
     }
-
 }
