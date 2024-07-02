@@ -14,26 +14,34 @@ cancelButton.addEventListener("click", function () {
 });
 
 const nextButtons = document.querySelectorAll('.right-address img[src="/icons/edit.svg"]');
-const AddressID = document.getElementById('AddressID');
+let AddressID = document.getElementById('addressID');
 const modalEdit = document.getElementById('modal-edit'); 
+// let AddressID = document.getElementById("AddressID")
+let UserID = document.getElementById("UserID");
+// console.log(AddressID);
 
 nextButtons.forEach((nextButton) => {
     nextButton.addEventListener("click", function () {
         AddressID.value = nextButton.parentElement.id; 
-        modalEdit.classList.add("active");
+        document.forms["form-edit"].submit();
     });
 });
 
-const cancelButtonEdit = document.querySelector(".cancel-edit");
-cancelButtonEdit.addEventListener("click", function () {
-    modalEdit.classList.remove("active");
-});
+// ini masih harus dibenerin lagi
+document.getElementById('cancel-edit').addEventListener("click", function(){
+    modalEdit.classList.remove("show");
+    editContainer.classList.remove("show");
+})
+// const cancelButtonEdit = document.querySelector(".cancel-edit");
+// cancelButtonEdit.addEventListener("click", function () {
+//     modalEdit.classList.remove("active");
+// });
 
 
 //munculin overlay validasi mau apus ato engga
 const exitAddressImgs = document.querySelectorAll('.right-address img[src="/icons/exit-address.svg"]');
 const modalDelete = document.getElementById("modal-delete");
-const addressID = document.getElementById("addressID");
+const addressID = document.getElementById("AddressID");
 exitAddressImgs.forEach((exitImg) => {
     exitImg.addEventListener("click", function () {
         addressID.value = exitImg.parentElement.id

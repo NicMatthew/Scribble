@@ -44,6 +44,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product-catalog', [ProductController::class, 'showAllProducts'])->name('product-catalog');
 Route::get('/product-catalog/{productID}', [ProductController::class, 'showProductDetail'])->name('product-detail');
 
+Route::post("/addresses/find", [AddressController::class, "findAddress"])->name("find-address");
 Route::get('/addresses/{userId}', [UserController::class, 'showAddresses'])->name('show-addresses');
 Route::post('/add/address', [AddressController::class, 'addAddress'])->name('add-address');
 Route::delete('/address', [AddressController::class, 'deleteAddress'])->name('delete-address');

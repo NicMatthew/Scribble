@@ -82,8 +82,14 @@ class UserController extends Controller
 
     public function showAddresses($userId)
     {
+        // dd("testttttttttttt");
         $addresses = Address::where('UserID', $userId)->get();
+        $addresss = null;
         // dd($addresses);
-        return view('address', ['addresses' => $addresses]);
+        return view('address', 
+        [
+            'addresses' => $addresses, 
+            "address_edit" => $addresss
+        ]);
     }
 }

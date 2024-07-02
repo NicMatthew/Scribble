@@ -230,12 +230,22 @@
     cursor: pointer;
 }
 
-.modal, .modal-edit, .modal-delete{
+.modal, .modal-delete{
     background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
     position: fixed;
     display: none;
+    overflow-y: scroll;
+    align-items: flex-start;
+    justify-content: center;
+}
+.modal-edit{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
     overflow-y: scroll;
     align-items: flex-start;
     justify-content: center;
