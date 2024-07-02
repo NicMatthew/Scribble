@@ -41,7 +41,7 @@ function setVariant(idx, varID) {
     selectedVariant = idx
     setQuantity(0)
 
-    variantInput.value = variants[varID].VariantID;
+    variantInput.setAttribute("value", varID)
 }
 
 let tempVar = null
@@ -62,6 +62,7 @@ if (!variantOpt[0].classList.contains("selected-variant")) {
 for (let i = 0; i < variantOpt.length; i++) {
     variantOpt[i].addEventListener("click", (e)=>{
         varId = null;
+
         variants.forEach(variant => {
             if (variant.VariantName == variantOpt[i].firstElementChild.innerText) {
                 varId = variant.VariantID
@@ -71,7 +72,7 @@ for (let i = 0; i < variantOpt.length; i++) {
     })
 }
 
-setVariant(0, 1)
+setVariant(0, variants[0].VariantID)
 
 // quantity adjust
 function setQuantity(val) {

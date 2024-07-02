@@ -60,6 +60,7 @@ class CartController extends Controller
         $variant_id = $request->input('var');
         $quantity = $request->input('quantity');
         $user_id = Auth::id();
+        // dd($variant_id);
 
         $cartDetail = CartDetail::where('ProductID', $product_id)
             ->where('VariantID', $variant_id)
