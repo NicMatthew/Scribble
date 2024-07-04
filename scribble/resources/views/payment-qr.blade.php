@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="\css\variable.css">
     <link rel="stylesheet" href="\css\payment-qr.css">
     <link rel="stylesheet" href="\css\header-standard.css">
+    <script src=""></script>
     <title>Document</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
             </div>
             <div class="container-payment-qr">
                 <div class="payment-qr-img">
-                    <img  src="/images/payment-qr.svg" alt="">
+                    <img  src="/images/payment-qr.svg" alt="" id="qr">
                 </div>
                 <div class="container-payment-info">
                     <div class="container-total-payment">
@@ -47,7 +48,7 @@
                     </div>
                     <div class="container-payment-otp">
                         <div class="input-otp">
-                            <input type="text" placeholder="Input OTP Code">
+                            <input type="text" placeholder="Input OTP Code" id="input-otp">
                         </div>
                         <div class="submit-button" id="submit-button">
                             <img src="/icons/next.svg" alt="">

@@ -1,9 +1,27 @@
-var submitButton = document.getElementById("submit-button")
-var overlay = document.getElementById("overlay")
+let submitButton = document.getElementById("submit-button")
+let overlay = document.getElementById("overlay")
+let qr = document.getElementById("qr")
+let otp = null
 
-submitButton.addEventListener("click", otpTrue, true);
+function randomizeOTP() {
+    otp = Math.round(Math.random()*1000000)
+    qr.src = "https://qrcode.tec-it.com/API/QRCode?data=" + otp
+}
+
+function checkOTP() {
+    let inputOtp = document.getElementById("input-otp").value
+
+    if (inputOtp == otp) {
+        otpTrue()
+    } else {
+        alert("Wrong OTP code!")
+        randomizeOTP()
+    }
+}
 
 function otpTrue() {
-    // alert("Hi");
     overlay.style.display = "block"
 }
+
+submitButton.addEventListener("click", (e)=>checkOTP());
+randomizeOTP()
