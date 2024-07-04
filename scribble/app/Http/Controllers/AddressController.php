@@ -57,4 +57,25 @@ class AddressController extends Controller
         $address->delete();
         return back();
     }
+
+    public function findAddress()
+    {
+        // dd('test');
+        $addressID = request()->addressID;
+        $userID = request()->userID;
+        $addresses = Address::where('UserID', $userID)->get();
+        $address_edit = null;
+
+        if($addressID !=null){
+            $address_edit = Address::where('AddressID', $addressID)->get()->first();
+        }
+
+        // dd($address_edit);
+        return view('address', 
+        [
+            'addresses' => $addresses, 
+            "address_edit" => $address_edit
+        ]);
+
+    }
 }

@@ -70,39 +70,41 @@
                 </form>
             </div>
         </div>
+        @if($address_edit != null)
         <div class="modal-edit" id="modal-edit">
             <div class="overlay">
                 <p class="b1" style="font-weight: bold; margin-bottom:15px; display:flex; align-items: center; justify-content: center">Edit Address</p>
                 <form method="POST" action="{{ route('edit-address') }}" class="form-address">
                     @csrf
-                    <input type="hidden" value="" name="addressID" id="AddressID">
+                    
                     <div class="form-address">
                         <div class=input-box>
                             <p>Address Name</p>
-                            <input type="text" name="address_name" placeholder="Address Name" required>
+                            <input type="text" name="address_name" placeholder="Address Name" value="{{ $address_edit->AddressName }}"required>
                         </div>
                         <div class=input-box>
                             <p>Recipient Name</p>
-                            <input type="text"name="recipient_name" placeholder="Recipient Name" required>
+                            <input type="text"name="recipient_name" placeholder="Recipient Name" value="{{ $address_edit->RecipientName }}"required>
                         </div>
                         <div class=input-box>
                             <p>Phone Number</p>
-                            <input type="text" name="phone_number" placeholder="Phone Number" required>
+                            <input type="text" name="phone_number" placeholder="Phone Number" value="{{ $address_edit->PhoneNumber }}"required>
                         </div>
                         <div class=input-box>
                             <p>Full Address</p>
-                            <input type="text" name="full_address" placeholder="Full Address" required>
+                            <input type="text" name="full_address" placeholder="Full Address" value="{{ $address_edit->FullAddress }}"required>
                         </div>
                         <div class=input-box>
                             <p>Post Code</p>
-                            <input type="text" name="post_code" placeholder="Post Code" required>
+                            <input type="text" name="post_code" placeholder="Post Code" value="{{ $address_edit->PostCode }}"required>
                         </div>
                         <button type="submit" class="btn"> Edit Address </button>
-                        <button type="submit" class="cancel-edit">Cancel</button>
+                        <button type="submit" class="cancel-edit" id="cancel-edit">Cancel</button>
                     </div>
                 </form>
             </div>
         </div>
+        @endif
         <div class="modal-delete" id="modal-delete">
             <div class="overlay-2">
                 <div class="form-delete">
@@ -113,7 +115,7 @@
 
                         <form action="{{ route('delete-address') }}" method="POST">
                             @csrf
-                            <input type="hidden" value="" name="addressID" id="addressID">
+                            <input type="hidden" value="" name="addressID" id="AddressID">
                             @method('DELETE')
                             <button type="submit" class="btn-del b2">Delete Address</button>
                         </form>
@@ -124,5 +126,10 @@
         </div>
 
     </div>
+    <form action="{{ route("find-address") }}" name="form-edit" method="POST">
+        @csrf
+        <input type="hidden" value="" name="addressID" id="addressID">
+        <input type="hidden" value="{{ auth()->id() }}" name="userID" id="userID">
+    </form>
 </body>
 </html>
