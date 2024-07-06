@@ -60,6 +60,46 @@ class VariantsTableSeeder extends Seeder
             ['VariantName' => 'SC-838', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //22
             ['VariantName' => 'SC-848', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //23
+            ['VariantName' => 'HB', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //24
+            ['VariantName' => 'B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //25
+            ['VariantName' => '2B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //26
+            ['VariantName' => '3B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //27
+            ['VariantName' => '4B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //28
+            ['VariantName' => '5B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //29
+            ['VariantName' => '6B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //30
+            ['VariantName' => '7B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //31
+            ['VariantName' => '8B', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //32
+            ['VariantName' => 'Purple', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //33
+            ['VariantName' => 'Kuromi', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //34
+            ['VariantName' => 'Cinamon Roll', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //35
+            ['VariantName' => 'My Melody', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //36
+            ['VariantName' => 'Pochacco', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //37
+            ['VariantName' => 'Sanrio', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //38
+            ['VariantName' => 'Super Soft', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //39
+            ['VariantName' => 'Soft', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //40
+            ['VariantName' => 'Neutral', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //41
+            ['VariantName' => 'Medium', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //42
+            ['VariantName' => 'Hard', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
         ]);
     }
 }

@@ -94,11 +94,9 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 8, 'ProductID' => 20, 'Image' => '/assets/specialty_pens/specialty5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 15, 'ProductID' => 20, 'Image' => '/assets/specialty_pens/specialty5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
 
-            // cutting tools
 
 
-
-
+            //cutting tools
             //scissors
             ['VariantID' => 1, 'ProductID' => 21, 'Image' => '/assets/cutting_tools/scissors/scissors1_image1.png', 'created_at' => now(), 'updated_at' => now()],
 
@@ -216,6 +214,151 @@ class ProductImagesTableSeeder extends Seeder
 
             ['VariantID' => 11, 'ProductID' => 51, 'Image' => '/assets/cutting_tools/punch_hole/punchhole5_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 11, 'ProductID' => 51, 'Image' => '/assets/cutting_tools/punch_hole/punchhole5_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+
+
+            //pencils
+            //woodcase
+            ['VariantID' => 23, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 23, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 23, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 24, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 25, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 26, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 27, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image7.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 28, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image8.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 29, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image9.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 30, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image10.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 31, 'ProductID' => 52, 'Image' => '/assets/pencils/woodcase/woodcase1_image11.svg', 'created_at' => now(), 'updated_at' => now()],
+           
+            ['VariantID' => 1, 'ProductID' => 53, 'Image' => '/assets/pencils/woodcase/woodcase2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 53, 'Image' => '/assets/pencils/woodcase/woodcase2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 53, 'Image' => '/assets/pencils/woodcase/woodcase2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 23, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 23, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 24, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 25, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 26, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 27, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 28, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image7.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 29, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image8.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 30, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image9.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 31, 'ProductID' => 54, 'Image' => '/assets/pencils/woodcase/woodcase3_image10.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 23, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 23, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 23, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 24, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 25, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 26, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 27, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image7.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 28, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image8.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 29, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image9.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 30, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image10.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 31, 'ProductID' => 55, 'Image' => '/assets/pencils/woodcase/woodcase4_image11.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 56, 'Image' => '/assets/pencils/woodcase/woodcase5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 56, 'Image' => '/assets/pencils/woodcase/woodcase5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+           
+            ['VariantID' => 1, 'ProductID' => 57, 'Image' => '/assets/pencils/woodcase/woodcase6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            //mechanical pencils
+            ['VariantID' => 8, 'ProductID' => 58, 'Image' => '/assets/pencils/mechanical/mechanical1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 58, 'Image' => '/assets/pencils/mechanical/mechanical1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 58, 'Image' => '/assets/pencils/mechanical/mechanical1_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 58, 'Image' => '/assets/pencils/mechanical/mechanical1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 18, 'ProductID' => 58, 'Image' => '/assets/pencils/mechanical/mechanical1_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 59, 'Image' => '/assets/pencils/mechanical/mechanical2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 59, 'Image' => '/assets/pencils/mechanical/mechanical2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 59, 'Image' => '/assets/pencils/mechanical/mechanical2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 59, 'Image' => '/assets/pencils/mechanical/mechanical2_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 10, 'ProductID' => 60, 'Image' => '/assets/pencils/mechanical/mechanical3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 60, 'Image' => '/assets/pencils/mechanical/mechanical3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 60, 'Image' => '/assets/pencils/mechanical/mechanical3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 60, 'Image' => '/assets/pencils/mechanical/mechanical3_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 32, 'ProductID' => 60, 'Image' => '/assets/pencils/mechanical/mechanical3_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 61, 'Image' => '/assets/pencils/mechanical/mechanical4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 61, 'Image' => '/assets/pencils/mechanical/mechanical4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 61, 'Image' => '/assets/pencils/mechanical/mechanical4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 61, 'Image' => '/assets/pencils/mechanical/mechanical4_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 32, 'ProductID' => 61, 'Image' => '/assets/pencils/mechanical/mechanical4_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 62, 'Image' => '/assets/pencils/mechanical/mechanical5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 62, 'Image' => '/assets/pencils/mechanical/mechanical5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 63, 'Image' => '/assets/pencils/mechanical/mechanical6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 63, 'Image' => '/assets/pencils/mechanical/mechanical6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 63, 'Image' => '/assets/pencils/mechanical/mechanical6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 35, 'ProductID' => 64, 'Image' => '/assets/pencils/mechanical/mechanical7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 35, 'ProductID' => 64, 'Image' => '/assets/pencils/mechanical/mechanical7_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 36, 'ProductID' => 64, 'Image' => '/assets/pencils/mechanical/mechanical7_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 37, 'ProductID' => 64, 'Image' => '/assets/pencils/mechanical/mechanical7_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 34, 'ProductID' => 64, 'Image' => '/assets/pencils/mechanical/mechanical7_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 33, 'ProductID' => 64, 'Image' => '/assets/pencils/mechanical/mechanical7_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            //colored pencils
+            ['VariantID' => 1, 'ProductID' => 65, 'Image' => '/assets/pencils/coloured/coloured1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 66, 'Image' => '/assets/pencils/coloured/coloured2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 66, 'Image' => '/assets/pencils/coloured/coloured2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 67, 'Image' => '/assets/pencils/coloured/coloured3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 67, 'Image' => '/assets/pencils/coloured/coloured3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 68, 'Image' => '/assets/pencils/coloured/coloured4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 68, 'Image' => '/assets/pencils/coloured/coloured4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 69, 'Image' => '/assets/pencils/coloured/coloured5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 70, 'Image' => '/assets/pencils/coloured/coloured6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 71, 'Image' => '/assets/pencils/coloured/coloured7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 72, 'Image' => '/assets/pencils/coloured/coloured8_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 72, 'Image' => '/assets/pencils/coloured/coloured8_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 72, 'Image' => '/assets/pencils/coloured/coloured8_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 72, 'Image' => '/assets/pencils/coloured/coloured8_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 73, 'Image' => '/assets/pencils/coloured/coloured9_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 73, 'Image' => '/assets/pencils/coloured/coloured9_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 73, 'Image' => '/assets/pencils/coloured/coloured9_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            //charcoal pencils
+            ['VariantID' => 39, 'ProductID' => 74, 'Image' => '/assets/pencils/charcoal/charcoal1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 39, 'ProductID' => 74, 'Image' => '/assets/pencils/charcoal/charcoal1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 39, 'ProductID' => 74, 'Image' => '/assets/pencils/charcoal/charcoal1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 38, 'ProductID' => 74, 'Image' => '/assets/pencils/charcoal/charcoal1_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 40, 'ProductID' => 74, 'Image' => '/assets/pencils/charcoal/charcoal1_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 75, 'Image' => '/assets/pencils/charcoal/charcoal2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 75, 'Image' => '/assets/pencils/charcoal/charcoal2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 75, 'Image' => '/assets/pencils/charcoal/charcoal2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+           
+            ['VariantID' => 39, 'ProductID' => 76, 'Image' => '/assets/pencils/charcoal/charcoal3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 39, 'ProductID' => 76, 'Image' => '/assets/pencils/charcoal/charcoal3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 39, 'ProductID' => 76, 'Image' => '/assets/pencils/charcoal/charcoal3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 41, 'ProductID' => 76, 'Image' => '/assets/pencils/charcoal/charcoal3_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 42, 'ProductID' => 76, 'Image' => '/assets/pencils/charcoal/charcoal3_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 39, 'ProductID' => 77, 'Image' => '/assets/pencils/charcoal/charcoal4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 39, 'ProductID' => 77, 'Image' => '/assets/pencils/charcoal/charcoal4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 41, 'ProductID' => 77, 'Image' => '/assets/pencils/charcoal/charcoal4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 42, 'ProductID' => 77, 'Image' => '/assets/pencils/charcoal/charcoal4_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 39, 'ProductID' => 78, 'Image' => '/assets/pencils/charcoal/charcoal5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 39, 'ProductID' => 78, 'Image' => '/assets/pencils/charcoal/charcoal5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 41, 'ProductID' => 78, 'Image' => '/assets/pencils/charcoal/charcoal5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 42, 'ProductID' => 78, 'Image' => '/assets/pencils/charcoal/charcoal5_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 79, 'Image' => '/assets/pencils/charcoal/charcoal6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 79, 'Image' => '/assets/pencils/charcoal/charcoal6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 79, 'Image' => '/assets/pencils/charcoal/charcoal6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 79, 'Image' => '/assets/pencils/charcoal/charcoal6_image4.svg', 'created_at' => now(), 'updated_at' => now()],
 
         ]);
     }
