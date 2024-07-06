@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class VariantsTableSeeder extends Seeder
 {
@@ -47,6 +48,18 @@ class VariantsTableSeeder extends Seeder
             ['VariantName' => 'Pink', 'created_at' => now(), 'updated_at' => now()],
             //16
             ['VariantName' => 'Dark Blue', 'created_at' => now(), 'updated_at' => now()],
+            //17
+            ['VariantName' => 'Khaki', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //18
+            ['VariantName' => 'Orange', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //19
+            ['VariantName' => 'Beige', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //20
+            ['VariantName' => 'SC-828', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //21
+            ['VariantName' => 'SC-838', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //22
+            ['VariantName' => 'SC-848', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
         ]);
     }
 }
