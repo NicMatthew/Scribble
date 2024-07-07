@@ -124,6 +124,8 @@ let modalEdit = document.getElementById("modal-edit");
 let editContainer = document.getElementById("edit-discount-container");
 let ProductForm = document.getElementById("ProductID")
 let VariantForm = document.getElementById("VariantName");
+let ProductFormDelete = document.getElementById("ProductIDDelete")
+let VariantFormDelete = document.getElementById("VariantNameDelete");
 
 document.querySelectorAll(".edit").forEach((editBtn) => {
     editBtn.addEventListener("click", function () {
@@ -137,6 +139,32 @@ document.querySelectorAll(".edit").forEach((editBtn) => {
         document.forms["form-edit"].submit()  
     });
 });
+document.querySelectorAll(".delete").forEach((deleteBtn) => {
+    deleteBtn.addEventListener("click", function () {
+        // Tampilkan overlay dan pop-up
+        var ProductID =
+            deleteBtn.parentElement.parentElement.parentElement.children[1]
+                .innerHTML;
+        var VariantName =
+            deleteBtn .parentElement.parentElement.parentElement.children[4]
+                .innerHTML;
+
+        ProductFormDelete.value = ProductID;
+        VariantFormDelete.value = VariantName;
+        console.log('berhasil')
+
+        document.getElementById("confirmDelete").classList.remove("hide")
+    });
+});
+
+document.getElementById("confirmDeleteClose").addEventListener('click', function () {
+    document.getElementById("confirmDelete").classList.add("hide");
+});
+document
+    .getElementById("confirmDeleteYes")
+    .addEventListener("click", function () {
+        document.forms["form-delete"].submit();  
+    });
 
 // Event listener untuk menutup pop-up
 document

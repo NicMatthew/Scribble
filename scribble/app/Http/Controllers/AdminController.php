@@ -156,4 +156,23 @@ class AdminController extends Controller
 
         return redirect()->route('product_admin');
     }
+    public function product_delete(){
+        // dd(request()->all());
+        $ProductID = request()->ProductID;
+        $VariantID = Variant::where("VariantName",request()->VariantName)->get()->first()->VariantID;
+        // dd($VariantID);
+        ProductEntry::where("VariantID",$VariantID)->where("ProductID",$ProductID)->delete();
+        // Cek masih ada product ato engga
+        $testProduct = ProductEntry::where("ProductID",$ProductID)->get();
+        if($testProduct == null){
+            Product::where("ProductID",$ProductID)->delete();
+        }
+        // cek msh ada variant ato engga
+        $testVariant = ProductEntry::where("VariantID",$VariantID)->get();
+        if($testProduct == null){
+            Variant::where("VariantID",$VariantID)->delete();
+        }
+        
+        return redirect()->route('product_admin');
+    }
 }

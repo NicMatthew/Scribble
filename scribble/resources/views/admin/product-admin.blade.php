@@ -93,8 +93,8 @@
                 <div class="do-content">
                     <p>Are you sure you want to delete this product?</p>
                     <div class="do-buttons">
-                        <button id="confirmDeleteYes">Close</button>
-                        <button id="confirmDeleteNo">Delete</button>
+                        <button id="confirmDeleteClose">Close</button>
+                        <button id="confirmDeleteYes">Delete</button>
                     </div>
                 </div>
             </div>
@@ -208,6 +208,11 @@
         <form action="{{ route("product-find") }}" name="form-edit">
             <input type="hidden" value="" name="ProductID" id="ProductID">
             <input type="hidden" value="" name="VariantName" id="VariantName">
+        </form>
+
+        <form action="{{ route("product_delete") }}" name="form-delete" >
+            <input type="hidden" value="" name="ProductID" id="ProductIDDelete">
+            <input type="hidden" value="" name="VariantName" id="VariantNameDelete">
         </form>
         
         

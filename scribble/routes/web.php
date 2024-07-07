@@ -119,6 +119,7 @@ Route::get("/product-admin/find", [AdminController::class, "product_find"])->nam
 Route::post("/product-admin/edit", [AdminController::class, "product_edit"])->name("product-edit");
 Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
 Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
+Route::get('/product-admin/delete', [AdminController::class, "product_delete"])->name('product_delete');
 
 // Route::post('/wishlist/add', [ProductController::class, 'addToWishlist'])->name('wishlist-add');
 Route::get('/wishlist', [ProductController::class, 'showWishlist'])->name('wishlist-index');
