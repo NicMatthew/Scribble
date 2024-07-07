@@ -270,6 +270,133 @@ class ProductEntriesTableSeeder extends Seeder
             
             ['ProductID' => 79, 'VariantID' => 1, 'Stock' => 8, 'Price' => 150000, 'created_at' => now(), 'updated_at' => now()],
 
+            //markers
+            ['ProductID' => 80, 'VariantID' => 10, 'Stock' => 102, 'Price' => 25000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 81, 'VariantID' => 10, 'Stock' => 34, 'Price' => 20000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 82, 'VariantID' => 8, 'Stock' => 18, 'Price' => 11000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 83, 'VariantID' => 54, 'Stock' => 28, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 83, 'VariantID' => 53, 'Stock' => 88, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 83, 'VariantID' => 11, 'Stock' => 90, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 83, 'VariantID' => 52, 'Stock' => 2, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 84, 'VariantID' => 1, 'Stock' => 10, 'Price' => 30000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 85, 'VariantID' => 1, 'Stock' => 45, 'Price' => 90000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 86, 'VariantID' => 1, 'Stock' => 98, 'Price' => 36500, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 87, 'VariantID' => 10, 'Stock' => 105, 'Price' => 19000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 88, 'VariantID' => 18, 'Stock' => 45, 'Price' => 16000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 88, 'VariantID' => 8, 'Stock' => 25, 'Price' => 17000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 88, 'VariantID' => 10, 'Stock' => 35, 'Price' => 17000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 89, 'VariantID' => 56, 'Stock' => 99, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 89, 'VariantID' => 55, 'Stock' => 155, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 89, 'VariantID' => 14, 'Stock' => 123, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 89, 'VariantID' => 8, 'Stock' => 125, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 89, 'VariantID' => 15, 'Stock' => 99, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 89, 'VariantID' => 18, 'Stock' => 57, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 90, 'VariantID' => 1, 'Stock' => 17, 'Price' => 20000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 91, 'VariantID' => 1, 'Stock' => 5, 'Price' => 30000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 92, 'VariantID' => 15, 'Stock' => 5, 'Price' => 54000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 92, 'VariantID' => 32, 'Stock' => 2, 'Price' => 53000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 92, 'VariantID' => 8, 'Stock' => 1, 'Price' => 54000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 92, 'VariantID' => 14, 'Stock' => 9, 'Price' => 55000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 92, 'VariantID' => 55, 'Stock' => 10, 'Price' => 54000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 93, 'VariantID' => 1, 'Stock' => 4, 'Price' => 50000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 94, 'VariantID' => 1, 'Stock' => 9, 'Price' => 43000, 'created_at' => now(), 'updated_at' => now()],
+
+
+            //others
+            ['ProductID' => 95, 'VariantID' => 10, 'Stock' => 10, 'Price' => 24000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 95, 'VariantID' => 50, 'Stock' => 1, 'Price' => 34000, 'created_at' => now(), 'updated_at' => now()],
+            
+            ['ProductID' => 96, 'VariantID' => 1, 'Stock' => 24, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 97, 'VariantID' => 1, 'Stock' => 75, 'Price' => 19000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 98, 'VariantID' => 57, 'Stock' => 86, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 98, 'VariantID' => 15, 'Stock' => 6, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 98, 'VariantID' => 19, 'Stock' => 34, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 99, 'VariantID' => 33, 'Stock' => 122, 'Price' => 44000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 99, 'VariantID' => 34, 'Stock' => 176, 'Price' => 45000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 99, 'VariantID' => 35, 'Stock' => 99, 'Price' => 44000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 100, 'VariantID' => 46, 'Stock' => 29, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 100, 'VariantID' => 47, 'Stock' => 39, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 100, 'VariantID' => 48, 'Stock' => 27, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 100, 'VariantID' => 49, 'Stock' => 45, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 101, 'VariantID' => 15, 'Stock' => 68, 'Price' => 67000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 102, 'VariantID' => 15, 'Stock' => 102, 'Price' => 87000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 103, 'VariantID' => 51, 'Stock' => 99, 'Price' => 37000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 103, 'VariantID' => 34, 'Stock' => 90, 'Price' => 37000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 103, 'VariantID' => 35, 'Stock' => 34, 'Price' => 37000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 103, 'VariantID' => 33, 'Stock' => 26, 'Price' => 47000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 104, 'VariantID' => 1, 'Stock' => 5, 'Price' => 25000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 105, 'VariantID' => 1, 'Stock' => 8, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 106, 'VariantID' => 10, 'Stock' => 18, 'Price' => 7000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 107, 'VariantID' => 1, 'Stock' => 67, 'Price' => 10000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 108, 'VariantID' => 10, 'Stock' => 99, 'Price' => 25000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 109, 'VariantID' => 1, 'Stock' => 75, 'Price' => 18000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 110, 'VariantID' => 15, 'Stock' => 100, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 110, 'VariantID' => 8, 'Stock' => 24, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 110, 'VariantID' => 14, 'Stock' => 293, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            
+            ['ProductID' => 111, 'VariantID' => 54, 'Stock' => 188, 'Price' => 29000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 111, 'VariantID' => 58, 'Stock' => 89, 'Price' => 29000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 111, 'VariantID' => 59, 'Stock' => 70, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 112, 'VariantID' => 8, 'Stock' => 757, 'Price' => 13000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 113, 'VariantID' => 1, 'Stock' => 43, 'Price' => 17800, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 114, 'VariantID' => 1, 'Stock' => 986, 'Price' => 19300, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 115, 'VariantID' => 15, 'Stock' => 10, 'Price' => 27000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 116, 'VariantID' => 15, 'Stock' => 300, 'Price' => 14000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 117, 'VariantID' => 60, 'Stock' => 15, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 118, 'VariantID' => 11, 'Stock' => 177, 'Price' => 45000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 119, 'VariantID' => 10, 'Stock' => 266, 'Price' => 29000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 120, 'VariantID' => 19, 'Stock' => 8, 'Price' => 67000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 120, 'VariantID' => 14, 'Stock' => 16, 'Price' => 67000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 120, 'VariantID' => 45, 'Stock' => 35, 'Price' => 67000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 121, 'VariantID' => 8, 'Stock' => 15, 'Price' => 29000, 'created_at' => now(), 'updated_at' => now()],
+
+            ['ProductID' => 122, 'VariantID' => 43, 'Stock' => 45, 'Price' => 36000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 122, 'VariantID' => 44, 'Stock' => 30, 'Price' => 56000, 'created_at' => now(), 'updated_at' => now()],
+            
+
+
+
+
+
+
         ]);
     }
 }

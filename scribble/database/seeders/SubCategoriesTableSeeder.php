@@ -63,6 +63,7 @@ class SubCategoriesTableSeeder extends Seeder
             ['CategoryProductID' => 8, 'NameSubCategory' => 'Rulers', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 8, 'NameSubCategory' => 'Staplers', 'created_at' => now(), 'updated_at' => now()],
             ['CategoryProductID' => 8, 'NameSubCategory' => 'Organizers', 'created_at' => now(), 'updated_at' => now()],
+            ['CategoryProductID' => 8, 'NameSubCategory' => 'Cutting Mats', 'created_at' => now(), 'updated_at' => now()],
         ]);
     }
 }

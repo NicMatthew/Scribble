@@ -83,7 +83,7 @@ class VariantsTableSeeder extends Seeder
             //33
             ['VariantName' => 'Kuromi', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //34
-            ['VariantName' => 'Cinamon Roll', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['VariantName' => 'CinamonRoll', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //35
             ['VariantName' => 'My Melody', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //36
@@ -100,6 +100,45 @@ class VariantsTableSeeder extends Seeder
             ['VariantName' => 'Medium', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //42
             ['VariantName' => 'Hard', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //43
+            ['VariantName' => 'A4', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //44
+            ['VariantName' => 'A3', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //45
+            ['VariantName' => 'Dark Brown', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //46
+            ['VariantName' => 'Plaid Biru', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //47
+            ['VariantName' => 'Kuning Pastel', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //48
+            ['VariantName' => 'Plaid Pink', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //49
+            ['VariantName' => 'Biru Pastel', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //50
+            ['VariantName' => 'Peach', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //51
+            ['VariantName' => 'Purin', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //52
+            ['VariantName' => 'Copper', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //53
+            ['VariantName' => 'Gold', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //54
+            ['VariantName' => 'Silver', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //55
+            ['VariantName' => 'Yellow', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //56
+            ['VariantName' => 'Random', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //57
+            ['VariantName' => 'Light Blue', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //58
+            ['VariantName' => 'Blue Silver', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //59
+            ['VariantName' => 'Wood', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //60
+            ['VariantName' => 'Blue & White', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            
+                        
+
         ]);
     }
 }

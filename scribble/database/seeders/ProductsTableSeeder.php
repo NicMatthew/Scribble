@@ -329,7 +329,355 @@ class ProductsTableSeeder extends Seeder
             ['NameProduct' => 'MARKART Professional Charcoal Pencils Drawing Set - 10 Pieces', 'Rating' => 4.6, 'DescriptionProduct' => 'Pentel Colour Pencil 36 warna menawarkan pilihan warna yang lebih luas untuk ekspresi seni yang lebih bebas. Set ini terdiri dari 36 pensil warna dengan pigmen yang kaya dan tahan lama. Desain ergonomis dan kualitas bahan terbaik membuat pensil ini nyaman digunakan untuk berbagai proyek seni dan kerajinan. Cocok untuk pelajar, seniman, dan hobi.', 'SubCategoryProductID' => 8, 'created_at' => now(), 'updated_at' => now()],
            
 
+            //markers
+            [
+                'NameProduct' => 'Sharpie Fine Point Permanent Marker',
+                'Rating' => 4.3,
+                'DescriptionProduct' => 'Spidol permanen Sharpie Fine Point adalah pilihan sempurna untuk menandai dan menuliskan catatan penting. Dengan ujung yang tajam dan tahan lama, produk ini ideal untuk penggunaan sehari-hari di kantor atau di rumah.',
+                'SubCategoryProductID' => 9,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'PENTEL Extra Broad Point Permanent Marker (Black) N50XL-A',
+                'Rating' => 4.7,
+                'DescriptionProduct' => 'Spidol permanen PENTEL Extra Broad Point memiliki ujung yang lebar dan tinta hitam pekat yang ideal untuk menulis pada berbagai jenis permukaan. Cocok untuk penggunaan di kantor atau untuk proyek seni kreatif.',
+                'SubCategoryProductID' => 9,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Spidol Permanent Paint Marker 1,5mm Tipis ATK Anti Luntur Biru Satuan',
+                'Rating' => 4.1,
+                'DescriptionProduct' => 'Spidol permanent Paint Marker dengan ujung tipis 1,5mm ini dirancang khusus untuk menulis dan menggambar dengan detail halus. Tersedia dalam warna biru yang intens, cocok untuk kebutuhan kantor dan industri.',
+                'SubCategoryProductID' => 9,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Spidol Permanen Sakura Pen Touch Paint Marker Pigment Color',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Spidol Permanen Sakura Pen Touch Paint Marker Pigment Color adalah pilihan terbaik untuk seniman dan pengguna yang mencari kualitas tinggi. Tersedia dalam berbagai warna, mudah diaplikasikan dan tahan lama.',
+                'SubCategoryProductID' => 9,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Kiedler White Board Dry Erase Marker 12pcs Spidol Wipe Clean',
+                'Rating' => 4.2,
+                'DescriptionProduct' => 'Spidol White Board Kiedler adalah alat yang sangat berguna untuk papan tulis kering. Dengan kemampuan menghapus yang mudah dan tahan lama, cocok untuk digunakan di kantor atau di rumah.',
+                'SubCategoryProductID' => 10,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Spidol Papan Tulis Quartet Marker Glass Board Premium Dry Erase Set',
+                'Rating' => 4.6,
+                'DescriptionProduct' => 'Spidol Papan Tulis Quartet Marker Glass Board adalah pilihan terbaik untuk penggunaan papan tulis kaca premium. Dengan kekuatan dan daya hapus yang luar biasa, cocok untuk ruang rapat atau kelas yang modern.',
+                'SubCategoryProductID' => 10,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Bazic Bright Color Magnetic Dry-Erase Markers (6/Pack) - Spidol',
+                'Rating' => 4.4,
+                'DescriptionProduct' => 'Bazic Bright Color Magnetic Dry-Erase Markers adalah pilihan yang tepat untuk ruang kelas atau kantor yang membutuhkan papan tulis magnetik dengan warna cerah. Mudah dihapus dan tahan lama.',
+                'SubCategoryProductID' => 10,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Deli Spidol Papan Tulis / Dry Erase Marker Tinta Hitam EU00620',
+                'Rating' => 4.8,
+                'DescriptionProduct' => 'Spidol Papan Tulis Deli dengan tinta hitam EU00620 adalah pilihan yang sempurna untuk papan tulis yang memerlukan penulisan yang jelas dan tahan lama. Cocok untuk penggunaan di kantor atau di ruang kelas.',
+                'SubCategoryProductID' => 10,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Deli Dry Erase Marker EU00230 EU00220 EU00240',
+                'Rating' => 4.3,
+                'DescriptionProduct' => 'Deli Dry Erase Marker adalah pilihan yang efisien dan ekonomis untuk papan tulis kering. Dengan tinta berkualitas dan ujung yang halus, produk ini cocok untuk kebutuhan sehari-hari di kantor atau sekolah.',
+                'SubCategoryProductID' => 10,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Stabilo/Highlighter BOSS',
+                'Rating' => 4.7,
+                'DescriptionProduct' => 'Stabilo Highlighter BOSS adalah pilihan terbaik untuk menyoroti teks dan catatan penting. Dengan ujung tahan lama dan tinta yang cerah, produk ini cocok untuk penggunaan di kantor, rumah, atau di sekolah.',
+                'SubCategoryProductID' => 11,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'CY Set Highlighter 2 Sisi Warna Warni',
+                'Rating' => 4.2,
+                'DescriptionProduct' => 'CY Set Highlighter 2 Sisi Warna Warni adalah pilihan yang bagus untuk menyoroti dan mewarnai. Dengan desain 2 sisi, produk ini cocok untuk kebutuhan kreatif di kantor atau untuk siswa yang kreatif.',
+                'SubCategoryProductID' => 11,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Highlighter Penanda Joyko HL-55 1 Set 12 Pcs 12 Warna',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Highlighter Joyko HL-55 1 Set 12 Pcs dengan 12 warna adalah pilihan yang sempurna untuk kebutuhan menyoroti dan mencatat yang berwarna-warni. Cocok untuk penggunaan di sekolah, kantor, atau untuk kegiatan seni.',
+                'SubCategoryProductID' => 11,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Zebra Midliner Series Conan Satuan / HIghlighler Karakter',
+                'Rating' => 4.1,
+                'DescriptionProduct' => 'Zebra Midliner Series Conan adalah highlighter karakter dengan kualitas terbaik. Dengan ujung dua sisi dan tinta yang tahan lama, produk ini cocok untuk penggunaan sehari-hari di kantor atau untuk seniman yang kreatif.',
+                'SubCategoryProductID' => 11,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Uni Posca Paint Marker PC-5M - Medium Point',
+                'Rating' => 4.9,
+                'DescriptionProduct' => 'Uni Posca Paint Marker PC-5M adalah pilihan terbaik untuk seniman dan pengguna yang membutuhkan marker cat dengan kualitas tinggi. Tersedia dalam medium point, cocok untuk berbagai jenis media dan permukaan.',
+                'SubCategoryProductID' => 12,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Spidol Warna Spidol Ban TOYO Paint Marker Original Spidol Nat Keramik',
+                'Rating' => 4.4,
+                'DescriptionProduct' => 'Spidol Warna Spidol Ban TOYO Paint Marker Original adalah pilihan terbaik untuk seniman dan pengguna yang mencari kualitas terbaik. Cocok untuk berbagai jenis permukaan termasuk ban dan keramik.',
+                'SubCategoryProductID' => 12,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+
+
             
+            //others
+            [
+                'NameProduct' => 'Tempat Pensil Kulit Waterproof',
+                'Rating' => 4.2,
+                'DescriptionProduct' => 'Tempat pensil kulit waterproof adalah pilihan yang tepat untuk menyimpan pensil dan alat tulis lainnya dengan aman dan nyaman. Desainnya yang tahan air menjaga barang-barang di dalamnya tetap kering dalam cuaca buruk atau kecelakaan.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Kotak Tempat Pensil Pencil Case Onscript',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Kotak tempat pensil Pencil Case Onscript adalah solusi penyimpanan yang stylish dan fungsional untuk peralatan tulis Anda. Didesain dengan material berkualitas dan ruang penyimpanan yang cukup luas untuk berbagai kebutuhan.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Kotak Pensil Transparant Matte Dove Multifungsi Pencil Case',
+                'Rating' => 4.1,
+                'DescriptionProduct' => 'Kotak pensil transparan matte Dove adalah pilihan yang serbaguna untuk menyimpan pensil dan alat tulis Anda. Desain transparan memudahkan Anda untuk melihat isinya tanpa perlu membuka kotaknya, praktis dan efisien.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Tempat Pensil Bulu Halus model Jahitan Kotak',
+                'Rating' => 4.3,
+                'DescriptionProduct' => 'Tempat pensil bulu halus dengan model jahitan kotak adalah pilihan yang elegan untuk menemani kegiatan menulis Anda. Didesain dengan bahan yang halus dan tahan lama, memberikan perlindungan maksimal untuk alat tulis favorit Anda.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'KOTAK PENCIL PANJANG SANRIO KUROMI MELODY CINNAMOROLL MAGNET',
+                'Rating' => 4.7,
+                'DescriptionProduct' => 'Kotak pencil panjang Sanrio Kuromi Melody Cinnamoroll Magnet adalah pilihan yang lucu dan fungsional untuk menyimpan pensil dan alat tulis. Dengan desain magnetik, dapat ditempelkan di berbagai permukaan logam, sangat praktis digunakan di mana saja.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'KENSHO Rosy Pouch Makeup Handle Pastel',
+                'Rating' => 4.4,
+                'DescriptionProduct' => 'KENSHO Rosy Pouch Makeup Handle Pastel adalah tempat pensil yang multifungsi, cocok digunakan tidak hanya untuk pensil tetapi juga untuk menyimpan alat makeup atau keperluan pribadi lainnya. Didesain dengan warna pastel yang menawan, memberikan sentuhan elegan pada meja Anda.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'KALIDI Grid Mesh Pencil Case Large Capacity',
+                'Rating' => 4.9,
+                'DescriptionProduct' => 'KALIDI Grid Mesh Pencil Case dengan kapasitas besar adalah solusi penyimpanan yang ideal untuk kebutuhan tulis Anda. Didesain dengan material mesh berkualitas tinggi, memberikan sirkulasi udara yang baik untuk menjaga keawetan alat tulis di dalamnya.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Kipling 100 Pens Metallic Case',
+                'Rating' => 4.6,
+                'DescriptionProduct' => 'Kipling 100 Pens Metallic Case adalah kotak pensil yang elegan dan tahan lama. Didesain untuk menyimpan hingga 100 pensil atau alat tulis lainnya dengan rapi, cocok untuk penggunaan di sekolah, kantor, atau untuk keperluan pribadi.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'TEMPAT PENSIL BULU SANRIO',
+                'Rating' => 4.2,
+                'DescriptionProduct' => 'Tempat pensil bulu Sanrio adalah pilihan yang lucu dan fungsional untuk anak-anak maupun dewasa. Didesain dengan motif bulu yang menarik perhatian, cocok digunakan sebagai koleksi atau hadiah spesial.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Beige Pencil Case',
+                'Rating' => 4.3,
+                'DescriptionProduct' => 'Beige Pencil Case adalah pilihan yang elegan dan minimalis untuk menyimpan pensil dan alat tulis Anda. Dengan warna netral yang cocok untuk semua kesempatan, memberikan kesan yang bersih dan teratur di meja kerja atau sekolah Anda.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Yeong Vegan Leather Pencil Case',
+                'Rating' => 4.8,
+                'DescriptionProduct' => 'Yeong Vegan Leather Pencil Case adalah kotak pensil yang terbuat dari kulit sintetis ramah lingkungan. Dengan desain yang elegan dan kualitas tinggi, memberikan perlindungan maksimal untuk alat tulis favorit Anda.',
+                'SubCategoryProductID' => 31,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Acrylic Ruler Penggaris Akrilik Joyko RL-302',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Acrylic Ruler Penggaris Akrilik Joyko RL-302 adalah penggaris yang kuat dan tahan lama. Didesain dari bahan akrilik berkualitas tinggi, memberikan akurasi dan ketahanan yang dibutuhkan untuk kebutuhan mengukur Anda.',
+                'SubCategoryProductID' => 32,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Penggaris Kristal Segitiga',
+                'Rating' => 4.2,
+                'DescriptionProduct' => 'Penggaris Kristal Segitiga adalah pilihan yang tepat untuk mengukur dan melukis dengan presisi. Dengan bentuk segitiga yang ergonomis, mudah digunakan untuk membuat garis lurus atau sudut yang sempurna.',
+                'SubCategoryProductID' => 32,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Deli Foldable Ruler',
+                'Rating' => 4.6,
+                'DescriptionProduct' => 'Deli Foldable Ruler adalah penggaris lipat yang praktis dan mudah disimpan. Didesain dengan material yang fleksibel namun kokoh, cocok untuk kebutuhan di sekolah, kantor, atau untuk kegiatan di luar ruangan.',
+                'SubCategoryProductID' => 32,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Penggaris Jahit Lentur Pola Lengkung',
+                'Rating' => 4.4,
+                'DescriptionProduct' => 'Penggaris Jahit Lentur Pola Lengkung adalah alat yang tepat untuk kebutuhan menyusun pola atau mengukur dengan bentuk lengkung. Didesain dengan material yang fleksibel dan tahan lama, cocok untuk para pengrajin atau pengguna yang membutuhkan akurasi tinggi.',
+                'SubCategoryProductID' => 32,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Joyko Penggaris Busur Ruler Set RL-PS3',
+                'Rating' => 4.9,
+                'DescriptionProduct' => 'Joyko Penggaris Busur Ruler Set RL-PS3 adalah set penggaris lengkap untuk kebutuhan teknis dan artistik. Dengan berbagai bentuk busur yang berbeda, memungkinkan Anda untuk membuat desain yang kompleks dan detail.',
+                'SubCategoryProductID' => 32,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Deli PENGGARIS RULER ALUMUNIUM GEOMETRY DRAWING',
+                'Rating' => 4.3,
+                'DescriptionProduct' => 'Deli Penggaris Aluminium Geometry Drawing adalah penggaris yang kuat dan presisi untuk menggambar dan membuat desain teknis. Didesain dari bahan aluminium berkualitas tinggi, memberikan ketahanan dan akurasi yang dibutuhkan.',
+                'SubCategoryProductID' => 32,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Stapler Staples Besar JOYKO HD-50',
+                'Rating' => 4.7,
+                'DescriptionProduct' => 'Stapler Staples Besar JOYKO HD-50 adalah stapler yang kuat dan handal untuk penggunaan sehari-hari di kantor atau sekolah. Dengan kemampuan men-stapler dokumen besar dengan mudah, menjadikan pekerjaan Anda lebih efisien.',
+                'SubCategoryProductID' => 33,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Max Stapler HD-10',
+                'Rating' => 4.2,
+                'DescriptionProduct' => 'Max Stapler HD-10 adalah stapler ringan dan ergonomis untuk kebutuhan penggunaan ringan di kantor atau di rumah. Didesain dengan bahan yang kuat dan tahan lama, memberikan kenyamanan dan kehandalan dalam penggunaan sehari-hari.',
+                'SubCategoryProductID' => 33,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Bantex Mini Stapler Hello Kitty White - 9330A07HK',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Bantex Mini Stapler Hello Kitty White adalah stapler mini yang lucu dan fungsional. Dengan desain Hello Kitty yang menggemaskan, cocok untuk anak-anak maupun dewasa yang menginginkan alat tulis yang menyenangkan.',
+                'SubCategoryProductID' => 33,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Bantex Pocket Stapler 9332',
+                'Rating' => 4.8,
+                'DescriptionProduct' => 'Bantex Pocket Stapler 9332 adalah stapler ringan dan portabel yang dapat dibawa ke mana-mana. Didesain untuk kebutuhan penggunaan ringan, cocok digunakan di sekolah, kantor, atau untuk keperluan pribadi di luar ruangan.',
+                'SubCategoryProductID' => 33,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Stapler / Staples Kenko HD-10',
+                'Rating' => 4.4,
+                'DescriptionProduct' => 'Stapler Kenko HD-10 adalah stapler ringan dan handal untuk penggunaan sehari-hari di kantor atau di rumah. Dengan desain yang ergonomis dan kemampuan men-stapler dengan presisi, membuat pekerjaan Anda lebih mudah.',
+                'SubCategoryProductID' => 33,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'KOKUYO Desktop File Organizer 1 set',
+                'Rating' => 4.6,
+                'DescriptionProduct' => 'KOKUYO Desktop File Organizer adalah solusi penyimpanan yang efisien untuk berbagai dokumen dan kertas di meja kerja Anda. Dengan desain yang ringkas dan fungsional, membantu menjaga ruang kerja tetap teratur dan terorganisir.',
+                'SubCategoryProductID' => 34,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'IKEA TJENA File Organizers White',
+                'Rating' => 4.3,
+                'DescriptionProduct' => 'IKEA TJENA File Organizers White adalah pilihan yang cerdas untuk menyimpan berkas dan dokumen di rumah atau kantor. Didesain dengan bahan yang tahan lama dan warna putih yang bersih, cocok untuk ruang kerja minimalis.',
+                'SubCategoryProductID' => 34,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Joyko Expanding File A4 25 POCKETS Organizer / Map Harmonika EF-7A4',
+                'Rating' => 4.9,
+                'DescriptionProduct' => 'Joyko Expanding File A4 25 Pockets Organizer adalah map harmonika dengan kapasitas besar untuk menyimpan berkas dan dokumen dalam jumlah besar. Didesain dengan kantong yang kuat dan tahan lama, memberikan perlindungan optimal untuk berkas Anda.',
+                'SubCategoryProductID' => 34,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'KOKUYO special A4 file organizer folder set file case WSG-FUS820',
+                'Rating' => 4.4,
+                'DescriptionProduct' => 'KOKUYO Special A4 File Organizer adalah set folder file dengan desain yang elegan dan fungsional. Didesain dari bahan berkualitas tinggi, memberikan perlindungan dan organisasi yang baik untuk berkas dan dokumen penting Anda.',
+                'SubCategoryProductID' => 34,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Bantex folder organizer kertas order PVC A5 kwitansi 1452',
+                'Rating' => 4.7,
+                'DescriptionProduct' => 'Bantex Folder Organizer PVC A5 adalah solusi penyimpanan yang kuat dan tahan lama untuk berkas, kwitansi, atau dokumen penting lainnya. Didesain dengan material PVC yang kuat, menjaga keawetan berkas Anda dari debu dan kelembaban.',
+                'SubCategoryProductID' => 34,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
+            [
+                'NameProduct' => 'Kalor Cutting Mat',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Kalor Cutting Mat adalah alas pemotong yang ideal untuk kebutuhan kerajinan dan kreatif Anda. Didesain dari material yang tahan lama dan anti-slip, memberikan keamanan dan presisi saat memotong kain, kertas, atau bahan lainnya.',
+                'SubCategoryProductID' => 35,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ],
 
         ]);
     }

@@ -360,6 +360,178 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 1, 'ProductID' => 79, 'Image' => '/assets/pencils/charcoal/charcoal6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 1, 'ProductID' => 79, 'Image' => '/assets/pencils/charcoal/charcoal6_image4.svg', 'created_at' => now(), 'updated_at' => now()],
 
+
+            //markers
+            //permanent_markers
+            ['VariantID' => 10, 'ProductID' => 80, 'Image' => '/assets/markers/permanent_markers/permanentmarkers1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 10, 'ProductID' => 81, 'Image' => '/assets/markers/permanent_markers/permanentmarkers2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 8, 'ProductID' => 82, 'Image' => '/assets/markers/permanent_markers/permanentmarkers3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 54, 'ProductID' => 83, 'Image' => '/assets/markers/permanent_markers/permanentmarkers4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 53, 'ProductID' => 83, 'Image' => '/assets/markers/permanent_markers/permanentmarkers4_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 11, 'ProductID' => 83, 'Image' => '/assets/markers/permanent_markers/permanentmarkers4_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 52, 'ProductID' => 83, 'Image' => '/assets/markers/permanent_markers/permanentmarkers4_image4.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //dry erase
+            ['VariantID' => 1, 'ProductID' => 84, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 84, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 84, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker1_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 85, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 85, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker2_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 86, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 86, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker3_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 86, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker3_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 10, 'ProductID' => 87, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 87, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker4_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 87, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker4_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 18, 'ProductID' => 88, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 88, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker5_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 88, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker5_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //highlighter
+            ['VariantID' => 56, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image4.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image5.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 18, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image6.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 90, 'Image' => '/assets/markers/highlighters/highlighters2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 90, 'Image' => '/assets/markers/highlighters/highlighters2_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 90, 'Image' => '/assets/markers/highlighters/highlighters2_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 91, 'Image' => '/assets/markers/highlighters/highlighters3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 91, 'Image' => '/assets/markers/highlighters/highlighters3_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 92, 'Image' => '/assets/markers/highlighters/highlighters4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 32, 'ProductID' => 92, 'Image' => '/assets/markers/highlighters/highlighters4_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 92, 'Image' => '/assets/markers/highlighters/highlighters4_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 92, 'Image' => '/assets/markers/highlighters/highlighters4_image4.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 92, 'Image' => '/assets/markers/highlighters/highlighters4_image5.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //paint markers
+            ['VariantID' => 1, 'ProductID' => 93, 'Image' => '/assets/markers/paint_markers/paintmarker1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 93, 'Image' => '/assets/markers/paint_markers/paintmarker1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 94, 'Image' => '/assets/markers/paint_markers/paintmarker2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //others
+            //pencil case
+            ['VariantID' => 10, 'ProductID' => 95, 'Image' => '/assets/others/pencil_cases/pencilcase1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 50, 'ProductID' => 95, 'Image' => '/assets/others/pencil_cases/pencilcase1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 96, 'Image' => '/assets/others/pencil_cases/pencilcase2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 96, 'Image' => '/assets/others/pencil_cases/pencilcase2_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 97, 'Image' => '/assets/others/pencil_cases/pencilcase3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 57, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 19, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 33, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 34, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 33, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 35, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image4.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 49, 'ProductID' => 100, 'Image' => '/assets/others/pencil_cases/pencilcase6_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 46, 'ProductID' => 100, 'Image' => '/assets/others/pencil_cases/pencilcase6_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 47, 'ProductID' => 100, 'Image' => '/assets/others/pencil_cases/pencilcase6_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 48, 'ProductID' => 100, 'Image' => '/assets/others/pencil_cases/pencilcase6_image4.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 49, 'ProductID' => 100, 'Image' => '/assets/others/pencil_cases/pencilcase6_image5.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 101, 'Image' => '/assets/others/pencil_cases/pencilcase7_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 102, 'Image' => '/assets/others/pencil_cases/pencilcase8_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 102, 'Image' => '/assets/others/pencil_cases/pencilcase8_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 51, 'ProductID' => 103, 'Image' => '/assets/others/pencil_cases/pencilcase9_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 51, 'ProductID' => 103, 'Image' => '/assets/others/pencil_cases/pencilcase9_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 34, 'ProductID' => 103, 'Image' => '/assets/others/pencil_cases/pencilcase9_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 35, 'ProductID' => 103, 'Image' => '/assets/others/pencil_cases/pencilcase9_image4.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 33, 'ProductID' => 103, 'Image' => '/assets/others/pencil_cases/pencilcase9_image5.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 104, 'Image' => '/assets/others/pencil_cases/pencilcase10_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 105, 'Image' => '/assets/others/pencil_cases/pencilcase11_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //rulers
+            ['VariantID' => 10, 'ProductID' => 106, 'Image' => '/assets/others/rulers/ruler1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 107, 'Image' => '/assets/others/rulers/ruler2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 10, 'ProductID' => 108, 'Image' => '/assets/others/rulers/ruler3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 109, 'Image' => '/assets/others/rulers/ruler4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image4.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 54, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 54, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 58, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 59, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image4.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //stapler
+            ['VariantID' => 8, 'ProductID' => 112, 'Image' => '/assets/others/staplers/stapler1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 112, 'Image' => '/assets/others/staplers/stapler1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 113, 'Image' => '/assets/others/staplers/stapler2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 113, 'Image' => '/assets/others/staplers/stapler2_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 114, 'Image' => '/assets/others/staplers/stapler3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 114, 'Image' => '/assets/others/staplers/stapler3_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 115, 'Image' => '/assets/others/staplers/stapler4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 116, 'Image' => '/assets/others/staplers/stapler5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //organizers
+            ['VariantID' => 60, 'ProductID' => 117, 'Image' => '/assets/others/organizers/organizer1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 60, 'ProductID' => 117, 'Image' => '/assets/others/organizers/organizer1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 60, 'ProductID' => 117, 'Image' => '/assets/others/organizers/organizer1_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 11, 'ProductID' => 118, 'Image' => '/assets/others/organizers/organizer2_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 11, 'ProductID' => 118, 'Image' => '/assets/others/organizers/organizer2_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 11, 'ProductID' => 118, 'Image' => '/assets/others/organizers/organizer2_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 10, 'ProductID' => 119, 'Image' => '/assets/others/organizers/organizer3_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 119, 'Image' => '/assets/others/organizers/organizer3_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 119, 'Image' => '/assets/others/organizers/organizer3_image3.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 19, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 45, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image3.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 45, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image4.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 45, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image5.png', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 8, 'ProductID' => 121, 'Image' => '/assets/others/organizers/organizer5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+
+            //cutting mat
+            ['VariantID' => 43, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 44, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
         ]);
     }
 }
