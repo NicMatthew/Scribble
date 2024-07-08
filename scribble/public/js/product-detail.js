@@ -16,6 +16,17 @@ let variantInput = document.getElementById("variant-input")
 let priceInput = document.getElementById("price-input")
 let selectedVariant = -1;
 
+variants.sort((a, b) => {
+    // Assuming VariantName is a string property within each object
+    if (a.VariantName < b.VariantName) {
+        return -1;
+    }
+    if (a.VariantName > b.VariantName) {
+        return 1;
+    }
+    return 0;
+});
+
 variants.forEach(variant => {
     let image = document.createElement("img")
     image.src = variant.Image
@@ -46,8 +57,8 @@ function setVariant(idx, varID) {
 
 let tempVar = null
 for (let i = variantOpt.length-1; i >= 0; i--) {
-    if (tempVar == variantOpt[i].innerText) {
-        variantOpt[i].remove()
+    if (tempVar == variantOpt[i].innerText || variantOpt[i].innerText == "None") {
+        variantOpt[i].style = "font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:none; flex-direction: row; align-items:center;"
     } else {
         tempVar = variantOpt[i].innerText
     }

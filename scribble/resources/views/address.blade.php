@@ -71,7 +71,7 @@
             </div>
         </div>
         @if($address_edit != null)
-        <div class="modal-edit" id="modal-edit">
+        <div class="modal-edit show" id="modal-edit">
             <div class="overlay">
                 <p class="b1" style="font-weight: bold; margin-bottom:15px; display:flex; align-items: center; justify-content: center">Edit Address</p>
                 <form method="POST" action="{{ route('edit-address') }}" class="form-address">
@@ -99,7 +99,7 @@
                             <input type="text" name="post_code" placeholder="Post Code" value="{{ $address_edit->PostCode }}"required>
                         </div>
                         <button type="submit" class="btn"> Edit Address </button>
-                        <button type="submit" class="cancel-edit" id="cancel-edit">Cancel</button>
+                        <a href="/addresses/{{auth()->id()}}" class="cancel-edit" id="cancel-edit">Cancel</a>
                     </div>
                 </form>
             </div>

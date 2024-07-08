@@ -47,7 +47,7 @@ class AddressController extends Controller
         ]);
 
          // Redirect back to the page where the form was submitted
-         return back();
+         return redirect()->route("show-addresses", auth()->id());
     }
 
     public function deleteAddress(Request $request)
