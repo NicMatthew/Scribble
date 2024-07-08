@@ -538,6 +538,14 @@ class ProductEntriesTableSeeder extends Seeder
             ['ProductID' => 188, 'VariantID' => 1, 'Stock' => 250, 'Price' => 35000, 'created_at' => now(), 'updated_at' => now()],
             ['ProductID' => 189, 'VariantID' => 1, 'Stock' => 240, 'Price' => 36000, 'created_at' => now(), 'updated_at' => now()],
         
+            //sticking tools
+            //glue stick
+            ['ProductID' => 190, 'VariantID' => 83, 'Stock' => 80, 'Price' => 12000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 190, 'VariantID' => 84, 'Stock' => 82, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 190, 'VariantID' => 85, 'Stock' => 91, 'Price' => 19000, 'created_at' => now(), 'updated_at' => now()],
+            //liquid
+
+            //tape
 
 
         ]);
