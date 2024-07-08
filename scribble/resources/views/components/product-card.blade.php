@@ -39,25 +39,27 @@
                     <img src="/icons/love-outline.svg">
                 </div> --}}
             </div>
-            <div class="rating-sell">
-                <div class="rating">
-                @for ($i = 0; $i < 5; $i++)
-                    @if ($i < $product->Rating)
+            <div class="btm-card">
+                <div class="rating-sell">
+                    <div class="rating">
+                    @for ($i = 0; $i < 5; $i++)
+                        @if ($i < $product->Rating)
+                            <img src="/icons/star.svg">
+                        @else
+                            <img src="/icons/star.svg">
+                        @endif
+                    @endfor
+                        <!-- <img src="/icons/star.svg">
                         <img src="/icons/star.svg">
-                    @else
                         <img src="/icons/star.svg">
-                    @endif
-                @endfor
-                    <!-- <img src="/icons/star.svg">
-                    <img src="/icons/star.svg">
-                    <img src="/icons/star.svg">
-                    <img src="/icons/star.svg">
-                    <img src="/icons/star.svg"> -->
+                        <img src="/icons/star.svg">
+                        <img src="/icons/star.svg"> -->
+                    </div>
+                    <h5 class="sell">100 Terjual</h5>
                 </div>
-                <h5 class="sell">100 Terjual</h5>
-            </div>
-            <div class="price">
-                <h4>Rp. {{ number_format($product-> Price, 0)}}</h4>
+                <div class="price">
+                    <h4>Rp. {{ number_format($product-> Price, 0)}}</h4>
+                </div>
             </div>
         </div>
     </a>

@@ -15,9 +15,20 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
+    protected function setImageAndMinPrice($products) {
+        foreach ($products as $product) {
+            // Adding the first image
+            $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+            // Adding the minimum price
+            $product->Price = $product->entries->min('Price');
+        }
+
+        return $products;
+    }
     public function showProductDetail($productID) {
         $selectedProduct = Product::where("ProductID", $productID)->first();
-        
+
         if(Auth::check()){
             $wish = Wishlist::where('UserID', Auth::user()->UserID)
             ->where('ProductID', $selectedProduct->ProductID)
@@ -60,131 +71,69 @@ class ProductController extends Controller
         if(Auth::check()){
             $wishlistProductIDs = Wishlist::where('UserID', Auth::id())->pluck('ProductID')->toArray();
         }
-        
+
 
         return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs"));
     }
     public function showAllProducts (Request $request)
     {
         $selected = null;
-        if($request->search != null){
-            if($request->category != null || $request->category != ""){
-                $search = $request->search;
-                $category = $request->category;
+        $products = null;
+        $search = $request->search;
+        $category_select = $request->category;
+        $subcategory_select = $request->sub_category;
+
+        if($search != null){
+            if($category_select != null || $category_select != ""){
                 $products = Product::where('NameProduct', 'like', "%$search%")
                                     ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
                                     ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
-                                    ->where("NameCategory","=",$category)
+                                    ->where("NameCategory","=",$category_select)
                                     ->with(['images', 'entries']) // Eager load images and entries
                                     ->get();
 
-                // Add the first image and the minimum price to the main product object
-                foreach ($products as $product) {
-                    // Adding the first image
-                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-                    // Adding the minimum price
-                    $product->Price = $product->entries->min('Price');
-                }
-
             }
-            elseif ($request->sub_category != null || $request->sub_category != ""){
-                $search = $request->search;
-                $subcategory = $request->sub_category;
+            elseif ($subcategory_select != null || $subcategory_select != ""){
                 $products = Product::where('NameProduct', 'like', "%$search%")
                                     ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
-                                    ->where("NameSubCategory","=",$subcategory)
+                                    ->where("NameSubCategory","=",$subcategory_select)
                                     ->with(['images', 'entries']) // Eager load images and entries
                                     ->get();
-
-                // Add the first image and the minimum price to the main product object
-                foreach ($products as $product) {
-                    // Adding the first image
-                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-                    // Adding the minimum price
-                    $product->Price = $product->entries->min('Price');
-                }
-
             }
             else{
-                $search = $request->search;
                 $products = Product::where('NameProduct', 'like', "%$search%")
                                     ->with(['images', 'entries']) // Eager load images and entries
                                     ->get();
-
-                // Add the first image and the minimum price to the main product object
-                foreach ($products as $product) {
-                    // Adding the first image
-                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-                    // Adding the minimum price
-                    $product->Price = $product->entries->min('Price');
-                }
-
-                $categoryName = null;
 
             }
 
         }
         else{
-            if($request->category != null || $request->category != ""){
-                $category = $request->category;
+            if($category_select != null || $category_select != ""){
                 $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
                                     ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
-                                    ->where("NameCategory","=",$category)
+                                    ->where("NameCategory", "=", $category_select)
                                     ->with(['images', 'entries']) // Eager load images and entries
                                     ->get();
-
-                // Add the first image and the minimum price to the main product object
-                foreach ($products as $product) {
-                    // Adding the first image
-                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-                    // Adding the minimum price
-                    $product->Price = $product->entries->min('Price');
-                }
 
             }
-            elseif ($request->sub_category != null || $request->sub_category != ""){
-                $search = $request->search;
-                $subcategory = $request->sub_category;
+            elseif ($subcategory_select != null || $subcategory_select != ""){
                 $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
-                                    ->where("NameSubCategory","=",$subcategory)
+                                    ->where("NameSubCategory","=", $subcategory_select)
                                     ->with(['images', 'entries']) // Eager load images and entries
                                     ->get();
-
-                // Add the first image and the minimum price to the main product object
-                foreach ($products as $product) {
-                    // Adding the first image
-                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-                    // Adding the minimum price
-                    $product->Price = $product->entries->min('Price');
-                }
 
             }
             else{
-                $search = $request->search;
                 $products = Product::with(['images', 'entries']) // Eager load images and entries
                                     ->get();
 
                 // Add the first image and the minimum price to the main product object
-                foreach ($products as $product) {
-                    // Adding the first image
-                    $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-                    // Adding the minimum price
-                    $product->Price = $product->entries->min('Price');
-                }
-
-                $categoryName = null;
 
             }
         }
-        $search = $request->search;
-        $category_select = $request->category;
-        $subcategory_select = $request->sub_category;
+        $products = $this->setImageAndMinPrice($products);
+
         if($category_select == null && $subcategory_select != null){
             $category_select = Category::join("sub_categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")->where("sub_categories.NameSubCategory", $subcategory_select)->get()->first()->NameCategory;
         }
@@ -192,8 +141,7 @@ class ProductController extends Controller
         $subcategories = SubCategory::all();
         $sorting = $request->sorting;
 
-        if($request->sorting != null || $request->sorting != ""){
-            $sorting = $request->sorting;
+        if($sorting != null || $sorting != ""){
             if($sorting=="Lowest Price"){
                 $products = $products->sortBy('Price');
 
@@ -210,23 +158,8 @@ class ProductController extends Controller
         // Get wishlist product IDs
         $user = Auth::user();
         $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
-        // dd($category);
         return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting','wishlistProductIDs'));
     }
-
-    // public function addToWishlist(Request $request)
-    // {
-    //     $user = Auth::user();
-    //     $productId = $request->input('product_id');
-
-    //     $NewWishlist= new Wishlist();
-    //     $NewWishlist->UserID = $user->UserID;
-    //     $NewWishlist->ProductID = $productId;
-
-    //     $NewWishlist->save();
-
-    //     return redirect()->to($request->url);
-    // }
 
     public function toggleWishlist(Request $request)
     {
@@ -251,12 +184,12 @@ class ProductController extends Controller
         return redirect()->to($request->url);
     }
 
-    
+
 
     public function showWishlist()
 {
     $user = Auth::user();
-    
+
     // Get wishlist products with their images and entries
     $wishlistProducts = Product::with(['images', 'entries'])
         ->join("wishlists", "wishlists.ProductID", "=", "products.ProductID")
@@ -275,7 +208,7 @@ class ProductController extends Controller
 }
 
     // public function removeFromWishlist(Request $request)
-    // {    
+    // {
     //     $user = Auth::user();
     //     $productId = $request->input('product_id');
 
