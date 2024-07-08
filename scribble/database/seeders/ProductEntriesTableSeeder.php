@@ -573,8 +573,6 @@ class ProductEntriesTableSeeder extends Seeder
             
             ['ProductID' => 202, 'VariantID' => 1, 'Stock' => 88, 'Price' => 22000, 'created_at' => now(), 'updated_at' => now()],
             
-            ['ProductID' => 202, 'VariantID' => 1, 'Stock' => 88, 'Price' => 22000, 'created_at' => now(), 'updated_at' => now()],
-            
             ['ProductID' => 203, 'VariantID' => 9, 'Stock' => 70, 'Price' => 30000, 'created_at' => now(), 'updated_at' => now()],
             ['ProductID' => 203, 'VariantID' => 8, 'Stock' => 70, 'Price' => 30000, 'created_at' => now(), 'updated_at' => now()],
             
