@@ -165,7 +165,7 @@ class VariantsTableSeeder extends Seeder
             //74
             ['VariantName' => 'Blue-Orange', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //75
-            ['VariantName' => 'Pink-Greem', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['VariantName' => 'Pink-Green', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //76
             ['VariantName' => 'Blue-Yellow', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //77
@@ -180,6 +180,36 @@ class VariantsTableSeeder extends Seeder
             ['VariantName' => 'Sage Green', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //82
             ['VariantName' => 'Light Pink', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //83
+            ['VariantName' => '8g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //84
+            ['VariantName' => '15g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //85
+            ['VariantName' => '25g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //86
+            ['VariantName' => '8.2g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //87
+            ['VariantName' => '21g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //88
+            ['VariantName' => '40g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //89
+            ['VariantName' => '20ml', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //90
+            ['VariantName' => '35ml', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //91
+            ['VariantName' => '125ml', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //92
+            ['VariantName' => '40ml', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //93
+            ['VariantName' => '60ml', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //94
+            ['VariantName' => '150ml', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //95
+            ['VariantName' => '24mm x 15yard', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //96
+            ['VariantName' => '12mm x 15 yard', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //97
+            ['VariantName' => 'Navy Blue', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
 
 
                     

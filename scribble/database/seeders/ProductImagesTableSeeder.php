@@ -435,7 +435,7 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 15, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 19, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image3.png', 'created_at' => now(), 'updated_at' => now()],
 
-            ['VariantID' => 33, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 34, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 34, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 33, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 35, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image4.png', 'created_at' => now(), 'updated_at' => now()],
@@ -698,17 +698,87 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 1, 'ProductID' => 188, 'Image' => '/assets/correcting_tools/eraser/eraser6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 1, 'ProductID' => 189, 'Image' => '/assets/correcting_tools/eraser/eraser7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            //sticking tools
+            //glue stick
+            ['VariantID' => 83, 'ProductID' => 190, 'Image' => '/assets/sticking_tools/glue_stick/gluestick1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 83, 'ProductID' => 190, 'Image' => '/assets/sticking_tools/glue_stick/gluestick1_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 84, 'ProductID' => 190, 'Image' => '/assets/sticking_tools/glue_stick/gluestick1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 85, 'ProductID' => 190, 'Image' => '/assets/sticking_tools/glue_stick/gluestick1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 191, 'Image' => '/assets/sticking_tools/glue_stick/gluestick2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 192, 'Image' => '/assets/sticking_tools/glue_stick/gluestick3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 193, 'Image' => '/assets/sticking_tools/glue_stick/gluestick4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 194, 'Image' => '/assets/sticking_tools/glue_stick/gluestick5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 86, 'ProductID' => 195, 'Image' => '/assets/sticking_tools/glue_stick/gluestick6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 87, 'ProductID' => 195, 'Image' => '/assets/sticking_tools/glue_stick/gluestick6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 88, 'ProductID' => 195, 'Image' => '/assets/sticking_tools/glue_stick/gluestick6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
 
 
+            //liquid glue
+            ['VariantID' => 1, 'ProductID' => 196, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 197, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 198, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 199, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 199, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 200, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 89, 'ProductID' => 201, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 89, 'ProductID' => 201, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 90, 'ProductID' => 201, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 91, 'ProductID' => 201, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue6_image4.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 202, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 9, 'ProductID' => 203, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue8_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 203, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue8_image2.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 8, 'ProductID' => 204, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue9_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 204, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue9_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 204, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue9_image3.svg', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 92, 'ProductID' => 205, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue10_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 92, 'ProductID' => 205, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue10_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 93, 'ProductID' => 205, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue10_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 94, 'ProductID' => 205, 'Image' => '/assets/sticking_tools/liquid_glue/liquidglue10_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            //tape
+            ['VariantID' => 97, 'ProductID' => 206, 'Image' => '/assets/sticking_tools/tape/tape1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 97, 'ProductID' => 206, 'Image' => '/assets/sticking_tools/tape/tape1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 206, 'Image' => '/assets/sticking_tools/tape/tape1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 207, 'Image' => '/assets/sticking_tools/tape/tape2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 96, 'ProductID' => 208, 'Image' => '/assets/sticking_tools/tape/tape3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 95, 'ProductID' => 208, 'Image' => '/assets/sticking_tools/tape/tape3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 15, 'ProductID' => 209, 'Image' => '/assets/sticking_tools/tape/tape4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 209, 'Image' => '/assets/sticking_tools/tape/tape4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 209, 'Image' => '/assets/sticking_tools/tape/tape4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 209, 'Image' => '/assets/sticking_tools/tape/tape4_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 210, 'Image' => '/assets/sticking_tools/tape/tape5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 210, 'Image' => '/assets/sticking_tools/tape/tape5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 211, 'Image' => '/assets/sticking_tools/tape/tape6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 211, 'Image' => '/assets/sticking_tools/tape/tape6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 10, 'ProductID' => 212, 'Image' => '/assets/sticking_tools/tape/tape7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 212, 'Image' => '/assets/sticking_tools/tape/tape7_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 11, 'ProductID' => 212, 'Image' => '/assets/sticking_tools/tape/tape7_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            
+            ['VariantID' => 1, 'ProductID' => 213, 'Image' => '/assets/sticking_tools/tape/tape8_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 213, 'Image' => '/assets/sticking_tools/tape/tape8_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 214, 'Image' => '/assets/sticking_tools/tape/tape9_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 214, 'Image' => '/assets/sticking_tools/tape/tape9_image2.svg', 'created_at' => now(), 'updated_at' => now()],
 
         ]);
     }
