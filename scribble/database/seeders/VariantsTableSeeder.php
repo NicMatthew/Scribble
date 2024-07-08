@@ -136,8 +136,53 @@ class VariantsTableSeeder extends Seeder
             ['VariantName' => 'Wood', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             //60
             ['VariantName' => 'Blue & White', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-            
-                        
+            //61
+            ['VariantName' => '50 lembar', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //62
+            ['VariantName' => '100 lembar', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //63
+            ['VariantName' => 'A5', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //64
+            ['VariantName' => 'B5', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //65
+            ['VariantName' => 'Brown', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //66
+            ['VariantName' => 'Small', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //67
+            ['VariantName' => 'Large', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //68
+            ['VariantName' => 'Plain', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //69
+            ['VariantName' => 'Grid', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //70
+            ['VariantName' => 'Dotted', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //71
+            ['VariantName' => 'Ruled', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //72
+            ['VariantName' => 'Brown', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //73
+            ['VariantName' => 'Grey', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //74
+            ['VariantName' => 'Blue-Orange', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //75
+            ['VariantName' => 'Pink-Greem', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //76
+            ['VariantName' => 'Blue-Yellow', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //77
+            ['VariantName' => 'Hare', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //78
+            ['VariantName' => 'Snow', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //79
+            ['VariantName' => 'Jilid Atas', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //80
+            ['VariantName' => 'Jilid Samping', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //81
+            ['VariantName' => 'Sage Green', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            //82
+            ['VariantName' => 'Light Pink', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+
+
+                    
 
         ]);
     }

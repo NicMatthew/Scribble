@@ -519,9 +519,187 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 43, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 44, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image2.png', 'created_at' => now(), 'updated_at' => now()],
 
+            // Writing Paper
+            ['VariantID' => 1, 'ProductID' => 123, 'Image' => '/assets/books_papers/writing_paper/writingpaper1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 124, 'Image' => '/assets/books_papers/writing_paper/writingpaper2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 61, 'ProductID' => 124, 'Image' => '/assets/books_papers/writing_paper/writingpaper2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 62, 'ProductID' => 124, 'Image' => '/assets/books_papers/writing_paper/writingpaper2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 63, 'ProductID' => 125, 'Image' => '/assets/books_papers/writing_paper/writingpaper4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 64, 'ProductID' => 125, 'Image' => '/assets/books_papers/writing_paper/writingpaper4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image4.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 32, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 50, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 57, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image7.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image5.svg', 'created_at' => now(), 'updated_at' => now()],
 
+             //Printing Paper
+            ['VariantID' => 1, 'ProductID' => 128, 'Image' => '/assets/books_papers/printing_paper/printingpaper1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 129, 'Image' => '/assets/books_papers/printing_paper/printingpaper2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 130, 'Image' => '/assets/books_papers/printing_paper/printingpaper3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 131, 'Image' => '/assets/books_papers/printing_paper/printingpaper4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 132, 'Image' => '/assets/books_papers/printing_paper/printingpaper5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+             // Specialty Paper
+            ['VariantID' => 1, 'ProductID' => 133, 'Image' => '/assets/books_papers/origami_paper/origamipaper1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 133, 'Image' => '/assets/books_papers/origami_paper/origamipaper1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 133, 'Image' => '/assets/books_papers/origami_paper/origamipaper1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 134, 'Image' => '/assets/books_papers/origami_paper/origamipaper2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 134, 'Image' => '/assets/books_papers/origami_paper/origamipaper2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 135, 'Image' => '/assets/books_papers/origami_paper/origamipaper3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 135, 'Image' => '/assets/books_papers/origami_paper/origamipaper3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 136, 'Image' => '/assets/books_papers/origami_paper/origamipaper4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 137, 'Image' => '/assets/books_papers/origami_paper/origamipaper5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+
+            // Sticky Notes
+            ['VariantID' => 65, 'ProductID' => 138, 'Image' => '/assets/books_papers/sticky_notes/stickynotes1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 32, 'ProductID' => 138, 'Image' => '/assets/books_papers/sticky_notes/stickynotes1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 138, 'Image' => '/assets/books_papers/sticky_notes/stickynotes1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 139, 'Image' => '/assets/books_papers/sticky_notes/stickynotes2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 140, 'Image' => '/assets/books_papers/sticky_notes/stickynotes3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 141, 'Image' => '/assets/books_papers/sticky_notes/stickynotes4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 65, 'ProductID' => 142, 'Image' => '/assets/books_papers/sticky_notes/stickynotes5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 41, 'ProductID' => 142, 'Image' => '/assets/books_papers/sticky_notes/stickynotes5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 67, 'ProductID' => 142, 'Image' => '/assets/books_papers/sticky_notes/stickynotes5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            // Notebooks
+            ['VariantID' => 1, 'ProductID' => 143, 'Image' => '/assets/books_papers/notebooks/notebooks1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 68, 'ProductID' => 143, 'Image' => '/assets/books_papers/notebooks/notebooks1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 69, 'ProductID' => 143, 'Image' => '/assets/books_papers/notebooks/notebooks1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 70, 'ProductID' => 143, 'Image' => '/assets/books_papers/notebooks/notebooks1_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 71, 'ProductID' => 143, 'Image' => '/assets/books_papers/notebooks/notebooks1_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 144, 'Image' => '/assets/books_papers/notebooks/notebooks2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 71, 'ProductID' => 144, 'Image' => '/assets/books_papers/notebooks/notebooks2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 69, 'ProductID' => 144, 'Image' => '/assets/books_papers/notebooks/notebooks2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 145, 'Image' => '/assets/books_papers/notebooks/notebooks3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 72, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 16, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 73, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 147, 'Image' => '/assets/books_papers/notebooks/notebooks5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 147, 'Image' => '/assets/books_papers/notebooks/notebooks5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 73, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 16, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image7.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 57, 'ProductID' => 148, 'Image' => '/assets/books_papers/notebooks/notebooks6_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 149, 'Image' => '/assets/books_papers/notebooks/notebooks7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 149, 'Image' => '/assets/books_papers/notebooks/notebooks7_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 149, 'Image' => '/assets/books_papers/notebooks/notebooks7_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 11, 'ProductID' => 149, 'Image' => '/assets/books_papers/notebooks/notebooks7_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 150, 'Image' => '/assets/books_papers/notebooks/notebooks8_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 74, 'ProductID' => 150, 'Image' => '/assets/books_papers/notebooks/notebooks8_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 75, 'ProductID' => 150, 'Image' => '/assets/books_papers/notebooks/notebooks8_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 76, 'ProductID' => 150, 'Image' => '/assets/books_papers/notebooks/notebooks8_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            // Planner
+            ['VariantID' => 1, 'ProductID' => 151, 'Image' => '/assets/books_papers/planner/planner1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 151, 'Image' => '/assets/books_papers/planner/planner1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 152, 'Image' => '/assets/books_papers/planner/planner2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 152, 'Image' => '/assets/books_papers/planner/planner2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 152, 'Image' => '/assets/books_papers/planner/planner2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 153, 'Image' => '/assets/books_papers/planner/planner3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 153, 'Image' => '/assets/books_papers/planner/planner3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 153, 'Image' => '/assets/books_papers/planner/planner3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 153, 'Image' => '/assets/books_papers/planner/planner3_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 154, 'Image' => '/assets/books_papers/planner/planner4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 154, 'Image' => '/assets/books_papers/planner/planner4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 77, 'ProductID' => 154, 'Image' => '/assets/books_papers/planner/planner4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 78, 'ProductID' => 154, 'Image' => '/assets/books_papers/planner/planner4_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 155, 'Image' => '/assets/books_papers/planner/planner5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 155, 'Image' => '/assets/books_papers/planner/planner5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 155, 'Image' => '/assets/books_papers/planner/planner5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 155, 'Image' => '/assets/books_papers/planner/planner5_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 156, 'Image' => '/assets/books_papers/planner/planner6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 156, 'Image' => '/assets/books_papers/planner/planner6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 156, 'Image' => '/assets/books_papers/planner/planner6_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            // Sketchbooks
+            ['VariantID' => 1, 'ProductID' => 157, 'Image' => '/assets/books_papers/sketchbook/sketchbook1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 157, 'Image' => '/assets/books_papers/sketchbook/sketchbook1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 158, 'Image' => '/assets/books_papers/sketchbook/sketchbook2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 158, 'Image' => '/assets/books_papers/sketchbook/sketchbook2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 159, 'Image' => '/assets/books_papers/sketchbook/sketchbook3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 159, 'Image' => '/assets/books_papers/sketchbook/sketchbook3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 79, 'ProductID' => 159, 'Image' => '/assets/books_papers/sketchbook/sketchbook3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 80, 'ProductID' => 159, 'Image' => '/assets/books_papers/sketchbook/sketchbook3_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            ['VariantID' => 1, 'ProductID' => 160, 'Image' => '/assets/books_papers/sketchbook/sketchbook4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 161, 'Image' => '/assets/books_papers/sketchbook/sketchbook5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 162, 'Image' => '/assets/books_papers/sketchbook/sketchbook6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 163, 'Image' => '/assets/books_papers/sketchbook/sketchbook7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 164, 'Image' => '/assets/books_papers/sketchbook/sketchbook8_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             
+            // Guestbooks
+            ['VariantID' => 1, 'ProductID' => 165, 'Image' => '/assets/books_papers/guestbook/guestbook1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 165, 'Image' => '/assets/books_papers/guestbook/guestbook1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 166, 'Image' => '/assets/books_papers/guestbook/guestbook2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 166, 'Image' => '/assets/books_papers/guestbook/guestbook2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 166, 'Image' => '/assets/books_papers/guestbook/guestbook2_image5.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 166, 'Image' => '/assets/books_papers/guestbook/guestbook2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 19, 'ProductID' => 166, 'Image' => '/assets/books_papers/guestbook/guestbook2_image4.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 167, 'Image' => '/assets/books_papers/guestbook/guestbook3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 167, 'Image' => '/assets/books_papers/guestbook/guestbook3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 168, 'Image' => '/assets/books_papers/guestbook/guestbook4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 19, 'ProductID' => 168, 'Image' => '/assets/books_papers/guestbook/guestbook4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 81, 'ProductID' => 168, 'Image' => '/assets/books_papers/guestbook/guestbook4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 169, 'Image' => '/assets/books_papers/guestbook/guestbook5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 169, 'Image' => '/assets/books_papers/guestbook/guestbook5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             
+            // Tape
+            ['VariantID' => 1, 'ProductID' => 170, 'Image' => '/assets/correcting_tools/tape/tape1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 55, 'ProductID' => 170, 'Image' => '/assets/correcting_tools/tape/tape1_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 170, 'Image' => '/assets/correcting_tools/tape/tape1_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 9, 'ProductID' => 171, 'Image' => '/assets/correcting_tools/tape/tape2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 14, 'ProductID' => 171, 'Image' => '/assets/correcting_tools/tape/tape2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 171, 'Image' => '/assets/correcting_tools/tape/tape2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 172, 'Image' => '/assets/correcting_tools/tape/tape3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 172, 'Image' => '/assets/correcting_tools/tape/tape3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 173, 'Image' => '/assets/correcting_tools/tape/tape4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 173, 'Image' => '/assets/correcting_tools/tape/tape4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 82, 'ProductID' => 174, 'Image' => '/assets/correcting_tools/tape/tape5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 8, 'ProductID' => 174, 'Image' => '/assets/correcting_tools/tape/tape5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 73, 'ProductID' => 174, 'Image' => '/assets/correcting_tools/tape/tape5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 175, 'Image' => '/assets/correcting_tools/tape/tape6_image    1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            // Liquid
+            ['VariantID' => 1, 'ProductID' => 176, 'Image' => '/assets/correcting_tools/liquid/liquid1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 177, 'Image' => '/assets/correcting_tools/liquid/liquid2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 178, 'Image' => '/assets/correcting_tools/liquid/liquid3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 179, 'Image' => '/assets/correcting_tools/liquid/liquid4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 180, 'Image' => '/assets/correcting_tools/liquid/liquid5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 181, 'Image' => '/assets/correcting_tools/liquid/liquid6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 182, 'Image' => '/assets/correcting_tools/liquid/liquid7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+            // Eraser
+            ['VariantID' => 1, 'ProductID' => 183, 'Image' => '/assets/correcting_tools/eraser/eraser1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 184, 'Image' => '/assets/correcting_tools/eraser/eraser2_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 185, 'Image' => '/assets/correcting_tools/eraser/eraser3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 186, 'Image' => '/assets/correcting_tools/eraser/eraser4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 187, 'Image' => '/assets/correcting_tools/eraser/eraser5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 188, 'Image' => '/assets/correcting_tools/eraser/eraser6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 189, 'Image' => '/assets/correcting_tools/eraser/eraser7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+
+
+
 
 
 

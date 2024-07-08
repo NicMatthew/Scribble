@@ -679,6 +679,646 @@ class ProductsTableSeeder extends Seeder
                 'updated_at' => Carbon::now()
             ],
 
+
+            
+
+            //Books & Paper
+            //Writing Paper
+            ['NameProduct' => 'Kertas Binder B5 100 Sheet (Garis/Line)',
+            'Rating' => 4.5,
+            'DescriptionProduct' => 'Isi : 100 Lembar dengan motif garis-garis
+            Ukuran : 182 x 257 mm
+            Untuk binder 26 Holes (Lubang) dengan kualitas kertas yang tebal beda dari merk lain.
+            ',
+            'SubCategoryProductID' => 13,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'Loose Leaf Kertas Binder BIGBOSS B5 Garis Lined Polos',
+            'Rating' => 4.8,
+            'DescriptionProduct' => 'Merk: Big Boss
+            Warna: Putih
+            Jenis: Kertas Binder/ Loose Leaf
+            Ukuran: B5
+            ',
+            'SubCategoryProductID' => 13,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'Lined Blank Paper Refills',
+            'Rating' => 4.5,
+            'DescriptionProduct' => 'Tingkatkan pengalaman mencatat Anda dengan Lined Blank Paper Refills premium kami. Dirancang untuk cocok dengan sebagian besar notebook dan binder ukuran standar, refill ini menawarkan solusi serbaguna untuk pelajar, profesional, dan kreatif. Setiap pak berisi 100 lembar kertas berkualitas tinggi bebas asam, memastikan catatan, sketsa, dan rencana Anda tetap terjaga dengan baik dari waktu ke waktu.',
+            'SubCategoryProductID' => 13,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => ' Colorplus Loose Leaf Binder Paper 100gsm',
+            'Rating' => 4.9,
+            'DescriptionProduct' => 'Dengan tiga pilihan warna kertas, seri terbaru loose leaf panmomo: panmomo Colorplus Loose Leaf, menghadirkan permukaan kertas yang halus dan nyaman untuk menulis catatan atau membuat to-do list.
+
+
+Gunakan warna pastel leaf green, sakura pink, dan sky blue untuk mengkategorikan catatanmu dengan mudah atau sekedar untuk menulis di atas warna favoritmu. Bahan kertas berkualitas tinggi 100 gsm lebih tahan terhadap bleeding dan feathering, membuatnya cocok ditulisi dengan berbagai variasi alat tulis seperti pensil, pena, brush pen, dan marker Ukuran:
+- A5: 14 x 21 cm (20 ring)
+Spacing bergaris 8 mm.
+
+
+Isi: 60 lembar (120 halaman).
+Gramasi kertas 100 gsm. Lebih tebal dibanding loose leaf standar.',
+            'SubCategoryProductID' => 13,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'Mini Loose Leaf 3 Rings Pastel Color - Grid',
+            'Rating' => 4,
+            'DescriptionProduct' => 'Isi loose leaf / kertas untuk Mini Binder 3 Rings
+
+
+Ukuran : 6x8cm
+Ketebalan : 100gsm
+Jumlah : 60 lembar
+',
+            'SubCategoryProductID' => 13,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            //Printing Paper
+            ['NameProduct' => 'PaperOne Kertas A4 80gr All Purpose 1 Box (2500 lembar) Kertas HVS',
+            'Rating' => 4.5,
+            'DescriptionProduct' => 'Ukuran : A4
+Gramasi : 80 gsm ( All Purpose )
+Size CM : 21,0 X 29,7
+5 Ream = 1 Box',
+            'SubCategoryProductID' => 14,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'PaperOne Kertas A4 100gr Digital 1 Box (2000 lembar) Kertas HVS',
+            'Rating' => 4.5,
+            'DescriptionProduct' => 'Tingkat keputihan kertas yang tinggi - Kontras dengan kejelasan cetak yang tajam
+             Sangat cocok digunakan untuk laporan kantor, buletin, salinan proposal, grafik, memo, resume, tesis, esai dan surat, dll.
+             Ukuran : A4
+Gramasi : 100 gsm ( Digital )
+Size CM : 21,0 X 29,7
+4 Ream = 1 Box',
+            'SubCategoryProductID' => 14,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'PaperOne Kertas A4 75gr Copier 1 Box (2500 lembar) Kertas HVS',
+            'Rating' => 4.5,
+            'DescriptionProduct' => "Ukuran : A4 \n
+Gramasi : 75 gsm ( Copier Paper ) \n
+Size CM : 21,0 X 29,7 \n
+5 Ream = 1 Box",
+            'SubCategoryProductID' => 14,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'Kertas HVS A4 80 gr Bola Dunia',
+            'Rating' => 4.7,
+            'DescriptionProduct' => 'KERTAS PRINT FOTOCOPY HVS A4 DAN F4 70 GRAM - Warna putih cerah - hasil cetak tajam
+- Kertas untuk cetak dan copy kecepatan tinggi
+- Teknologi TRUTONE - memberikan kualitas gambar dan cetak maksimal serta reproduksi garis yang jelas dan warna yang cerah
+- Bahan baku kertas diproduksi dari sumber yang bertanggung jawab yang telah bersertifikasi PEFC atau Program Pengesahan Sertifikasi Hutan (info lengkap www.pefc.org)
+- Cocok untuk digunakan di kantor/perusahaan (laporan, memo, proposal) , rumah tangga, pelajar (surat, tugas, skripsi, CV) serta copy centre
+- Pilihan tepat untuk segala jenis mesin Laser & Inkjet Print, Fax dan mesin Photocopy',
+            'SubCategoryProductID' => 14,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'Kertas hvs A4 75gr Copypaper',
+            'Rating' => 4.5,
+            'DescriptionProduct' => 'Kertas HVS ukuran A4 Copy paper dengan tebal 75gsm',
+            'SubCategoryProductID' => 14,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            //Specialty Paper
+            ['NameProduct' => 'Faber Castell 50 Origami Washi Paper Animal Series 15x15cm',
+            'Rating' => 4,
+            'DescriptionProduct' => 'Merek: Faber Castell
+            Tipe: Animal Series
+
+            Keterangan:
+            - Origami 15x15cm
+            - Warna dan corak yang menarik
+            - Isi 50 pcs
+            - Nyaman dipakai
+            - Superior quality',
+            'SubCategoryProductID' => 15,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+            ['NameProduct' => 'Sidu Origami Paper 16x16 100pcs',
+            'Rating' => 4.5,
+            'DescriptionProduct' => '[Sidu Origami Paper 16x16 100pcs]
+
+            Merek: Sinar Dunia
+            Tipe: 16x16cm
+            Harga diatas merupakan harga 1 item
+
+            Keterangan:
+            - Origami 16x16cm
+            - Warna warni
+            - Isi 100 pcs
+            - Nyaman dipakai
+            - Superior quality
+            - Dengan harga terjangkau dan kualitas baik banyak user senang menggunakan ini.',
+            'SubCategoryProductID' => 15,
+            'created_at' => now(),
+            'updated_at' => now()],
+
+
+                [
+                'NameProduct' => 'Sidu Origami Paper 12x12cm',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Kertas origami SIDU dengan ukuran 12x12 cm ini sangat cocok untuk berbagai proyek kerajinan tangan. Terbuat dari bahan berkualitas tinggi, kertas ini mudah dilipat dan tidak mudah robek. Hadir dengan berbagai warna menarik yang akan memperindah hasil karya Anda.',
+                'SubCategoryProductID' => 15,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            [
+                'NameProduct' => 'Kertas Lipat Origami Asturo 16 x 16 cm isi 50 lembar',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Kertas lipat origami Asturo dengan ukuran 16 x 16 cm ini berisi 50 lembar dalam satu pak. Sangat cocok untuk membuat berbagai macam bentuk origami. Kertas ini memiliki ketebalan yang pas, sehingga mudah dibentuk dan tahan lama.',
+                'SubCategoryProductID' => 15,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            [
+                'NameProduct' => 'Mideer origami paper middle level',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Kertas origami Mideer tingkat menengah ini dirancang khusus untuk para penggemar origami yang ingin meningkatkan keterampilan mereka. Kertas ini mudah dilipat dan tersedia dalam berbagai warna cerah, sehingga setiap karya Anda akan terlihat menarik.',
+                'SubCategoryProductID' => 15,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            //Sticky Notes
+            [
+                'NameProduct' => '200 Lembar Sticky Notes Set',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Set sticky notes berisi 200 lembar ini sangat praktis untuk mencatat hal-hal penting. Tersedia dalam berbagai warna cerah yang akan membantu Anda mengorganisir catatan dengan lebih baik. Mudah ditempel dan dilepas tanpa meninggalkan bekas.',
+                'SubCategoryProductID' => 16,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            [
+                'NameProduct' => 'Transparent Flag / Sticky Notes Panah Tom & Jerry TJ P-7A',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Sticky notes panah transparan Tom & Jerry TJ P-7A ini sangat ideal untuk menandai halaman atau bagian penting dalam dokumen Anda. Desainnya yang unik dan transparan tidak akan menutupi teks di bawahnya, dan mudah dipindahkan tanpa merusak kertas.',
+                'SubCategoryProductID' => 16,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            [
+                'NameProduct' => 'Deli Sticky Note Pad Notes 4x100Sheets',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Deli Sticky Note Pad dengan 4x100 lembar ini adalah pilihan sempurna untuk kebutuhan catatan harian Anda. Setiap pad terdiri dari 4 warna berbeda, yang memudahkan Anda dalam mengkategorikan catatan. Tempelkan pada berbagai permukaan dan lepas tanpa meninggalkan residu.',
+                'SubCategoryProductID' => 16,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            [
+                'NameProduct' => 'Deli Memo Tempel / Sticky Notes 80 Lembar Warna Putih BT1XX',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Deli Memo Tempel / Sticky Notes dengan 80 lembar ini hadir dalam warna putih yang elegan. Sangat cocok untuk mencatat pesan penting atau pengingat. Kertas berkualitas tinggi memastikan catatan Anda tetap terlihat jelas dan rapi.',
+                'SubCategoryProductID' => 16,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            [
+                'NameProduct' => 'Joyko Sticky Notes',
+                'Rating' => 4.5,
+                'DescriptionProduct' => 'Joyko Sticky Notes menawarkan kemudahan dalam mencatat dan mengingat hal-hal penting. Tersedia dalam berbagai warna cerah, sticky notes ini mudah ditempelkan pada berbagai permukaan dan dapat dilepas tanpa merusak kertas.',
+                'SubCategoryProductID' => 16,
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            
+            //Books
+            //Notebooks
+                [
+                    'NameProduct' => 'Joyko Notebook A5 NB-700/ Diary Agenda Buku Catatan',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Joyko Notebook A5 NB-700 adalah buku catatan yang sempurna untuk keperluan sehari-hari. Dengan cover yang kuat dan halaman berkualitas, notebook ini ideal untuk mencatat agenda, jurnal, atau catatan penting lainnya. Ukurannya yang kompak memudahkan Anda membawa notebook ini ke mana saja.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Exquisite Life Clear Cover Notebook B5 (Ruled, Grid)',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Exquisite Life Clear Cover Notebook B5 hadir dengan pilihan halaman bergaris dan grid, cocok untuk menulis dan menggambar. Cover transparannya memberikan kesan elegan dan modern, serta melindungi isi notebook dengan baik. Ideal untuk penggunaan sekolah, kantor, atau pribadi.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'BUKU TULIS BIG BOSS 50 LEMBAR CAMPUS NOTEBOOK 36 SHEET B5 BOXY [10PCS] - 36 Lembar',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Buku Tulis Big Boss dengan 50 lembar ini sangat cocok untuk kebutuhan sekolah atau kuliah. Terdiri dari 10 buku dengan masing-masing 36 lembar, buku ini menawarkan kualitas kertas yang baik untuk tulisan yang rapi dan bersih.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Deli Leather Cover Notebook/Buku Catatan A5',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Deli Leather Cover Notebook A5 adalah buku catatan dengan cover kulit yang elegan dan profesional. Ideal untuk mencatat meeting, jurnal harian, atau catatan penting lainnya. Kertas berkualitas tinggi memastikan tulisan Anda tetap terlihat jelas dan rapi.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Cinnamoroll B6 Notebook - Adinata / Buku Catatan / Memo',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Cinnamoroll B6 Notebook adalah buku catatan yang lucu dan menarik, cocok untuk anak-anak maupun remaja. Dengan desain karakter Cinnamoroll yang menggemaskan, notebook ini ideal untuk mencatat tugas sekolah, jurnal harian, atau memo penting.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Kokuyo Campus Binder notebook L-NP704 2x2 Ring B5',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Kokuyo Campus Binder Notebook L-NP704 dengan 2x2 ring ukuran B5 adalah pilihan yang sempurna untuk kebutuhan catatan sekolah atau kuliah. Binder ini memungkinkan Anda menambah atau mengurangi halaman dengan mudah sesuai kebutuhan. Kertas berkualitas tinggi memastikan kenyamanan menulis.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'KOKUYO Noritake binder notebook B5 WSG-RU2XP61',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Kokuyo Noritake Binder Notebook B5 WSG-RU2XP61 adalah notebook dengan desain elegan dan fungsional. Binder ini memudahkan Anda untuk mengatur halaman sesuai kebutuhan, membuatnya ideal untuk penggunaan sekolah, kuliah, atau pekerjaan kantor.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Notebook Kampus Semi-B5 dengan Lapisan Souffle Warna Mineral Bertitik',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Notebook Kampus Semi-B5 dengan lapisan souffle warna mineral bertitik ini sangat cocok untuk mencatat di kelas atau saat rapat. Kertas bertitik memudahkan Anda untuk menulis dan menggambar dengan rapi. Cover yang kuat dan elegan melindungi isi notebook dengan baik.',
+                    'SubCategoryProductID' => 17,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+            
+            //  Planners
+            
+                [
+                    'NameProduct' => 'Campus Diary PLANNER KOKUYO Size A6',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Campus Diary Planner KOKUYO ukuran A6 ini adalah pilihan sempurna untuk mengatur jadwal harian Anda. Dengan desain yang ringkas dan halaman yang terorganisir dengan baik, planner ini memudahkan Anda mencatat kegiatan sehari-hari, catatan penting, dan to-do list. Cover yang kokoh dan halaman berkualitas tinggi memastikan planner ini tahan lama.',
+                    'SubCategoryProductID' => 18,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Buku Planner Hobonichi',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Buku Planner Hobonichi adalah planner yang populer dengan desain yang minimalis dan fungsional. Dilengkapi dengan halaman yang fleksibel untuk mencatat jadwal harian, mingguan, dan bulanan, serta halaman tambahan untuk catatan pribadi. Ideal untuk Anda yang ingin mengatur waktu dengan lebih efektif.',
+                    'SubCategoryProductID' => 18,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Memo Kojikoji A6 B',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Memo Kojikoji A6 B adalah memo pad praktis dengan ukuran yang kecil dan mudah dibawa. Cocok untuk mencatat hal-hal penting secara cepat, membuat to-do list, atau sekadar mencatat ide-ide kreatif. Desain yang simpel namun menarik membuat memo ini menjadi favorit untuk penggunaan sehari-hari.',
+                    'SubCategoryProductID' => 18,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Weekly block B6 Shimaenaga Dango Yuki',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Weekly block B6 Shimaenaga Dango Yuki adalah planner mingguan yang ideal untuk mengatur jadwal mingguan Anda dengan lebih teratur. Dengan ukuran B6 yang pas di tas, planner ini mudah dibawa ke mana saja. Desainnya yang menarik dengan ilustrasi Shimaenaga Dango Yuki menambah kesan manis pada setiap catatan Anda.',
+                    'SubCategoryProductID' => 18,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Blue Sky 2024-2025 Academic Year Weekly and Monthly Planner, 5" x 8"',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Blue Sky Academic Year Weekly and Monthly Planner 2024-2025 adalah planner yang ideal untuk pelajar dan profesional. Dengan ukuran 5" x 8", planner ini menawarkan halaman mingguan dan bulanan yang terstruktur dengan baik. Cover fleksibel dan desain wirebound membuatnya mudah digunakan dan dibawa ke mana saja.',
+                    'SubCategoryProductID' => 18,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Crispin Finn The List Shopping Planner Pad',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Crispin Finn The List Shopping Planner Pad adalah pad planner yang dirancang khusus untuk membuat daftar belanja. Dengan tampilan yang bersih dan terorganisir, planner ini memudahkan Anda mencatat semua kebutuhan belanja dengan rapi. Cocok untuk membantu mengatur belanja harian atau mingguan dengan lebih efisien.',
+                    'SubCategoryProductID' => 18,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+            
+            
+            //SketchBook
+                [
+                    'NameProduct' => 'LYRA Sketch Book A4/A5 30 Sheets',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'LYRA Sketch Book tersedia dalam ukuran A4 dan A5 dengan 30 lembar kertas berkualitas tinggi. Buku gambar ini cocok untuk berbagai jenis sketsa dan gambar, baik menggunakan pensil, arang, atau pensil warna. Ideal untuk seniman profesional maupun pemula.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Itoya Kids Sketchbook Navy (Penguin)',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Itoya Kids Sketchbook Navy dengan desain lucu penguin adalah pilihan sempurna untuk anak-anak yang gemar menggambar. Dengan kertas berkualitas tinggi, buku sketsa ini memberikan pengalaman menggambar yang menyenangkan dan menginspirasi kreativitas anak.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Deli Sketch Book / Buku Gambar Sketsa A4 160GSM 60 Lembar EC27X - B5, 40 Lembar',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Deli Sketch Book hadir dengan pilihan ukuran A4 dan B5, menawarkan kertas 160GSM yang tebal dan tahan lama. Buku gambar ini cocok untuk berbagai teknik menggambar, termasuk pensil, tinta, dan cat air. Ideal untuk penggunaan di sekolah atau hobi seni.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Canson XL Series Mixed Media Pad, Side Wire, 9x12 inches, 60 Sheets - Heavyweight Art Paper for Watercolor, Gouache, Marker, Painting, Drawing, Sketching',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Canson XL Series Mixed Media Pad adalah buku gambar serbaguna dengan kertas berat yang cocok untuk berbagai media, termasuk cat air, gouache, marker, dan cat akrilik. Ukuran 9x12 inci dan 60 lembar kertas berkualitas tinggi menjadikan buku ini pilihan ideal untuk seniman yang menggunakan berbagai teknik.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Canson XL Series Pen & Ink, white, 7x10',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Canson XL Series Pen & Ink adalah buku gambar khusus untuk tinta dan pena. Dengan ukuran 7x10 inci, buku ini menawarkan kertas putih yang halus dan tahan lama, ideal untuk menghasilkan detail yang tajam dan jelas dalam karya seni Anda.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Canson XL Series Sketchbook, Recycled, Foldover Pad, 9x12 inches, 100 Sheets (50lb/74g) - Artist Paper for Adults and Students - Graphite, Charcoal, Pencil, Colored Pencil',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Canson XL Series Sketchbook adalah buku gambar yang ramah lingkungan dengan kertas daur ulang. Ukuran 9x12 inci dan 100 lembar kertas berkualitas tinggi membuatnya sempurna untuk seniman dewasa dan pelajar. Cocok untuk berbagai media seperti grafit, arang, pensil, dan pensil warna.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Bianyo Mixed Media Paper Sketchbook, 11" X 14", 60 Sheets/Each, 123 LBS/200 GSM, Spiral-Bound Pad, Micro-Perforated, Ideal for Wet & Dry Media Like Marker, Watercolor, Acrylic, Pastel, Pencil',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Bianyo Mixed Media Paper Sketchbook adalah buku gambar yang ideal untuk media basah dan kering. Dengan ukuran 11" x 14", 60 lembar kertas 200 GSM, dan spiral-bound yang kokoh, buku ini cocok untuk marker, cat air, akrilik, pastel, dan pensil. Desain micro-perforated memudahkan Anda merobek lembaran tanpa merusaknya.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Ankkol Sketch Book 9x12 Inch Artist Sketch Pad, 100 Sheets (68lb/100gsm) Top Spiral Bound Sketchbook, Acid-Free Drawing Paper Pad, Art Supplies for Colored and Graphite Pencils, Charcoal & Soft Pastel',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Ankkol Sketch Book adalah buku gambar ukuran 9x12 inci dengan 100 lembar kertas bebas asam. Desain spiral atas membuatnya mudah digunakan dan ideal untuk berbagai media seperti pensil berwarna, grafit, arang, dan pastel lembut. Kertas berkualitas tinggi memastikan karya seni Anda tetap terlihat sempurna.',
+                    'SubCategoryProductID' => 19,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+            
+
+
+            //Guest Book
+            
+                [
+                    'NameProduct' => 'Joyko Buku Tamu GB-2030-5 Pink / Buku Tamu Warna Pink',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Joyko Buku Tamu GB-2030-5 berwarna pink ini adalah pilihan sempurna untuk mencatat kehadiran tamu di acara-acara penting Anda. Dengan desain yang elegan dan warna pink yang menawan, buku tamu ini sangat cocok untuk acara pernikahan, ulang tahun, atau acara resmi lainnya. Kualitas kertas yang baik memastikan setiap tulisan terlihat rapi dan jelas.',
+                    'SubCategoryProductID' => 20,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'ZICOTO Beautiful Wedding Guest Book',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'ZICOTO Beautiful Wedding Guest Book adalah buku tamu yang indah dan elegan untuk acara pernikahan Anda. Dengan cover yang cantik dan halaman yang dirancang khusus untuk ucapan dan tanda tangan tamu, buku tamu ini akan menjadi kenang-kenangan yang berharga dari hari istimewa Anda.',
+                    'SubCategoryProductID' => 20,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Lamare Funeral Guest Book for Memorial Service',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Lamare Funeral Guest Book adalah buku tamu yang dirancang khusus untuk upacara peringatan dan pemakaman. Dengan desain yang tenang dan penuh hormat, buku tamu ini memungkinkan para tamu untuk meninggalkan pesan dukungan dan kenangan bagi keluarga yang berduka. Kualitas kertas yang tinggi memastikan catatan tetap terbaca dengan baik.',
+                    'SubCategoryProductID' => 20,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'ZICOTO Beautiful Linen Wedding Guest Book - Simply Elegant Guestbook to Sign in and Add Polaroid Photos',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'ZICOTO Beautiful Linen Wedding Guest Book adalah buku tamu pernikahan yang elegan dengan cover linen. Buku ini dirancang tidak hanya untuk tanda tangan, tetapi juga untuk menambahkan foto Polaroid, menciptakan kenangan indah dari hari pernikahan Anda. Setiap halaman memiliki ruang yang cukup untuk pesan dan foto dari tamu.',
+                    'SubCategoryProductID' => 20,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Forever And Always Wedding Guest Book',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Forever And Always Wedding Guest Book adalah buku tamu pernikahan yang dirancang dengan elegan dan romantis. Buku ini menyediakan ruang untuk tamu menulis pesan, ucapan, dan kenangan spesial. Desain yang indah dan bahan berkualitas tinggi menjadikan buku tamu ini sebagai suvenir yang tak terlupakan dari hari pernikahan Anda.',
+                    'SubCategoryProductID' => 20,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+            
+            
+            // Correcting Tools
+            // 28 Correction tape
+            
+                [
+                    'NameProduct' => 'Tipex Roll JOYKO Correction Tape CT-522',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Tipex Roll JOYKO Correction Tape CT-522 adalah alat koreksi yang praktis dan mudah digunakan. Dengan desain roll yang memudahkan aplikasi, tape ini memungkinkan Anda untuk memperbaiki kesalahan tulisan dengan rapi dan cepat. Ukurannya yang pas di tangan membuatnya nyaman untuk digunakan sehari-hari.',
+                    'SubCategoryProductID' => 28,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Tombow Correction Tape Refillable CT-CX Free CT-CR',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Tombow Correction Tape Refillable CT-CX adalah solusi sempurna untuk perbaikan kesalahan tulisan. Tape ini dapat diisi ulang, sehingga lebih ramah lingkungan dan ekonomis. Desainnya yang ergonomis dan mudah dipegang membuat koreksi tulisan menjadi lebih nyaman dan efisien.',
+                    'SubCategoryProductID' => 28,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'SDI Correction Tape CT-105',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'SDI Correction Tape CT-105 menawarkan solusi praktis untuk memperbaiki kesalahan tulisan. Dengan tape yang halus dan tahan lama, alat koreksi ini memastikan hasil yang rapi dan tidak meninggalkan bekas. Ukurannya yang kompak memudahkan Anda membawa dan menggunakannya kapan saja.',
+                    'SubCategoryProductID' => 28,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Faber-Castell Mini Correction Tape',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Faber-Castell Mini Correction Tape adalah alat koreksi yang kecil namun efektif. Desain mini membuatnya mudah dibawa dalam tas atau kotak pensil. Tape ini memberikan hasil yang rapi dan bersih, ideal untuk penggunaan sehari-hari di sekolah atau kantor.',
+                    'SubCategoryProductID' => 28,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Tombow CAX5C MONO AIR Ultra-Effortless Limited Edition',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Tombow CAX5C MONO AIR Ultra-Effortless adalah correction tape edisi terbatas yang menawarkan pengalaman koreksi yang sangat mudah dan efisien. Dengan teknologi MONO AIR, tape ini meluncur dengan lancar di atas kertas, menghasilkan koreksi yang rapi dan tidak mengganggu tulisan asli.',
+                    'SubCategoryProductID' => 28,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Japan KOKUYO Correction Belt Noritake Co-branded Limited Cat and Teenager Stand Can Be Belted Japanese Texture Stationery',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Japan KOKUYO Correction Belt Noritake adalah correction tape edisi terbatas dengan desain unik yang menampilkan gambar kucing dan remaja. Alat koreksi ini tidak hanya berfungsi dengan baik, tetapi juga menambah sentuhan gaya pada perlengkapan alat tulis Anda. Tekstur khas Jepang memastikan hasil yang rapi dan profesional.',
+                    'SubCategoryProductID' => 28,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+            
+            // 29 Correction fluid
+        
+                [
+                    'NameProduct' => 'Tip Ex Cair Correction Fluid Pen JOYKO JK-01',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Tip Ex Cair Correction Fluid Pen JOYKO JK-01 adalah alat koreksi cair yang praktis dengan ujung pena untuk aplikasi yang presisi. Cocok untuk memperbaiki kesalahan tulisan dengan hasil yang rapi dan cepat kering. Ideal digunakan di rumah, sekolah, maupun kantor.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Kenko Correction Pen Cairan Koreksi Tinta Pena Koreksi FN-301',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Kenko Correction Pen FN-301 adalah pena koreksi dengan cairan koreksi berkualitas tinggi. Ujung pena yang halus memudahkan aplikasi, memberikan hasil yang rapi dan tahan lama. Ideal untuk memperbaiki kesalahan tulisan dengan cepat dan efisien.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'BAZIC Correction Fluid Tipe-x Kuas / Penghapus Kertas Fluid BAZIC 1612',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'BAZIC Correction Fluid 1612 adalah cairan koreksi dengan kuas yang memudahkan aplikasi pada area yang lebih luas. Cairan ini cepat kering dan memberikan hasil yang rapi tanpa meninggalkan bekas. Cocok untuk digunakan di rumah, sekolah, atau kantor.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Correction Fluid / Cairan Koreksi / Penghapus Cair Joyko CF-S209',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Correction Fluid Joyko CF-S209 adalah cairan koreksi yang efektif untuk memperbaiki kesalahan tulisan. Dengan aplikator yang mudah digunakan, cairan ini cepat kering dan menghasilkan koreksi yang rapi. Sangat cocok untuk digunakan di sekolah, kantor, atau di rumah.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Pentel Correction Pen ZL62-W Blue',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Pentel Correction Pen ZL62-W adalah pena koreksi berwarna biru yang menawarkan cairan koreksi berkualitas tinggi. Dengan ujung pena yang presisi, alat ini memudahkan koreksi tulisan dengan hasil yang rapi dan profesional. Ideal untuk penggunaan sehari-hari.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'GREEBEL CORRECTION PEN GBC 120702',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'GREEBEL CORRECTION PEN GBC 120702 adalah pena koreksi dengan cairan koreksi yang cepat kering. Ujung pena yang presisi memudahkan aplikasi pada area yang kecil dan memberikan hasil yang rapi. Alat ini sangat berguna untuk memperbaiki kesalahan tulisan di sekolah, kantor, atau di rumah.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Correction Fluid Cairan Koreksi Penghapus Cair Joyko CF-P236',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Correction Fluid Joyko CF-P236 adalah cairan koreksi yang dirancang untuk memperbaiki kesalahan tulisan dengan mudah dan cepat. Dengan aplikator yang praktis, cairan ini memberikan hasil yang rapi dan tidak meninggalkan bekas. Ideal untuk penggunaan sehari-hari di sekolah, kantor, atau rumah.',
+                    'SubCategoryProductID' => 29,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+            
+            // 30 Erasers
+            
+                [
+                    'NameProduct' => 'Eraser / Penghapus Joyko ER-111',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Penghapus Joyko ER-111 adalah penghapus berkualitas tinggi yang efektif menghilangkan noda pensil tanpa merusak kertas. Desainnya yang ergonomis membuatnya nyaman digunakan dan mudah digenggam.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'ERASER / PENGHAPUS STAEDTLER 526',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Penghapus STAEDTLER 526 adalah penghapus berkualitas yang dirancang untuk menghapus coretan pensil dengan bersih dan rapi. Penghapus ini tahan lama dan tidak mudah hancur saat digunakan.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Stabilo Exam Grade Small Eraser - Peralatan Tulis',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Stabilo Exam Grade Small Eraser adalah penghapus kecil yang ideal untuk ujian dan penggunaan sehari-hari. Penghapus ini memberikan hasil yang bersih dan tidak merusak kertas, sangat cocok untuk pelajar dan profesional.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Faber-Castell - Penghapus Dust-Free Hitam',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Penghapus Faber-Castell Dust-Free Hitam adalah penghapus yang dirancang untuk mengurangi debu saat digunakan. Penghapus ini memberikan hasil yang bersih dan rapi tanpa meninggalkan residu berlebih.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Lyra Kneadable Eraser',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Penghapus Lyra Kneadable adalah penghapus yang dapat dibentuk sesuai kebutuhan. Ideal untuk seni dan ilustrasi, penghapus ini tidak meninggalkan residu dan sangat efektif untuk menghapus detail kecil.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'Tombow Mono Zero Eraser Fine Circle Rectangle / Penghapus Pensil Mekanik Refill',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'Tombow Mono Zero Eraser adalah penghapus pensil mekanik dengan ujung yang sangat presisi. Ideal untuk detail kecil dan koreksi akurat, penghapus ini dapat diisi ulang sehingga lebih ekonomis dan ramah lingkungan.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'NameProduct' => 'DERWENT Battery-Operated Eraser',
+                    'Rating' => 4.5,
+                    'DescriptionProduct' => 'DERWENT Battery-Operated Eraser adalah penghapus yang dioperasikan dengan baterai, memberikan kemudahan dan efisiensi dalam menghapus. Penghapus ini ideal untuk seni, ilustrasi, dan penggunaan profesional lainnya, memberikan hasil yang rapi dan cepat.',
+                    'SubCategoryProductID' => 30,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ]
+            
+            
+            
+
+
+
         ]);
     }
 }
