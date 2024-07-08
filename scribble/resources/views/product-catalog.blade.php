@@ -31,7 +31,7 @@
                     @endforeach
                 </ul>
             </li>
-        </ul> 
+        </ul>
         @endforeach
     </div>
     <div class="content">
@@ -74,12 +74,16 @@
                     @foreach ($products as $product)
                         @include('components/product-card', ['product' => $product])
                     @endforeach
-            @endif            
+            @endif
         </div>
     </div>
     @include('components/footer')
     <form id="form_catalog" style="display: none" name="form_catalog" method="GET" action="{{ route("product-catalog") }}">
-        <input type="text" name="category" value="{{$category_select}}">
+        @if ($subcategory_select == null)
+            <input type="text" name="category" value="{{ $category_select }}">
+        @else
+            <input type="text" name="category" value="">
+        @endif
         <input type="text" name="sub_category" value="{{$subcategory_select}}">
         <input type="text" name="search" value="{{ $search }}">
         <input type="text" name="sorting" value="{{$sorting}}">
