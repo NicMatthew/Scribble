@@ -109,12 +109,12 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 10, 'ProductID' => 23, 'Image' => '/assets/cutting_tools/scissors/scissors3_image3.png', 'created_at' => now(), 'updated_at' => now()],
 
             ['VariantID' => 17, 'ProductID' => 24, 'Image' => '/assets/cutting_tools/scissors/scissors4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 17, 'ProductID' => 24, 'Image' => '/assets/cutting_tools/scissors/scissors4_image4.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 18, 'ProductID' => 24, 'Image' => '/assets/cutting_tools/scissors/scissors4_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 19, 'ProductID' => 24, 'Image' => '/assets/cutting_tools/scissors/scissors4_image3.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 17, 'ProductID' => 24, 'Image' => '/assets/cutting_tools/scissors/scissors4_image4.png', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 25, 'Image' => '/assets/cutting_tools/scissors/scissors5_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 11, 'ProductID' => 25, 'Image' => '/assets/cutting_tools/scissors/scissors5_image1.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 11, 'ProductID' => 25, 'Image' => '/assets/cutting_tools/scissors/scissors5_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 10, 'ProductID' => 25, 'Image' => '/assets/cutting_tools/scissors/scissors5_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 15, 'ProductID' => 25, 'Image' => '/assets/cutting_tools/scissors/scissors5_image4.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 8, 'ProductID' => 25, 'Image' => '/assets/cutting_tools/scissors/scissors5_image5.png', 'created_at' => now(), 'updated_at' => now()],
@@ -171,9 +171,9 @@ class ProductImagesTableSeeder extends Seeder
 
             ['VariantID' => 1, 'ProductID' => 40, 'Image' => '/assets/cutting_tools/cutters/cutter6_image1.png', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 8, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image1.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 8, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image2.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 8, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 10, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image4.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 9, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image5.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 11, 'ProductID' => 41, 'Image' => '/assets/cutting_tools/cutters/cutter7_image6.png', 'created_at' => now(), 'updated_at' => now()],
@@ -199,7 +199,6 @@ class ProductImagesTableSeeder extends Seeder
 
             //punch hole
             ['VariantID' => 11, 'ProductID' => 47, 'Image' => '/assets/cutting_tools/punch_hole/punchhole1_image1.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 16, 'ProductID' => 47, 'Image' => '/assets/cutting_tools/punch_hole/punchhole1_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 9, 'ProductID' => 47, 'Image' => '/assets/cutting_tools/punch_hole/punchhole1_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 16, 'ProductID' => 47, 'Image' => '/assets/cutting_tools/punch_hole/punchhole1_image4.png', 'created_at' => now(), 'updated_at' => now()],
 
@@ -395,7 +394,7 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 10, 'ProductID' => 88, 'Image' => '/assets/markers/dry_erase_markers/dryerasemarker5_image3.png', 'created_at' => now(), 'updated_at' => now()],
 
             //highlighter
-            ['VariantID' => 56, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 55, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 14, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 8, 'ProductID' => 89, 'Image' => '/assets/markers/highlighters/highlighters1_image4.png', 'created_at' => now(), 'updated_at' => now()],
@@ -431,8 +430,8 @@ class ProductImagesTableSeeder extends Seeder
 
             ['VariantID' => 1, 'ProductID' => 97, 'Image' => '/assets/others/pencil_cases/pencilcase3_image1.png', 'created_at' => now(), 'updated_at' => now()],
 
-            ['VariantID' => 57, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image1.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 15, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 15, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 57, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 19, 'ProductID' => 98, 'Image' => '/assets/others/pencil_cases/pencilcase4_image3.png', 'created_at' => now(), 'updated_at' => now()],
 
             ['VariantID' => 34, 'ProductID' => 99, 'Image' => '/assets/others/pencil_cases/pencilcase5_image1.png', 'created_at' => now(), 'updated_at' => now()],
@@ -470,12 +469,12 @@ class ProductImagesTableSeeder extends Seeder
 
             ['VariantID' => 1, 'ProductID' => 109, 'Image' => '/assets/others/rulers/ruler4_image1.png', 'created_at' => now(), 'updated_at' => now()],
 
-            ['VariantID' => 15, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 8, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 14, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 15, 'ProductID' => 110, 'Image' => '/assets/others/rulers/ruler5_image4.png', 'created_at' => now(), 'updated_at' => now()],
 
-            ['VariantID' => 54, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 54, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 58, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image3.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 59, 'ProductID' => 111, 'Image' => '/assets/others/rulers/ruler6_image4.png', 'created_at' => now(), 'updated_at' => now()],
@@ -507,17 +506,17 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 10, 'ProductID' => 119, 'Image' => '/assets/others/organizers/organizer3_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 10, 'ProductID' => 119, 'Image' => '/assets/others/organizers/organizer3_image3.png', 'created_at' => now(), 'updated_at' => now()],
 
+            ['VariantID' => 1, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image5.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image4.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 19, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 14, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image2.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 45, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image3.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 45, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image4.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 45, 'ProductID' => 120, 'Image' => '/assets/others/organizers/organizer4_image5.png', 'created_at' => now(), 'updated_at' => now()],
 
             ['VariantID' => 8, 'ProductID' => 121, 'Image' => '/assets/others/organizers/organizer5_image1.png', 'created_at' => now(), 'updated_at' => now()],
 
             //cutting mat
-            ['VariantID' => 43, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image1.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 44, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 44, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 43, 'ProductID' => 122, 'Image' => '/assets/others/cutting_mats/cuttingmat1_image2.png', 'created_at' => now(), 'updated_at' => now()],
 
             // Writing Paper
             ['VariantID' => 1, 'ProductID' => 123, 'Image' => '/assets/books_papers/writing_paper/writingpaper1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
