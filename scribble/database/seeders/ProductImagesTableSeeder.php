@@ -315,7 +315,7 @@ class ProductImagesTableSeeder extends Seeder
             
             ['VariantID' => 1, 'ProductID' => 69, 'Image' => '/assets/pencils/coloured/coloured5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             
-            ['VariantID' => 1, 'ProductID' => 70, 'Image' => '/assets/pencils/coloured/coloured6_image2.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 70, 'Image' => '/assets/pencils/coloured/coloured6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             
             ['VariantID' => 1, 'ProductID' => 71, 'Image' => '/assets/pencils/coloured/coloured7_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             
