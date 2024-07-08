@@ -31,7 +31,8 @@ nextButtons.forEach((nextButton) => {
 document.getElementById('cancel-edit').addEventListener("click", function(){
     modalEdit.classList.remove("show");
     editContainer.classList.remove("show");
-})
+});
+
 // const cancelButtonEdit = document.querySelector(".cancel-edit");
 // cancelButtonEdit.addEventListener("click", function () {
 //     modalEdit.classList.remove("active");

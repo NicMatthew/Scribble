@@ -590,3 +590,7 @@
 .btn-quantity {
     cursor: pointer;
 }
+
+.var-opt .hide {
+    display: none;
+}

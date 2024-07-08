@@ -241,7 +241,7 @@
     justify-content: center;
 }
 .modal-edit{
-    display: flex;
+    display: none;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
@@ -249,6 +249,9 @@
     overflow-y: scroll;
     align-items: flex-start;
     justify-content: center;
+}
+.show{
+    display: flex;
 }
 
 /* .modal-delete {
