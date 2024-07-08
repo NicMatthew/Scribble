@@ -44,9 +44,10 @@ class ProductController extends Controller
         $variants = ProductEntry::join("variants", "variants.VariantID", "=", "product_entries.VariantID")
                                 ->join("product_images", "product_images.VariantID", "=", "product_entries.VariantID")
                                 ->where("product_images.ProductID", $productID)
+                                ->where("product_entries.ProductID", $productID)
                                 ->get();
 
-        // dd($product);
+        // dd($variants);
         if ($selectedProduct == null) {
             return redirect()->route("product-catalog");
         }
