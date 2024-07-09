@@ -529,7 +529,7 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 8, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 14, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image3.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 15, 'ProductID' => 126, 'Image' => '/assets/books_papers/writing_paper/writingpaper3_image4.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 1, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 32, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 50, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 14, 'ProductID' => 127, 'Image' => '/assets/books_papers/writing_paper/writingpaper5_image6.svg', 'created_at' => now(), 'updated_at' => now()],
@@ -579,7 +579,7 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 71, 'ProductID' => 144, 'Image' => '/assets/books_papers/notebooks/notebooks2_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 69, 'ProductID' => 144, 'Image' => '/assets/books_papers/notebooks/notebooks2_image3.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 1, 'ProductID' => 145, 'Image' => '/assets/books_papers/notebooks/notebooks3_image1.svg', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 1, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image6.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image5.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 10, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 72, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 16, 'ProductID' => 146, 'Image' => '/assets/books_papers/notebooks/notebooks4_image3.svg', 'created_at' => now(), 'updated_at' => now()],
@@ -677,7 +677,7 @@ class ProductImagesTableSeeder extends Seeder
             ['VariantID' => 82, 'ProductID' => 174, 'Image' => '/assets/correcting_tools/tape/tape5_image1.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 8, 'ProductID' => 174, 'Image' => '/assets/correcting_tools/tape/tape5_image2.svg', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 73, 'ProductID' => 174, 'Image' => '/assets/correcting_tools/tape/tape5_image3.svg', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 1, 'ProductID' => 175, 'Image' => '/assets/correcting_tools/tape/tape6_image    1.svg', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 1, 'ProductID' => 175, 'Image' => '/assets/correcting_tools/tape/tape6_image1.svg', 'created_at' => now(), 'updated_at' => now()],
 
             // Liquid
             ['VariantID' => 1, 'ProductID' => 176, 'Image' => '/assets/correcting_tools/liquid/liquid1_image1.svg', 'created_at' => now(), 'updated_at' => now()],
