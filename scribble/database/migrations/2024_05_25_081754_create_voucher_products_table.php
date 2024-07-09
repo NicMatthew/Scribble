@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('VoucherName');
             $table->date('StartDate');
             $table->date('EndDate');
-            $table->integer('Value');
+            $table->float('Value');
             $table->string('DiscountCategory');
             $table->timestamps();
         });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Wishlist;
@@ -15,6 +16,8 @@ class HomeController extends Controller
         $products = Product::with(['images', 'entries'])
             ->orderBy('created_at', 'desc')
             ->get();
+
+        $banners = Banner::all();
 
         if(Auth::check()){
             foreach($products as $product) {
@@ -42,6 +45,6 @@ class HomeController extends Controller
         }
         // if(auth())
 
-        return view('home', ['products' => $products]);
+        return view('home', ['products' => $products, "banners" => $banners]);
     }
 }

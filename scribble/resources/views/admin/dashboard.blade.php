@@ -28,7 +28,7 @@
                             <div class="description">Total Sales</div>
                         </div>
                         <div class="overview">
-                            <div class="value">300</div>
+                            <div class="value">{{ $userCount }}</div>
                             <div class="description">Registered Users</div>
                         </div>
                     </div>
@@ -36,36 +36,12 @@
                 <div class="content-discount">
                     <div class="content-title">Discount</div>
                     <div class="discount-wrapper">
-                        <div class="discount">
+                        @foreach ($voucherProduct as $voucher)
                             @include("components/voucher")
-                            <div class="discount-remove">
-                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                            </div>
-                        </div>
-                        <div class="discount">
+                        @endforeach
+                        @foreach ($voucherShipment as $voucher)
                             @include("components/voucher")
-                            <div class="discount-remove">
-                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                            </div>
-                        </div>
-                        <div class="discount">
-                            @include("components/voucher")
-                            <div class="discount-remove">
-                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                            </div>
-                        </div>
-                        <div class="discount">
-                            @include("components/voucher")
-                            <div class="discount-remove">
-                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                            </div>
-                        </div>
-                        <div class="discount">
-                            @include("components/voucher")
-                            <div class="discount-remove">
-                                <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="discount-add" id="discount-add">Add Discount</div>
                 </div>
@@ -148,48 +124,14 @@
         <div class="banner-container">
             <div class="content-title">Banner</div>
             <div class="banner-wrapper">
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
+                @foreach ($banners as $banner)
+                    <div class="banner">
+                        <img src="{{ $banner->image }}" class="banner-img">
+                        <div class="banner-remove">
+                            <a href="{{ route("admin-remove-banner", $banner->id) }}" onclick="return false"><img src="/icons/trash-bin-white.svg" class="remove-icon"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                    </div>
-                </div>
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                    </div>
-                </div>
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                    </div>
-                </div>
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                    </div>
-                </div>
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                    </div>
-                </div>
-                <div class="banner">
-                    <img src="/images/group.jpg" class="banner-img">
-                    <div class="banner-remove">
-                        <img src="/icons/trash-bin-white.svg" class="remove-icon">
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="discount-add" id="banner-add">Add Banner</div>
         </div>
@@ -204,6 +146,8 @@
                 <div class="rem-btn" id="rem-btn">Remove</div>
             </div>
         </div>
+<!-- ADD DISCOUNT -->
+
         <div class="add-discount-container" id="add-discount-container">
             <div class="header">
                 <div class="close-btn" id="close-btn-disc">
@@ -212,34 +156,48 @@
                 <div class="header-title">Add Discount</div>
                 <hr class="divider">
             </div>
-            <form class="add-discount-wrapper">
+            <form name="disc-form" class="add-discount-wrapper" action="{{ route("add-discount") }}" method="GET">
                 <div class="input-wrapper">
                     <div class="input-name">Discount name</div>
-                    <input type="text" class="input-field" placeholder="Discount name">
+                    <input type="text" class="input-field" placeholder="Discount name" name="DiscountName">
                 </div>
                 <div class="input-wrapper">
                     <div class="input-name">Start date</div>
-                    <input type="date" class="input-field">
+                    <input type="date" class="input-field" name="StartDate">
                 </div>
                 <div class="input-wrapper">
                     <div class="input-name">End date</div>
-                    <input type="date" class="input-field">
+                    <input type="date" class="input-field" name="EndDate">
                 </div>
                 <div class="input-wrapper">
                     <div class="input-name">Discount value</div>
-                    <input type="text" class="input-field" placeholder="IDR/%">
+                    <input type="text" class="input-field" placeholder="IDR / 0.x (percentage)" name="DiscountValue">
                 </div>
                 <div class="input-wrapper">
                     <div class="input-name">Discount type</div>
-                    <input type="text" class="input-field" placeholder="Shipment / Total Payment">
+                    <select class="input-field" name="DiscountType" id="ChooseType">
+                        <option value="" disabled selected>Choose Shipment / Total Payment</option>
+                        <option value="Shipment">Shipment</option>
+                        <option value="Total Payment">Total Payment</option>
+                    </select>
                 </div>
-                <div class="input-wrapper">
+                <div class="input-wrapper" id="CategoryProductVoucher">
                     <div class="input-name">Discount category product</div>
-                    <input type="text" class="input-field" placeholder="Category product">
+                    <select class="input-field" name="DiscountCategory">
+                        <option value="" disabled selected>Choose Category Product</option>
+                        @foreach ($categories as $category)
+                            <option value="{{$category->NameCategory}}">{{$category->NameCategory}}</option>
+                        @endforeach
+
+                    </select>
                 </div>
-                <div class="add-new-disc">Add Discount</div>
+                <div class="add-new-disc" id="add-new-disc">Add Discount</div>
             </form>
         </div>
+
+
+
+
         <div class="add-banner-container" id="add-banner-container">
             <div class="header">
                 <div class="close-btn" id="close-btn-banner">
@@ -249,14 +207,15 @@
                 <hr class="divider">
             </div>
             <div class="banner-wrapper">
-                <form name="" method="POST" class="banner-form">
+                <form name="banner-form" action="{{ route("admin-store-banner") }}" method="POST" class="banner-form" enctype="multipart/form-data">
+                    @csrf
                     <div class="banner-import">Import Image</div>
                     <input type="file" accept="image/*" name="bannerImage" class="banner-image" id="banner-image">
                 </form>
                 <div class="banner-preview" id="banner-preview">
                     <img src="#" class="img-preview" id="img-preview">
                     <img src="/icons/exit-address.svg" class="close-preview" id="close-preview">
-                    <div class="submit-banner">Add Banner</div>
+                    <div class="submit-banner" id="submit-banner">Add Banner</div>
                 </div>
             </div>
         </div>

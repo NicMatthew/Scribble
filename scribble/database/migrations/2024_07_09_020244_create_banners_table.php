@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('voucher_shipments', function (Blueprint $table) {
-            $table->id('VoucherShipmentID');
-            $table->string('VoucherName');
-            $table->date('StartDate');
-            $table->date('EndDate');
-            $table->float('Value');
+        Schema::create('banners', function (Blueprint $table) {
+            $table->id();
+            $table->longText("image");
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('voucher_shipments');
+        Schema::dropIfExists('banners');
     }
 };

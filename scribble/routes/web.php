@@ -102,9 +102,7 @@ Route::get('/faq', function () {
 Route::get('/review', function () {
     return view('review');
 });
-Route::get('/dashboard', function () {
-    return view('/admin/dashboard');
-});
+
 
 Route::get('/wishlist', function () {
     return view('wishlist');
@@ -113,7 +111,11 @@ Route::get('/order-admin', function () {
     return view('/admin/order-admin');
 });
 
+Route::get('/wishlist', [ProductController::class, 'showWishlist'])->name('wishlist-index');
 
+Route::post('/wishlist-toggle', [ProductController::class, 'toggleWishlist'])->name('wishlist-toggle');
+
+//Product Admin Routing
 Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
 Route::get("/product-admin/find", [AdminController::class, "product_find"])->name("product-find");
 Route::post("/product-admin/edit", [AdminController::class, "product_edit"])->name("product-edit");
@@ -121,7 +123,10 @@ Route::post("/product-admin", [AdminController::class, "product_add"])->name("pr
 Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
 Route::get('/product-admin/delete', [AdminController::class, "product_delete"])->name('product_delete');
 
-// Route::post('/wishlist/add', [ProductController::class, 'addToWishlist'])->name('wishlist-add');
-Route::get('/wishlist', [ProductController::class, 'showWishlist'])->name('wishlist-index');
 
-Route::post('/wishlist-toggle', [ProductController::class, 'toggleWishlist'])->name('wishlist-toggle');
+
+//Dashboard Admin Routing
+Route::get('/dashboard', [AdminController::class, "dashboard"])->name("admin-dashboard");
+Route::get('/dashboard/discount/add', [AdminController::class, "addDiscount"])->name("add-discount");
+Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
+Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");

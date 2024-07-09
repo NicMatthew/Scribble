@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductEntry;
 use App\Models\ProductImage;
 use App\Models\SubCategory;
+use App\Models\User;
 use App\Models\Variant;
+use App\Models\VoucherProduct;
+use App\Models\VoucherShipment;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -140,7 +144,7 @@ class AdminController extends Controller
         ->update(["NameProduct" => request()->ProductName,
                 "DescriptionProduct" => request()->ProductDescription,
                 "SubCategoryProductID" => $newsubcategoryid,
-            
+
         ]);
         // updating variant
         Variant::where("VariantID",request()->VariantID)
@@ -172,7 +176,72 @@ class AdminController extends Controller
         if($testProduct == null){
             Variant::where("VariantID",$VariantID)->delete();
         }
-        
+
         return redirect()->route('product_admin');
     }
+
+    protected function countUsers() {
+        $userCount = User::all()->count();
+
+        return $userCount;
+    }
+
+    public function storeBanner(Request $request) {
+        if ($request->hasFile('bannerImage')) {
+
+            // Ambil file gambar yang diunggah
+            $banner = $request->file('bannerImage');
+
+            // Konversi gambar ke dalam base64
+            $imageBase64 = base64_encode(file_get_contents($banner->getRealPath()));
+
+            $newBanner = new Banner();
+            $newBanner->image = 'data:'.$banner->getClientMimeType().';base64,'.$imageBase64;
+            $newBanner->save();
+        }
+
+        return redirect()->route("admin-dashboard");
+    }
+
+    public function removeBanner($id) {
+        $banner = Banner::find($id);
+        $banner->delete();
+
+        return redirect()->route("admin-dashboard");
+    }
+
+    public function dashboard() {
+        $userCount = $this->countUsers();
+        $categories = Category::all();
+        $banners = Banner::all();
+        $voucherProduct = VoucherProduct::all();
+        $voucherShipment = VoucherShipment::all();
+
+
+        return view("admin.dashboard", compact("userCount", "categories", "banners","voucherProduct","voucherShipment"));
+    }
+    public function addDiscount(){
+        // dd(request()->all());
+        // shipment section
+        if(request()->DiscountType == "Shipment"){
+            $newVoucherShipment = new VoucherShipment();
+            $newVoucherShipment->VoucherName = request()->DiscountName;
+            $newVoucherShipment->StartDate = request()->StartDate;
+            $newVoucherShipment->EndDate = request()->EndDate;
+            $newVoucherShipment->Value = request()->DiscountValue;
+            $newVoucherShipment->save();
+        }else{
+            $newVoucherProduct = new VoucherProduct();
+            $newVoucherProduct->VoucherName = request()->DiscountName;
+            $newVoucherProduct->StartDate = request()->StartDate;
+            $newVoucherProduct->EndDate = request()->EndDate;
+            $newVoucherProduct->Value = request()->DiscountValue;
+            $newVoucherProduct->DiscountCategory = request()->DiscountCategory;
+            $newVoucherProduct->save();
+        }
+
+        return redirect()->route("admin-dashboard");
+
+    }
 }
+

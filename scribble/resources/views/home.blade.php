@@ -16,11 +16,9 @@
     <div class="banner-section">
         <div class="banner">
             <div class="banner-img" id="banner-carousel">
-                <img src="/images/banner (1).png">
-                <img src="/images/banner (2).png">
-                <img src="/images/banner (6).png">
-                <img src="/images/banner (7).png">
-                <img src="/images/banner (5).png">
+                @foreach ($banners as $banner)
+                    <img src="{{ $banner->image }}">
+                @endforeach
             </div>
             <div class="prev-next">
                 <img src="/icons/prev.svg" id="prev-btn">

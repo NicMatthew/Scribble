@@ -10,14 +10,19 @@
     <link rel="stylesheet" href="/css/variable.css">
 </head>
 <body>
-    <div class="wrapper" id="">
-        <img src="/icons/voucher-green.svg" class="voucher-img">
-        <div class="details-info">
-            <div class="voucher-name">Disc 30%</div>
-            <div class="voucher-condition">Minimal Transaksi 200k</div>
-            <div class="voucher-period">1 Jan 2024 - 14 Jan 2024</div>
+    <div class="discount">
+        <div class="wrapper" id="">
+            <img src="/icons/voucher-green.svg" class="voucher-img">
+            <div class="details-info">
+                <div class="voucher-name">{{$voucher->VoucherName}}</div>
+                <div class="voucher-condition">500k off on any products</div>
+                <div class="voucher-period">{{$voucher->StartDate}} - {{$voucher->EndDate}}</div>
+            </div>
+            <img src="/icons/next-green.svg" class="voucher-next">
         </div>
-        <img src="/icons/next-green.svg" class="voucher-next">
+        <div class="discount-remove">
+            <img src="/icons/trash-bin-white.svg" class="remove-icon">
+        </div>
     </div>
 </body>
 </html>
