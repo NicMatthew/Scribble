@@ -317,16 +317,16 @@ class ProductEntriesTableSeeder extends Seeder
 
 
             //others
-            ['ProductID' => 95, 'VariantID' => 10, 'Stock' => 10, 'Price' => 24000, 'created_at' => now(), 'updated_at' => now()],
-            ['ProductID' => 95, 'VariantID' => 50, 'Stock' => 1, 'Price' => 34000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 95, 'VariantID' => 50, 'Stock' => 10, 'Price' => 24000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 95, 'VariantID' => 10, 'Stock' => 1, 'Price' => 34000, 'created_at' => now(), 'updated_at' => now()],
             
             ['ProductID' => 96, 'VariantID' => 1, 'Stock' => 24, 'Price' => 15000, 'created_at' => now(), 'updated_at' => now()],
 
             ['ProductID' => 97, 'VariantID' => 1, 'Stock' => 75, 'Price' => 19000, 'created_at' => now(), 'updated_at' => now()],
 
             ['ProductID' => 98, 'VariantID' => 57, 'Stock' => 86, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
-            ['ProductID' => 98, 'VariantID' => 15, 'Stock' => 6, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
-            ['ProductID' => 98, 'VariantID' => 19, 'Stock' => 34, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 98, 'VariantID' => 19, 'Stock' => 6, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
+            ['ProductID' => 98, 'VariantID' => 15, 'Stock' => 34, 'Price' => 32000, 'created_at' => now(), 'updated_at' => now()],
 
             ['ProductID' => 99, 'VariantID' => 33, 'Stock' => 122, 'Price' => 44000, 'created_at' => now(), 'updated_at' => now()],
             ['ProductID' => 99, 'VariantID' => 34, 'Stock' => 176, 'Price' => 45000, 'created_at' => now(), 'updated_at' => now()],

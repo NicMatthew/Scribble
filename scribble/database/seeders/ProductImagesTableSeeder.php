@@ -422,8 +422,8 @@ class ProductImagesTableSeeder extends Seeder
 
             //others
             //pencil case
-            ['VariantID' => 10, 'ProductID' => 95, 'Image' => '/assets/others/pencil_cases/pencilcase1_image1.png', 'created_at' => now(), 'updated_at' => now()],
-            ['VariantID' => 50, 'ProductID' => 95, 'Image' => '/assets/others/pencil_cases/pencilcase1_image2.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 50, 'ProductID' => 95, 'Image' => '/assets/others/pencil_cases/pencilcase1_image1.png', 'created_at' => now(), 'updated_at' => now()],
+            ['VariantID' => 10, 'ProductID' => 95, 'Image' => '/assets/others/pencil_cases/pencilcase1_image2.png', 'created_at' => now(), 'updated_at' => now()],
 
             ['VariantID' => 1, 'ProductID' => 96, 'Image' => '/assets/others/pencil_cases/pencilcase2_image1.png', 'created_at' => now(), 'updated_at' => now()],
             ['VariantID' => 1, 'ProductID' => 96, 'Image' => '/assets/others/pencil_cases/pencilcase2_image2.png', 'created_at' => now(), 'updated_at' => now()],

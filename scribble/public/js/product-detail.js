@@ -16,17 +16,6 @@ let variantInput = document.getElementById("variant-input")
 let priceInput = document.getElementById("price-input")
 let selectedVariant = -1;
 
-variants.sort((a, b) => {
-    // Assuming VariantName is a string property within each object
-    if (a.VariantName < b.VariantName) {
-        return -1;
-    }
-    if (a.VariantName > b.VariantName) {
-        return 1;
-    }
-    return 0;
-});
-
 variants.forEach(variant => {
     let image = document.createElement("img")
     image.src = variant.Image
