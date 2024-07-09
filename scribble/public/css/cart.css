@@ -73,11 +73,15 @@ table th{
     flex-direction: column;
 }
 .quantity-text{
-    margin-left: 2%;
+    margin-left: 17%;
+}
+.price-text{
+    margin-left: 13%;
 }
 .container-product-title{
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 .container-product-title p{
     font-size: 20px;
@@ -187,7 +191,7 @@ table th{
     justify-content: flex-start;
     align-items: center;
     gap: 15%;
-    width: 28%;
+    width: 40%;
     /* background-color: tomato; */
 }
 .product-name p{
@@ -252,10 +256,10 @@ table th{
     font-size: 24px;
 }
 .product-details-text{
-    margin-left: 2%;
+    margin-left: 15.5%;
 }
 .total-text{
-    /* margin-right: 12%; */
+    margin-left: 14%;
 }
 .product-checkbox{
     height: 100%;
