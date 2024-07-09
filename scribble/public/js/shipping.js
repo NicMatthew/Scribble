@@ -27,3 +27,6 @@ voucherList.forEach((voucher)=>{
         closeOverlay()
     })
 })
+
+let addressSelect = document.getElementById("address-select")
+addressSelect.href = addressSelect.href + "?" + window.location.href.split("?")[1]

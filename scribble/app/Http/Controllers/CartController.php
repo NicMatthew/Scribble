@@ -84,7 +84,7 @@ class CartController extends Controller
         }
 
         // Redirect ke halaman keranjang atau halaman lain yang sesuai
-        return redirect()->route('cart.index')->with('success', 'Product added to cart successfully!');
+        return redirect()->back();
     }
 
     public function update(Request $request, $product_id, $variant_id, $user_id)

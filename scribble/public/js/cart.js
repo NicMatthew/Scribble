@@ -1,4 +1,4 @@
-// document.querySelectorAll('.btn-quantity').forEach(button => {
+    // document.querySelectorAll('.btn-quantity').forEach(button => {
 //         button.addEventListener('click', function() {
 //             let action = this.getAttribute('data-action');
 //             let quantityInput = this.parentElement.querySelector('p');
@@ -103,7 +103,7 @@ function updateSummary() {
     } else {
         summaryContainer.style.display = "block"; // Tetap tampilkan summaryContainer
         // summaryItemsContainer.innerHTML = "<p>No items selected</p>"; // Tampilkan pesan default jika tidak ada item yang dipilih
-        // summaryTotal.innerHTML = `<p>Total</p><p>Rp. 0</p>`; // Reset total harga
+        // summaryTotal.innerHTML = "<p>Total</p><p>Rp. 0</p>"; // Reset total harga
     }
 }
 
@@ -111,8 +111,49 @@ function formatCurrency(value) {
     return ("Rp." + new Intl.NumberFormat("id-ID", { maximumFractionDigits: 0 }).format(value));
 }
 
+function goToShippingPage() {
+    // Ambil data dari checkbox yang dicentang
+    let checkedProducts = document.querySelectorAll('input[name="checkedProducts[]"]:checked');
+    
+    // Buat form untuk mengirim data ke halaman shipping
+    let form = document.createElement('form');
+    form.method = 'GET';
+    // form.action = '{{ route("shipping") }}'; // Ganti dengan route yang sesuai
+    form.action = '/shipping';
 
+    // let inputToken = document.createElement("input")
+    // inputToken.type = "hidden"
+    // inputToken.name = "_token"
+    // inputToken.value = "7YC0Sxth7AYe4RFSjzaPf2ygLCecJhPbyXhz6vvF"
+    // form.appendChild(inputToken)
 
+    // Tambahkan input hidden untuk setiap produk yang dicentang
+    checkedProducts.forEach(checkbox => {
+        let variantId = checkbox.getAttribute('data-variant');
+        let quantity = checkbox.getAttribute('data-quantity');
+        let productID = checkbox.getAttribute("data-id");
+        
+        let inputVariant = document.createElement('input');
+        inputVariant.type = 'hidden';
+        inputVariant.name = 'variants[]';
+        inputVariant.value = variantId;
 
+        let inputQuantity = document.createElement('input');
+        inputQuantity.type = 'hidden';
+        inputQuantity.name = 'quantities[]';
+        inputQuantity.value = quantity;
 
+        let inputProductID = document.createElement("input")
+        inputProductID.type = "hidden"
+        inputProductID.name = "productIDs[]"
+        inputProductID.value = productID
 
+        form.appendChild(inputVariant);
+        form.appendChild(inputQuantity);
+        form.appendChild(inputProductID)
+    });
+
+    // Submit form
+    document.body.appendChild(form)
+    form.submit();
+}

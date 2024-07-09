@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ShippingController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -67,9 +68,11 @@ Route::get('/sidebar', function () {
     return view('/components/sidebar');
 });
 
-Route::get('/shipping', function () {
-    return view('shipping');
-});
+Route::get('/shipping', [ShippingController::class, "index"])->name('shipping.index');
+
+// Route::get('/shipping', function () {
+//     return view('shipping');
+// });
 
 // Route::get('/address', function () {
 //     return view('address');

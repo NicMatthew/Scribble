@@ -13,6 +13,9 @@
     <script src="/js/shipping.js" defer=""></script>
 </head>
 <body>
+    @php
+        $totalPrice = 0;
+    @endphp
     <div class="header">
         <div class="back-btn" onclick="history.back()">
             <img src="/icons/prev.svg">
@@ -45,27 +48,27 @@
             <div class="address-info">
                 <div class="address-title">Destination Address</div>
                 <div class="address-detail">
-                    {{-- @if ($selectedAddressName && $selectedFullAddress)
-                        <div class="address-name">{{ $selectedAddressName }}</div>
-                        <div class="address-full">{{ $selectedFullAddress }}</div>
+                    @if (request()->has('selectedAddressName') && request()->has('selectedFullAddress'))
+                        <div class="address-name">{{ request()->input('selectedAddressName') }}</div>
+                        <div class="address-full">{{ request()->input('selectedFullAddress') }}</div>
                     @else
                         <div class="address-name">No address selected</div>
-                    @endif --}}
-                    <div class="address-name">Rumah Talenta BCA</div>
-                    <div class="address-full">Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kabupaten Bogor, Jawa Barat 16810</div>
+                    @endif
                 </div>
             </div>
-            <a href="address" class="address-select">Select</a>
+            <a href="/addresses/{{auth()->id()}}" class="address-select" id="address-select">Select</a>
         </div>
         <div class="product-payment-container">
             <div class="product-container">
                 <div class="product-header">Products</div>
                 <div class="product-wrapper">
-                    @include("components/product-payment")
-                    @include("components/product-payment")
-                    @include("components/product-payment")
-                    @include("components/product-payment")
-                    @include("components/product-payment")
+                    @foreach($selectedProducts as $product)
+                        @include("components/product-payment")
+                        @php
+                            $totalPrice += $product['productPrice'] * $product['quantity'];
+                        @endphp
+                    @endforeach
+                   
                 </div>
             </div>
             <div class="payment-container">
@@ -74,7 +77,7 @@
                     <div class="payment-list">
                         <div class="list">
                             <div class="payment-name">Subtotal produk</div>
-                            <div class="payment-price">Rp. 100.000</div>
+                            <div class="payment-price">Rp. {{ number_format($totalPrice, 0, ',', '.') }}</div>
                         </div>
                         <div class="list">
                             <div class="payment-name">Biaya pengiriman</div>
@@ -111,11 +114,14 @@
                 <hr class="divider">
             </div>
             <div class="voucher-list">
-                @include("components/voucher")
-                @include("components/voucher")
-                @include("components/voucher")
-                @include("components/voucher")
-                @include("components/voucher")
+               <div class="voucher-category" >Discount Shipping</div>
+                @foreach ($voucherShipment as $voucher)
+                    @include("components/voucher")
+                @endforeach
+                <div class="voucher-category">Discount Product</div>
+                @foreach ($voucherProduct as $voucher)
+                    @include("components/voucher")
+                @endforeach
             </div>
         </div>
     </div>

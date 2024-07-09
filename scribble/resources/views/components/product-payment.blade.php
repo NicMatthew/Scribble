@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="product">
-        <img src="/images/pict1.jpg" class="product-img">
+        <img src="{{ $product['productImage'] }}" class="product-img">
         <div class="product-details">
-            <div class="product-title">Item 1</div>
-            <div class="product-price">Rp. 30.000</div>
-            <div class="product-quantity">Quantity: 3</div>
+            <div class="product-title">{{ $product['productName'] }}</div>
+            <div class="product-price">Rp. {{ number_format($product['productPrice'] * $product['quantity']?? 0, 0, ',', '.') }}</div>
+            <div class="product-quantity"> Quantity : {{ $product['quantity'] }}</div>
         </div>
     </div>
 </body>

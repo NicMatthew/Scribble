@@ -158,6 +158,13 @@ body {
     font-weight: bold;
 }
 
+.voucher-category{
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 20px;  
+}
+
+
 .voucher-wrapper {
     display: flex;
     align-items: center;

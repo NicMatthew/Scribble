@@ -1,3 +1,5 @@
+const passed = window.location.href.split("?")[1]
+
 //munculin overlay tambah alamat
 const plusAddressImg = document.querySelector(
     '.header img[src="/icons/plus-address.svg"]'
@@ -27,18 +29,6 @@ nextButtons.forEach((nextButton) => {
     });
 });
 
-// ini masih harus dibenerin lagi
-document.getElementById('cancel-edit').addEventListener("click", function(){
-    modalEdit.classList.remove("show");
-    editContainer.classList.remove("show");
-});
-
-// const cancelButtonEdit = document.querySelector(".cancel-edit");
-// cancelButtonEdit.addEventListener("click", function () {
-//     modalEdit.classList.remove("active");
-// });
-
-
 //munculin overlay validasi mau apus ato engga
 const exitAddressImgs = document.querySelectorAll('.right-address img[src="/icons/exit-address.svg"]');
 const modalDelete = document.getElementById("modal-delete");
@@ -63,27 +53,77 @@ keepButton.addEventListener("click", function () {
     modalDelete.classList.remove("active");
 });
 
-let addressActive = null
 
-//tanda addres kepilih
-const address = document.querySelectorAll('.address');
+// tanda addres kepilih
+// document.addEventListener("DOMContentLoaded", function () {
+//     let addressActive = null;
+
+//     const addressDivs = document.querySelectorAll(".address");
+
+//     addressDivs.forEach(function (addressDiv) {
+//         addressDiv.addEventListener("click", function () {
+//             if (addressActive !== null) {
+//                 addressActive.classList.remove("active-border");
+//             }
+            
+//             this.classList.add("active-border");
+//             addressActive = this;
+
+//             const addressName = this.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
+//             const fullAddress = this.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
+
+//             // Set hidden form fields with selected address details
+//             document.getElementById("selectedAddressName").value = addressName;
+//             document.getElementById("selectedFullAddress").value = fullAddress;
+
+//             // Submit the form
+//             document.getElementById("shippingForm").submit();
+//         });
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    var addressDivs = document.querySelectorAll(".address");
+    let addressActive = null;
+
+    const addressDivs = document.querySelectorAll(".address");
 
     addressDivs.forEach(function (addressDiv) {
         addressDiv.addEventListener("click", function () {
-            if (addressActive != null) {
-                addressActive.classList.remove("active-border")
+            if (addressActive !== null) {
+                addressActive.classList.remove("active-border");
             }
-            this.classList.toggle("active-border");
-            addressActive = this
-
-            // var addressName = this.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
-            // var fullAddress = this.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
             
-            // // Store the selected address details in local storage
-            // localStorage.setItem('selectedAddressName', addressName);
-            // localStorage.setItem('selectedFullAddress', fullAddress);
+            this.classList.add("active-border");
+            addressActive = this;
+
+            const addressName = this.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
+            const fullAddress = this.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
+
+            // Encode addressName and fullAddress to be used in URL
+            const encodedAddressName = encodeURIComponent(addressName);
+            const encodedFullAddress = encodeURIComponent(fullAddress);
+
+            // Construct URL with query parameters
+            const url = `/shipping?selectedAddressName=${encodedAddressName}&selectedFullAddress=${encodedFullAddress}` + "&" + passed;
+
+            // Redirect to the shipping page with query parameters
+            window.location.href = url;
         });
     });
 });
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     console.log("DOM fully loaded and parsed");
+
+//     const addressDivs = document.querySelectorAll(".address");
+
+//     addressDivs.forEach(function (addressDiv) {
+//         addressDiv.addEventListener("click", function () {
+//             console.log("Clicked address:", this);
+//         });
+//     });
+// });
+

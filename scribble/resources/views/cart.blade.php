@@ -60,11 +60,6 @@
                                 <p class="var-cart"> var : {{ $item->VariantName }}</p>
                             </div>
                         </td>
-                        {{-- <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>{{ $item->Quantity }}</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td> --}}
                         <td class="product-quantity">
                             <form action="{{ route('cart.update', ['product_id' => $item->ProductID, 'variant_id' => $item->VariantID, 'user_id' => $item->UserID]) }}" method="POST" class="form-quantity">
                                 @csrf
@@ -84,60 +79,13 @@
                             <p>Rp. {{ number_format($item->Price*$item->Quantity ?? 0, 0, ',', '.') }}</p>
                         </td>
                         {{-- <td class="product-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" onclick="updateSummary(this)">
                         </td> --}}
                         <td class="product-checkbox">
-                            <input type="checkbox" onclick="updateSummary(this)">
+                            <input type="checkbox" name="checkedProducts[]" data-id="{{ $item->ProductID }}" data-variant="{{ $item->VariantID }}" data-quantity="{{ $item->Quantity }}" onclick="updateSummary(this)">
                         </td>
-
                     </tr>   
                     @endforeach
-                    {{-- <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    
-                    <tr class="products">
-                        <td class="product-details">
-                            <img src="\images\marker.png" alt="">
-                            <p>Spidol Marker Hitam</p>
-                        </td>
-                        <td class="product-quantity">
-                            <img src="\icons\minus.svg" alt="">
-                            <p>20</p>
-                            <img src="\icons\plus.svg" alt="">
-                        </td>
-                        <td class="product-price">
-                            <p>Rp.100.000</p>
-
-                        </td>
-                        <td class="product-total-price">
-                            <p>Rp.100.000</p>
-                        </td>
-                        <td class="product-checkbox">
-                            <input type="checkbox">
-                        </td>
-
-                    </tr>
-                    --}}
                 </table>
 
                 <div class="container-summary" id="summaryContainer" style="display: none;">
@@ -151,42 +99,13 @@
                             <p>Rp. 0</p>
                         </div>
                     </div>
-                    <div class="container-summary-checkout">
+                    {{-- <div class="container-summary-checkout">
                         <p>Checkout</p>
+                    </div> --}}
+                    <div class="container-summary-checkout">
+                        <button type="button" onclick="goToShippingPage()">Checkout</button>
                     </div>
                 </div>
-
-                {{-- <div class="container-summary">
-                    <div class="container-summary-title">
-                        <p>Summary</p>
-                    </div>
-                    <div class="container-summary-price">
-                        <div class="prices">
-                            <p>Item 1</p>
-                            <p>Rp. 100.000</p>
-                        </div>
-                        <div class="prices">
-                            <p>Item 1</p>
-                            <p>Rp. 100.000</p>
-                        </div>
-                        <div class="prices">
-                            <p>Item 1</p>
-                            <p>Rp. 100.000</p>
-                        </div>
-                        <div class="prices">
-                            <p>Item 1</p>
-                            <p>Rp. 100.000</p>
-                        </div>
-
-                        <div class="total-price">
-                            <p>Total</p>
-                            <p>Rp. 100.000</p>
-                        </div>
-                    </div>
-                    <div class="container-summary-checkout">
-                        <p>Checkout</p>
-                    </div>
-                </div> --}}
 
             </div>
         </div>

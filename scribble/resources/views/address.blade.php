@@ -36,6 +36,11 @@
                 <img src="/icons/exit-address.svg" style="width: 50px; height: 50px; cursor:pointer;" alt="">
                 <img src="/icons/edit.svg" style="width: 50px; height: 50px; cursor:pointer;" class="edit-btn" alt="">
             </div>
+            <form action="/shipping" method="POST" id="shippingForm" style="display: none;">
+                @csrf
+                <input type="hidden" name="selectedAddressName" id="selectedAddressName">
+                <input type="hidden" name="selectedFullAddress" id="selectedFullAddress">
+            </form>
         </div>
         @endforeach
         <div class="modal" id="modal">
