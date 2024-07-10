@@ -55,3 +55,13 @@
 .voucher-next {
     transition: 0.3s ease-in-out;
 }
+
+/* Add this to your CSS file */
+.selected-voucher {
+    border: 2px solid #4CAF50; /* Green border to indicate selection */
+
+}
+
+.dimmed-voucher {
+    opacity: 0.5; /* Make the voucher appear dimmed */
+}

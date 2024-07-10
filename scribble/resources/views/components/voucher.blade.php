@@ -23,7 +23,7 @@
             </div>
             <div class="discount-remove">
                 <img src="/icons/trash-bin-white.svg" class="remove-icon">
-            </div>
+            </div> 
         @else
         <div class="wrapper" id="" value="{{$voucher->VoucherProductID}}"> 
                 <img src="/icons/voucher-green.svg" class="voucher-img">
