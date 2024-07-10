@@ -18,7 +18,7 @@ class ShippingController extends Controller
         $variants = $request->input('variants', []);
         $quantities = $request->input('quantities', []);
         $productIDs = $request->input('productIDs', []);
-        
+
         // Buat array untuk menyimpan data produk yang dipilih
         $selectedProducts = [];
 
@@ -52,6 +52,7 @@ class ShippingController extends Controller
                     'productPrice' => $product->Price,
                     'quantity' => $request->input('quantities')[$index], // Ambil quantity dari request
                     'productImage' => $product->ProductImage,
+                    "variantID" => $product->VariantID
                 ];
             }
         }
@@ -64,5 +65,9 @@ class ShippingController extends Controller
         // Kirim data ke Blade view shipping.blade.php
         return view('shipping',compact('selectedProducts','voucherProduct','voucherShipment'));
         // return view('shipping');
+    }
+
+    public function makeOrder(Request $request) {
+        dd($request);
     }
 }

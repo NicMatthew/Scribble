@@ -126,10 +126,10 @@ Route::post("/product-admin", [AdminController::class, "product_add"])->name("pr
 Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
 Route::get('/product-admin/delete', [AdminController::class, "product_delete"])->name('product_delete');
 
-
-
 //Dashboard Admin Routing
 Route::get('/dashboard', [AdminController::class, "dashboard"])->name("admin-dashboard");
 Route::get('/dashboard/discount/add', [AdminController::class, "addDiscount"])->name("add-discount");
 Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
 Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");
+
+Route::post("/make-order", [ShippingController::class, "makeOrder"])->name("make-order");

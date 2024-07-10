@@ -131,8 +131,14 @@
         </div>
     </div>
     <form method="POST" action="" name="shipping-form">
-        <input type="hidden" name="productIDs">
-        <input
+        @foreach ($selectedProducts as $product)
+            <input type="hidden" name="productIDs[]" value="{{ $product["productID"] }}">
+            <input type="hidden" name="variantIDs[]" value="{{ $product["variantID"] }}">
+            <input type="hidden" name="quantity[]" value="{{ $product["quantity"] }}">
+        @endforeach
+        <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
+        <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
+        <input type="hidden" name="totalPrice" value="" id="totalPrice">
     </form>
 </body>
 </html>

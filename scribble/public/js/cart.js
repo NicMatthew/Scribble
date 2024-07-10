@@ -36,8 +36,8 @@ document.querySelectorAll(".btn-quantity").forEach((button) => {
                 quantityInput.innerText = currentQuantity - 1;
                 formInput.value = currentQuantity - 1;
             } else {
-                quantityInput.innerText = 0; 
-                formInput.value = 0; 
+                quantityInput.innerText = 0;
+                formInput.value = 0;
             }
         } else if (action === "plus") {
             if (currentQuantity < stock) {
@@ -49,7 +49,7 @@ document.querySelectorAll(".btn-quantity").forEach((button) => {
         this.closest("form").submit();
     });
 });
-    
+
 document.addEventListener("DOMContentLoaded", function () {
     // Memanggil fungsi updateSummary saat halaman dimuat untuk pertama kali
     updateSummary();
@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function updateSummary() {
     let summaryContainer = document.getElementById("summaryContainer");
     summaryItemsContainer = document.getElementById("summaryItems");
-    console.log(summaryTotal)
     let selectedItems = document.querySelectorAll(
         'input[type="checkbox"]:checked'
     );
@@ -114,7 +113,7 @@ function formatCurrency(value) {
 function goToShippingPage() {
     // Ambil data dari checkbox yang dicentang
     let checkedProducts = document.querySelectorAll('input[name="checkedProducts[]"]:checked');
-    
+
     // Buat form untuk mengirim data ke halaman shipping
     let form = document.createElement('form');
     form.method = 'GET';
@@ -132,7 +131,7 @@ function goToShippingPage() {
         let variantId = checkbox.getAttribute('data-variant');
         let quantity = checkbox.getAttribute('data-quantity');
         let productID = checkbox.getAttribute("data-id");
-        
+
         let inputVariant = document.createElement('input');
         inputVariant.type = 'hidden';
         inputVariant.name = 'variants[]';

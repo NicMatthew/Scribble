@@ -9,6 +9,8 @@ let selectedProduct = null
 let subtotalPrice = document.getElementById("subtotalPrice")
 let discountPrice = document.getElementById("discountPrice")
 let totalPrice = document.getElementById("totalPrice")
+let voucherShipmentID = document.getElementById("voucherShipmentID")
+let voucherProductID = document.getElementById("voucherProductID")
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -109,6 +111,7 @@ for (let i = 0; i < vouchersProduct.length; i++) {
 
         voucher.firstElementChild.classList.add("selected-voucher")
         selectedProduct = voucher
+        voucherProductID.value = voucherId
 
         displaySelVoucher()
         dimmVoucher(vouchersProduct)
@@ -124,6 +127,7 @@ for (let i = 0; i < vouchersShipment.length; i++) {
             selectedShipment = null
             resetDimm(vouchersShipment)
             setPrice()
+            voucherShipmentID.value = null
             return
         }
 
@@ -137,6 +141,8 @@ for (let i = 0; i < vouchersShipment.length; i++) {
 
         selectedShipment = voucher
         voucher.firstElementChild.classList.add("selected-voucher")
+        voucherShipmentID.value = voucherId
+
         displaySelVoucher()
         dimmVoucher(vouchersShipment)
         setPrice()
@@ -151,3 +157,4 @@ modal.addEventListener("click", (e) => {
 
 let addressSelect = document.getElementById("address-select");
 addressSelect.href = addressSelect.href + "?" + window.location.href.split("?")[1];
+setPrice()
