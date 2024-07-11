@@ -108,6 +108,7 @@ class ShippingController extends Controller
                     'quantity' => $quantity[0],
                     'productImage' => $product->ProductImage,
                     'variantID' => $variantID[0],
+                    'CategoryID' => Category::join('sub_categories','sub_categories.CategoryProductID','=','categories.CategoryProductID')->where('SubCategoryProductID',$product->SubCategoryProductID)->first()->CategoryProductID
                 ]
             ];
         } 
