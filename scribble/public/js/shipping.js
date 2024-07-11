@@ -88,6 +88,7 @@ function setPrice() {
     } else {
         tempDiscount += val2
     }
+    
 
     discountPrice.innerText = "Rp. " + numberWithCommas(tempDiscount)
     totalPrice.innerText = "Rp. " + numberWithCommas(tempSub - tempDiscount + 5000)

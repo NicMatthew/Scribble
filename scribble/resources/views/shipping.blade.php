@@ -140,7 +140,8 @@
         <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
         <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
         <input type="hidden" name="totalPrice" value="" id="totalPriceInput">
-        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">
+        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">6t
     </form>
+    <script
 </body>
 </html>
