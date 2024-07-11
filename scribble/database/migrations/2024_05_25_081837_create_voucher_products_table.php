@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('StartDate');
             $table->date('EndDate');
             $table->float('Value');
-            $table->string('DiscountCategory');
+            $table->foreignId('DiscountCategory')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("CategoryProductID")->on('categories');
             $table->timestamps();
         });
     }

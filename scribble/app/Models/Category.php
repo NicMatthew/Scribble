@@ -9,6 +9,9 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "CategoryProductID";
+    protected $table = "categories";
+
     public function subCategories()
     {
         return $this->hasMany(SubCategory::class, 'CategoryProductID', 'CategoryProductID');
