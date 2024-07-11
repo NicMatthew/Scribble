@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/header-standard.css">
+    <link rel="stylesheet" href="/css/voucher.css">
     <script src="/js/dashboard.js" defer=""></script>
 </head>
 <body>
@@ -186,7 +187,7 @@
                     <select class="input-field" name="DiscountCategory">
                         <option value="" disabled selected>Choose Category Product</option>
                         @foreach ($categories as $category)
-                            <option value="{{$category->NameCategory}}">{{$category->NameCategory}}</option>
+                            <option value="{{$category->CategoryProductID}}">{{$category->NameCategory}}</option>
                         @endforeach
 
                     </select>

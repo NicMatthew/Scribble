@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class VoucherShipment extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = "VoucherShipmentID";
+    protected $table = "voucher_shipments";
+
 }

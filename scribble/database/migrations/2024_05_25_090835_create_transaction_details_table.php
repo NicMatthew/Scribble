@@ -15,8 +15,7 @@ return new class extends Migration
             $table->foreignId('TransactionID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("TransactionID")->on('transactions');
             $table->foreignId('ProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("ProductID")->on('products');
             $table->foreignId('VariantID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VariantID")->on('variants');
-            $table->foreignId('VoucherProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VoucherProductID")->on('voucher_products');
-            $table->integer('TotalPrice');
+            $table->foreignId('VoucherProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VoucherProductID")->on('voucher_products')->nullable();
             $table->integer('Quantity');
             $table->primary(['TransactionID','ProductID','VariantID']);
             $table->timestamps();

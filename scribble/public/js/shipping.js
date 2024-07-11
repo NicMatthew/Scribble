@@ -11,6 +11,8 @@ let discountPrice = document.getElementById("discountPrice")
 let totalPrice = document.getElementById("totalPrice")
 let voucherShipmentID = document.getElementById("voucherShipmentID")
 let voucherProductID = document.getElementById("voucherProductID")
+let totalPriceInput = document.getElementById("totalPriceInput")
+let payBtn = document.getElementById("pay-btn")
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -65,11 +67,11 @@ function setPrice() {
     let val2 = 0;
 
     if (selectedProduct != null) {
-        val1 = parseInt(selectedProduct.firstElementChild.getAttribute("value").split(";")[1])
+        val1 = parseFloat(selectedProduct.firstElementChild.getAttribute("value").split(";")[1])
     }
 
     if (selectedShipment != null) {
-        val2 = parseInt(selectedShipment.firstElementChild.getAttribute("value").split(";")[1])
+        val2 = parseFloat(selectedShipment.firstElementChild.getAttribute("value").split(";")[1])
     }
 
     tempSub = parseInt(subtotalPrice.innerText.replaceAll(".", "").substring(3))
@@ -89,6 +91,7 @@ function setPrice() {
 
     discountPrice.innerText = "Rp. " + numberWithCommas(tempDiscount)
     totalPrice.innerText = "Rp. " + numberWithCommas(tempSub - tempDiscount + 5000)
+    totalPriceInput.value = tempSub - tempDiscount + 5000
 }
 
 for (let i = 0; i < vouchersProduct.length; i++) {
@@ -154,6 +157,10 @@ modal.addEventListener("click", (e) => {
         closeOverlay();
     }
 });
+
+payBtn.addEventListener("click", (e)=>{
+    document.forms["shipping-form"].submit()
+})
 
 let addressSelect = document.getElementById("address-select");
 addressSelect.href = addressSelect.href + "?" + window.location.href.split("?")[1];

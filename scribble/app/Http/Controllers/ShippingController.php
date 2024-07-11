@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\Transaction;
+use App\Models\TransactionDetail;
 use App\Models\Variant;
 use App\Models\VoucherProduct;
 use App\Models\VoucherShipment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ShippingController extends Controller
@@ -18,6 +21,7 @@ class ShippingController extends Controller
         $variants = $request->input('variants', []);
         $quantities = $request->input('quantities', []);
         $productIDs = $request->input('productIDs', []);
+        $addressID = $request->addressID;
 
         // Buat array untuk menyimpan data produk yang dipilih
         $selectedProducts = [];
@@ -63,11 +67,33 @@ class ShippingController extends Controller
         // dd($selectedProducts);
 
         // Kirim data ke Blade view shipping.blade.php
-        return view('shipping',compact('selectedProducts','voucherProduct','voucherShipment'));
+        return view('shipping',compact('selectedProducts','voucherProduct','voucherShipment', "addressID"));
         // return view('shipping');
     }
 
     public function makeOrder(Request $request) {
-        dd($request);
+        $newTransHead = new Transaction();
+
+        $newTransHead->UserID = auth()->id();
+        $newTransHead->VoucherShipmentID = $request->voucherShipmentID;
+        $newTransHead->TransactionDate = Carbon::now()->toDateString();
+        $newTransHead->TransactionStatus = "Packing";
+        $newTransHead->ReviewStatus = "none";
+        $newTransHead->AddressID = $request->addressID;
+        $newTransHead->TotalPrice = $request->totalPrice;
+
+        $newTransHead->save();
+
+        for ($i = 0; $i < count($request->productIDs); $i++) {
+            $newTransDetail = new TransactionDetail();
+
+            $newTransDetail->TransactionID = $newTransHead->id;
+            $newTransDetail->ProductID = $request->productIDs[$i];
+            $newTransDetail->VariantID = $request->variantIDs[$i];
+            $newTransDetail->VoucherProductID = $request->voucherProductID;
+            $newTransDetail->Quantity = $request->quantity[$i];
+
+            $newTransDetail->save();
+        }
     }
 }

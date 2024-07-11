@@ -101,7 +101,7 @@
                     </div>
                     <div class="voucher-btn" id="voucher-btn">Select</div>
                 </div>
-                <a href="" class="pay-btn">Pay Now</a>
+                <div class="pay-btn" id="pay-btn">Pay Now</div>
             </div>
         </div>
     </div>
@@ -130,7 +130,8 @@
             </div>
         </div>
     </div>
-    <form method="POST" action="" name="shipping-form">
+    <form method="POST" action="{{ route("make-order") }}" name="shipping-form">
+        @csrf
         @foreach ($selectedProducts as $product)
             <input type="hidden" name="productIDs[]" value="{{ $product["productID"] }}">
             <input type="hidden" name="variantIDs[]" value="{{ $product["variantID"] }}">
@@ -138,7 +139,8 @@
         @endforeach
         <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
         <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
-        <input type="hidden" name="totalPrice" value="" id="totalPrice">
+        <input type="hidden" name="totalPrice" value="" id="totalPriceInput">
+        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">
     </form>
 </body>
 </html>
