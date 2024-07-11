@@ -69,6 +69,7 @@ Route::get('/sidebar', function () {
 });
 
 Route::get('/shipping', [ShippingController::class, "index"])->name('shipping.index');
+Route::get('/buy-now', [ShippingController::class, 'buyNow'])->name('buy.now');
 
 // Route::get('/shipping', function () {
 //     return view('shipping');

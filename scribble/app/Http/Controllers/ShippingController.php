@@ -75,6 +75,51 @@ class ShippingController extends Controller
         // return view('shipping');
     }
 
+    public function buyNow(Request $request)
+    {
+        // dd($request->all());
+        // Ambil data produk yang dibeli
+        $productID = $request->input('productIDs');
+        $quantity = $request->input('quantities');
+        $variantID = $request->input('variants');
+        $addressID = $request->addressID;
+
+        // Ambil data produk dari database berdasarkan product_id dan variant_id
+        $product = Product::where('products.ProductID', $productID)
+                ->join('product_entries', 'products.ProductID', '=', 'product_entries.ProductID')
+                ->join('variants', 'product_entries.VariantID', '=', 'variants.VariantID')
+                ->where('variants.VariantID', $variantID)
+                ->first();
+
+        $image = ProductImage::where("VariantID", "=", $variantID)
+                                ->where("ProductID", "=", $productID)
+                                ->first();
+
+        $product->ProductImage = $image->Image;
+
+        // Jika produk ditemukan, buat array untuk produk yang dibeli
+        if ($product) {
+            $selectedProducts = [
+                [
+                    'productID' => $productID[0],
+                    'productName' => $product->NameProduct,
+                    'variantName' => $product->VariantName,
+                    'productPrice' => $product->Price,
+                    'quantity' => $quantity[0],
+                    'productImage' => $product->ProductImage,
+                    'variantID' => $variantID[0],
+                ]
+            ];
+        } 
+        $voucherProduct = VoucherProduct::all();
+        $voucherShipment = VoucherShipment::all();
+
+        // Redirect ke halaman shipping dengan data produk yang dibeli
+        return view('shipping', compact('selectedProducts', 'voucherProduct', 'voucherShipment', "addressID"));
+    }
+
+
+
     public function makeOrder(Request $request) {
         $newTransHead = new Transaction();
 
