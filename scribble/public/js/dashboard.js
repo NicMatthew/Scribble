@@ -38,10 +38,28 @@ bannRemBtns.forEach(btn => {
     })
 })
 
+let shipmentVoucher = document.getElementById("VoucherShipmentID");
+let productVoucher = document.getElementById("VoucherProductID");
 discRemBtns.forEach(btn => {
     btn.addEventListener("click", (e)=>{
         modal.classList.add("show")
         msgContainer.classList.add("show")
+        let type = btn.parentElement.children[0].children[1].children[1].innerHTML;
+        let voucherID = btn.parentElement.children[0].getAttribute('value').split(';')[0]
+        console.log(voucherID)
+        if (type == "Shipment Voucher") {
+            shipmentVoucher.value = voucherID
+            productVoucher.value = null
+        } else {
+            productVoucher.value = voucherID
+            shipmentVoucher.value = null
+        }
+        bannDelBtn.addEventListener("click", (e) => {
+            // submit form
+            console.log('test')
+            document.forms["delete-voucher"].submit();
+        });
+        
     })
 })
 
@@ -94,5 +112,6 @@ choose.addEventListener('change', (e) => {
     } else {
         category.classList.remove('hide')
     }
+    
 })
 

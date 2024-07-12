@@ -311,8 +311,9 @@ body {
     left: 0px;
     display: none;
     justify-content: center;
-    align-items: flex-start;
-    overflow-y: scroll;
+    align-items: center;
+    /* overflow:hidden; */
+    z-index: 1000;
 }
 
 .message-container {

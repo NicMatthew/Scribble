@@ -256,5 +256,18 @@ class AdminController extends Controller
         return redirect()->route("admin-dashboard");
 
     }
+    public function deleteDiscount(){
+        // dd(request()->all());
+        if(request()->VoucherProductID != null){
+            // dd(request()->VoucherProductID);
+            $voucher = VoucherProduct::where('voucher_products.VoucherProductID',request()->VoucherProductID);
+            $voucher->delete();
+        }
+        if(request()->VoucherShipmentID != null){
+            $voucher = VoucherShipment::where('voucher_shipments.VoucherShipmentID',request()->VoucherShipmentID);
+            $voucher->delete();
+        }
+        return redirect()->route("admin-dashboard");
+    }
 }
 
