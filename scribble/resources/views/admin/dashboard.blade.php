@@ -167,8 +167,9 @@
             </div>
         </div>
     </div>
-    <form name="" method="POST" class="hide">
-        <input type="text" name="">
+    <form name="delete-voucher" method="GET" class="hide" action="{{ route('delete-discount') }}">
+        <input type="hidden" name="VoucherProductID" id="VoucherProductID">
+        <input type="hidden" name="VoucherShipmentID" id="VoucherShipmentID">
     </form>
 </body>
 </html>
