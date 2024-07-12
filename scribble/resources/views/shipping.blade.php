@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/header-standard.css">
     <link rel="stylesheet" href="/css/steps-info.css">
+    <link rel="stylesheet" href="/css/voucher.css">
     <script src="/js/shipping.js" defer=""></script>
 </head>
 <body>
@@ -68,7 +69,7 @@
                             $totalPrice += $product['productPrice'] * $product['quantity'];
                         @endphp
                     @endforeach
-                   
+
                 </div>
             </div>
             <div class="payment-container">
@@ -77,7 +78,7 @@
                     <div class="payment-list">
                         <div class="list">
                             <div class="payment-name">Subtotal produk</div>
-                            <div class="payment-price">Rp. {{ number_format($totalPrice, 0, ',', '.') }}</div>
+                            <div class="payment-price" id="subtotalPrice">Rp. {{ number_format($totalPrice, 0, ',', '.') }}</div>
                         </div>
                         <div class="list">
                             <div class="payment-name">Biaya pengiriman</div>
@@ -85,11 +86,11 @@
                         </div>
                         <div class="list">
                             <div class="payment-name">Discount</div>
-                            <div class="payment-price">Rp. 0</div>
+                            <div class="payment-price" id="discountPrice">Rp. 0</div>
                         </div>
                         <div class="list">
                             <div class="payment-name final">Total payment</div>
-                            <div class="payment-price final">Rp. 105.000</div>
+                            <div class="payment-price final" id="totalPrice">Rp. 105.000</div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +101,7 @@
                     </div>
                     <div class="voucher-btn" id="voucher-btn">Select</div>
                 </div>
-                <a href="" class="pay-btn">Pay Now</a>
+                <div class="pay-btn" id="pay-btn">Pay Now</div>
             </div>
         </div>
     </div>
@@ -114,16 +115,33 @@
                 <hr class="divider">
             </div>
             <div class="voucher-list">
-               <div class="voucher-category" >Discount Shipping</div>
-                @foreach ($voucherShipment as $voucher)
-                    @include("components/voucher")
-                @endforeach
-                <div class="voucher-category">Discount Product</div>
-                @foreach ($voucherProduct as $voucher)
-                    @include("components/voucher")
-                @endforeach
+                <h3 class="voucher-category-title">Discount Shipping</h3>
+                <div class="voucher-category" id="voucherShipment">
+                    @foreach ($voucherShipment as $voucher)
+                        @include("components/voucher")
+                    @endforeach
+                </div>
+                <h3 class="voucher-category-title">Discount Product</h3>
+                <div class="voucher-category" id="voucherProduct">
+                    @foreach ($voucherProduct as $voucher)
+                        @include("components/voucher")
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
+    <form method="POST" action="{{ route("make-order") }}" name="shipping-form">
+        @csrf
+        @foreach ($selectedProducts as $product)
+            <input type="hidden" name="productIDs[]" value="{{ $product["productID"] }}">
+            <input type="hidden" name="variantIDs[]" value="{{ $product["variantID"] }}">
+            <input type="hidden" name="quantity[]" value="{{ $product["quantity"] }}">
+        @endforeach
+        <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
+        <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
+        <input type="hidden" name="totalPrice" value="" id="totalPriceInput">
+        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">6t
+    </form>
+    <script
 </body>
 </html>

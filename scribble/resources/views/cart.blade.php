@@ -92,18 +92,21 @@
                     <div class="container-summary-title">
                         <p>Summary</p>
                     </div>
-                    <div class="container-summary-price" id="summaryItems">
-                        <!-- Summary items will be added dynamically here -->
-                        <div class="total-price" id="summaryTotal">
-                            <p>Total</p>
-                            <p>Rp. 0</p>
+                    <hr>
+                    <div class="bawah">
+                        <div class="container-summary-price" id="summaryItems">
+                            <!-- Summary items will be added dynamically here -->
+                            <div class="total-price" id="summaryTotal">
+                                <p>Total</p>
+                                <p>Rp. 0</p>
+                            </div>
                         </div>
-                    </div>
-                    {{-- <div class="container-summary-checkout">
-                        <p>Checkout</p>
-                    </div> --}}
-                    <div class="container-summary-checkout">
-                        <button type="button" onclick="goToShippingPage()">Checkout</button>
+                        {{-- <div class="container-summary-checkout">
+                            <p>Checkout</p>
+                        </div> --}}
+                        <div class="container-summary-checkout">
+                            <button type="button" onclick="goToShippingPage()">Checkout</button>
+                        </div>
                     </div>
                 </div>
 

@@ -17,14 +17,14 @@ cancelButton.addEventListener("click", function () {
 
 const nextButtons = document.querySelectorAll('.right-address img[src="/icons/edit.svg"]');
 let AddressID = document.getElementById('addressID');
-const modalEdit = document.getElementById('modal-edit'); 
+const modalEdit = document.getElementById('modal-edit');
 // let AddressID = document.getElementById("AddressID")
 let UserID = document.getElementById("UserID");
 // console.log(AddressID);
 
 nextButtons.forEach((nextButton) => {
     nextButton.addEventListener("click", function () {
-        AddressID.value = nextButton.parentElement.id; 
+        AddressID.value = nextButton.parentElement.id;
         document.forms["form-edit"].submit();
     });
 });
@@ -65,7 +65,7 @@ keepButton.addEventListener("click", function () {
 //             if (addressActive !== null) {
 //                 addressActive.classList.remove("active-border");
 //             }
-            
+
 //             this.classList.add("active-border");
 //             addressActive = this;
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (addressActive !== null) {
                 addressActive.classList.remove("active-border");
             }
-            
+
             this.classList.add("active-border");
             addressActive = this;
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const encodedFullAddress = encodeURIComponent(fullAddress);
 
             // Construct URL with query parameters
-            const url = `/shipping?selectedAddressName=${encodedAddressName}&selectedFullAddress=${encodedFullAddress}` + "&" + passed;
+            const url = `/shipping?selectedAddressName=${encodedAddressName}&selectedFullAddress=${encodedFullAddress}` + "&" + passed + "&addressID=" + addressDiv.id;
 
             // Redirect to the shipping page with query parameters
             window.location.href = url;

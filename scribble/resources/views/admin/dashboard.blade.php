@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/header-standard.css">
+    <link rel="stylesheet" href="/css/voucher.css">
     <script src="/js/dashboard.js" defer=""></script>
 </head>
 <body>
@@ -24,7 +25,7 @@
                     <div class="content-title">Overview</div>
                     <div class="overview-wrapper">
                         <div class="overview">
-                            <div class="value">Rp. 120.322.000</div>
+                            <div class="value">Rp. {{ number_format($totalSales, 0, ",", ".") }}</div>
                             <div class="description">Total Sales</div>
                         </div>
                         <div class="overview">
@@ -51,72 +52,18 @@
                     <div class="content-title">Top Sales</div>
                     <div class="sales-header">
                         <div class="sub-header">Product</div>
-                        <div class="sub-header">Earnings</div>
+                        <div class="sub-header">Sales Quantity</div>
                     </div>
                     <div class="top-sales-wrapper">
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
+                        @foreach ($sales as $sale)
+                            <div class="sales">
+                                <div class="sales-product">
+                                    <img src="{{ $sale->Image }}" class="sales-img">
+                                    <div class="sales-title">{{ $sale->NameProduct }}</div>
+                                </div>
+                                <div class="total-earn">{{ $sale->SalesQuantity }}</div>
                             </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
-                        <div class="sales">
-                            <div class="sales-product">
-                                <img src="/images/pict1.jpg" class="sales-img">
-                                <div class="sales-title">Pencil</div>
-                            </div>
-                            <div class="total-earn">Rp. 100.000</div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -186,7 +133,7 @@
                     <select class="input-field" name="DiscountCategory">
                         <option value="" disabled selected>Choose Category Product</option>
                         @foreach ($categories as $category)
-                            <option value="{{$category->NameCategory}}">{{$category->NameCategory}}</option>
+                            <option value="{{$category->CategoryProductID}}">{{$category->NameCategory}}</option>
                         @endforeach
 
                     </select>

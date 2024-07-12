@@ -12,8 +12,11 @@ const minusBtn = document.getElementById("minus-btn")
 const availableDisp = document.getElementById("available-quan-disp")
 const productDesc = document.getElementById("product-desc")
 let quanInput = document.getElementById("quantity-input")
+let quanInput2 = document.getElementById("quantity-input-2");
 let variantInput = document.getElementById("variant-input")
+let variantInput2 = document.getElementById("variant-input-2");
 let priceInput = document.getElementById("price-input")
+let priceInput2 = document.getElementById("price-input-2");
 let selectedVariant = -1;
 
 variants.forEach(variant => {
@@ -33,6 +36,7 @@ function setVariant(idx, varID) {
     }
 
     priceInput.value = variants[idx].Price
+    priceInput2.value = variants[idx].Price;
     priceDisplay.innerText = "Rp. " + numberWithCommas(variants[idx].Price)
     mainPhoto.firstChild.src = variants[idx].Image
     variantOpt[idx].classList.add("selected-variant")
@@ -42,6 +46,7 @@ function setVariant(idx, varID) {
     setQuantity(0)
 
     variantInput.setAttribute("value", varID)
+    variantInput2.setAttribute("value", varID);
 }
 
 let tempVar = null
@@ -79,6 +84,7 @@ function setQuantity(val) {
     currQuantity = parseInt(quantityDisp.innerText)
     if (currQuantity+val > 0 && currQuantity+val <= variants[selectedVariant].Stock) {
         quanInput.setAttribute("value", parseInt(quantityDisp.innerText) + val);
+        quanInput2.setAttribute("value", parseInt(quantityDisp.innerText) + val);
         quantityDisp.innerText = parseInt(quantityDisp.innerText) + val
     }
 }
@@ -213,6 +219,26 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isLoggedIn) {
             // Pengguna sudah login, arahkan ke halaman keranjang
             document.forms["add-to-cart-form"].submit();
+        } else {
+            // Pengguna belum login, arahkan ke halaman login
+            window.location.href = "/log-in";
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buyNowBtn = document.getElementById("buy-now-btn");
+
+    buyNowBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // Mencegah tindakan default dari anchor link
+
+        // Memeriksa status login pengguna dari elemen data
+        const isLoggedIn =
+            document.getElementById("login-status").dataset.loggedIn === "true";
+
+        if (isLoggedIn) {
+            // Pengguna sudah login, arahkan ke halaman keranjang
+            document.forms["buy-now-form"].submit();
         } else {
             // Pengguna belum login, arahkan ke halaman login
             window.location.href = "/log-in";
