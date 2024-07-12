@@ -8,11 +8,14 @@ use App\Models\Product;
 use App\Models\ProductEntry;
 use App\Models\ProductImage;
 use App\Models\SubCategory;
+use App\Models\Transaction;
+use App\Models\TransactionDetail;
 use App\Models\User;
 use App\Models\Variant;
 use App\Models\VoucherProduct;
 use App\Models\VoucherShipment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -216,9 +219,19 @@ class AdminController extends Controller
         $banners = Banner::all();
         $voucherProduct = VoucherProduct::all();
         $voucherShipment = VoucherShipment::all();
+        $totalSales = Transaction::all()->sum("TotalPrice");
 
+        $sales = TransactionDetail::join("products", "products.ProductID", "=", "transaction_details.ProductID")
+                                    ->select("NameProduct", "products.ProductID", DB::raw("sum(Quantity) as SalesQuantity"))
+                                    ->groupBy("products.ProductID")
+                                    ->get();
 
-        return view("admin.dashboard", compact("userCount", "categories", "banners","voucherProduct","voucherShipment"));
+        foreach ($sales as $sale) {
+            $image = ProductImage::where("product_images.ProductID", $sale->ProductID)->first()->Image;
+            $sale->Image = $image;
+        }
+
+        return view("admin.dashboard", compact("userCount", "categories", "banners","voucherProduct","voucherShipment", "totalSales", "sales"));
     }
     public function addDiscount(){
         // dd(request()->all());

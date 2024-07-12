@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/transaction-list.css">
     <script src="/js/transaction-list.js" defer></script>
+    {{-- unpaid ,packaged, in delivery, finished, canceled --}}
 </head>
 <body>
     <div class="navbar">

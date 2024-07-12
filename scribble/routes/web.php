@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ShippingController;
+use App\Http\Controllers\TransactionListController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,8 @@ Route::get('/profile', [UserController::class, 'showProfile'])->name("profile")-
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
 Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/transaction-list',[TransactionListController::class,'index']);
 // Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show');
 
 // Route::get('/product-catalog', function () {
@@ -95,9 +98,7 @@ Route::get('/edit-profile', function () {
     return view('edit-profile');
 });
 
-Route::get('/transaction-list', function () {
-    return view('transaction-list');
-});
+
 
 Route::get('/faq', function () {
     return view('faq');
