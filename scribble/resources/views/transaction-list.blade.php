@@ -32,13 +32,13 @@
                                 <p class="b1">{{  $transaction->TransactionDate }}</p>
                             </div>
                             <div class="content-header-right">
-                                <p class="b1 order-id">{{  $transaction->TransactionID }}</p>
+                                <p class="b1 order-id">Transaction ID: {{  $transaction->TransactionID }}</p>
                                 <p class="b1 status">{{  $transaction->TransactionStatus }}</p>
                             </div>
                         </div>
                         <div class="main-content">
                             <div class="grand-total">
-                                <p class="b2">Grand Total: <span class="b1 total">{{  $transaction->TotalPrice }}</span></p>
+                                <p class="b2">Grand Total: <span class="b1 total">Rp. {{  $transaction->TotalPrice }}</span></p>
                             </div>
                             <div class="all-items">
                                 @foreach ($transaction->details as $details)
@@ -49,12 +49,11 @@
                                             </div>
                                             <div class="middle-side-item">
                                                 <div class="item-name">
-                                                    <p class="h3 name-item">{{ $details->NameProduct }}</p>
+                                                    <p class="b1 name-item">{{ $details->NameProduct }}</p>
                                                 </div>
                                                 <div class="item-desc">
                                                     <div class="total-price">
-                                                        <p class="b2 total-price-text">Total Price:</p>
-                                                        <p class="b1 price-text">{{ $details->Price*$details->Quantity }}</p>
+                                                        <p class="b2 total-price-text">Total Price:  <span class="b1 price-text">Rp. {{ $details->Price*$details->Quantity }}</span></p>
                                                     </div>
                                                     <div class="qty">
                                                         <p class="b2 qty-text">Quantity: {{ $details->Quantity }}</p>
