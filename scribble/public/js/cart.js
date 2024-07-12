@@ -46,14 +46,74 @@ document.querySelectorAll(".btn-quantity").forEach((button) => {
             }
         }
 
+        let productId = formInput.closest("form").dataset.productId;
+        let variantId = formInput.closest("form").dataset.variantId;
+        localStorage.setItem(`quantity-${productId}-${variantId}`,formInput.value);
+
+
         this.closest("form").submit();
     });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Memanggil fungsi updateSummary saat halaman dimuat untuk pertama kali
+    // Restore checked status and quantities
+    document
+        .querySelectorAll('input[name="checkedProducts[]"]')
+        .forEach(function (checkbox) {
+            let productId = checkbox.dataset.id;
+            let variantId = checkbox.dataset.variant;
+
+            // Restore checked status
+            if (localStorage.getItem(`checked-${productId}-${variantId}`)) {
+                checkbox.checked = true;
+            }
+
+            // Restore quantity
+            let quantity = localStorage.getItem(
+                `quantity-${productId}-${variantId}`
+            );
+            if (quantity) {
+                let quantityInput = checkbox
+                    .closest("tr")
+                    .querySelector('input[name="quantity"]');
+                quantityInput.value = quantity;
+                checkbox
+                    .closest("tr")
+                    .querySelector(".product-quantity p").innerText = quantity;
+            }
+        });
+
     updateSummary();
+
+    // Add event listeners to checkboxes
+    document
+        .querySelectorAll('input[name="checkedProducts[]"]')
+        .forEach(function (checkbox) {
+            checkbox.addEventListener("click", function () {
+                let productId = checkbox.dataset.id;
+                let variantId = checkbox.dataset.variant;
+
+                // Store checked status
+                if (checkbox.checked) {
+                    localStorage.setItem(
+                        `checked-${productId}-${variantId}`,
+                        true
+                    );
+                } else {
+                    localStorage.removeItem(
+                        `checked-${productId}-${variantId}`
+                    );
+                }
+
+                updateSummary();
+            });
+        });
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Memanggil fungsi updateSummary saat halaman dimuat untuk pertama kali
+//     updateSummary();
+// });
 
 function updateSummary() {
     let summaryContainer = document.getElementById("summaryContainer");
