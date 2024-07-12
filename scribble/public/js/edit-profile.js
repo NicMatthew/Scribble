@@ -30,7 +30,7 @@ function removeAllAlert() {
 submitBtn.addEventListener("click", (e) => {
     removeAllAlert();
 
-    if (!/^[a-zA-Z]+$/.test(name.value)) {
+    if (!/^[a-zA-Z\s]+$/.test(name.value)) {
         let parEl = name.parentElement;
         let alert = document.createElement("p");
         alert.innerHTML = "Name only can contain alphabets only!";

@@ -15,6 +15,7 @@ class HomeController extends Controller
         // Fetch latest 8 products, including images and entries
         $products = Product::with(['images', 'entries'])
             ->orderBy('created_at', 'desc')
+            ->take(8)
             ->get();
 
         $banners = Banner::all();
