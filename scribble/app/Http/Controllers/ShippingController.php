@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CartDetail;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
@@ -122,6 +123,7 @@ class ShippingController extends Controller
 
 
     public function makeOrder(Request $request) {
+        // dd($request->all());
         $newTransHead = new Transaction();
 
         $newTransHead->UserID = auth()->id();
@@ -144,6 +146,11 @@ class ShippingController extends Controller
             $newTransDetail->Quantity = $request->quantity[$i];
 
             $newTransDetail->save();
+
+            CartDetail::where('UserID', auth()->id())
+                    ->where('ProductID', $request->productIDs[$i])
+                    ->where('VariantID', $request->variantIDs[$i])
+                    ->delete();
         }
     }
 }

@@ -47,11 +47,20 @@
                     <span class="badge position-absolute" style="background-color: var(--prim-1); color: var(--white); border-style:solid; border-color:var(--prim-1); top: 7px; right: 19px; transform: translate(50%, -50%); border-radius: 50%;">{{ $totalUniqueItemsInCart }}</span>
                 </a>
                 <!-- User -->
-                <button type="button" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;">
-                    <a href="{{route("profile")}}">
-                        <img src="/icons/people.png" alt="" style="width: 18px; height: 20px;">
+                @if(Auth::check())
+                <a href="{{ route('profile') }}" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;position: relative">
+                    @if(Auth::user()->ImageUser)
+                        <img src="{{ Auth::user()->ImageUser }}" alt="Profile" style="width: 35px; height: 35px; border-radius: 50%; object-fit:cover">
+                    @else
+                        <img src="/icons/people.png" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%;">
+                    @endif
+                </a>
+                @else
+                    <a href="{{ route('profile') }}" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;">
+                        <img src="/icons/people.png" alt="Profile" style="width: 18px; height: 15px; border-radius: 50%;">
                     </a>
-                </button>
+                @endif
+                
             </div>
             </div>
             <!-- Right elements -->
