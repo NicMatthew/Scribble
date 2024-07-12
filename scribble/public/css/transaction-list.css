@@ -46,6 +46,11 @@
     gap: 400px;
     border-bottom: 2px solid var(--grey);
 }
+.left-side-item img{
+    height: 200px;
+    width: fit-content;
+
+}
 
 .content-header-left, .content-header-right{
     display: flex;
