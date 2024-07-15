@@ -111,6 +111,7 @@
                 </table>
                 <div class="table-navigation">
                     <a href="#"><img src="/icons/previous-icon-order-admin.svg" alt=""></a>
+                    <p class="b2">1</p>
                     <a href="#"><img src="/icons/next-icon-order-admin.svg" alt=""></a>
                 </div>
             </div>
