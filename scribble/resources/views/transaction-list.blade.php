@@ -61,21 +61,29 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="right-side-item">
-                                            <a href="/product-catalog/{{ $details->ProductID }}" class="buy-again-btn">
-                                                <img src="/icons/trolley.svg" alt="tes">
-                                                <p class="b2 buy-again-text">Buy Again</p>
-                                            </a>
-                                        </div>
+                                        @if ($transaction->TransactionStatus != "Canceled")
+                                            <div class="right-side-item">
+                                                <a href="/product-catalog/{{ $details->ProductID }}" class="buy-again-btn">
+                                                    <img src="/icons/trolley.svg" alt="tes">
+                                                    <p class="b2 buy-again-text">Buy Again</p>
+                                                </a>
+                                            </div>
+                                        @else
+                                            <div class="right-side-item">
+                                                
+                                            </div>
+                                        @endif
                                     </div>
                                 @endforeach
                             </div>
+                            @if ($transaction->TransactionStatus != "Canceled")
                             <div class="cancellation">
-                                <a href="#" class="cancel-btn" id="cancel-btn">
+                                <a href="#" class="cancel-btn" id="cancel-btn" value = {{ $transaction->TransactionID }}>
                                     <img src="/icons/cancel-order.svg" alt="tes">
-                                    <p class="b2 cancel-text">Cancel</p>
+                                    <p class="b2 cancel-text" >Cancel</p>
                                 </a>
-                            </div>
+                            </div>  
+                            @endif
                         </div>
                     </div>
                 @endforeach
@@ -95,5 +103,8 @@
             </div>
         </div>
     </div>
+    <form action="{{ route('transaction-delete') }}" name="TransactionDelete">
+        <input type="hidden" name="TransactionID" id="TransactionID">
+    </form>
 </body>
 </html>

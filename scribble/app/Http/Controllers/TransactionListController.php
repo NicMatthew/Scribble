@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use App\Models\VoucherProduct;
+use Illuminate\Cache\RedisTagSet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -43,5 +44,15 @@ class TransactionListController extends Controller
         // dd($transactions);
 
         return view('transaction-list', compact('transactions'));
+    }
+    public function transaction_delete(){
+        // jika mau diapus
+        // Transaction::where('TransactionID',request()->TransactionID)->where('UserID',auth()->id())->delete();
+        // TransactionDetail::where('TransactionID',request()->TransactionID)->delete();
+
+        Transaction::where('TransactionID',request()->TransactionID)
+        ->where('UserID',auth()->id())
+        ->update(['TransactionStatus' => 'Canceled']);
+        return redirect()->route('transaction-list');
     }
 }

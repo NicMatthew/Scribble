@@ -38,7 +38,8 @@ Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware(
 Route::post('/profile/update', [UserController::class, 'updateProfile'])->middleware('auth')->name('update-profile');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/transaction-list',[TransactionListController::class,'index']);
+Route::get('/transaction-list',[TransactionListController::class,'index'])->name('transaction-list');
+Route::get('/transaction-list/delete',[TransactionListController::class,'transaction_delete'])->name('transaction-delete');
 // Route::get('/products/{name}', [ProductController::class, 'showByName'])->name('product-show');
 
 // Route::get('/product-catalog', function () {
