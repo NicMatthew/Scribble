@@ -88,7 +88,7 @@
                             </a>
                             <form action="{{ route('buy.now') }}" method="GET" id="buy-now-form" style="display: none;">
                                 <input type="hidden" name="productIDs[]" value="{{ $selectedProduct->ProductID }}">
-                                <input type="hidden" name="quantities[]" value="" id="quantity-input-2"> 
+                                <input type="hidden" name="quantities[]" value="" id="quantity-input-2">
                                 <input type="hidden" name="price[]" value="" id="price-input-2">
                                 <input type="hidden"  name="user_id" value="{{ auth()->id() }}">
                                 <input type="hidden" name="variants[]" value="" id="variant-input-2">
@@ -211,13 +211,11 @@
             <div class="wrapper-2">
                 <i id ="left-2" class="fa-solid fa-angle-left"></i>
                 <ul class="carousel-2">
-                    @if ($products->isNotEmpty())
-                        @foreach ($products as $product)
-                            <li class="card">
-                                @include('components/product-card', ['product' => $product])
-                            </li>
-                        @endforeach
-                    @endif
+                    @foreach ($products as $product)
+                        <li class="card">
+                            @include('components/product-card')
+                        </li>
+                    @endforeach
                 </ul>
                 <i id ="right-2" class="fa-solid fa-angle-right"></i>
             </div>
