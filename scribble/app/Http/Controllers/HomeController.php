@@ -10,6 +10,21 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public function checkWishlist($products) {
+        foreach($products as $product) {
+            $wish = Wishlist::where('UserID', Auth::user()->UserID)
+            ->where('ProductID', $product->ProductID)
+            ->first();
+
+            if ($wish != null) {
+                $product->inWishlist = true;
+            } else {
+                $product->inWishlist = null;
+            }
+        }
+        return $products;
+    }
+
     public function index()
     {
         // Fetch latest 8 products, including images and entries
@@ -21,17 +36,7 @@ class HomeController extends Controller
         $banners = Banner::all();
 
         if(Auth::check()){
-            foreach($products as $product) {
-            $wish = Wishlist::where('UserID', Auth::user()->UserID)
-            ->where('ProductID', $product->ProductID)
-            ->first();
-
-            if ($wish != null) {
-                $product->inWishlist = true;
-            } else {
-                $product->inWishlist = null;
-            }
-        }
+            $products = $this->checkWishlist($products);
         }
 
         // dd($products);
