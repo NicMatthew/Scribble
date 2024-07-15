@@ -170,7 +170,7 @@ body {
     color: var(--white);
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--white);
     border-radius: 10px;
     cursor: pointer;
@@ -354,7 +354,7 @@ body {
 .cancel-btn {
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--sec-2);
     padding: 10px 25px;
     border: 2px solid var(--sec-2);
@@ -370,7 +370,7 @@ body {
 .rem-btn {
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--white);
     padding: 10px 25px;
     background-color: var(--prim-1);
@@ -434,7 +434,7 @@ body {
     border-radius: 10px;
     text-align: center;
     font-family: Helvetica;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.2rem;
     color: var(--white);
     margin-top: 30px;

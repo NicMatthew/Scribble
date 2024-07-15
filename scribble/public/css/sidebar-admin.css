@@ -48,7 +48,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 20px;
     border-radius: 15px;
     filter: grayscale(1);
     filter: brightness(0);
@@ -64,15 +64,15 @@ body {
 }
 
 .menu-icon {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     object-fit: contain;
 }
 
 .menu-text {
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .sidebar-bottom {

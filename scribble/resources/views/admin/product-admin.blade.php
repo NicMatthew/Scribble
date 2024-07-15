@@ -9,10 +9,11 @@
         <link rel="stylesheet" href="/css/product-admin.css">
         <link rel="stylesheet" href="/css/header-standard.css">
 
+
         <script src="/js/product-admin.js" defer=""></script>
     </head>
     <body>
-        {{-- @dd($product_edit) --}}
+
         @if($product_edit != null)
             <script>
             let product = {!! json_encode($product_edit->toArray()) !!}
@@ -29,7 +30,7 @@
         <div class="main-content">
             <div class="content-header">
                 <div class="the-title">
-                    <div class="header-title" style="color: white">Products Management</div>
+                    <div class="header-title" style="color: black">Products Management</div>
                     <div class="new-prod-btn" id="product-add">
                         <img src="\images\only-plus.png" alt="Plus">
                         <p class="new-prod-txt">New Product</p>
@@ -38,8 +39,8 @@
                 <hr class="content-line">
             </div>
             <div class="sub-content">
-                <p class="all-prods">All Products</p>
-                <p class="total">Total Products: {{ count($products) }}</p>
+                <p class="h2 all-prods">All Products</p>
+                <p class="b2 total">Total Products: {{ count($products) }}</p>
             </div>
             <div class="bottom-content">
                 <table>
@@ -86,8 +87,12 @@
                         @endforeach
                     @endif
                 </table>
-
+                
             </div>
+                <div class="pagination-links">
+                    {{ $products->links() }}
+                </div>
+
 
             <div class="delete-overlay hide" id="confirmDelete">
                 <div class="do-content">

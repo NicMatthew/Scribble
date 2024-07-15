@@ -87,11 +87,11 @@ class ProductController extends Controller
 
         // Get wishlist product IDs
         $wishlistProductIDs=null;
-        if(Auth::check()){
-            $wishlistProductIDs = Wishlist::where('UserID', Auth::id())->pluck('ProductID')->toArray();
-        }
 
-        $products = $this->checkWishlist($products);
+        if(auth()->check() == true){
+            $wishlistProductIDs = Wishlist::where('UserID', Auth::id())->pluck('ProductID')->toArray();
+            $products = $this->checkWishlist($products);
+        }
 
         return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs"));
     }
@@ -173,12 +173,15 @@ class ProductController extends Controller
 
             }
 
-            
+
         }
-        
+
 
         // Get wishlist product IDs
         $user = Auth::user();
+        if($user == null){
+            return redirect()->route('log-in');
+        }
         $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
 
         $products = $this->checkWishlist($products);
@@ -187,6 +190,9 @@ class ProductController extends Controller
 
     public function toggleWishlist(Request $request)
     {
+        if(auth()->check() == false){
+            return redirect()->route('log-in');
+        }
         $user = Auth::user();
         $productId = $request->input('product_id');
 

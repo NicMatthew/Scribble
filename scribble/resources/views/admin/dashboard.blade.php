@@ -17,7 +17,7 @@
     <div class="main-content">
         <div class="content-header">
             <div class="header-title">Dashboard</div>
-            <hr class="content-line">
+            {{-- <hr class="content-line"> --}}
         </div>
         <div class="content-wrapper">
             <div class="content-left">
