@@ -63,7 +63,7 @@ table th{
 .container-summary{
     width: 20%;
     height: 50vh;
-    margin-right: 3%;
+    margin-right: 2%;
     /* margin-left: 3%; */
     /* background-color: antiquewhite; */
     /* border: 1px solid black; */
@@ -109,7 +109,7 @@ table th{
     align-items: center;
     /* background-color: brown; */
     /* border-bottom: 1px solid var(--dark-grey); */
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     padding: 5%;
 
 }
@@ -129,13 +129,20 @@ table th{
 .prices{
     color: var(--dark-grey);
 }
-.prices ,.total-price{
+.prices {
     display: flex;
     margin: 2%;
     justify-content: space-between;
  }
+.total-price{
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
+    justify-content: space-between;
+}
 .prices ,.total-price p{
-    font-size: 20px;
+    font-size: 18px;
 }
 .total-price p{
     font-weight: bold;
