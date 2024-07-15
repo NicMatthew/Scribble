@@ -7,6 +7,15 @@ let submitBtn = document.getElementById("submit-btn")
 let passEye = document.getElementById("pass-eye")
 let alertArr = []
 
+function checkUniqueEmail(email) {
+    users.forEach((user)=>{
+        if (user.EmailUser == email) {
+            return true
+        }
+    })
+    return true
+}
+
 function removeAllAlert() {
     alertArr.forEach((alert)=>{
         alert.classList.remove("alert")
@@ -53,6 +62,14 @@ submitBtn.addEventListener("click", (e)=>{
         let parEl = email.parentElement
         let alert = document.createElement("p")
         alert.innerHTML = "Email is not valid!"
+
+        parEl.classList.add("alert")
+        alertArr.push(parEl)
+        parEl.appendChild(alert)
+    } else if (checkUniqueEmail(email.value)) {
+        let parEl = email.parentElement
+        let alert = document.createElement("p")
+        alert.innerHTML = "Email has already been taken!"
 
         parEl.classList.add("alert")
         alertArr.push(parEl)

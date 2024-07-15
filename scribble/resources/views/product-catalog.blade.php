@@ -38,6 +38,7 @@
         <div class="heading">
             <div class="left-heading">
                 <p class="h2">{{ $category_select ?? 'All Products' }}</p>
+                
                 @if($subcategory_select != null || $subcategory_select != "")
                     <img src="/icons/chevron-right.svg" alt="right">
                     <p class="b1">{{ $subcategory_select }}</p>
