@@ -106,7 +106,7 @@
         </div>
     </div>
     <div class="modal" id="modal">
-        <div class="select-voucher">
+        <div class="select-voucher" id="voucherList">
             <div class="header">
                 <div class="close-btn" id="close-btn">
                     <img src="/icons/close.svg">
@@ -114,19 +114,40 @@
                 <div class="header-title">Discount</div>
                 <hr class="divider">
             </div>
-            <div class="voucher-list">
+            <div class="voucher-list" id="voucher-list">
                 <h3 class="voucher-category-title">Discount Shipping</h3>
-                <div class="voucher-category" id="voucherShipment">
-                    @foreach ($voucherShipment as $voucher)
-                        @include("components/voucher")
-                    @endforeach
-                </div>
+                @if (count($voucherShipment) == 0)
+                    <h3 class="voucher-alert b1">No Discount Shipping Available</h3>
+                    <div class="voucher-category" id="voucherShipment">
+
+                    </div>
+                @else
+                    <div class="voucher-category" id="voucherShipment">
+                        @foreach ($voucherShipment as $voucher)
+                            @include("components/voucher")
+                        @endforeach
+                    </div>
+                @endif
                 <h3 class="voucher-category-title">Discount Product</h3>
+                @if (count($voucherProduct) == 0)
+                    <h3 class="voucher-alert b1">No Discount Product Available</h3>
+                    <div class="voucher-category" id="voucherProduct">
+
+                    </div>
+                @else
                 <div class="voucher-category" id="voucherProduct">
                     @foreach ($voucherProduct as $voucher)
                         @include("components/voucher")
                     @endforeach
                 </div>
+                @endif
+            </div>
+        </div>
+        <div class="message-container" id="message-container">
+            <img src="/icons/reminder-delete.svg">
+            <div class="alert-message">Address is empty!</div>
+            <div class="btn-container">
+                <div class="cancel-btn" id="cancel-btn">OK</div>
             </div>
         </div>
     </div>
@@ -140,8 +161,7 @@
         <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
         <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
         <input type="hidden" name="totalPrice" value="" id="totalPriceInput">
-        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">6t
+        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">
     </form>
-    <script
 </body>
 </html>

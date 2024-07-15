@@ -37,10 +37,14 @@
     <div class="content">
         <div class="heading">
             <div class="left-heading">
-                <p class="h2">{{ $category_select ?? 'All Products' }}</p>
-                @if($subcategory_select != null || $subcategory_select != "")
-                    <img src="/icons/chevron-right.svg" alt="right">
-                    <p class="b1">{{ $subcategory_select }}</p>
+                @if($search == null)
+                    <p class="h2">{{ $category_select ?? 'All Products' }}</p>
+                    @if($subcategory_select != null || $subcategory_select != "")
+                        <img src="/icons/chevron-right.svg" alt="right">
+                        <p class="b1">{{ $subcategory_select }}</p>
+                    @endif
+                @else
+                    <p class="h2"> Search Result of : {{ $search }}</p>
                 @endif
             </div>
             <div class="right-heading">

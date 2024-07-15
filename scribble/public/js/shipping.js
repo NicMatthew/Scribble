@@ -1,5 +1,7 @@
 const voucherBtn = document.getElementById("voucher-btn");
 const modal = document.getElementById("modal");
+const message = document.getElementById("message-container")
+const voucherList = document.getElementById("voucherList")
 const closeBtn = document.getElementById("close-btn");
 const voucherSel = document.getElementById("voucher-title");
 let vouchersProduct = document.getElementById("voucherProduct").children
@@ -19,6 +21,7 @@ function numberWithCommas(x) {
 }
 
 voucherBtn.addEventListener("click", (e) => {
+    voucherList.classList.add("active")
     modal.classList.add("active");
 });
 
@@ -27,6 +30,7 @@ closeBtn.addEventListener("click", (e) => {
 });
 
 function closeOverlay() {
+    voucherList.classList.remove("active")
     modal.classList.remove("active");
 }
 
@@ -88,7 +92,7 @@ function setPrice() {
     } else {
         tempDiscount += val2
     }
-    
+
 
     discountPrice.innerText = "Rp. " + numberWithCommas(tempDiscount)
     totalPrice.innerText = "Rp. " + numberWithCommas(tempSub - tempDiscount + 5000)
@@ -160,7 +164,17 @@ modal.addEventListener("click", (e) => {
 });
 
 payBtn.addEventListener("click", (e)=>{
-    document.forms["shipping-form"].submit()
+    if(document.getElementById('addressID').value == ''){
+        modal.classList.add("active")
+        message.classList.add("active")
+    }else{
+        document.forms["shipping-form"].submit()
+    }
+})
+
+document.getElementById("cancel-btn").addEventListener("click", (e)=>{
+    modal.classList.remove('active')
+    message.classList.remove('active')
 })
 
 let addressSelect = document.getElementById("address-select");

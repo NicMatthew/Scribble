@@ -15,6 +15,21 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
+    public function checkWishlist($products) {
+        foreach($products as $product) {
+            $wish = Wishlist::where('UserID', Auth::user()->UserID)
+            ->where('ProductID', $product->ProductID)
+            ->first();
+
+            if ($wish != null) {
+                $product->inWishlist = true;
+            } else {
+                $product->inWishlist = null;
+            }
+        }
+        return $products;
+    }
+
     protected function setImageAndMinPrice($products) {
         foreach ($products as $product) {
             // Adding the first image
@@ -72,10 +87,11 @@ class ProductController extends Controller
 
         // Get wishlist product IDs
         $wishlistProductIDs=null;
-        if(Auth::check()){
-            $wishlistProductIDs = Wishlist::where('UserID', Auth::id())->pluck('ProductID')->toArray();
-        }
 
+        if(auth()->check() == true){
+            $wishlistProductIDs = Wishlist::where('UserID', Auth::id())->pluck('ProductID')->toArray();
+            $products = $this->checkWishlist($products);
+        }
 
         return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs"));
     }
@@ -157,18 +173,26 @@ class ProductController extends Controller
 
             }
 
-            
+
         }
-        
+
 
         // Get wishlist product IDs
         $user = Auth::user();
+        if($user == null){
+            return redirect()->route('log-in');
+        }
         $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
+
+        $products = $this->checkWishlist($products);
         return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting','wishlistProductIDs'));
     }
 
     public function toggleWishlist(Request $request)
     {
+        if(auth()->check() == false){
+            return redirect()->route('log-in');
+        }
         $user = Auth::user();
         $productId = $request->input('product_id');
 
@@ -187,7 +211,7 @@ class ProductController extends Controller
             $NewWishlist->save();
         }
 
-        return redirect()->to($request->url);
+        return redirect()->back();
     }
 
 

@@ -85,7 +85,7 @@ Route::get('/buy-now', [ShippingController::class, 'buyNow'])->name('buy.now');
 
 Route::get('/payment-qr', function () {
     return view('payment-qr');
-});
+})->name("payment");
 
 Route::get('/terms', function () {
     return view('terms');
