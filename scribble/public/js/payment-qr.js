@@ -21,6 +21,9 @@ function checkOTP() {
 
 function otpTrue() {
     overlay.style.display = "block"
+    setInterval(()=>{
+        document.forms["otp-form"].submit()
+    }, 3000)
 }
 
 submitButton.addEventListener("click", (e)=>checkOTP());

@@ -37,17 +37,20 @@ class AddressController extends Controller
     public function editAddress()
     {
         // $addressId = $request->addressID;
-        Address::where('AddressID', request()->addressID)
-        ->update([
-            "AddressName" => request()->address_name,
-            "RecipientName" => request()->recipient_name,
-            "PostCode" => request()->post_code,
-            "FullAddress" => request()->full_address,
-            "PhoneNumber" => request()->phone_number
-        ]);
+        // dd(request()->all());
+        $address = Address::find(request()->addressID);
+        // dd($address);
+
+        $address->AddressName = request()->address_name;
+        $address->RecipientName = request()->recipient_name;
+        $address->PostCode = request()->post_code;
+        $address->FullAddress = request()->full_address;
+        $address->PhoneNumber = request()->phone_number;
+
+        $address->update();
 
          // Redirect back to the page where the form was submitted
-         return redirect()->route("show-addresses", auth()->id());
+         return redirect()->to(request()->url);
     }
 
     public function deleteAddress(Request $request)
@@ -71,11 +74,11 @@ class AddressController extends Controller
         }
 
         // dd($address_edit);
-        return view('address', 
+        return view('address',
         [
-            'addresses' => $addresses, 
+            "url" => request()->url,
+            'addresses' => $addresses,
             "address_edit" => $address_edit
         ]);
-
     }
 }

@@ -53,43 +53,14 @@ keepButton.addEventListener("click", function () {
     modalDelete.classList.remove("active");
 });
 
+let addressActive = null;
 
-// tanda addres kepilih
-// document.addEventListener("DOMContentLoaded", function () {
-//     let addressActive = null;
+const addressDivs = document.querySelectorAll(".address");
 
-//     const addressDivs = document.querySelectorAll(".address");
-
-//     addressDivs.forEach(function (addressDiv) {
-//         addressDiv.addEventListener("click", function () {
-//             if (addressActive !== null) {
-//                 addressActive.classList.remove("active-border");
-//             }
-
-//             this.classList.add("active-border");
-//             addressActive = this;
-
-//             const addressName = this.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
-//             const fullAddress = this.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
-
-//             // Set hidden form fields with selected address details
-//             document.getElementById("selectedAddressName").value = addressName;
-//             document.getElementById("selectedFullAddress").value = fullAddress;
-
-//             // Submit the form
-//             document.getElementById("shippingForm").submit();
-//         });
-//     });
-// });
-
-document.addEventListener("DOMContentLoaded", function () {
-    let addressActive = null;
-
-    const addressDivs = document.querySelectorAll(".address");
-
-    addressDivs.forEach(function (addressDiv) {
-        addressDiv.addEventListener("click", function () {
-            if (addressActive !== null) {
+addressDivs.forEach(function (addressDiv) {
+    addressDiv.addEventListener("click", (e) => {
+        if (e.target.closest(addressDiv)) {
+            if (addressActive != null) {
                 addressActive.classList.remove("active-border");
             }
 
@@ -108,22 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Redirect to the shipping page with query parameters
             window.location.href = url;
-        });
+        }
     });
 });
 
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     console.log("DOM fully loaded and parsed");
-
-//     const addressDivs = document.querySelectorAll(".address");
-
-//     addressDivs.forEach(function (addressDiv) {
-//         addressDiv.addEventListener("click", function () {
-//             console.log("Clicked address:", this);
-//         });
-//     });
-// });
-
+document.getElementById("url").value = window.location.href;

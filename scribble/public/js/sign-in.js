@@ -8,12 +8,13 @@ let passEye = document.getElementById("pass-eye")
 let alertArr = []
 
 function checkUniqueEmail(email) {
+    let check = false
     users.forEach((user)=>{
         if (user.EmailUser == email) {
-            return true
+            check = true
         }
     })
-    return true
+    return check
 }
 
 function removeAllAlert() {

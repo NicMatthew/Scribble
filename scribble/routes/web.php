@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\signinController;
+use App\Http\Controllers\SigninController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ShippingController;
 use App\Http\Controllers\TransactionListController;
 use App\Models\Product;
@@ -27,11 +28,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // })->name("home");
 
-Route::get("/sign-in", [signinController::class, "signin"])->name("sign-in");
-Route::post("/sign-in/create", [signinController::class, "createUser"])->name("createUser");
-Route::get("/log-in", [signinController::class, "login"])->name("log-in");
-Route::post("/log-in", [signinController::class, "authenticate"])->name("authenticate");
-Route::post("/log-out", [signinController::class, "logout"])->name("log-out");
+Route::get("/sign-in", [SigninController::class, "signin"])->name("sign-in");
+Route::post("/sign-in/create", [SigninController::class, "createUser"])->name("createUser");
+Route::get("/log-in", [SigninController::class, "login"])->name("log-in");
+Route::post("/log-in", [SigninController::class, "authenticate"])->name("authenticate");
+Route::post("/log-out", [SigninController::class, "logout"])->name("log-out");
 
 Route::get('/profile', [UserController::class, 'showProfile'])->name("profile")->middleware('auth');
 Route::get('/profile/edit', [UserController::class, 'editProfile'])->middleware('auth')->name("edit-profile");
@@ -83,9 +84,8 @@ Route::get('/buy-now', [ShippingController::class, 'buyNow'])->name('buy.now');
 //     return view('address');
 // });
 
-Route::get('/payment-qr', function () {
-    return view('payment-qr');
-})->name("payment");
+Route::get('/payment-qr', [PaymentController::class, "qr"])->name("payment");
+Route::post('/payment/successful', [PaymentController::class, "paymentSuccess"])->name("paymentSuccess");
 
 Route::get('/terms', function () {
     return view('terms');
@@ -136,4 +136,4 @@ Route::get('/dashboard/discount/delete', [AdminController::class, "deleteDiscoun
 Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
 Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");
 
-Route::post("/make-order", [ShippingController::class, "makeOrder"])->name("make-order");
+Route::post("/make-order", [PaymentController::class, "makeOrder"])->name("make-order");

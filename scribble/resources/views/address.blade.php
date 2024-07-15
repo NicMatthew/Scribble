@@ -81,8 +81,10 @@
                 <p class="b1" style="font-weight: bold; margin-bottom:15px; display:flex; align-items: center; justify-content: center">Edit Address</p>
                 <form method="POST" action="{{ route('edit-address') }}" class="form-address">
                     @csrf
-                    
+
                     <div class="form-address">
+                        <input type="hidden" value="{{ $address->AddressID }}" name="addressID">
+                        <input type="hidden" value="{{ $url }}" name="url">
                         <div class=input-box>
                             <p>Address Name</p>
                             <input type="text" name="address_name" placeholder="Address Name" value="{{ $address_edit->AddressName }}"required>
@@ -133,6 +135,7 @@
     </div>
     <form action="{{ route("find-address") }}" name="form-edit" method="POST">
         @csrf
+        <input type="hidden" value="" name="url" id="url">
         <input type="hidden" value="" name="addressID" id="addressID">
         <input type="hidden" value="{{ auth()->id() }}" name="userID" id="userID">
     </form>

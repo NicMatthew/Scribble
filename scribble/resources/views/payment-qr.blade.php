@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="\css\variable.css">
     <link rel="stylesheet" href="\css\payment-qr.css">
     <link rel="stylesheet" href="\css\header-standard.css">
-    <script src=""></script>
+    <script src="\js\payment-qr.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -44,12 +44,14 @@
                 <div class="container-payment-info">
                     <div class="container-total-payment">
                         <p>Total</p>
-                        <p>Rp. 100.000</p>
+                        <p>Rp. {{ number_format($totalPrice, 0, ',', '.') }}</p>
                     </div>
                     <div class="container-payment-otp">
-                        <div class="input-otp">
+                        <form class="input-otp" method="POST" action="{{ route("paymentSuccess") }}" name="otp-form">
+                            @csrf
+                            <input type="hidden" name="transactionID" value="{{ $transactionID }}">
                             <input type="text" placeholder="Input OTP Code" id="input-otp">
-                        </div>
+                        </form>
                         <div class="submit-button" id="submit-button">
                             <img src="/icons/next.svg" alt="">
                         </div>
@@ -60,12 +62,7 @@
         </div>
         <div id="overlay">
             <div class="payment-success">
-                <a class="continue-button" href="/">
-                    <p>Continue</p>
-                </a>
             </div>
         </div>
-
-        <script src="\js\payment-qr.js"></script>
 </body>
 </html>

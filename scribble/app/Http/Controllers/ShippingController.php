@@ -112,47 +112,11 @@ class ShippingController extends Controller
                     'CategoryID' => Category::join('sub_categories','sub_categories.CategoryProductID','=','categories.CategoryProductID')->where('SubCategoryProductID',$product->SubCategoryProductID)->first()->CategoryProductID
                 ]
             ];
-        } 
+        }
         $voucherProduct = VoucherProduct::all();
         $voucherShipment = VoucherShipment::all();
 
         // Redirect ke halaman shipping dengan data produk yang dibeli
         return view('shipping', compact('selectedProducts', 'voucherProduct', 'voucherShipment', "addressID"));
-    }
-
-
-
-    public function makeOrder(Request $request) {
-        // dd($request->all());
-        $newTransHead = new Transaction();
-
-        $newTransHead->UserID = auth()->id();
-        $newTransHead->VoucherShipmentID = $request->voucherShipmentID;
-        $newTransHead->VoucherProductID = $request->voucherProductID;
-        $newTransHead->TransactionDate = Carbon::now()->toDateString();
-        $newTransHead->TransactionStatus = "Unpaid";
-        $newTransHead->ReviewStatus = "none";
-        $newTransHead->AddressID = $request->addressID;
-        $newTransHead->TotalPrice = $request->totalPrice;
-
-        $newTransHead->save();
-
-        for ($i = 0; $i < count($request->productIDs); $i++) {
-            $newTransDetail = new TransactionDetail();
-
-            $newTransDetail->TransactionID = $newTransHead->id;
-            $newTransDetail->ProductID = $request->productIDs[$i];
-            $newTransDetail->VariantID = $request->variantIDs[$i];
-            $newTransDetail->Quantity = $request->quantity[$i];
-
-            $newTransDetail->save();
-
-            CartDetail::where('UserID', auth()->id())
-                    ->where('ProductID', $request->productIDs[$i])
-                    ->where('VariantID', $request->variantIDs[$i])
-                    ->delete();
-        }
-
-        return redirect()->route("payment");
     }
 }

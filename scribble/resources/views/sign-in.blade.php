@@ -27,12 +27,9 @@
                 <input type="text" placeholder="Phone Number" name="phoneNumber" id="phoneNumber" required>
             </div>
 
-            <div class="input-box @error("email") alert @enderror">
+            <div class="input-box">
                 <h3>Email</h3>
                 <input type="email" placeholder="Email" name="email" id="email" required>
-                @error("email")
-                    <p>{{ $message }}</p>
-                @enderror
             </div>
 
             <div class="input-box">
