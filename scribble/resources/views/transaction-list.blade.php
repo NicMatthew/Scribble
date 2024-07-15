@@ -42,7 +42,7 @@
                             </div>
                             <div class="all-items">
                                 @foreach ($transaction->details as $details)
-                                    <div class="item">
+                                    <div class="item">  
                                         <div class="item-set">
                                             <div class="left-side-item">
                                                 <img src="{{ $details->Image }}" alt="">
@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                         <div class="right-side-item">
-                                            <a href="#" class="buy-again-btn">
+                                            <a href="/product-catalog/{{ $details->ProductID }}" class="buy-again-btn">
                                                 <img src="/icons/trolley.svg" alt="tes">
                                                 <p class="b2 buy-again-text">Buy Again</p>
                                             </a>
