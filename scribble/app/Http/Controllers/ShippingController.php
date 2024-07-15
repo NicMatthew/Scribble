@@ -130,7 +130,7 @@ class ShippingController extends Controller
         $newTransHead->VoucherShipmentID = $request->voucherShipmentID;
         $newTransHead->VoucherProductID = $request->voucherProductID;
         $newTransHead->TransactionDate = Carbon::now()->toDateString();
-        $newTransHead->TransactionStatus = "Packing";
+        $newTransHead->TransactionStatus = "Unpaid";
         $newTransHead->ReviewStatus = "none";
         $newTransHead->AddressID = $request->addressID;
         $newTransHead->TotalPrice = $request->totalPrice;
@@ -152,5 +152,7 @@ class ShippingController extends Controller
                     ->where('VariantID', $request->variantIDs[$i])
                     ->delete();
         }
+
+        return redirect()->route("payment");
     }
 }
