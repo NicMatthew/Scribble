@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Product Detail | Scribble</title>
         <link rel="shortcut icon" href="/images/simple_logo.svg">
         <link href="/css/variable.css" rel="stylesheet">
         <link href="/css/product-detail.css" rel="stylesheet">
@@ -46,7 +46,7 @@
                                 @endfor
                             </div>
                             <div class="review-sold" style="display: flex; align-items:center">
-                                <p class="mb-0 b3">(0 reviews) | 0 Terjual - yang ini blom</p>
+                                <p class="mb-0 b3">(0 reviews) | 0 Sold- yang ini blom</p>
                             </div>
                         </div>
                         <div class="price-product mb-1 b2" style="display: flex; align-items:center">
@@ -73,7 +73,7 @@
                         <div class="check-out">
                             <div id="add-to-cart-btn" class="btn mr-2" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                                 <img src="/icons/cart-product-detail.svg" alt="">
-                                <p class="mb-0 ml-2 b3" style="font-weight: bold; color:white">Add to Cart</p>
+                                <p class="mb-0 ml-2 b3" style="font-weight:bold; color:white">Add to Cart</p>
                             </div>
                             <form action="{{ route('cart.add') }}" method="POST" id="add-to-cart-form" style="display: none" name="add-to-cart-form">
                                 @csrf
@@ -84,7 +84,7 @@
                                 <input type="text" name="var" value="" id="variant-input">
                             </form>
                             <a id="buy-now-btn" href="" class="btn-2 mr-3" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
-                                <p class="mb-0 b3" style="font-weight: bold; color:white">Buy Now</p>
+                                <p class="mb-0 b3" style="font-weight:bold ;color:white">Buy Now</p>
                             </a>
                             <form action="{{ route('buy.now') }}" method="GET" id="buy-now-form" style="display: none;">
                                 <input type="hidden" name="productIDs[]" value="{{ $selectedProduct->ProductID }}">

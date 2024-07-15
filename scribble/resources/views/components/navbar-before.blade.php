@@ -28,7 +28,7 @@
                 <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0" method="get" action="{{ route("product-catalog") }}">
                     <input autocomplete="off" type="search" class="form-control b3"  id="search_term" name="search" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" value=""/>
                     <button type="submit" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer; width: 50px; border:none; outline:none">
-                        <img src="/icons/search.png" alt="Search" style="width:50%; padding-top: 5px">
+                        <img src="/icons/search.png" alt="Search" style="width:48%; padding-top: 1px">
                     </button>
                 </form>
             </div>
@@ -38,7 +38,7 @@
             <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
             <div class="d-flex">
                 <a class="btn text-white b3" data-mdb-ripple-init style="background-color: #F2758F; border-radius: 10px; height: 35px; display: flex; align-items: center;" href="{{route("sign-in")}}" role="button">
-                <img src="/icons/people.png" alt="" style="width: 18px; height: 20px; margin-right: 8px;">
+                <img src="/icons/people.png" alt="" style="width: 18px; height: 20px; margin-right: 8px; font-weight:bold">
                 Sign Up
                 </a>
             </div>

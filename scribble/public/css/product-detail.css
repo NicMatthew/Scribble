@@ -343,8 +343,8 @@
 }
 
 .rate-product img{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     margin-right: 15px;
 }
 
@@ -372,13 +372,13 @@
     font-family: Helvetica;
     font-size: 18px;
     padding-bottom: 5px;
-    color: var(--prim-1);
+    color: var(--grey);
 }
 
 .many-users{
     font-family: Helvetica;
     font-size: 18px;
-    color: var(--prim-1);
+    color: var(--grey);
     transform: translateY(-5px);
 }
 

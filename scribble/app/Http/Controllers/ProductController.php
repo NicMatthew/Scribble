@@ -157,7 +157,9 @@ class ProductController extends Controller
 
             }
 
+            
         }
+        
 
         // Get wishlist product IDs
         $user = Auth::user();

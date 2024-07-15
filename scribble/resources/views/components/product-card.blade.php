@@ -55,7 +55,7 @@
                         <img src="/icons/star.svg">
                         <img src="/icons/star.svg"> -->
                     </div>
-                    <h5 class="sell">100 Terjual</h5>
+                    <h5 class="sell">100 Sold</h5>
                 </div>
                 <div class="price">
                     <h4>Rp. {{ number_format($product-> Price, 0)}}</h4>

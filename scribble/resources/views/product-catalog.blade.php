@@ -47,11 +47,11 @@
                 <div class="b3 dropdown-sort">
                     <div class="sort-btn">
                         <div class="left-part">
-                            <img src="/icons/sort.svg" alt="sort">
+                            <img src="/icons/sort.svg" alt="sort" style="width: 25%">
                             <p class="mb-0 b3" style="display: flex; align-items:center" id="sort_title">{{ $sorting ?? "Sort By"}}</p>
                         </div>
                         <div class="right-part">
-                            <img src="/icons/chevron-down.svg" alt="down">
+                            <img src="/icons/chevron-down.svg" alt="down" style="width: 80%">
                         </div>
                         <ul class="dropdown-sort-content">
                             <li class="b3 sorting"><a href="#" style="text-decoration:none">Top Sales</a></li>
