@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    z-index: -3;
 }
 
 .left-address p {
@@ -173,6 +174,7 @@
     padding-bottom: 2vh;
     padding-left: 2vh;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn:hover{
@@ -220,14 +222,14 @@
     width: 80%;
     background-color: white;
     color: #f2758f;
-    border-color: #f2758f;
-    border-style: solid;
+    outline: #f2758f solid 3px;
     border-radius: 10px;
     margin-top: 2.5vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    padding-left: 2vh;
     cursor: pointer;
+    font-size: 1rem;
+    font-family: Helvetica;
 }
 
 .modal, .modal-delete{
