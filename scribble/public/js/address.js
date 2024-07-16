@@ -59,7 +59,11 @@ const addressDivs = document.querySelectorAll(".address");
 
 addressDivs.forEach(function (addressDiv) {
     addressDiv.addEventListener("click", (e) => {
-        if (e.target != e.currentTarget ) {
+        console.log(e.target)
+        console.log(e.currentTarget)
+        console.log(addressDiv.firstElementChild)
+
+        if (e.target != e.currentTarget && e.currentTarget != addressDiv.firstElementChild) {
             return
         }
 
@@ -67,11 +71,11 @@ addressDivs.forEach(function (addressDiv) {
             addressActive.classList.remove("active-border");
         }
 
-        this.classList.add("active-border");
-        addressActive = this;
+        addressDiv.classList.add("active-border");
+        addressActive = addressDiv;
 
-        const addressName = this.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
-        const fullAddress = this.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
+        const addressName = addressDiv.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
+        const fullAddress = addressDiv.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
 
         // Encode addressName and fullAddress to be used in URL
         const encodedAddressName = encodeURIComponent(addressName);
