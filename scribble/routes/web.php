@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderAdminController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ShippingController;
 use App\Http\Controllers\TransactionListController;
@@ -113,9 +114,12 @@ Route::get('/review', function () {
 Route::get('/wishlist', function () {
     return view('wishlist');
 });
-Route::get('/order-admin', function () {
-    return view('/admin/order-admin');
-});
+// Route::get('/order-admin', function () {
+//     return view('/admin/order-admin');
+// });
+
+Route::get('/order-admin', [OrderAdminController::class, 'index']);
+Route::post('/order-admin/update/{id}', [OrderAdminController::class, 'updateStatus'])->name("order-admin-update");
 
 Route::get('/wishlist', [ProductController::class, 'showWishlist'])->name('wishlist-index');
 

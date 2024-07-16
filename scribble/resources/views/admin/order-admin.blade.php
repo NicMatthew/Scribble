@@ -20,7 +20,7 @@
         <div class="orders">
             <div class="title-order">
                 <p class="h2 all-orders-title">All Orders</p>
-                <p class="b2 total-orders">Total Orders: 5</p>
+                <p class="b2 total-orders">Total Orders: {{ $transactions->count() }}</p>
             </div>
             <div class="all-orders">
                 <table>
@@ -32,91 +32,47 @@
                         <th class="b2">Total Payment</th>
                         <th class="b2">Action</th>
                     </tr>
-                    <tr class="data">
-                        <td class="b2">1</td>
-                        <td class="b2">OD001</td>
-                        <td class="b2">5 May 2024</td>
-                        <td class="b2">Packaged</td>
-                        <td class="b2">Rp 100.000</td>
-                        <td>
-                            <div class="action-btn">
-                                <form action="#">
-                                    <input type="submit" value="Proceed" class="proceed-btn b2"/>
-                                </form>
-                                <form action="#">
-                                    <input type="submit" value="Cancel" class="cancel-btn b2"/>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="data">
-                        <td class="b2">1</td>
-                        <td class="b2">OD001</td>
-                        <td class="b2">5 May 2024</td>
-                        <td class="b2">Packaged</td>
-                        <td class="b2">Rp 100.000</td>
-                        <td>
-                            <div class="action-btn">
-                                <form action="#">
-                                    <input type="submit" value="Proceed" class="proceed-btn b2"/>
-                                </form>
-                                <form action="#">
-                                    <input type="submit" value="Cancel" class="cancel-btn b2"/>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="data">
-                        <td class="b2">1</td>
-                        <td class="b2">OD001</td>
-                        <td class="b2">5 May 2024</td>
-                        <td class="b2">Packaged</td>
-                        <td class="b2">Rp 100.000</td>
-                        <td>
-                            <div class="action-btn">
-                                <form action="#">
-                                    <input type="button" value="Proceed" class="proceed-btn b2"/>
-                                </form>
-                                <form action="#">
-                                    <input type="button" value="Cancel" class="cancel-btn b2"/>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="data">
-                        <td class="b2">1</td>
-                        <td class="b2">OD001</td>
-                        <td class="b2">5 May 2024</td>
-                        <td class="b2">Packaged</td>
-                        <td class="b2">Rp 100.000</td>
-                        <td>
-                            <div class="action-btn">
-                                <form action="#">
-                                    <input type="submit" value="Proceed" class="proceed-btn b2"/>
-                                </form>
-                                <form action="#">
-                                    <input type="submit" value="Cancel" class="cancel-btn b2"/>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="data">
-                        <td class="b2">1</td>
-                        <td class="b2">OD001</td>
-                        <td class="b2">5 May 2024</td>
-                        <td class="b2">Finished</td>
-                        <td class="b2">Rp 100.000</td>
-                        {{-- <td class="b2"></td> --}}
-                    </tr>
+                    @foreach($transactions as $key => $transaction)
+                        <tr class="data">
+                            <td class="b2">{{ $key + 1 }}</td>
+                            <td class="b2">{{ $transaction->TransactionID }}</td>
+                            <td class="b2">{{ $transaction->TransactionDate }}</td>
+                            <td class="b2">{{ $transaction->TransactionStatus }}</td>
+                            <td class="b2">Rp {{ number_format($transaction->TotalPrice, 0, ',', '.') }}</td>
+                            <td>
+                                <div class="action-btn">
+                                    @if(!in_array($transaction->TransactionStatus, ['Finished', 'Canceled']))
+                                        <form action="{{ route('order-admin-update', $transaction->TransactionID) }}" method="POST" class="form-proceed">
+                                            @csrf
+                                            <input type="hidden" name="status" value="{{ $transaction->TransactionStatus === 'Paid' ? 'Packaged' : ($transaction->TransactionStatus === 'Packaged' ? 'In Delivery' : 'Finished') }}">
+                                            <input type="submit" value="Proceed" class="proceed-btn b2"/>
+                                        </form>
+                                        <form action="{{ route('order-admin-update', $transaction->TransactionID) }}" method="POST" class="form-cancel">
+                                            @csrf
+                                            <input type="hidden" name="status" value="Canceled">
+                                            <input type="submit" value="Cancel" class="cancel-btn b2"/>
+                                        </form>
+                                    @endif
+                                    {{-- <form action="#">
+                                        <input type="submit" value="Proceed" class="proceed-btn b2"/>
+                                    </form>
+                                    <form action="#">
+                                        <input type="submit" value="Cancel" class="cancel-btn b2"/>
+                                    </form> --}}
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </table>
-                <div class="table-navigation">
+                {{-- <div class="table-navigation">
                     <a href="#"><img src="/icons/previous-icon-order-admin.svg" alt=""></a>
                     <p class="b2">1</p>
                     <a href="#"><img src="/icons/next-icon-order-admin.svg" alt=""></a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
+
     <div class="modal-delete hidden" id="modal-delete">
         <div class="overlay-2">
             <div class="form-delete">
@@ -130,6 +86,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal-proceed hidden" id="modal-proceed">
         <div class="overlay-2">
             <div class="form-delete">
