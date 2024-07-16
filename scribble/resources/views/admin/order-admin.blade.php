@@ -37,7 +37,7 @@
                             <td class="b2">{{ $key + 1 }}</td>
                             <td class="b2">{{ $transaction->TransactionID }}</td>
                             <td class="b2">{{ $transaction->TransactionDate }}</td>
-                            <td class="b2">{{ $transaction->TransactionStatus }}</td>
+                            <td class="b2" style="font-weight : bold ; @if($transaction->TransactionStatus === 'Paid') color: black; @elseif($transaction->TransactionStatus === 'Packaged') color: #EDC158; @elseif($transaction->TransactionStatus === 'In Delivery') color: #52A9CF; @elseif($transaction->TransactionStatus === 'Finished') color: #78C354; @elseif($transaction->TransactionStatus === 'Canceled') color: #F2758F; @endif">{{ $transaction->TransactionStatus }}</td>
                             <td class="b2">Rp {{ number_format($transaction->TotalPrice, 0, ',', '.') }}</td>
                             <td>
                                 <div class="action-btn">
@@ -47,11 +47,16 @@
                                             <input type="hidden" name="status" value="{{ $transaction->TransactionStatus === 'Paid' ? 'Packaged' : ($transaction->TransactionStatus === 'Packaged' ? 'In Delivery' : 'Finished') }}">
                                             <input type="submit" value="Proceed" class="proceed-btn b2"/>
                                         </form>
-                                        <form action="{{ route('order-admin-update', $transaction->TransactionID) }}" method="POST" class="form-cancel">
-                                            @csrf
-                                            <input type="hidden" name="status" value="Canceled">
-                                            <input type="submit" value="Cancel" class="cancel-btn b2"/>
-                                        </form>
+                                        @if($transaction->TransactionStatus !== 'In Delivery')
+                                            <form action="{{ route('order-admin-update', $transaction->TransactionID) }}" method="POST" class="form-cancel">
+                                                @csrf
+                                                <input type="hidden" name="status" value="Canceled">
+                                                <input type="submit" value="Cancel" class="cancel-btn b2"/>
+                                            </form>
+                                        @endif
+                                    @endif
+                                    @if($transaction->TransactionStatus === 'Finished')
+                                        <p class="b2">Completed</p>
                                     @endif
                                     {{-- <form action="#">
                                         <input type="submit" value="Proceed" class="proceed-btn b2"/>
