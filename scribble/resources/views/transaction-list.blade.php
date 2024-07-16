@@ -33,7 +33,7 @@
                             </div>
                             <div class="content-header-right">
                                 <p class="b1 order-id">Transaction ID: {{  $transaction->TransactionID }}</p>
-                                <p class="b1 status">{{  $transaction->TransactionStatus }}</p>
+                                <p class="b1 status {{ $transaction->statusColor }}">{{  $transaction->TransactionStatus }}</p>
                             </div>
                         </div>
                         <div class="main-content">
@@ -42,7 +42,7 @@
                             </div>
                             <div class="all-items">
                                 @foreach ($transaction->details as $details)
-                                    <div class="item">  
+                                    <div class="item">
                                         <div class="item-set">
                                             <div class="left-side-item">
                                                 <img src="{{ $details->Image }}" alt="">
@@ -70,7 +70,7 @@
                                             </div>
                                         @else
                                             <div class="right-side-item">
-                                                
+
                                             </div>
                                         @endif
                                     </div>
@@ -82,7 +82,7 @@
                                     <img src="/icons/cancel-order.svg" alt="tes">
                                     <p class="b2 cancel-text" >Cancel</p>
                                 </a>
-                            </div>  
+                            </div>
                             @endif
                         </div>
                     </div>

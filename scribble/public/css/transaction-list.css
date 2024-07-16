@@ -71,10 +71,33 @@
 
 .status{
     padding: 10px 20px 10px 20px;
-    background-color: var(--prim-2);
-    color: var(--white);
     text-align: center;
     border-radius: 15px;
+}
+
+.bnw {
+    background-color: var(--grey);
+    color: #303030;
+}
+
+.blue {
+    background-color: var(--sec-1);
+    color: var(--white);
+}
+
+.yellow {
+    background-color: var(--prim-2);
+    color: var(--white);
+}
+
+.green {
+    background-color: var(--sec-2);
+    color: var(--white);
+}
+
+.pink {
+    background-color: var(--prim-1);
+    color: var(--white);
 }
 
 .main-content{
@@ -182,9 +205,9 @@
 
 /* modal */
 .exclaimation-mark{
-    margin-bottom: 15px; 
-    display: flex; 
-    align-items: center; 
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -192,9 +215,9 @@
   background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
   height: 100vh;
-  position: fixed; 
+  position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   z-index: 100;
   overflow-y: auto;
   align-items: flex-start;
