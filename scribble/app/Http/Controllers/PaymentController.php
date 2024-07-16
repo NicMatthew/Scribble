@@ -41,7 +41,7 @@ class PaymentController extends Controller
         }
 
         $totalPrice = $request->totalPrice;
-        $transactionID = $newTransHead->id;
+        $transactionID = $newTransHead->TransactionID;
 
         return redirect()->route("payment", compact("totalPrice", "transactionID"));
     }
