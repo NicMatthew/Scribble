@@ -40,8 +40,19 @@ class TransactionListController extends Controller
                 ->get();
             // discount masih belum
             $transaction->Discount = VoucherProduct::where('VoucherProductID',$transaction->VoucherProductID)->get();
+
+            if ($transaction->TransactionStatus == "Paid") {
+                $transaction->statusColor = "bnw";
+            } else if ($transaction->TransactionStatus == "In Packaging") {
+                $transaction->statusColor = "yellow";
+            } else if ($transaction->TransactionStatus == "In Delivery") {
+                $transaction->statusColor = "blue";
+            } else if ($transaction->TransactionStatus == "Finished") {
+                $transaction->statusColor = "green";
+            } else if ($transaction->TransactionStatus == "Cancelled") {
+                $transaction->statusColor = "pink";
+            }
         }
-        // dd($transactions);
 
         return view('transaction-list', compact('transactions'));
     }
@@ -52,7 +63,7 @@ class TransactionListController extends Controller
 
         Transaction::where('TransactionID',request()->TransactionID)
         ->where('UserID',auth()->id())
-        ->update(['TransactionStatus' => 'Canceled']);
+        ->update(['TransactionStatus' => 'Cancelled']);
         return redirect()->route('transaction-list');
     }
 }
