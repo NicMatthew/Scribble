@@ -27,7 +27,7 @@ class PaymentController extends Controller
         for ($i = 0; $i < count($request->productIDs); $i++) {
             $newTransDetail = new TransactionDetail();
 
-            $newTransDetail->TransactionID = $newTransHead->id;
+            $newTransDetail->TransactionID = $newTransHead->TransactionID;
             $newTransDetail->ProductID = $request->productIDs[$i];
             $newTransDetail->VariantID = $request->variantIDs[$i];
             $newTransDetail->Quantity = $request->quantity[$i];

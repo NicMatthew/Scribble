@@ -106,7 +106,7 @@
                             <input type="text" name="post_code" placeholder="Post Code" value="{{ $address_edit->PostCode }}"required>
                         </div>
                         <button type="submit" class="btn"> Edit Address </button>
-                        <a href="/addresses/{{auth()->id()}}" class="cancel-edit" id="cancel-edit">Cancel</a>
+                        <a href="{{ $url }}" class="cancel-edit" id="cancel-edit">Cancel</a>
                     </div>
                 </form>
             </div>
