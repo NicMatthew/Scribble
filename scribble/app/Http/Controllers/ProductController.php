@@ -103,6 +103,8 @@ class ProductController extends Controller
         $category_select = $request->category;
         $subcategory_select = $request->sub_category;
 
+        
+        
         if($search != null){
             if($category_select != null || $category_select != ""){
                 $products = Product::where('NameProduct', 'like', "%$search%")
@@ -152,6 +154,8 @@ class ProductController extends Controller
 
             }
         }
+
+        
         $products = $this->setImageAndMinPrice($products);
 
         if($category_select == null && $subcategory_select != null){

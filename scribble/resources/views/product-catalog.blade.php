@@ -80,6 +80,9 @@
                     @endforeach
             @endif
         </div>
+        <div class="pagination-links">
+            {{ $products->links() }}
+        </div>
     </div>
     @include('components/footer')
     <form id="form_catalog" style="display: none" name="form_catalog" method="GET" action="{{ route("product-catalog") }}">
