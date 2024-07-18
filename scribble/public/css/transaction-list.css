@@ -165,9 +165,10 @@
     gap: 10px;
 }
 
-.buy-again-text, .cancel-text{
+.buy-again-text, .cancel-text, .review-text{
     color: var(--white);
 }
+
 
 .buy-again-btn{
     background-color: var(--prim-1);
@@ -201,6 +202,24 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+}
+.review{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.review-btn{
+    background-color: var(--prim-2);
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    gap: 10px;
+    border-radius: 15px;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+.review-btn img{
+    height: 20px;
 }
 
 /* modal */

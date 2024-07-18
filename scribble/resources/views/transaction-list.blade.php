@@ -76,13 +76,22 @@
                                     </div>
                                 @endforeach
                             </div>
-                            @if ($transaction->TransactionStatus != "Canceled")
+                            @if ($transaction->TransactionStatus != "Canceled" && $transaction->TransactionStatus != "Finished")
                             <div class="cancellation">
                                 <a href="#" class="cancel-btn" id="cancel-btn" value = {{ $transaction->TransactionID }}>
                                     <img src="/icons/cancel-order.svg" alt="tes">
                                     <p class="b2 cancel-text" >Cancel</p>
                                 </a>
                             </div>
+                            @endif
+                            @if ($transaction->TransactionStatus == "Finished" && $transaction->ReviewStatus == 'none')
+                                <div class="review">
+                                    <a href="" class="review-btn">
+                                        <img src="/icons/review-white.svg" alt="tes">
+                                        <p class="b2 review-text" >Review</p>
+                                    </a>
+
+                                </div>
                             @endif
                         </div>
                     </div>

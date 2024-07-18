@@ -22,7 +22,7 @@
     /* background-color: cornsilk; */
     width: 100%;
     height: fit-content;
-    padding: 50px 150px 50px 150px;
+    padding: 50px 150px 0px 150px;
     display: flex;
     flex-direction: column;
 }
@@ -74,6 +74,8 @@
 
 .review-container{
     width: 100%;
+    display: flex;
+    flex-direction: row;
     /* background-color: thistle; */
     margin-top: 25px;
 }
@@ -144,6 +146,7 @@ form {
 
 .stars img{
     margin-right: 7px;
+    height: 40px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
@@ -251,8 +254,12 @@ form {
 
 
 .submit-button{
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 50px;
     width: 100%;
     display: flex;
+    background-color: violetf;
     flex-direction: row-reverse;
 }
 
@@ -277,4 +284,14 @@ form {
     font-family: Helvetica;
     color: white;
     font-weight: bold;
+}
+.container-review{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: none;
+    flex-direction: column;
+    margin-bottom: 20px;
 }

@@ -13,7 +13,7 @@
     <div class="sidebar">
         <div class="sidebar-top">
             <a href="/profile" class="b2 profile" style="text-decoration: none">Profile</a>
-            <a href="#" class="b2 transaction-list" style="text-decoration: none">Transaction List</a>
+            <a href="/transaction-list" class="b2 transaction-list" style="text-decoration: none">Transaction List</a>
             <a href="/wishlist" class="b2 wishlist" style="text-decoration: none">Wishlist</a>
         </div>
         <form class="sidebar-bottom" name="" action="{{route("log-out")}}" method="POST">
