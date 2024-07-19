@@ -86,7 +86,7 @@
                             @endif
                             @if ($transaction->TransactionStatus == "Finished" && $transaction->ReviewStatus == 'none')
                                 <div class="review">
-                                    <a href="" class="review-btn">
+                                    <a href="#" class="review-btn" id="review-btn" value = {{ $transaction->TransactionID }}>
                                         <img src="/icons/review-white.svg" alt="tes">
                                         <p class="b2 review-text" >Review</p>
                                     </a>
@@ -114,6 +114,9 @@
     </div>
     <form action="{{ route('transaction-delete') }}" name="TransactionDelete">
         <input type="hidden" name="TransactionID" id="TransactionID">
+    </form>
+    <form action="{{ route('transaction-review') }}" name="TransactionReview">
+        <input type="hidden" name="TransactionID" id="TransactionIDReview">
     </form>
 </body>
 </html>

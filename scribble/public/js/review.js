@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     var stars = document.querySelectorAll(".stars img");
     stars.forEach(function (star, index) {
+        
         star.addEventListener("click", function () {
+            star.parentElement.parentElement.children[1].value = index+1;
             rateStar(index);
         });
     });
@@ -17,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+document.getElementById("submit-button").addEventListener('click', function () {
+    // document.forms["form-submit"].submit();
+})
 
 document.addEventListener("DOMContentLoaded", function () {
     var input = document.getElementById("upload-photo");

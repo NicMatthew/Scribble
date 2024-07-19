@@ -66,4 +66,32 @@ class TransactionListController extends Controller
         ->update(['TransactionStatus' => 'Cancelled']);
         return redirect()->route('transaction-list');
     }
+
+    public function transaction_review(){
+        // dd(request()->all());
+        $transaction = Transaction::where('TransactionID', request()->TransactionID)->first();
+        $transaction->details = TransactionDetail::where('transaction_details.TransactionID', $transaction->TransactionID)
+                ->join('products', 'products.ProductID', '=', 'transaction_details.ProductID')
+                ->join('variants', 'variants.VariantID', '=', 'transaction_details.VariantID')
+                ->join('product_entries', function ($join) {
+                    $join->on('product_entries.ProductID', '=', 'products.ProductID')
+                        ->on('product_entries.VariantID', '=', 'variants.VariantID');
+                })
+                ->leftJoinSub(
+                    DB::table('product_images')
+                        ->select('ProductID', 'VariantID', DB::raw('MIN(ImageProductID) as ImageID'))
+                        ->groupBy('ProductID', 'VariantID'),
+                    'first_images',
+                    function ($join) {
+                        $join->on('first_images.ProductID', '=', 'transaction_details.ProductID')
+                            ->on('first_images.VariantID', '=', 'transaction_details.VariantID');
+                    }
+                )
+                ->leftJoin('product_images', function ($join) {
+                    $join->on('product_images.ImageProductID', '=', 'first_images.ImageID');
+                })
+                ->get();
+        // dd($transaction);
+        return view('review', compact('transaction'));
+    }
 }

@@ -23,3 +23,15 @@ const btnCancelOrder = document.querySelector(".btn-del");
 btnCancelOrder.addEventListener("click", function () {
     document.forms['TransactionDelete'].submit()
 });
+
+
+const reviewBtns = document.querySelectorAll(".review-btn"); // Selects all elements
+const transactionIDReview = document.getElementById("TransactionIDReview");
+
+reviewBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+        // console.log("Cancel button clicked!");
+        transactionIDReview.value = btn.getAttribute("value");
+        document.forms["TransactionReview"].submit();
+    });
+});
