@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('ProductID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("ProductID")->on('products');
             $table->foreignId('VariantID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("VariantID")->on('variants');
             $table->foreignId('UserID')->constrained()->cascadeOnDelete()->cascadeOnUpdate()->references("UserID")->on('users');
-            $table->string('Image');
-            $table->string('TextReview');
+            $table->string('Image')->nullable();
+            $table->string('TextReview')->nullable();
             $table->integer('Rating');
             $table->timestamps();
         });

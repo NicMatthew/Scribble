@@ -22,58 +22,57 @@
         </div>
     </div>
     <div >
-        <form id="review-form" action="/submit-review" method="POST" enctype="multipart/form-data" class="container-review" name="form-submit">
-            @foreach ($transaction->details as $products)
-                <input type="hidden" name="ProductID[]" value="{{ $products->ProductID }}">
-                <input type="hidden" name="VariantID[]" value="{{ $products->VariantID }}">
-                <div class="product-review">
-                    <div class="detail-product">
-                        <img src="{{ $products->Image }}" alt="">
-                        <div class="product-review-detail">
-                            <p class="title-product">{{ $products->NameProduct }}</p>
-                            @if ($products->VariantName != 'None')
-                                <p class="variant">Variant : {{ $products->VariantName }}</p>
-                            @endif
-                            <p class="price">Rp. {{ $products->Price }}</p>
-                        </div>
+        @foreach ($transaction->details as $index => $products)
+            <input type="hidden" name="ProductID[]" value="{{ $products->ProductID }}">
+            <input type="hidden" name="VariantID[]" value="{{ $products->VariantID }}">
+            <div class="product-review">
+                <div class="detail-product">
+                    <img src="{{ $products->Image }}" alt="">
+                    <div class="product-review-detail">
+                        <p class="title-product">{{ $products->NameProduct }}</p>
+                        @if ($products->VariantName != 'None')
+                            <p class="variant">Variant : {{ $products->VariantName }}</p>
+                        @endif
+                        <p class="price">Rp. {{ $products->Price }}</p>
                     </div>
-                    <div class="review-container">
-                        <div class="left-column">
-                            <div class="additional-class"></div>
-                            <textarea name="TextReview[]" class="review-text TextReview_input" placeholder="Write your review here"></textarea>
-                        </div>
-                        <div class="right-column">
-                            <div class="rating-section">
-                                <p style="font-family: Helvetica">Rating :</p>
-                                <input type="hidden" name="Rating[]" class="Rating_input">
-                                <div class="stars">
-                                    <img src="/icons/star-empty.svg" alt="">
-                                    <img src="/icons/star-empty.svg" alt="">
-                                    <img src="/icons/star-empty.svg" alt="">
-                                    <img src="/icons/star-empty.svg" alt="">
-                                    <img src="/icons/star-empty.svg" alt="">
-                                </div>
+                </div>
+                <div class="review-container">
+                    <div class="left-column">
+                        <div class="additional-class"></div>
+                        <textarea name="TextReview[]" class="review-text" placeholder="Write your review here"></textarea>
+                    </div>
+                    <div class="right-column">
+                        <div class="rating-section">
+                            <p style="font-family: Helvetica">Rating :</p>
+                            <input type="hidden" name="Rating[]" class="Rating-input">
+                            <div class="stars">
+                                <img src="/icons/star-empty.svg" alt="">
+                                <img src="/icons/star-empty.svg" alt="">
+                                <img src="/icons/star-empty.svg" alt="">
+                                <img src="/icons/star-empty.svg" alt="">
+                                <img src="/icons/star-empty.svg" alt="">
                             </div>
-                            <div class="photo-upload">
-                                <input type="file" id="upload-photo" name="Image[]" class="upload-input Image_input">
-                                <label for="upload-photo" class="upload-label">
-                                    <p>Add Photo</p>
-                                    <span class="icon"><img src="/icons/photo-review.svg" alt="Photo Icon"></span>
-                                </label>
-                                <div class="preview-container">
-                                    <img id="remove-photo" src="/icons/exit-address.svg" class="remove-icon"></img>
-                                    <img id="photo-preview" src="#" alt="Photo Preview">
-                                </div>
+                        </div>
+                        <div class="photo-upload">
+                            <input type="file" id="upload-photo-{{ $index }}" name="Image[]" class="upload-input Image-input">
+                            <label for="upload-photo-{{ $index }}" class="upload-label">
+                                <p>Add Photo</p>
+                                <span class="icon"><img src="/icons/photo-review.svg" alt="Photo Icon"></span>
+                            </label>
+                            <div class="preview-container">
+                                <img id="remove-photo-{{ $index }}" src="/icons/exit-address.svg" class="remove-icon"></img>
+                                <img id="photo-preview-{{ $index }}" src="#" alt="Photo Preview">
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </form>
+            </div>
+        @endforeach
         <div class="submit-button" id="submit-button">
-            <input type="submit" class="btn-send">
+            <a class="btn-send">
                 <img src="/icons/send.svg" alt="">
                 <p>Send</p>
+            </a>
         </div>
     </div>
     
