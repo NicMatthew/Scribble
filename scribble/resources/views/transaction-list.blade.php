@@ -76,14 +76,24 @@
                                     </div>
                                 @endforeach
                             </div>
-                            @if ($transaction->TransactionStatus != "Canceled" && $transaction->TransactionStatus != "Finished")
-                            <div class="cancellation">
-                                <a href="#" class="cancel-btn" id="cancel-btn" value = {{ $transaction->TransactionID }}>
-                                    <img src="/icons/cancel-order.svg" alt="tes">
-                                    <p class="b2 cancel-text" >Cancel</p>
-                                </a>
+                            <div class="transaction-actions">
+                                @if ($transaction->TransactionStatus == "Unpaid")
+                                    <div class="pay-now">
+                                        <a href="{{ route('retry-payment', $transaction->TransactionID) }}" class="pay-now-btn">
+                                            <img src="/icons/paynow.png" alt="Pay Now">
+                                            <p class="b2 pay-now-text">Pay Now</p>
+                                        </a>
+                                    </div>
+                                @endif
+                                @if ($transaction->TransactionStatus != "Cancelled" && $transaction->TransactionStatus != "Finished")
+                                <div class="cancellation">
+                                    <a href="#" class="cancel-btn" id="cancel-btn" value = {{ $transaction->TransactionID }}>
+                                        <img src="/icons/cancel-order.svg" alt="tes">
+                                        <p class="b2 cancel-text" >Cancel</p>
+                                    </a>
+                                </div>
+                                @endif
                             </div>
-                            @endif
                             @if ($transaction->TransactionStatus == "Finished" && $transaction->ReviewStatus == 'none')
                                 <div class="review">
                                     <a href="" class="review-btn">

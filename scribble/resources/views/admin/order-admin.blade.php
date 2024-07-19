@@ -41,7 +41,7 @@
                             <td class="b2">Rp {{ number_format($transaction->TotalPrice, 0, ',', '.') }}</td>
                             <td>
                                 <div class="action-btn">
-                                    @if(!in_array($transaction->TransactionStatus, ['Finished', 'Canceled']))
+                                    @if(!in_array($transaction->TransactionStatus, ['Finished', 'Cancelled']))
                                         <form action="{{ route('order-admin-update', $transaction->TransactionID) }}" method="POST" class="form-proceed">
                                             @csrf
                                             <input type="hidden" name="status" value="{{ $transaction->TransactionStatus === 'Paid' ? 'Packaged' : ($transaction->TransactionStatus === 'Packaged' ? 'In Delivery' : 'Finished') }}">
@@ -50,13 +50,16 @@
                                         @if($transaction->TransactionStatus !== 'In Delivery')
                                             <form action="{{ route('order-admin-update', $transaction->TransactionID) }}" method="POST" class="form-cancel">
                                                 @csrf
-                                                <input type="hidden" name="status" value="Canceled">
+                                                <input type="hidden" name="status" value="Cancelled">
                                                 <input type="submit" value="Cancel" class="cancel-btn b2"/>
                                             </form>
                                         @endif
                                     @endif
                                     @if($transaction->TransactionStatus === 'Finished')
                                         <p class="b2">Completed</p>
+                                    @endif
+                                    @if($transaction->TransactionStatus === 'Cancelled')
+                                        <p class="b2">Cancelled</p>
                                     @endif
                                     {{-- <form action="#">
                                         <input type="submit" value="Proceed" class="proceed-btn b2"/>
