@@ -449,7 +449,7 @@ input[type='file'] {
 
 .header-title {
     font-size: 1.2em;
-    color: black;
+    color: var(--white);
 }
 
 .divider {
@@ -743,7 +743,7 @@ input[type='file'] {
 .pagination-links li.active span {
     background-color: var(--prim-2);
     color: #fff;
-    border-color: #007bff;
+    /* border-color: #007bff; */
 }
 
 

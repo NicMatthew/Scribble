@@ -24,13 +24,14 @@ class AdminController extends Controller
         ->join('variants','variants.VariantID','=','product_entries.VariantID')
         ->join('sub_categories','sub_categories.SubCategoryProductID','=','products.SubCategoryProductID')
         ->join('categories','categories.CategoryProductID','=','sub_categories.CategoryProductID')
-        ->select('products.*', 'variants.*', 'sub_categories.NameSubCategory', 'categories.NameCategory') // Select required fields
+        ->select('products.*', 'variants.*', 'sub_categories.NameSubCategory', 'categories.NameCategory','product_entries.Stock','product_entries.Price') // Select required fields
         ->paginate(10); // Pagination with 10 items per page
         // ->get();
         
         $categories = Category::all();
         $subcategories = SubCategory::all();
         $product = null;
+        // dd($products);
       
         return view('/admin/product-admin',
         [

@@ -60,4 +60,13 @@ class PaymentController extends Controller
 
         return redirect()->route("transaction-list");
     }
+
+    public function retryPayment($transactionID)
+    {
+        $transaction = Transaction::find($transactionID);
+
+        if ($transaction && $transaction->TransactionStatus == "Unpaid") {
+            return redirect()->route("payment", ['transactionID' => $transaction->TransactionID, 'totalPrice' => $transaction->TotalPrice]);
+        }
+    }
 }

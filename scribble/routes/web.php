@@ -116,3 +116,5 @@ Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBann
 
 
 Route::post("/make-order", [PaymentController::class, "makeOrder"])->name("make-order");
+Route::get("/orders/{transactionID}/retry-payment", [PaymentController::class, 'retryPayment'])->name('retry-payment');
+

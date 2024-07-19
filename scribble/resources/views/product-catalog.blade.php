@@ -67,21 +67,21 @@
             </div>
         </div>
         <div class="products-container">
-            @if ($search && $products->isEmpty())
+            @if ($search && $paginatedProducts->isEmpty())
             <div class="container-error-msg">
                 <img src="/icons/error-icon-2.png" alt="">
                 <p class="notFoundMsg b1"> Product not found </p>
             </div>
             @endif
 
-            @if ($products->isNotEmpty())
-                    @foreach ($products as $product)
+            @if ($paginatedProducts->isNotEmpty())
+                    @foreach ($paginatedProducts as $product)
                         @include('components/product-card', ['product' => $product])
                     @endforeach
             @endif
         </div>
         <div class="pagination-links">
-            {{ $products->links() }}
+            {{ $paginatedProducts->links() }}
         </div>
     </div>
     @include('components/footer')
