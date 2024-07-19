@@ -165,7 +165,7 @@
     gap: 10px;
 }
 
-.buy-again-text, .cancel-text, .review-text{
+.buy-again-text, .cancel-text, .review-text, .pay-now-text{
     color: var(--white);
 }
 
@@ -182,9 +182,20 @@
     align-items: center;
 }
 
-.buy-again-btn:hover, .cancel-btn:hover{
+.buy-again-btn:hover, .cancel-btn:hover, .pay-now-btn:hover{
     opacity: 70%;
     transition: 0.3s ease-in-out;
+}
+
+.pay-now-btn{
+    background-color: var(--sec-1);
+    padding: 6px 20px 6px 20px;
+    display: flex;
+    gap: 10px;
+    border-radius: 15px;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
 }
 
 .cancel-btn{
@@ -197,12 +208,26 @@
     cursor: pointer;
     align-items: center;
 }
-
+.pay-now{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .cancellation{
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
+.transaction-actions {
+    display: flex;
+    gap: 10px; /* Tambahkan jarak antar tombol sesuai kebutuhan */
+    align-items: center;
+    justify-content: center;
+}
+
 .review{
     margin-bottom: 30px;
     display: flex;
