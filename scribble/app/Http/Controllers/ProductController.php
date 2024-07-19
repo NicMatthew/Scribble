@@ -9,6 +9,8 @@ use App\Models\ProductEntry;
 use App\Models\ProductImage;
 use App\Models\SubCategory;
 use App\Models\Wishlist;
+// use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
@@ -95,102 +97,173 @@ class ProductController extends Controller
 
         return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs"));
     }
-    public function showAllProducts (Request $request)
-    {
-        $selected = null;
-        $products = null;
-        $search = $request->search;
-        $category_select = $request->category;
-        $subcategory_select = $request->sub_category;
+    // public function showAllProducts (Request $request)
+    // {
+    //     $selected = null;
+    //     $products = null;
+    //     $search = $request->search;
+    //     $category_select = $request->category;
+    //     $subcategory_select = $request->sub_category;
 
         
         
-        if($search != null){
-            if($category_select != null || $category_select != ""){
-                $products = Product::where('NameProduct', 'like', "%$search%")
-                                    ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
-                                    ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
-                                    ->where("NameCategory","=",$category_select)
-                                    ->with(['images', 'entries']) // Eager load images and entries
-                                    ->get();
+    //     if($search != null){
+    //         if($category_select != null || $category_select != ""){
+    //             $products = Product::where('NameProduct', 'like', "%$search%")
+    //                                 ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+    //                                 ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
+    //                                 ->where("NameCategory","=",$category_select)
+    //                                 ->with(['images', 'entries']) // Eager load images and entries
+    //                                 ->get();
 
-            }
-            elseif ($subcategory_select != null || $subcategory_select != ""){
-                $products = Product::where('NameProduct', 'like', "%$search%")
-                                    ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
-                                    ->where("NameSubCategory","=",$subcategory_select)
-                                    ->with(['images', 'entries']) // Eager load images and entries
-                                    ->get();
-            }
-            else{
-                $products = Product::where('NameProduct', 'like', "%$search%")
-                                    ->with(['images', 'entries']) // Eager load images and entries
-                                    ->get();
+    //         }
+    //         elseif ($subcategory_select != null || $subcategory_select != ""){
+    //             $products = Product::where('NameProduct', 'like', "%$search%")
+    //                                 ->join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+    //                                 ->where("NameSubCategory","=",$subcategory_select)
+    //                                 ->with(['images', 'entries']) // Eager load images and entries
+    //                                 ->get();
+    //         }
+    //         else{
+    //             $products = Product::where('NameProduct', 'like', "%$search%")
+    //                                 ->with(['images', 'entries']) // Eager load images and entries
+    //                                 ->get();
 
-            }
+    //         }
 
-        }
-        else{
-            if($category_select != null || $category_select != ""){
-                $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
-                                    ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
-                                    ->where("NameCategory", "=", $category_select)
-                                    ->with(['images', 'entries']) // Eager load images and entries
-                                    ->get();
+    //     }
+    //     else{
+    //         if($category_select != null || $category_select != ""){
+    //             $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+    //                                 ->join("categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")
+    //                                 ->where("NameCategory", "=", $category_select)
+    //                                 ->with(['images', 'entries']) // Eager load images and entries
+    //                                 ->get();
 
-            }
-            elseif ($subcategory_select != null || $subcategory_select != ""){
-                $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
-                                    ->where("NameSubCategory","=", $subcategory_select)
-                                    ->with(['images', 'entries']) // Eager load images and entries
-                                    ->get();
+    //         }
+    //         elseif ($subcategory_select != null || $subcategory_select != ""){
+    //             $products = Product::join("sub_categories","sub_categories.SubCategoryProductID","=","products.SubCategoryProductID")
+    //                                 ->where("NameSubCategory","=", $subcategory_select)
+    //                                 ->with(['images', 'entries']) // Eager load images and entries
+    //                                 ->get();
 
-            }
-            else{
-                $products = Product::with(['images', 'entries']) // Eager load images and entries
-                                    ->get();
+    //         }
+    //         else{
+    //             $products = Product::with(['images', 'entries']) // Eager load images and entries
+    //                                 ->get();
 
-                // Add the first image and the minimum price to the main product object
+    //             // Add the first image and the minimum price to the main product object
 
-            }
-        }
+    //         }
+    //     }
 
         
-        $products = $this->setImageAndMinPrice($products);
+    //     $products = $this->setImageAndMinPrice($products);
 
-        if($category_select == null && $subcategory_select != null){
-            $category_select = Category::join("sub_categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")->where("sub_categories.NameSubCategory", $subcategory_select)->get()->first()->NameCategory;
-        }
-        $categories = Category::all();
-        $subcategories = SubCategory::all();
-        $sorting = $request->sorting;
+    //     if($category_select == null && $subcategory_select != null){
+    //         $category_select = Category::join("sub_categories","sub_categories.CategoryProductID","=","categories.CategoryProductID")->where("sub_categories.NameSubCategory", $subcategory_select)->get()->first()->NameCategory;
+    //     }
+    //     $categories = Category::all();
+    //     $subcategories = SubCategory::all();
+    //     $sorting = $request->sorting;
 
-        if($sorting != null || $sorting != ""){
-            if($sorting=="Lowest Price"){
-                $products = $products->sortBy('Price');
+    //     if($sorting != null || $sorting != ""){
+    //         if($sorting=="Lowest Price"){
+    //             $products = $products->sortBy('Price');
 
-            }elseif($sorting=="Highest Price"){
-                $products = $products->sortByDesc('Price');
-            }
-            elseif($sorting=="Top Sales"){
-                // masih menunggu transaksi
+    //         }elseif($sorting=="Highest Price"){
+    //             $products = $products->sortByDesc('Price');
+    //         }
+    //         elseif($sorting=="Top Sales"){
+    //             // masih menunggu transaksi
 
-            }
-
-
-        }
+    //         }
 
 
-        // Get wishlist product IDs
-        $user = Auth::user();
-        if($user == null){
-            return redirect()->route('log-in');
-        }
-        $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
+    //     }
 
-        $products = $this->checkWishlist($products);
-        return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting','wishlistProductIDs'));
+
+    //     // Get wishlist product IDs
+    //     $user = Auth::user();
+    //     if($user == null){
+    //         return redirect()->route('log-in');
+    //     }
+    //     $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
+
+    //     $products = $this->checkWishlist($products);
+    //     return view('product-catalog', compact('products', 'search','categories','subcategories', 'category_select', 'subcategory_select', 'sorting','wishlistProductIDs'));
+    // }
+
+    public function showAllProducts(Request $request)
+{
+    $selected = null;
+    $search = $request->search;
+    $category_select = $request->category;
+    $subcategory_select = $request->sub_category;
+    $sorting = $request->sorting;
+
+    $query = Product::query();
+
+    if ($search != null) {
+        $query->where('NameProduct', 'like', "%$search%");
     }
+
+    if ($category_select != null && $category_select != "") {
+        $query->join("sub_categories", "sub_categories.SubCategoryProductID", "=", "products.SubCategoryProductID")
+              ->join("categories", "sub_categories.CategoryProductID", "=", "categories.CategoryProductID")
+              ->where("NameCategory", "=", $category_select);
+    }
+
+    if ($subcategory_select != null && $subcategory_select != "") {
+        $query->join("sub_categories", "sub_categories.SubCategoryProductID", "=", "products.SubCategoryProductID")
+              ->where("NameSubCategory", "=", $subcategory_select);
+    }
+
+    $query->with(['images', 'entries']);
+
+    if ($sorting != null && $sorting != "") {
+        if ($sorting == "Lowest Price") {
+            $query->orderBy('Price', 'asc');
+        } elseif ($sorting == "Highest Price") {
+            $query->orderBy('Price', 'desc');
+        }
+    }
+
+    // Get the products as a collection
+    $products = $query->get();
+
+    // Process the products
+    $products = $this->setImageAndMinPrice($products);
+
+    if ($category_select == null && $subcategory_select != null) {
+        $category_select = Category::join("sub_categories", "sub_categories.CategoryProductID", "=", "categories.CategoryProductID")
+                                    ->where("sub_categories.NameSubCategory", $subcategory_select)
+                                    ->get()
+                                    ->first()
+                                    ->NameCategory;
+    }
+
+    $categories = Category::all();
+    $subcategories = SubCategory::all();
+
+    $user = Auth::user();
+    if ($user == null) {
+        return redirect()->route('log-in');
+    }
+
+    $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
+    $products = $this->checkWishlist($products);
+
+    // Manually paginate the results
+    $perPage = 16;
+    $currentPage = LengthAwarePaginator::resolveCurrentPage();
+    $currentItems = $products->slice(($currentPage - 1) * $perPage, $perPage)->all();
+    $paginatedProducts = new LengthAwarePaginator($currentItems, $products->count(), $perPage, $currentPage, [
+        'path' => LengthAwarePaginator::resolveCurrentPath()
+    ]);
+
+    return view('product-catalog', compact('paginatedProducts', 'search', 'categories', 'subcategories', 'category_select', 'subcategory_select', 'sorting', 'wishlistProductIDs'));
+}
 
     public function toggleWishlist(Request $request)
     {
