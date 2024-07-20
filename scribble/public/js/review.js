@@ -33,10 +33,11 @@ document.getElementById("submit-button").addEventListener('click', function () {
     });
     
     if (check != 0) {
+        // harus diganti modal
         alert('Please fill all review form')
     } else {
-        alert('mantap')
-        // document.forms["form-submit"].submit();
+        // alert('mantap')
+        document.forms["form-submit"].submit();
     }
     
 })

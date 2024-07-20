@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Review;
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use App\Models\VoucherProduct;
@@ -93,5 +94,22 @@ class TransactionListController extends Controller
                 ->get();
         // dd($transaction);
         return view('review', compact('transaction'));
+    }
+    public function transaction_review_add(){
+        // dd(request()->Image);
+
+        for ($i=0; $i < count(request()->ProductID); $i++) { 
+            # code...
+            $newReview = new Review();
+            $newReview->ProductID = request()->ProductID[$i];
+            $newReview->VariantID = request()->VariantID[$i];
+            $newReview->TextReview = request()->TextReview[$i];
+            $newReview->Rating = request()->Rating[$i];
+            $newReview->Image = request()->Image[$i];
+            $newReview->save();
+        }
+        return redirect()->route('transaction-list');
+        
+        // dd('test');
     }
 }

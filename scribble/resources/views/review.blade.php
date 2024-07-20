@@ -22,6 +22,7 @@
         </div>
     </div>
     <div >
+        <form action="{{ route('transaction-review-add') }}" name="form-submit" enctype="multipart/form-data">
         @foreach ($transaction->details as $index => $products)
             <input type="hidden" name="ProductID[]" value="{{ $products->ProductID }}">
             <input type="hidden" name="VariantID[]" value="{{ $products->VariantID }}">
@@ -54,7 +55,7 @@
                             </div>
                         </div>
                         <div class="photo-upload">
-                            <input type="file" id="upload-photo-{{ $index }}" name="Image[]" class="upload-input Image-input">
+                            <input type="file" id="upload-photo-{{ $index }}" name="Image[]" class="upload-input Image-input" accept="image/*">
                             <label for="upload-photo-{{ $index }}" class="upload-label">
                                 <p>Add Photo</p>
                                 <span class="icon"><img src="/icons/photo-review.svg" alt="Photo Icon"></span>
@@ -68,6 +69,7 @@
                 </div>
             </div>
         @endforeach
+        </form>
         <div class="submit-button" id="submit-button">
             <a class="btn-send">
                 <img src="/icons/send.svg" alt="">
