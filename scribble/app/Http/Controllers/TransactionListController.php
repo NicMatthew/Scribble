@@ -115,6 +115,7 @@ class TransactionListController extends Controller
 
             }
             // dd($newReview->Image);
+            $newReview->UserID = auth()->id();
             
             
             $newReview->save();
