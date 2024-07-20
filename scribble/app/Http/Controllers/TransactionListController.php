@@ -97,6 +97,9 @@ class TransactionListController extends Controller
     }
     public function transaction_review_add(){
         // dd(request()->file('Image'));
+        $transaction = Transaction::find(request()->TransactionID);
+        $transaction->ReviewStatus = "Reviewed";
+        $transaction->update();
 
         for ($i=0; $i < count(request()->ProductID); $i++) { 
             # code...

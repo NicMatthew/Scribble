@@ -24,6 +24,7 @@
     <div >
         <form action="{{ route('transaction-review-add') }}" name="form-submit" enctype="multipart/form-data" method="POST">
             @csrf
+        <input type="hidden" name="TransactionID" value="{{ $transaction->TransactionID }}">
         @foreach ($transaction->details as $index => $products)
             <input type="hidden" name="ProductID[]" value="{{ $products->ProductID }}">
             <input type="hidden" name="VariantID[]" value="{{ $products->VariantID }}">
