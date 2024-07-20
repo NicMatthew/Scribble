@@ -96,7 +96,7 @@ class TransactionListController extends Controller
         return view('review', compact('transaction'));
     }
     public function transaction_review_add(){
-        // dd(request()->file('Image'));
+        // dd();
         $transaction = Transaction::find(request()->TransactionID);
         $transaction->ReviewStatus = "Reviewed";
         $transaction->update();
@@ -108,7 +108,7 @@ class TransactionListController extends Controller
             $newReview->VariantID = request()->VariantID[$i];
             $newReview->TextReview = request()->TextReview[$i];
             $newReview->Rating = request()->Rating[$i];
-            if(request()->Image[$i] != null){
+            if(request()->file('Image') != null){
                 $image = request()->Image[$i];
 
                 // Konversi gambar ke dalam base64
