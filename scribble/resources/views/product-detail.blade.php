@@ -46,7 +46,7 @@
                                 @endfor
                             </div>
                             <div class="review-sold" style="display: flex; align-items:center">
-                                <p class="mb-0 b3">(0 reviews) | 0 Sold- yang ini blom</p>
+                                <p class="mb-0 b3">({{$reviewCount}} reviews) | 0 Sold- yang ini blom</p>
                             </div>
                         </div>
                         <div class="price-product mb-1 b2" style="display: flex; align-items:center">
@@ -114,91 +114,67 @@
 
                 <div class="rating-review">
                     <p class="title-rating-review mb-1">Product Ratings</p>
-                    <div class="container-rate" style="display: flex; align-items:center;">
-                        <div class="rate-product">
-                            <img src="/icons/star-sharper.svg" alt="">
-                            <div class="rate">
-                                <div class="rating-numb">
-                                    <p class="main-rate mb-0">{{ number_format($averageRating, 1) }}</p>
-                                    <p class="standard b3 mb-0">/5</p>
+                    @if($reviewCount > 0)
+                        <div class="container-rate" style="display: flex; align-items:center;">
+                            <div class="rate-product">
+                                <img src="/icons/star-sharper.svg" alt="">
+                                <div class="rate">
+                                    <div class="rating-numb">
+                                        <p class="main-rate mb-0">{{ number_format($averageRating, 1) }}</p>
+                                        <p class="standard b3 mb-0">/5</p>
+                                    </div>
+                                    <p class="many-users b3 mt-0 mb-0">Based on {{$reviewCount}} reviews</p>
                                 </div>
-                                <p class="many-users b3 mt-0 mb-0">Based on 100 reviews</p>
                             </div>
-                        </div>
 
-                        <div class="dropdown-filter">
-                            <div class="rate-filter">
-                                <div class="left-part mr-3" style="display: flex; align-items:center; flex-direction:row">
-                                    <img src="/icons/sort-review.svg" class="ml-3" alt="sort">
-                                    <p class="mb-0 ml-2 b3" style="display: flex; align-items:center; color:white">Sort By</p>
+                            <div class="dropdown-filter">
+                                <div class="rate-filter">
+                                    <div class="left-part mr-3" style="display: flex; align-items:center; flex-direction:row">
+                                        <img src="/icons/sort-review.svg" class="ml-3" alt="sort"  id="sortIcon">
+                                        <p class="mb-0 ml-2 b3" style="display: flex; align-items:center; color:white" id="sortText">Sort By</p>
+                                    </div>
+                                    <div class="right-part" style="display: flex; align-items:center">
+                                        <img src="/icons/chevron-down.svg" class="mr-3" alt="down">
+                                    </div>
+                                    <ul class="dropdown-filter-content">
+                                        <li class="b3" style="display: flex; align-items:center" data-star="5"><img src="/icons/star.svg"  style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">5 Star</a></li>
+                                        <li class="b3" style="display: flex; align-items:center" data-star="4"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a  href="#" style="text-decoration:none">4 Star</a></li>
+                                        <li class="b3" style="display: flex; align-items:center" data-star="3"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">3 Star</a></li>
+                                        <li class="b3" style="display: flex; align-items:center" data-star="2"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">2 Star</a></li>
+                                        <li class="b3" style="display: flex; align-items:center" data-star="1"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">1 Star</a></li>
+                                    </ul>
                                 </div>
-                                <div class="right-part" style="display: flex; align-items:center">
-                                    <img src="/icons/chevron-down.svg" class="mr-3" alt="down">
-                                </div>
-                                <ul class="dropdown-filter-content">
-                                    <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg"  style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">5 Star</a></li>
-                                    <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a  href="#" style="text-decoration:none">4 Star</a></li>
-                                    <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">3 Star</a></li>
-                                    <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">2 Star</a></li>
-                                    <li class="b3" style="display: flex; align-items:center"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">1 Star</a></li>
-                                </ul>
                             </div>
                         </div>
-                    </div>
-                    @foreach ($reviews as $review)
-                    <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
-                        <div class="review">
-                            <div class="review-detail">
-                                <div class="review-profile mr-3">
-                                    <img src="{{ $review->reviewer->ImageUser }}" style="width: 50px; height: 50px">
-                                </div>
-                                <div class="review-detail-right">
-                                    <p class="mb-1">{{ $review->reviewer->NameUser }}</p>
-                                    <div class="review-star mb-0">
-                                        @for ($i = 0; $i < $review->Rating; $i++)
-                                            <img src="/icons/star.svg">
-                                        @endfor
+                        @foreach ($reviews as $review)
+                            <div class="review" data-rating="{{ $review->Rating }}">
+                                <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
+                                <div class="review-detail">
+                                    <div class="review-profile mr-3">
+                                        <img src="{{ $review->reviewer->ImageUser }}" style="width: 50px; height: 50px">
+                                    </div>
+                                    <div class="review-detail-right">
+                                        <p class="mb-1">{{ $review->reviewer->NameUser }}</p>
+                                        <div class="review-star mb-0">
+                                            @for ($i = 0; $i < $review->Rating; $i++)
+                                                <img src="/icons/star.svg">
+                                            @endfor
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="review-desc mb-0 mt-2">{{ $review->TextReview}}</p>
+                                @if ($review->Image)
+                                    <div class="review-photo mt-2">
+                                        <div class="review-ph1">
+                                                <img src="{{ $review->Image }}" alt="Review Image" class="image-review">
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
-                            <p class="review-desc mb-0 mt-2">{{ $review->TextReview}}</p>
-                            <div class="review-photo mt-2">
-                                <div class="review-ph1">
-
-                                </div>
-                                <div class="review-ph1">
-
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach                    
-                    <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
-                    <div class="review">
-                        <div class="review-detail">
-                            <div class="review-profile mr-3">
-                                <img src="/icons/people-review.svg" style="width: 50px; height: 50px">
-                            </div>
-                            <div class="review-detail-right">
-                                <p class="mb-1">Jesslyn Tanuwijaya</p>
-                                <div class="review-star mb-0">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                </div>
-                            </div>
-                        </div>
-                        <p class="review-desc mb-0 mt-2">Alhamdulillah sampe dgn aman, Sesuai ekspetasi, kualitas produk baik. Karena biasa pakai yang series watercolor, pakai yang classic rasanya beda. Hasil lebih pigmented yang watercolor cuma lebih halus yang classic.</p>
-                        <div class="review-photo mt-2">
-                            <div class="review-ph1">
-
-                            </div>
-                            <div class="review-ph1">
-
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach   
+                        @else
+                        <p class="product-desc mb-0">No review written for this product.</p>
+                    @endif
                 </div>
 
                 <div class="suggest mt-3">

@@ -75,6 +75,7 @@ class ProductController extends Controller
                     ->get();
 
         $averageRating = $reviews->avg('Rating');
+        $reviewCount = Review::where('ProductID', $productID)->count();
 
         if ($selectedProduct == null) {
             return redirect()->route("product-catalog");
@@ -103,7 +104,7 @@ class ProductController extends Controller
             $products = $this->checkWishlist($products);
         }
 
-        return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs", "reviews", "averageRating"));
+        return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs", "reviews", "averageRating", "reviewCount"));
     }
    
 
