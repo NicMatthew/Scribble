@@ -243,8 +243,14 @@
     cursor: pointer;
     align-items: center;
 }
+
 .review-btn img{
     height: 20px;
+}
+
+.review-btn:hover{
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
 }
 
 /* modal */

@@ -28,7 +28,8 @@
             <div class="col-md-4">
                 <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0" method="get" action="{{ route("product-catalog") }} ">
                     <input autocomplete="off" type="search" class="form-control b3"  id="search_term" name="search" style="height: 35px; border-radius: 10px 0 0 10px; background-color:#EEF5F6" placeholder="Search" value="{{ $search ?? '' }}"/>
-                    <button type="submit" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer; width: 50px; border:none">
+                    <button type="submit" style="background-color: #F2758F; border-radius: 0 10px 10px 0; height: 35px; cursor: pointer; width: 50px; border: none; outline: none !important; box-shadow: none; transition: opacity 0.3s ease-in-out;"
+                    onmouseover="this.style.opacity = '0.7';" onmouseout="this.style.opacity = '1';">
                         <img src="/icons/search.png" alt="Search" style="width:48%; padding-top: 1px">
                     </button>
                 </form>
@@ -48,7 +49,7 @@
                 </a>
                 <!-- User -->
                 @if(Auth::check())
-                <a href="{{ route('profile') }}" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;position: relative">
+                <a href="{{ route('profile') }}" class="btn rounded-circle custom-btn" data-mdb-ripple-init style="width: auto; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #fff; cursor: pointer; position: relative; outline: none !important; box-shadow: none;">
                     @if(Auth::user()->ImageUser)
                         <img src="{{ Auth::user()->ImageUser }}" alt="Profile" style="width: 35px; height: 35px; border-radius: 50%; object-fit:cover">
                     @else
@@ -56,7 +57,7 @@
                     @endif
                 </a>
                 @else
-                    <a href="{{ route('profile') }}" class="btn rounded-circle" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;">
+                    <a href="{{ route('profile') }}" class="btn rounded-circle custom-btn" data-mdb-ripple-init style="width: 35px; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #F2758F; cursor: pointer;  outline: none !important;">
                         <img src="/icons/people.png" alt="Profile" style="width: 18px; height: 15px; border-radius: 50%;">
                     </a>
                 @endif

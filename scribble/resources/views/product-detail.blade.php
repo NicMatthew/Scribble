@@ -119,7 +119,7 @@
                             <img src="/icons/star-sharper.svg" alt="">
                             <div class="rate">
                                 <div class="rating-numb">
-                                    <p class="main-rate mb-0">4.7</p>
+                                    <p class="main-rate mb-0">{{ number_format($averageRating, 1) }}</p>
                                     <p class="standard b3 mb-0">/5</p>
                                 </div>
                                 <p class="many-users b3 mt-0 mb-0">Based on 100 reviews</p>
@@ -145,33 +145,33 @@
                             </div>
                         </div>
                     </div>
+                    @foreach ($reviews as $review)
                     <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
-                    <div class="review">
-                        <div class="review-detail">
-                            <div class="review-profile mr-3">
-                                <img src="/icons/people-review.svg" style="width: 50px; height: 50px">
+                        <div class="review">
+                            <div class="review-detail">
+                                <div class="review-profile mr-3">
+                                    <img src="{{ $review->reviewer->ImageUser }}" style="width: 50px; height: 50px">
+                                </div>
+                                <div class="review-detail-right">
+                                    <p class="mb-1">{{ $review->reviewer->NameUser }}</p>
+                                    <div class="review-star mb-0">
+                                        @for ($i = 0; $i < $review->Rating; $i++)
+                                            <img src="/icons/star.svg">
+                                        @endfor
+                                    </div>
+                                </div>
                             </div>
-                            <div class="review-detail-right">
-                                <p class="mb-1">Jesslyn Tanuwijaya</p>
-                                <div class="review-star mb-0">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
-                                    <img src="/icons/star.svg">
+                            <p class="review-desc mb-0 mt-2">{{ $review->TextReview}}</p>
+                            <div class="review-photo mt-2">
+                                <div class="review-ph1">
+
+                                </div>
+                                <div class="review-ph1">
+
                                 </div>
                             </div>
                         </div>
-                        <p class="review-desc mb-0 mt-2">Alhamdulillah sampe dgn aman, Sesuai ekspetasi, kualitas produk baik. Karena biasa pakai yang series watercolor, pakai yang classic rasanya beda. Hasil lebih pigmented yang watercolor cuma lebih halus yang classic.</p>
-                        <div class="review-photo mt-2">
-                            <div class="review-ph1">
-
-                            </div>
-                            <div class="review-ph1">
-
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach                    
                     <hr class="mb-3 mt-3" style="border-bottom: 1px solid #D9D9D9">
                     <div class="review">
                         <div class="review-detail">

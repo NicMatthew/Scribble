@@ -183,3 +183,7 @@ ul, li{
 .passive {
     opacity: 0.5;
 }
+
+a.btn:focus {
+    outline: none !important;
+}
