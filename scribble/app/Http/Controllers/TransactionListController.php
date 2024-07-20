@@ -96,7 +96,7 @@ class TransactionListController extends Controller
         return view('review', compact('transaction'));
     }
     public function transaction_review_add(){
-        // dd(request()->Image);
+        // dd(request()->file('Image'));
 
         for ($i=0; $i < count(request()->ProductID); $i++) { 
             # code...
@@ -105,7 +105,18 @@ class TransactionListController extends Controller
             $newReview->VariantID = request()->VariantID[$i];
             $newReview->TextReview = request()->TextReview[$i];
             $newReview->Rating = request()->Rating[$i];
-            $newReview->Image = request()->Image[$i];
+            if(request()->Image[$i] != null){
+                $image = request()->Image[$i];
+
+                // Konversi gambar ke dalam base64
+                $imageBase64 = base64_encode(file_get_contents($image->getRealPath()));
+                // dd(request()->Image[$i]);
+                $newReview->Image = 'data:'.$image->getClientMimeType().';base64,'.$imageBase64;
+
+            }
+            // dd($newReview->Image);
+            
+            
             $newReview->save();
         }
         return redirect()->route('transaction-list');

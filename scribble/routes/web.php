@@ -39,7 +39,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/transaction-list',[TransactionListController::class,'index'])->name('transaction-list');
 Route::get('/transaction-list/delete',[TransactionListController::class,'transaction_delete'])->name('transaction-delete');
 Route::get('/transaction-list/review',[TransactionListController::class,'transaction_review'])->name('transaction-review');
-Route::get('/transaction-list/review/add',[TransactionListController::class,'transaction_review_add'])->name('transaction-review-add');
+Route::post('/transaction-list/review/add',[TransactionListController::class,'transaction_review_add'])->name('transaction-review-add');
 
 
 Route::get('/product-catalog', [ProductController::class, 'showAllProducts'])->name('product-catalog');
