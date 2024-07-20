@@ -101,9 +101,11 @@ minusBtn.addEventListener("click", (e)=>{
 const dropdownFilterBtn = document.querySelector(".dropdown-filter");
 const dropdownContent = document.querySelector(".dropdown-filter-content");
 
-dropdownFilterBtn.addEventListener("click", function () {
-    dropdownFilterBtn.classList.toggle("active");
-});
+if (dropdownFilterBtn) {
+    dropdownFilterBtn.addEventListener("click", function () {
+        dropdownFilterBtn.classList.toggle("active");
+    });
+}
 
 let isDragStart = false,
     prevPageX,
@@ -256,14 +258,14 @@ document.addEventListener('DOMContentLoaded', function() {
     listItems.forEach(function(item) {
         item.addEventListener('click', function() {
             var selectedStar = item.getAttribute('data-star');
-            
+
             document.getElementById('sortText').textContent = selectedStar + ' Star';
             document.getElementById('sortIcon').src = '/icons/star.svg'; // Assuming star.svg is your star icon
             // Hide all reviews
             var reviews = document.querySelectorAll('.review');
             reviews.forEach(function(review) {
                 var reviewRating = review.getAttribute('data-rating');
-                
+
                 // Toggle visibility based on selected star rating
                 if (selectedStar === reviewRating || selectedStar === 'all') {
                     review.style.display = 'block';

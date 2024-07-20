@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Models\CartDetail;
 use App\Models\Category;
 use App\Models\Product;
@@ -67,12 +68,13 @@ class ShippingController extends Controller
 
         $voucherProduct = VoucherProduct::all();
         $voucherShipment = VoucherShipment::all();
+        $address = Address::find($addressID);
 
         // dd($selectedProducts);
 
         // dd($selectedProducts);
         // Kirim data ke Blade view shipping.blade.php
-        return view('shipping',compact('selectedProducts','voucherProduct','voucherShipment', "addressID"));
+        return view('shipping',compact('selectedProducts','voucherProduct','voucherShipment', "address"));
         // return view('shipping');
     }
 
@@ -115,8 +117,9 @@ class ShippingController extends Controller
         }
         $voucherProduct = VoucherProduct::all();
         $voucherShipment = VoucherShipment::all();
+        $address = Address::find($addressID);
 
         // Redirect ke halaman shipping dengan data produk yang dibeli
-        return view('shipping', compact('selectedProducts', 'voucherProduct', 'voucherShipment', "addressID"));
+        return view('shipping', compact('selectedProducts', 'voucherProduct', 'voucherShipment', "address"));
     }
 }

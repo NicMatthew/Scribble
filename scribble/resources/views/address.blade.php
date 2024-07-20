@@ -25,7 +25,7 @@
             <hr class="divider">
         </div>
         @foreach ($addresses as $address)
-        <div class="address" id="{{ $address->AddressID }}">
+        <div class="address @if(request()->addressID ==  $address->AddressID) active-border @endif" id="{{ $address->AddressID }}">
             <div class="left-address">
                 <p style="color: var(--prim-1); font-weight:bold; font-size: 18px; margin-bottom: 5px">{{ $address->AddressName}}</p>
                 <p style="color: var(--dark-grey); font-weight:bold; font-size: 20px; margin-bottom: 5px">{{ $address->RecipientName}}</p>

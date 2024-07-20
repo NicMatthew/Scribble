@@ -1,4 +1,4 @@
-const passed = window.location.href.split("?")[1]
+const passed = window.location.href.split("?")[1].split("addressID=")[0]
 
 //munculin overlay tambah alamat
 const plusAddressImg = document.querySelector(
@@ -18,9 +18,7 @@ cancelButton.addEventListener("click", function () {
 const nextButtons = document.querySelectorAll('.right-address img[src="/icons/edit.svg"]');
 let AddressID = document.getElementById('addressID');
 const modalEdit = document.getElementById('modal-edit');
-// let AddressID = document.getElementById("AddressID")
 let UserID = document.getElementById("UserID");
-// console.log(AddressID);
 
 nextButtons.forEach((nextButton) => {
     nextButton.addEventListener("click", function () {
@@ -39,13 +37,6 @@ exitAddressImgs.forEach((exitImg) => {
         modalDelete.classList.add("active");
     });
 });
-// //cancel edit
-// const cancelButtons = document.querySelectorAll("#modal-delete .cancel");
-// cancelButtons.forEach((cancelButton) => {
-//     cancelButton.addEventListener("click", function () {
-//         modalDelete.classList.remove("active");
-//     });
-// });
 
 //keep address
 const keepButton = document.querySelector('.keep');
@@ -59,10 +50,6 @@ const addressDivs = document.querySelectorAll(".address");
 
 addressDivs.forEach(function (addressDiv) {
     addressDiv.addEventListener("click", (e) => {
-        console.log(e.target)
-        console.log(e.currentTarget)
-        console.log(addressDiv.firstElementChild)
-
         if (e.target != e.currentTarget && e.currentTarget != addressDiv.firstElementChild) {
             return
         }
@@ -74,15 +61,8 @@ addressDivs.forEach(function (addressDiv) {
         addressDiv.classList.add("active-border");
         addressActive = addressDiv;
 
-        const addressName = addressDiv.querySelector(".left-address p:nth-of-type(1)").textContent.trim();
-        const fullAddress = addressDiv.querySelector(".left-address p:nth-of-type(4)").textContent.trim();
-
-        // Encode addressName and fullAddress to be used in URL
-        const encodedAddressName = encodeURIComponent(addressName);
-        const encodedFullAddress = encodeURIComponent(fullAddress);
-
         // Construct URL with query parameters
-        const url = `/shipping?selectedAddressName=${encodedAddressName}&selectedFullAddress=${encodedFullAddress}` + "&" + passed + "&addressID=" + addressDiv.id;
+        const url = "/shipping?" + passed + "&addressID=" + addressDiv.id;
 
         // Redirect to the shipping page with query parameters
         window.location.href = url;

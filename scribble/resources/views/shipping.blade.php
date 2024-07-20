@@ -49,9 +49,9 @@
             <div class="address-info">
                 <div class="address-title">Destination Address</div>
                 <div class="address-detail">
-                    @if (request()->has('selectedAddressName') && request()->has('selectedFullAddress'))
-                        <div class="address-name">{{ request()->input('selectedAddressName') }}</div>
-                        <div class="address-full">{{ request()->input('selectedFullAddress') }}</div>
+                    @if ($address != null)
+                        <div class="address-name">{{ $address->AddressName }}</div>
+                        <div class="address-full">{{ $address->FullAddress }}</div>
                     @else
                         <div class="address-name">No address selected</div>
                     @endif
@@ -161,7 +161,7 @@
         <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
         <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
         <input type="hidden" name="totalPrice" value="" id="totalPriceInput">
-        <input type="hidden" name="addressID" value="{{ $addressID }}" id="addressID">
+        <input type="hidden" name="addressID" value="@if($address != null) $address->AddressID @endif" id="addressID">
     </form>
 </body>
 </html>
