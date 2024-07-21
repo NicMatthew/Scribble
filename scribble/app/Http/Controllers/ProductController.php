@@ -109,7 +109,7 @@ class ProductController extends Controller
    
 
     public function showAllProducts(Request $request)
-    {
+    {   
         $selected = null;
         $search = $request->search;
         $category_select = $request->category;
@@ -174,7 +174,8 @@ class ProductController extends Controller
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $currentItems = $products->slice(($currentPage - 1) * $perPage, $perPage)->all();
         $paginatedProducts = new LengthAwarePaginator($currentItems, $products->count(), $perPage, $currentPage, [
-            'path' => LengthAwarePaginator::resolveCurrentPath()
+            'path' => LengthAwarePaginator::resolveCurrentPath(),
+            'query' => $request->query(),
         ]);
 
         return view('product-catalog', compact('paginatedProducts', 'search', 'categories', 'subcategories', 'category_select', 'subcategory_select', 'sorting', 'wishlistProductIDs'));
