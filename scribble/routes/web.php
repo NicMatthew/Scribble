@@ -41,7 +41,6 @@ Route::get('/transaction-list/delete',[TransactionListController::class,'transac
 Route::get('/transaction-list/review',[TransactionListController::class,'transaction_review'])->name('transaction-review');
 Route::post('/transaction-list/review/add',[TransactionListController::class,'transaction_review_add'])->name('transaction-review-add');
 
-
 Route::get('/product-catalog', [ProductController::class, 'showAllProducts'])->name('product-catalog');
 Route::get('/product-catalog/{productID}', [ProductController::class, 'showProductDetail'])->name('product-detail');
 
@@ -51,47 +50,15 @@ Route::post('/add/address', [AddressController::class, 'addAddress'])->name('add
 Route::delete('/address', [AddressController::class, 'deleteAddress'])->name('delete-address');
 Route::post('/editAddress', [AddressController::class, 'editAddress'])->name('edit-address');
 
-Route::get('/product-detail', function () {
-    return view('product-detail');
-});
-
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::put('/cart/{product_id}/{variant_id}/{user_id}', [CartController::class, 'update'])->name('cart.update');
-
-Route::get('/sidebar', function () {
-    return view('/components/sidebar');
-});
 
 Route::get('/shipping', [ShippingController::class, "index"])->name('shipping.index');
 Route::get('/buy-now', [ShippingController::class, 'buyNow'])->name('buy.now');
 
 Route::get('/payment-qr', [PaymentController::class, "qr"])->name("payment");
 Route::post('/payment/successful', [PaymentController::class, "paymentSuccess"])->name("paymentSuccess");
-
-Route::get('/terms', function () {
-    return view('terms');
-});
-
-Route::get('/about-us', function () {
-    return view('about-us');
-});
-
-Route::get('/edit-profile', function () {
-    return view('edit-profile');
-});
-
-Route::get('/faq', function () {
-    return view('faq');
-});
-
-Route::get('/review', function () {
-    return view('review');
-});
-
-Route::get('/wishlist', function () {
-    return view('wishlist');
-});
 
 Route::get('/order-admin', [OrderAdminController::class, 'index']);
 Route::post('/order-admin/update/{id}', [OrderAdminController::class, 'updateStatus'])->name("order-admin-update");
@@ -115,7 +82,18 @@ Route::get('/dashboard/discount/delete', [AdminController::class, "deleteDiscoun
 Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
 Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");
 
-
 Route::post("/make-order", [PaymentController::class, "makeOrder"])->name("make-order");
 Route::get("/orders/{transactionID}/retry-payment", [PaymentController::class, 'retryPayment'])->name('retry-payment');
 
+Route::get('/terms', function () {
+    return view('terms');
+});
+
+Route::get('/about-us', function () {
+    return view('about-us');
+});
+
+
+Route::get('/faq', function () {
+    return view('faq');
+});
