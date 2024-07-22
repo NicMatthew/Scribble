@@ -27,8 +27,11 @@ class OrderAdminController extends Controller
         $transaction->TransactionStatus = $request->input('status');
         $transaction->save();
 
-        if ($request->input('status') == 'In Delivery') {
-            $this->reduceStock($transaction->TransactionID);
+        // $transaction->TransactionStatus = $newStatus;
+        // $transaction->save();
+
+        if ($request->input('status') == 'Cancelled') {
+            $this->increaseStock($transaction->TransactionID);
         }
 
         return redirect()->back()->with('success', 'Order status updated successfully.');
@@ -45,6 +48,22 @@ class OrderAdminController extends Controller
 
             if ($product) {
                 $product->Stock -= $detail->Quantity;
+                $product->save();
+            }
+        }
+    }
+
+    private function increaseStock($transactionID)
+    {
+        $transactionDetails = TransactionDetail::where('TransactionID', $transactionID)->get();
+
+        foreach ($transactionDetails as $detail) {
+            $product = ProductEntry::where('ProductID', $detail->ProductID)
+                                ->where('VariantID', $detail->VariantID)
+                                ->first();
+
+            if ($product) {
+                $product->Stock += $detail->Quantity;
                 $product->save();
             }
         }

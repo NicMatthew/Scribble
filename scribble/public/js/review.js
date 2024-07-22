@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     var stars = document.querySelectorAll(".stars img");
     stars.forEach(function (star, index) {
-        
+
         star.addEventListener("click", function () {
-            star.parentElement.parentElement.children[1].value = index+1;
+            let count = index%5;
+            star.parentElement.parentElement.children[1].value = count+1;
             rateStar(index);
         });
     });
@@ -30,8 +31,10 @@ document.getElementById("submit-button").addEventListener('click', function () {
         if (element.value == '') {
             check++;
         }
+        // check++;
+        // console.log(element.value)
     });
-    
+
     if (check != 0) {
         // harus diganti modal
         alert('Please fill all review form')
@@ -39,7 +42,7 @@ document.getElementById("submit-button").addEventListener('click', function () {
         // alert('mantap')
         document.forms["form-submit"].submit();
     }
-    
+
 })
 
 document.addEventListener("DOMContentLoaded", function () {

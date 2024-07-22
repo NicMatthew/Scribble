@@ -22,7 +22,7 @@
         </div>
     </div>
     <div >
-        <form action="{{ route('transaction-review-add') }}" name="form-submit" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('transaction-review-add') }}" name="form-submit" enctype="multipart/form-data" method="POST" class="form-review">
             @csrf
         <input type="hidden" name="TransactionID" value="{{ $transaction->TransactionID }}">
         @foreach ($transaction->details as $index => $products)
@@ -79,7 +79,7 @@
             </a>
         </div>
     </div>
-    
+
 
 </body>
 </html>

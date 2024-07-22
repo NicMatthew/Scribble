@@ -30,8 +30,9 @@ class CartController extends Controller
             })
             ->where('cd.UserID', $user_id)
             ->select('cd.*', 'p.*', 'v.*', 'u.*', 'pe.*', 'pi.*') // Pilih kolom yang diperlukan
-            ->groupBy('p.ProductID', 'v.VariantID', 'u.UserID', 'v.VariantName', 'pi.ImageProductID') // Sesuaikan kolom group by sesuai kebutuhan
+            // ->groupBy('p.ProductID', 'v.VariantID', 'u.UserID', 'v.VariantName', 'pi.ImageProductID') // Sesuaikan kolom group by sesuai kebutuhan
             ->get();
+            // dd($cartItems);
 
         return view('cart', compact('cartItems'));
     }

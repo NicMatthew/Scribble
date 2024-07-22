@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductEntry;
 use App\Models\Review;
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
@@ -66,7 +67,26 @@ class TransactionListController extends Controller
         Transaction::where('TransactionID',request()->TransactionID)
         ->where('UserID',auth()->id())
         ->update(['TransactionStatus' => 'Cancelled']);
+
+        $this->increaseStock(request()->TransactionID);
+
         return redirect()->route('transaction-list');
+    }
+
+    private function increaseStock($transactionID)
+    {
+        $transactionDetails = TransactionDetail::where('TransactionID', $transactionID)->get();
+
+        foreach ($transactionDetails as $detail) {
+            $product = ProductEntry::where('ProductID', $detail->ProductID)
+                                ->where('VariantID', $detail->VariantID)
+                                ->first();
+
+            if ($product) {
+                $product->Stock += $detail->Quantity;
+                $product->save();
+            }
+        }
     }
 
     public function transaction_review(){
