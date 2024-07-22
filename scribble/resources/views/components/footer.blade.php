@@ -25,7 +25,7 @@
                         Category
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="{{ route('product-catalog', ['category' => 'Pens']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pen</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Pens']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pens</a>
                     </p>
                     <p class="mb-2 b3">
                         <a href="{{ route('product-catalog', ['category' => 'Pencils']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pencils</a>

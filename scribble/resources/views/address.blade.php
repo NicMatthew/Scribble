@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Address | Scribble</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link href="/css/variable.css" rel="stylesheet">
     <!-- <script src="https://kit.fontawesome.com/4d9121ebec.js" crossorigin="anonymous"></script> -->

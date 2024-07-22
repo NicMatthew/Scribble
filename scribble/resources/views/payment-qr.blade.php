@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="\css\payment-qr.css">
     <link rel="stylesheet" href="\css\header-standard.css">
     <script src="\js\payment-qr.js" defer></script>
-    <title>Document</title>
+    <title>Payment | Scribble</title>
 </head>
 <body>
     <div class="container">

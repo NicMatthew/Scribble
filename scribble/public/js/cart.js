@@ -167,7 +167,7 @@ function updateSummary() {
 }
 
 function formatCurrency(value) {
-    return ("Rp." + new Intl.NumberFormat("id-ID", { maximumFractionDigits: 0 }).format(value));
+    return ("Rp. " + new Intl.NumberFormat("id-ID", { maximumFractionDigits: 0 }).format(value));
 }
 
 function goToShippingPage() {
