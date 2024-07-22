@@ -54,6 +54,7 @@ class TransactionListController extends Controller
                 $transaction->statusColor = "pink";
             }
         }
+        $transactions = $transactions->sortByDesc('TransactionID');
 
         return view('transaction-list', compact('transactions'));
     }

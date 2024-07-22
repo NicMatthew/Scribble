@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class PaymentController extends Controller
 {
     public function makeOrder(Request $request) {
+        // dd($request->all());
         $newTransHead = new Transaction();
 
         $newTransHead->UserID = auth()->id();
