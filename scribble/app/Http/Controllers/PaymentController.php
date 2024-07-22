@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CartDetail;
+use App\Models\ProductEntry;
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use Carbon\Carbon;
@@ -58,8 +59,26 @@ class PaymentController extends Controller
         $transaction = Transaction::find(request()->transactionID);
         $transaction->TransactionStatus = "Paid";
         $transaction->update();
+        
+        $this->reduceStock($transaction->TransactionID);
 
         return redirect()->route("transaction-list");
+    }
+
+    private function reduceStock($transactionID)
+    {
+        $transactionDetails = TransactionDetail::where('TransactionID', $transactionID)->get();
+
+        foreach ($transactionDetails as $detail) {
+           
+            $product = ProductEntry::where('ProductID', $detail->ProductID)
+                                ->where('VariantID', $detail->VariantID)
+                                ->first();
+            if ($product) {
+                $product->Stock -= $detail->Quantity;
+                $product->save();
+            }
+        }
     }
 
     public function retryPayment($transactionID)
