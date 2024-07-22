@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Transaction List</title>
+    <title>Transaction List | Scribblec</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/transaction-list.css">
@@ -38,7 +38,7 @@
                         </div>
                         <div class="main-content">
                             <div class="grand-total">
-                                <p class="b2">Grand Total: <span class="b1 total">Rp. {{  $transaction->TotalPrice }}</span></p>
+                                <p class="b2">Grand Total: <span class="b1 total">Rp {{ number_format($transaction->TotalPrice, 0, ',', '.')  }}</span></p>
                             </div>
                             <div class="all-items">
                                 @foreach ($transaction->details as $details)
@@ -53,7 +53,7 @@
                                                 </div>
                                                 <div class="item-desc">
                                                     <div class="total-price">
-                                                        <p class="b2 total-price-text">Total Price:  <span class="b1 price-text">Rp. {{ $details->Price*$details->Quantity }}</span></p>
+                                                        <p class="b2 total-price-text">Total Price:  <span class="b1 price-text">Rp {{ number_format($details->Price*$details->Quantity , 0, ',', '.')}}</span></p>
                                                     </div>
                                                     <div class="qty">
                                                         <p class="b2 qty-text">Quantity: {{ $details->Quantity }}</p>

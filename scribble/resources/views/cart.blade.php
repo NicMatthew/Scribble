@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/steps-info.css">
     <link rel="stylesheet" href="/css/header-standard.css">
     <script src="/js/cart.js" defer=""></script>
-    <title>Document</title>
+    <title>Cart | Scribble</title>
 </head>
 <body>
     <div class="container">

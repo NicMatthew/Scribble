@@ -25,28 +25,26 @@
                         Category
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pencils</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Pens']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pen</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pen</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Pencils']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Pencils</a>
+                    </p>
+                    
+                    <p class="mb-2 b3">
+                        <a href="{{ route('product-catalog', ['category' => 'Markers']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Markers</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Markers</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Books & Papers']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Books & Papers</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Papers</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Cutting Tools']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Cutting Tools</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Books</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Sticking Tools']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Sticking Tools</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Cutting Tools</a>
-                    </p>
-                    <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Sticking Tools</a>
-                    </p>
-                    <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Correction Tools</a>
+                        <a href="{{ route('product-catalog', ['category' => 'Correcting Tools']) }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Correction Tools</a>
                     </p>
                     </div>
 
@@ -79,16 +77,16 @@
                         Account
                     </h6>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Account Details</a>
+                        <a href="{{ route('profile') }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Account Details</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Cart</a>
+                        <a href="{{ route('cart.index') }}" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Cart</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Transaction List</a>
+                        <a href="/transaction-list" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Transaction List</a>
                     </p>
                     <p class="mb-2 b3">
-                        <a href="#!" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Wishlist</a>
+                        <a href="/wishlist" class="text-reset half-opacity" style="color: #757575; text-decoration: none">Wishlist</a>
                     </p>
                     </div>
                 </div>

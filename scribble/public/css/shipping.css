@@ -50,7 +50,7 @@ body {
 .address-name {
     font-size: 1.1rem;
     font-family: Helvetica;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--white);
 }
 
@@ -66,7 +66,7 @@ body {
     border-radius: 10px;
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--sec-1);
     transition: 0.3s ease-in-out;
 }
@@ -183,7 +183,7 @@ body {
 .voucher-title {
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--white);
 }
 
@@ -193,7 +193,7 @@ body {
     color: var(--sec-2);
     font-family: Helvetica;
     font-size: 1.2rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -235,7 +235,7 @@ body {
     background-color: var(--prim-1);
     color: var(--white);
     font-family: Helvetica;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.2rem;
     border-radius: 15px;
     transition: 0.3s ease-in-out;

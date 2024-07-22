@@ -13,7 +13,7 @@ class OrderAdminController extends Controller
     public function index()
     {
         // Ambil semua data transaksi
-        $transactions = $transactions = Transaction::where('TransactionStatus', '!=', 'Unpaid')->get();
+        $transactions = $transactions = Transaction::where('TransactionStatus', '!=', 'Unpaid')->paginate(10);
         
         // Kirim data ke view
         return view('admin.order-admin', compact('transactions'));

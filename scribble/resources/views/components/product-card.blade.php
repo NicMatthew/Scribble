@@ -58,7 +58,7 @@
                     <h5 class="sell">100 Sold</h5>
                 </div>
                 <div class="price">
-                    <h4>Rp. {{ number_format($product-> Price, 0)}}</h4>
+                    <h4>Rp. {{ number_format($product-> Price, 0, ',','.')}}</h4>
                 </div>
             </div>
         </div>

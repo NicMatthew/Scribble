@@ -73,16 +73,16 @@
                     <div class="payment-header">Payment Details</div>
                     <div class="payment-list">
                         <div class="list">
-                            <div class="payment-name">Subtotal produk</div>
+                            <div class="payment-name">Product Subtotal</div>
                             <div class="payment-price" id="subtotalPrice">Rp. {{ number_format($totalPrice, 0, ',', '.') }}</div>
                         </div>
                         <div class="list">
-                            <div class="payment-name">Biaya pengiriman</div>
+                            <div class="payment-name">Shipping Fee</div>
                             <div class="payment-price">Rp. 5.000</div>
                         </div>
                         <div class="list">
                             <div class="payment-name">Discount</div>
-                            <div class="payment-price" id="discountPrice">Rp. 0</div>
+                            <div class="payment-price" id="discountPrice">- Rp. 0</div>
                         </div>
                         <div class="list">
                             <div class="payment-name final">Total payment</div>

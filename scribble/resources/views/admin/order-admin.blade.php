@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order Management</title>
+    <title>Admin's Page | Order Management</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/order-admin.css">
@@ -34,7 +34,8 @@
                     </tr>
                     @foreach($transactions as $key => $transaction)
                         <tr class="data">
-                            <td class="b2">{{ $key + 1 }}</td>
+                            <td class="b2">{{ $transactions->firstItem() + $key }}</td>
+                            {{-- <td class="b2">{{ $key+1 }}</td> --}}
                             <td class="b2">{{ $transaction->TransactionID }}</td>
                             <td class="b2">{{ $transaction->TransactionDate }}</td>
                             <td class="b2" style="font-weight : bold ; @if($transaction->TransactionStatus === 'Paid') color: black; @elseif($transaction->TransactionStatus === 'Packaged') color: #EDC158; @elseif($transaction->TransactionStatus === 'In Delivery') color: #52A9CF; @elseif($transaction->TransactionStatus === 'Finished') color: #78C354; @elseif($transaction->TransactionStatus === 'Canceled') color: #F2758F; @endif">{{ $transaction->TransactionStatus }}</td>
@@ -72,11 +73,15 @@
                         </tr>
                     @endforeach
                 </table>
+                
                 {{-- <div class="table-navigation">
                     <a href="#"><img src="/icons/previous-icon-order-admin.svg" alt=""></a>
                     <p class="b2">1</p>
                     <a href="#"><img src="/icons/next-icon-order-admin.svg" alt=""></a>
                 </div> --}}
+            </div>
+            <div class="table-navigation">
+                {{ $transactions->links() }}
             </div>
         </div>
     </div>

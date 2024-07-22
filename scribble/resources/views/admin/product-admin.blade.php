@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin's Page | Product </title>
+        <title>Admin's Page | Product Management </title>
         <link rel="shortcut icon" href="/images/simple_logo.svg">
         <link rel="stylesheet" href="/css/variable.css">
         <link rel="stylesheet" href="/css/product-admin.css">
@@ -59,16 +59,16 @@
                         
                     @else
                         <div class="hide">{{ $count = 0  }}</div>
-                        @foreach ($products as $product)
+                        @foreach ($products as $key => $product)
                             <tr class="data">
-                                <div class="hide">{{ $count =  $count + 1  }}</div>
-                                <td>{{ $count }}</td>
+                                {{-- <div class="hide">{{ $count =  $count + 1  }}</div> --}}
+                                <td>{{ $products->firstItem() + $key }}</td>
                                 <td>{{ $product->ProductID }}</td>
                                 <td class="prod-name">{{ $product->NameProduct }}</td>
                                 <td>{{ $product->NameCategory }}</td>
                                 <td>{{ $product->VariantName }}</td>
                                 <td>{{ $product->Stock }}</td>
-                                <td>{{ $product->Price }}</td>
+                                <td>{{'Rp '.number_format($product->Price, 0, ',', '.')  }}</td>
                                 <td class="container-edit">
                                     <img src="\images\3-bullets.png" alt="" class="more-btn">
                                     <div class="edit-delete-popup" id="popup">

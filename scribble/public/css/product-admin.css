@@ -713,6 +713,21 @@ input[type='file'] {
     margin-top: 20px; /* Menambahkan sedikit jarak atas */
 }
 
+.pagination-links .pagination {
+    display: flex;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.pagination-links p{
+    font-family: Helvetica;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 12px;
+}
 .pagination-links ul {
     list-style-type: none; /* Menghilangkan bullet points */
     display: flex;
