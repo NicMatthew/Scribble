@@ -24,10 +24,6 @@
         <div class="header-title">Shipping</div>
         <hr class="divider">
     </div>
-    {{-- @php
-        $selectedAddressName = isset($_COOKIE['selectedAddressName']) ? $_COOKIE['selectedAddressName'] : null;
-        $selectedFullAddress = isset($_COOKIE['selectedFullAddress']) ? $_COOKIE['selectedFullAddress'] : null;
-    @endphp --}}
     <div class="steps-info">
         <div class="step prim-1-fill passive">
             <div class="step-counter">Step 1</div>
@@ -161,7 +157,7 @@
         <input type="hidden" name="voucherShipmentID" value="" id="voucherShipmentID">
         <input type="hidden" name="voucherProductID" value="" id="voucherProductID">
         <input type="hidden" name="totalPrice" value="" id="totalPriceInput">
-        <input type="hidden" name="addressID" value="@if($address != null) $address->AddressID @endif" id="addressID">
+        <input type="hidden" name="addressID" value="@if($address != null) {{ $address->AddressID }} @endif" id="addressID">
     </form>
 </body>
 </html>
