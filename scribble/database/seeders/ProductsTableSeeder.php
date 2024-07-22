@@ -35,7 +35,7 @@ class ProductsTableSeeder extends Seeder
             ['NameProduct' => 'Spidol Permanent SNOWMAN', 'Rating' => 4.9, 'DescriptionProduct' => 'Spidol Permanent SNOWMAN adalah pilihan terbaik untuk kebutuhan penandaan permanen. Dengan tinta yang tahan air dan cepat kering, spidol ini dapat digunakan di berbagai permukaan seperti plastik, logam, dan kaca. Kualitas tinggi dari tinta memastikan hasil yang tajam dan jelas.', 'SubCategoryProductID' => 3, 'created_at' => now(), 'updated_at' => now()],
             ['NameProduct' => 'Spidol Penanda Kain / Water Erasable Pen / Fabric Marker', 'Rating' => 4.5, 'DescriptionProduct' => 'Spidol Penanda Kain / Water Erasable Pen / Fabric Marker adalah alat yang sempurna untuk proyek menjahit dan kerajinan tangan. Tinta yang dapat dihapus dengan air memudahkan Anda dalam membuat tanda sementara pada kain tanpa meninggalkan noda permanen. Ideal untuk penjahit dan pengrajin.', 'SubCategoryProductID' => 3, 'created_at' => now(), 'updated_at' => now()],
             ['NameProduct' => 'ZEBRA MILDLINER BRUSH PEN & MARKER DOUBLE ENDED HIGHLIGHT', 'Rating' => 4.9, 'DescriptionProduct' => 'ZEBRA MILDLINER BRUSH PEN & MARKER DOUBLE ENDED HIGHLIGHT adalah alat tulis yang menawarkan dua fungsi dalam satu produk. Satu ujung berupa brush pen yang fleksibel untuk membuat garis tebal dan tipis, sementara ujung lainnya berupa highlighter untuk penandaan. Tersedia dalam berbagai warna pastel yang lembut, spidol ini sempurna untuk perencanaan kreatif dan jurnal.', 'SubCategoryProductID' => 3, 'created_at' => now(), 'updated_at' => now()],
-            //specialty 
+            //specialty
             ['NameProduct' => 'Zebra Prestige Fineliner', 'Rating' => 3.9, 'DescriptionProduct' => 'Zebra Prestige Fineliner adalah pulpen fineliner berkualitas tinggi yang ideal untuk menulis, menggambar, dan sketsa. Dengan ujung yang halus dan tinta yang tahan lama, fineliner ini menawarkan garis yang konsisten dan tajam setiap kali digunakan. Desainnya yang elegan dan ergonomis membuatnya nyaman untuk digunakan dalam jangka waktu lama.', 'SubCategoryProductID' => 4, 'created_at' => now(), 'updated_at' => now()],
             ['NameProduct' => 'Haile 4Size STA Waterproof Calligraphy Pen', 'Rating' => 3.4, 'DescriptionProduct' => 'Haile 4Size STA Waterproof Calligraphy Pen adalah set pena kaligrafi dengan empat ukuran berbeda, dirancang untuk memenuhi kebutuhan seni tulis tangan dan kaligrafi Anda. Tinta tahan air memastikan hasil tulisan yang tahan lama dan tidak luntur. Pena ini sempurna untuk menciptakan karya kaligrafi yang indah dan detail.', 'SubCategoryProductID' => 4, 'created_at' => now(), 'updated_at' => now()],
             ['NameProduct' => 'Baru Calligraphy Pens - 4 Sizes Calligraphy', 'Rating' => 4.7, 'DescriptionProduct' => 'Baru Calligraphy Pens - 4 Sizes Calligraphy adalah set pena kaligrafi yang terdiri dari empat ukuran berbeda untuk berbagai gaya tulisan. Set ini ideal untuk pemula maupun profesional yang ingin menghasilkan karya kaligrafi yang menakjubkan. Tinta berkualitas tinggi memastikan setiap goresan terlihat jelas dan tajam.', 'SubCategoryProductID' => 4, 'created_at' => now(), 'updated_at' => now()],
@@ -327,7 +327,7 @@ class ProductsTableSeeder extends Seeder
             ['NameProduct' => 'Faber Castell goldfaber charcoal pencil', 'Rating' => 4.9, 'DescriptionProduct' => 'Faber-Castell Classic Colour Pencil 48 adalah set pensil warna yang ideal untuk seniman yang mencari berbagai pilihan warna. Dengan 48 warna yang intens dan mudah dicampur, set ini cocok untuk menciptakan karya seni yang kompleks dan detail. Setiap pensil dirancang dengan kualitas tinggi dan bentuk heksagonal yang ergonomis, memastikan kenyamanan dan keakuratan dalam setiap goresan.', 'SubCategoryProductID' => 8, 'created_at' => now(), 'updated_at' => now()],
             ['NameProduct' => 'Samoyed Charcoal Pencil PCC-FV', 'Rating' => 3.7, 'DescriptionProduct' => 'Pentel Colour Pencil 12 warna adalah set pensil warna yang praktis dan serbaguna untuk berbagai kebutuhan seni dan kreatif. Dengan 12 warna cerah dan pigmen yang kaya, pensil ini ideal untuk mewarnai, menggambar, dan sketsa. Desainnya yang ergonomis dan kualitas bahan yang tahan lama memastikan pensil ini nyaman digunakan dalam jangka waktu yang lama.', 'SubCategoryProductID' => 8, 'created_at' => now(), 'updated_at' => now()],
             ['NameProduct' => 'MARKART Professional Charcoal Pencils Drawing Set - 10 Pieces', 'Rating' => 4.6, 'DescriptionProduct' => 'Pentel Colour Pencil 36 warna menawarkan pilihan warna yang lebih luas untuk ekspresi seni yang lebih bebas. Set ini terdiri dari 36 pensil warna dengan pigmen yang kaya dan tahan lama. Desain ergonomis dan kualitas bahan terbaik membuat pensil ini nyaman digunakan untuk berbagai proyek seni dan kerajinan. Cocok untuk pelajar, seniman, dan hobi.', 'SubCategoryProductID' => 8, 'created_at' => now(), 'updated_at' => now()],
-           
+
 
             //markers
             [
@@ -427,7 +427,7 @@ class ProductsTableSeeder extends Seeder
                 'updated_at' => Carbon::now()
             ],
             [
-                'NameProduct' => 'Zebra Midliner Series Conan Satuan / HIghlighler Karakter',
+                'NameProduct' => 'Zebra Midliner Series Conan Satuan / Highlighter Karakter',
                 'Rating' => 4.1,
                 'DescriptionProduct' => 'Zebra Midliner Series Conan adalah highlighter karakter dengan kualitas terbaik. Dengan ujung dua sisi dan tinta yang tahan lama, produk ini cocok untuk penggunaan sehari-hari di kantor atau untuk seniman yang kreatif.',
                 'SubCategoryProductID' => 11,
@@ -452,7 +452,7 @@ class ProductsTableSeeder extends Seeder
             ],
 
 
-            
+
             //others
             [
                 'NameProduct' => 'Tempat Pensil Kulit Waterproof',
@@ -680,7 +680,7 @@ class ProductsTableSeeder extends Seeder
             ],
 
 
-            
+
 
             //Books & Paper
             //Writing Paper
@@ -848,7 +848,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             [
                 'NameProduct' => 'Kertas Lipat Origami Asturo 16 x 16 cm isi 50 lembar',
                 'Rating' => 4.5,
@@ -857,7 +857,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             [
                 'NameProduct' => 'Mideer origami paper middle level',
                 'Rating' => 4.5,
@@ -866,7 +866,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             //Sticky Notes
             [
                 'NameProduct' => '200 Lembar Sticky Notes Set',
@@ -876,7 +876,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             [
                 'NameProduct' => 'Transparent Flag / Sticky Notes Panah Tom & Jerry TJ P-7A',
                 'Rating' => 4.5,
@@ -885,7 +885,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             [
                 'NameProduct' => 'Deli Sticky Note Pad Notes 4x100Sheets',
                 'Rating' => 4.5,
@@ -894,7 +894,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             [
                 'NameProduct' => 'Deli Memo Tempel / Sticky Notes 80 Lembar Warna Putih BT1XX',
                 'Rating' => 4.5,
@@ -903,7 +903,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             [
                 'NameProduct' => 'Joyko Sticky Notes',
                 'Rating' => 4.5,
@@ -912,7 +912,7 @@ Size CM : 21,0 X 29,7 \n
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            
+
             //Books
             //Notebooks
                 [
@@ -979,9 +979,9 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
+
             //  Planners
-            
+
                 [
                     'NameProduct' => 'Campus Diary PLANNER KOKUYO Size A6',
                     'Rating' => 4.5,
@@ -1030,8 +1030,8 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
-            
+
+
             //SketchBook
                 [
                     'NameProduct' => 'LYRA Sketch Book A4/A5 30 Sheets',
@@ -1097,11 +1097,11 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
+
 
 
             //Guest Book
-            
+
                 [
                     'NameProduct' => 'Joyko Buku Tamu GB-2030-5 Pink / Buku Tamu Warna Pink',
                     'Rating' => 4.5,
@@ -1142,11 +1142,11 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
-            
+
+
             // Correcting Tools
             // 28 Correction tape
-            
+
                 [
                     'NameProduct' => 'Tipex Roll JOYKO Correction Tape CT-522',
                     'Rating' => 4.5,
@@ -1195,9 +1195,9 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
+
             // 29 Correction fluid
-        
+
                 [
                     'NameProduct' => 'Tip Ex Cair Correction Fluid Pen JOYKO JK-01',
                     'Rating' => 4.5,
@@ -1254,9 +1254,9 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
+
             // 30 Erasers
-            
+
                 [
                     'NameProduct' => 'Eraser / Penghapus Joyko ER-111',
                     'Rating' => 4.5,
@@ -1313,7 +1313,7 @@ Size CM : 21,0 X 29,7 \n
                     'created_at' => now(),
                     'updated_at' => now()
                 ],
-            
+
                 //sticking tools
                 //glue stick(25)
                 ['NameProduct' => 'Lem Kenko Glue Stick', 'Rating' => 4.9, 'DescriptionProduct' => 'Lem Kenko Glue Stick adalah lem stik berkualitas tinggi yang dirancang untuk keperluan sehari-hari. Lem ini memiliki daya rekat yang kuat dan cepat kering, sehingga sangat cocok untuk digunakan di sekolah, kantor, maupun untuk kerajinan tangan. Desainnya yang praktis dan mudah digunakan membuatnya nyaman untuk diaplikasikan pada berbagai permukaan seperti kertas, karton, dan foto. Kenko Glue Stick juga aman digunakan oleh anak-anak karena bebas dari bahan berbahaya.', 'SubCategoryProductID' => 25, 'created_at' => now(), 'updated_at' => now()],
@@ -1334,7 +1334,7 @@ Size CM : 21,0 X 29,7 \n
                 ['NameProduct' => 'Lem Fox Slime 350 gr', 'Rating' => 4.4, 'DescriptionProduct' => 'Lem Fox Slime 350 gr adalah lem cair berkualitas tinggi yang ideal untuk membuat slime dan berbagai proyek kerajinan. Lem ini memiliki daya rekat yang kuat dan konsistensi yang tepat untuk menghasilkan slime yang lembut dan elastis. Dengan botol berukuran 350 gr, lem ini cukup untuk berbagai eksperimen dan kegiatan kreatif. Aman digunakan oleh anak-anak karena tidak beracun dan bebas dari bahan berbahaya.', 'SubCategoryProductID' => 26, 'created_at' => now(), 'updated_at' => now()],
                 ['NameProduct' => 'Alligator Liquid Glue 70 ml', 'Rating' => 4.1, 'DescriptionProduct' => 'Alligator Liquid Glue 70 ml adalah lem cair serbaguna yang dirancang untuk berbagai keperluan menempel di rumah, sekolah, dan kantor. Lem ini memiliki daya rekat yang kuat dan cepat kering, sehingga sangat cocok untuk proyek seni, kerajinan tangan, dan tugas sehari-hari. Botol berukuran 70 ml mudah digunakan dan disimpan. Lem ini juga aman untuk digunakan oleh anak-anak karena tidak mengandung bahan berbahaya.', 'SubCategoryProductID' => 26, 'created_at' => now(), 'updated_at' => now()],
                 ['NameProduct' => 'White Liquid Glue Lem Putih Cair Kertas Joyko GL-W01', 'Rating' => 3.8, 'DescriptionProduct' => 'White Liquid Glue Lem Putih Cair Kertas Joyko GL-W01 adalah lem cair yang ideal untuk kebutuhan sekolah dan rumah tangga. Dengan daya rekat yang kuat dan cepat kering, lem ini sangat cocok untuk menempel kertas, karton, dan proyek kerajinan. Botol yang mudah digunakan memastikan aplikasi yang bersih dan tepat. Lem ini juga aman digunakan oleh anak-anak karena tidak beracun dan bebas dari bahan berbahaya.', 'SubCategoryProductID' => 26, 'created_at' => now(), 'updated_at' => now()],
-                
+
                 //tape(27)
                 ['NameProduct' => 'Double Tape/Pita Perekat Dua Sisi Ukuran 6m X 6mm', 'Rating' => 4.7, 'DescriptionProduct' => 'Double Tape/Pita Perekat Dua Sisi Ukuran 6m X 6mm adalah pita perekat serbaguna yang ideal untuk berbagai keperluan. Dengan ukuran 6 meter panjang dan 6 mm lebar, pita ini sangat cocok untuk proyek seni, kerajinan tangan, dan perbaikan rumah tangga. Pita perekat ini memiliki daya rekat yang kuat di kedua sisinya, memungkinkan Anda untuk menempelkan berbagai macam bahan dengan mudah dan efisien. Selain itu, pita perekat ini juga mudah dipotong sesuai kebutuhan dan tidak meninggalkan residu saat dilepas, menjadikannya pilihan sempurna untuk aplikasi yang bersih dan rapi.', 'SubCategoryProductID' => 27, 'created_at' => now(), 'updated_at' => now()],
                 ['NameProduct' => 'KOKUYO DOTLINER LONG Tape glue GLUE TA-DM4400 TA-D4400', 'Rating' => 4.1, 'DescriptionProduct' => 'KOKUYO DOTLINER LONG Tape glue GLUE TA-DM4400 TA-D4400 adalah lem pita berkualitas tinggi yang dirancang untuk memberikan kemudahan dan kecepatan dalam menempel. Dengan desain panjang, lem ini sangat cocok untuk penggunaan yang lebih intensif di rumah, kantor, atau sekolah. Teknologi DOTLINER memastikan aplikasi lem yang bersih dan presisi tanpa berantakan. Lem ini juga memiliki daya rekat yang kuat dan tahan lama, serta tidak meninggalkan bekas saat dilepas, menjadikannya pilihan ideal untuk berbagai proyek kreatif dan tugas harian.', 'SubCategoryProductID' => 27, 'created_at' => now(), 'updated_at' => now()],

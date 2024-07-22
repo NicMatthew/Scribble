@@ -189,7 +189,7 @@ table th{
     border: 1px solid var(--dark-grey);
     margin-left: 30px;
     border-radius: 15px;
-    padding: 1%;
+    padding: 20px;
     display: flex;
     align-items: center;
     gap: 2%;
@@ -298,7 +298,7 @@ table th{
     border-radius: 15px;
     color: var(--white);
 }
-/* 
+/*
 .product-checkbox input:checked{
     color: aliceblue;
 } */
