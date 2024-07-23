@@ -15,7 +15,7 @@
         @include('components/navbar')
         <div id="login-status" data-logged-in="{{ auth()->check() ? 'true' : 'false' }}"></div>
         <div class="big-container">
-            <div class="back-button">
+            <div class="back-button" onclick="history.back()">
                 <img src="/icons/prev.svg" alt="">
             </div>
             <div class="right">
