@@ -16,7 +16,7 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->email === 'admin@scribble.com') {
+        if (Auth::check() && Auth::user()->RoleUser === '0') {
             return $next($request);
         }
 
