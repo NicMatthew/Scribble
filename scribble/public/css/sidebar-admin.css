@@ -80,13 +80,14 @@ body {
 }
 
 .sidebar-bottom .sidebar-menu {
-    width: calc(100% - 50px);
+    /* width: calc(100% - 50px); */
     background-color: var(--prim-1);
     padding: 12px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     filter: none;
+    border: none;
 }
 
 .sidebar-bottom .menu-text {

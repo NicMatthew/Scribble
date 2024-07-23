@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\User;
+use App\Models\Review;
 use App\Models\Product;
+use App\Models\Category;
+use App\Models\Wishlist;
+use App\Models\SubCategory;
+use Illuminate\Support\Arr;
 use App\Models\ProductEntry;
 use App\Models\ProductImage;
-use App\Models\SubCategory;
-use App\Models\Wishlist;
-use App\Models\Review;
-use App\Models\User;
 // use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
+use App\Models\TransactionDetail;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 
 class ProductController extends Controller
@@ -49,10 +51,45 @@ class ProductController extends Controller
 
             // Adding the minimum price
             $product->Price = $product->entries->min('Price');
+            $averageRating = Review::where('ProductID', $product->ProductID)
+                               ->avg('Rating');
+            
+
+            // Calculate stars logic
+            $fullStars = floor($averageRating);
+            $halfStar = ($averageRating - $fullStars) >= 0.5;
+            $emptyStars = 5 - ceil($averageRating);
+
+            // $averageRating = $reviews->avg('Rating');
+
+        // $fullStars = floor($averageRating);
+        // $halfStar = ($averageRating - $fullStars) >= 0.5;
+
+        // // Calculate empty stars count
+        // $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0);
+
+            // Store stars data in product object
+            $product->stars = [
+                'fullStars' => $fullStars,
+                'halfStar' => $halfStar,
+                'emptyStars' => $emptyStars
+            ];
+
+            // Fetch total quantity sold
+            $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+                                                ->sum('Quantity');
+
+            // Store total quantity sold in product object
+            $product->totalQuantitySold = $totalQuantitySold;
         }
+
+        // dd($products);
 
         return $products;
     }
+
+    
+
     public function showProductDetail($productID) {
         $selectedProduct = Product::where("ProductID", $productID)->first();
         $selectedProduct = [$selectedProduct];
@@ -68,9 +105,19 @@ class ProductController extends Controller
         $reviews = Review::where('ProductID', $productID)
                     ->with('reviewer') // Eager load the reviewer information
                     ->get();
+        
+        $totalQuantitySold = TransactionDetail::where('ProductID', $productID)
+                    ->sum('Quantity');
+
 
         $averageRating = $reviews->avg('Rating');
         $reviewCount = Review::where('ProductID', $productID)->count();
+
+        $fullStars = floor($averageRating);
+        $halfStar = ($averageRating - $fullStars) >= 0.5;
+
+        // Calculate empty stars count
+        $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0);
 
         if ($selectedProduct == null) {
             return redirect()->route("product-catalog");
@@ -96,7 +143,7 @@ class ProductController extends Controller
             $products = $this->checkWishlist($products);
         }
 
-        return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs", "reviews", "averageRating", "reviewCount"));
+        return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs", "reviews", "averageRating", "reviewCount", "fullStars", "halfStar", "emptyStars", "totalQuantitySold"));
     }
 
 

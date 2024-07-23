@@ -18,15 +18,6 @@
         <div class="product-details">
             <div class="title-wish">
                 <h3 class="product-title">{{ $product->NameProduct}}</h3>
-                {{-- <form action="{{ route('wishlist-toggle') }}" method="POST" name="wish-form">
-                    @csrf
-                    <input type="hidden" name="product_id" value="{{ $product->ProductID }}">
-                    <input type="hidden" name="url" value="" id="urlInput">
-
-                    <button class="wish" >
-                        <img src="/icons/love-outline.svg" alt="Add to Wishlist">
-                    </button>
-                </form> --}}
                 <form action="{{ route('wishlist-toggle') }}" method="POST" name="wish-form">
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->ProductID }}">
@@ -35,27 +26,36 @@
                         <img src="{{ $product->inWishlist ? '/icons/love-fill.svg' : '/icons/love-outline.svg' }}" alt="Toggle Wishlist">
                     </button>
                 </form>
-                {{-- <div class="wish" onclick="return false">
-                    <img src="/icons/love-outline.svg">
-                </div> --}}
             </div>
             <div class="btm-card">
                 <div class="rating-sell">
                     <div class="rating">
-                    @for ($i = 0; $i < 5; $i++)
-                        @if ($i < $product->Rating)
-                            <img src="/icons/star.svg">
+                        {{-- @dump($product) --}}
+                        <div class="rating mb-0">
+                            @if (!is_null($product->stars) && ($product->stars['fullStars'] > 0 || $product->stars['halfStar'] || $product->stars['emptyStars'] > 0))
+                            {{-- Full stars --}}
+                            @for ($i = 0; $i < $product->stars['fullStars']; $i++)
+                                <img src="/icons/star.svg">
+                            @endfor
+            
+                            {{-- Half star if applicable --}}
+                            @if ($product->stars['halfStar'])
+                                <img src="/icons/star-half.svg">
+                            @endif
+            
+                            {{-- Empty stars --}}
+                            @for ($i = 0; $i < $product->stars['emptyStars']; $i++)
+                                <img src="/icons/star-empty.svg">
+                            @endfor
                         @else
-                            <img src="/icons/star.svg">
+                            {{-- Display 5 empty stars if no stars data available --}}
+                            @for ($i = 0; $i < 5; $i++)
+                                <img src="/icons/star-empty.svg">
+                            @endfor
                         @endif
-                    @endfor
-                        <!-- <img src="/icons/star.svg">
-                        <img src="/icons/star.svg">
-                        <img src="/icons/star.svg">
-                        <img src="/icons/star.svg">
-                        <img src="/icons/star.svg"> -->
+                        </div>
                     </div>
-                    <h5 class="sell">100 Sold</h5>
+                    <h5 class="sell">{{ $product->totalQuantitySold }} Sold</h5>
                 </div>
                 <div class="price">
                     <h4>Rp. {{ number_format($product-> Price, 0, ',','.')}}</h4>

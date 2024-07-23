@@ -30,10 +30,10 @@
         </div>
         <form class="sidebar-bottom" name="" action="{{route("log-out")}}" method="POST">
             @csrf
-            <div class="sidebar-menu">
+            <button type="submit" class="sidebar-menu">
                 <img src="/icons/exit.svg">
-                <button type="submit" class="menu-text">Log out</button>
-            </div>
+                <p class="menu-text">Log out</p>
+            </button>
         </form>
     </div>
 </body>

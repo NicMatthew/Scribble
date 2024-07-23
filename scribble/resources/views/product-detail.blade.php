@@ -38,15 +38,23 @@
                         </div>
                         <div class="rating-sell mb-1 mt-0" style="display: flex; align-items:center">
                             <div class="rating mb-0">
-                                <?php for ($i = 0; $i < $averageRating; $i++): ?>
+                                {{-- Full stars --}}
+                                @for ($i = 0; $i < $fullStars; $i++)
                                     <img src="/icons/star.svg">
-                                <?php endfor; ?>
-                                <?php for ($i = 0; $i < 5 - $averageRating; $i++): ?>
+                                @endfor
+                            
+                                {{-- Half star if applicable --}}
+                                @if ($halfStar)
+                                    <img src="/icons/star-half.svg">
+                                @endif
+                            
+                                {{-- Empty stars --}}
+                                @for ($i = 0; $i < $emptyStars; $i++)
                                     <img src="/icons/star-empty.svg">
-                                <?php endfor; ?>
-                            </div>                            
+                                @endfor
+                            </div>
                             <div class="review-sold" style="display: flex; align-items:center">
-                                <p class="mb-0 b3">({{$reviewCount}} reviews) | 0 Sold</p>
+                                <p class="mb-0 b3">({{$reviewCount}} reviews) | {{$totalQuantitySold}} Sold</p>
                             </div>
                         </div>
                         <div class="price-product mb-1 b2" style="display: flex; align-items:center">
