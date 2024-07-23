@@ -9,6 +9,7 @@
     <!-- <script src="https://kit.fontawesome.com/4d9121ebec.js" crossorigin="anonymous"></script> -->
     <link href="/css/review.css" rel="stylesheet">
     <link href="/css/header-standard.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/shipping.css">
     <script src="/js/review.js" defer=""></script>
 </head>
 <body>
@@ -80,7 +81,7 @@
             </a>
         </div>
     </div>
-    <div class="modal">
+    <div class="modal" id="modal">
         <div class="message-container" id="message-container">
             <img src="/icons/reminder-delete.svg">
             <div class="alert-message">Rating is empty!</div>
