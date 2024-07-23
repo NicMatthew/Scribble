@@ -40,7 +40,7 @@
             </div>
             <div class="sub-content">
                 <p class="h2 all-prods">All Products</p>
-                <p class="b2 total">Total Products: {{ count($products) }}</p>
+                <p class="b2 total">Total Products: {{ $totalProduct  }}</p>
             </div>
             <div class="bottom-content">
                 <table>
@@ -58,11 +58,11 @@
                     @if ($products == null)
 
                     @else
-                        <div class="hide">{{ $count = 0  }}</div>
+                    <div class="hide">{{ $count = 0  }}</div>
                         @foreach ($products as $key => $product)
                             <tr class="data">
                                 {{-- <div class="hide">{{ $count =  $count + 1  }}</div> --}}
-                                <td>{{ $products->firstItem() + $key }}</td>
+                                <td>{{ $key+1 }}</td>
                                 <td>{{ $product->ProductID }}</td>
                                 <td class="prod-name">{{ $product->NameProduct }}</td>
                                 <td>{{ $product->NameCategory }}</td>
@@ -89,11 +89,9 @@
                 </table>
 
             </div>
-            @if ($product_edit == null)
                 <div class="pagination-links">
                     {{ $products->links() }}
                 </div>
-            @endif
 
 
             <div class="delete-overlay hide" id="confirmDelete">
@@ -181,7 +179,7 @@
                     <div class="input-wrapper">
                         <div class="input-name">Product Sub Category</div>
                         <select class="input-field" name="ProductSubCategory">
-                            <option value="{{ $product->NameSubCategory }}" selected id="ProductSubCategory">{{ $product_edit->NameSubCategory }}</option>
+                            <option value="{{ $product_edit->NameSubCategory }}" selected id="ProductSubCategory">{{ $product_edit->NameSubCategory }}</option>
                             @foreach ($subcategories as $subcategory)
                                 <option value="{{ $subcategory->NameSubCategory }}">{{ $subcategory->NameSubCategory }}</option>
                             @endforeach

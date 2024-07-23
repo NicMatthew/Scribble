@@ -14,15 +14,15 @@
         <div class="sidebar-top">
             <img src="/images/Scribble_Logo.png" class="sidebar-logo">
             <div class="sidebar-menus ">
-                <a href="" class="sidebar-menu dashboard-page">
+                <a href="/dashboard" class="sidebar-menu dashboard-page">
                     <img src="/icons/dashboard.svg" class="menu-icon">
                     <div class="menu-text prim-2-fill">Dashboard</div>
                 </a>
-                <a href="" class="sidebar-menu product-page">
+                <a href="product-admin" class="sidebar-menu product-page">
                     <img src="/icons/products.svg" class="menu-icon">
                     <div class="menu-text prim-1-fill">Products</div>
                 </a>
-                <a href="" class="sidebar-menu order-page">
+                <a href="/order-admin" class="sidebar-menu order-page">
                     <img src="/icons/orders.svg" class="menu-icon">
                     <div class="menu-text sec-2-fill">Orders</div>
                 </a>
