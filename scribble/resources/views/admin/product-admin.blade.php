@@ -93,8 +93,7 @@
                     {{ $products->links() }}
                 </div>
 
-
-            <div class="delete-overlay hide" id="confirmDelete">
+            {{-- <div class="delete-overlay hide" id="confirmDelete">
                 <div class="do-content">
                     <p>Are you sure you want to delete this product?</p>
                     <div class="do-buttons">
@@ -102,7 +101,22 @@
                         <button id="confirmDeleteYes">Delete</button>
                     </div>
                 </div>
+            </div> --}}
+
+            <div class="delete-overlay hide" id="confirmDelete">
+                <div class="do-content">
+                    <div class="form-delete">
+                        <img src="/icons/reminder-delete.svg" class="exclaimation-mark" alt="">
+                        <p class="confirm b1">Are you sure you want to delete your product?</p>
+                        <p class="confirm-desc b3">This action cannot be undone</p>
+                        <div class="do-buttons">
+                            <button id="confirmDeleteClose" class="keep b2">Keep Product</button>
+                            <button id="confirmDeleteYes" class="btn-del b2">Delete Product</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
         </div>
         <div class="modal" id="modal">
