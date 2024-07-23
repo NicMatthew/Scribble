@@ -28,12 +28,13 @@
                 </a>
             </div>
         </div>
-        <div class="sidebar-bottom">
-            <a href="" class="sidebar-menu">
+        <form class="sidebar-bottom" name="" action="{{route("log-out")}}" method="POST">
+            @csrf
+            <div class="sidebar-menu">
                 <img src="/icons/exit.svg">
-                <div class="menu-text">Log out</div>
-            </a>
-        </div>
+                <button type="submit" class="menu-text">Log out</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
