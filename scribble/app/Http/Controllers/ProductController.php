@@ -126,20 +126,19 @@ class ProductController extends Controller
                 ->where("NameSubCategory", "=", $subcategory_select);
         }
 
-        if ($sorting != null && $sorting != "") {
-            $query->join("product_entries", "product_entries.ProductID", "=", "products.ProductID");
-            if ($sorting == "Lowest Price") {
-                $query->orderBy('Price', 'asc');
-            } elseif ($sorting == "Highest Price") {
-                $query->orderBy('Price', 'desc');
-            }
-        }
-
         // Get the products as a collection
         $products = $query->get();
 
         // Process the products
         $products = $this->setImageAndMinPrice($products);
+
+        if ($sorting != null && $sorting != "") {
+            if ($sorting == "Lowest Price") {
+                $products = $products->sortBy("Price");
+            } elseif ($sorting == "Highest Price") {
+                $products = $products->sortByDesc("Price");
+            }
+        }
 
         if ($category_select == null && $subcategory_select != null) {
             $category_select = Category::join("sub_categories", "sub_categories.CategoryProductID", "=", "categories.CategoryProductID")
