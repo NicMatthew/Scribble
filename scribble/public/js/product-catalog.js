@@ -36,7 +36,7 @@ subcategories.forEach((subcategory) => {
 
 sort.forEach((sorting) => {
     sorting.addEventListener("click", (e) => {
-        form.children[3].setAttribute("value", sorting.innerText);
+        form.lastElementChild.setAttribute("value", sorting.innerText);
         sortTitle.innerHTML = sorting.innerText
         document.forms["form_catalog"].submit();
     });

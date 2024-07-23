@@ -22,7 +22,7 @@
         <script>
             let product = null
         </script>
-            
+
         @endif
         {{-- @dd($product_edit) --}}
         <div class="background">
@@ -56,7 +56,7 @@
                     </tr>
                     <!-- <hr class="content-line-table"> -->
                     @if ($products == null)
-                        
+
                     @else
                         <div class="hide">{{ $count = 0  }}</div>
                         @foreach ($products as $key => $product)
@@ -87,11 +87,13 @@
                         @endforeach
                     @endif
                 </table>
-                
+
             </div>
+            @if ($product_edit == null)
                 <div class="pagination-links">
                     {{ $products->links() }}
                 </div>
+            @endif
 
 
             <div class="delete-overlay hide" id="confirmDelete">
@@ -111,7 +113,7 @@
                     <div class="close-btn" id="close-btn-disc">
                         <img src="/icons/close.svg">
                     </div>
-                    <div class="header-title">Add Product</div>
+                    <div class="header-title" style="color: var(--black)">Add Product</div>
                     <hr class="divider">
                 </div>
                 <form class="add-discount-wrapper" name="" method="POST" action="{{ route("product_add") }}" enctype="multipart/form-data">
@@ -154,7 +156,7 @@
                         <div class="input-name">Product Price</div>
                         <input type="text" class="input-field" placeholder="Product Price" name="ProductPrice">
                     </div>
-                    <input class="add-new-disc" placeholder="Add Product" type="submit">
+                    <input class="add-new-disc" placeholder="Add Product" type="submit" value="Add Product">
                 </form>
             </div>
 
@@ -167,7 +169,7 @@
                     <div class="close-btn" id="close-btn-edit">
                         <img src="/icons/close.svg">
                     </div>
-                    <div class="header-title">Edit Product</div>
+                    <div class="header-title" style="color: var(--black)">Edit Product</div>
                     <hr class="divider">
                 </div>
                 <form class="add-discount-wrapper" name="" method="POST" action="{{ route("product-edit") }}" enctype="multipart/form-data">
@@ -203,12 +205,12 @@
                     </div>
                     <input type="hidden" value="{{ $product_edit->ProductID }}" name="ProductID">
                     <input type="hidden" value="{{ $product_edit->VariantID }}" name="VariantID">
-                    <input class="add-new-disc" placeholder="Add Product" type="submit">
+                    <input class="add-new-disc" placeholder="Add Product" type="submit" value="Edit Product">
                 </form>
             </div>
 
-        </div> 
-            
+        </div>
+
         @endif
         <form action="{{ route("product-find") }}" name="form-edit">
             <input type="hidden" value="" name="ProductID" id="ProductID">
@@ -219,9 +221,9 @@
             <input type="hidden" value="" name="ProductID" id="ProductIDDelete">
             <input type="hidden" value="" name="VariantName" id="VariantNameDelete">
         </form>
-        
-        
 
-        
+
+
+
     </body>
     </html>
