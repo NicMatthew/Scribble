@@ -22,6 +22,11 @@
                 <img src="/images/Scribble_Logo.png" height="35" />
             </a>
             </div>
+            <style>
+                a.ms-md-2 img:hover {
+                    opacity: 0.7;
+                }
+                </style>
             <!-- Left elements -->
 
             <!-- Center elements -->

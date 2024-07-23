@@ -18,9 +18,14 @@
             <!-- Left elements -->
             <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
             <a href="/" class="ms-md-2">
-                <img src="/images/Scribble_Logo.png" height="35" />
+                <img src="/images/Scribble_Logo.png" height="35" "/>
             </a>
             </div>
+            <style>
+                a.ms-md-2 img:hover {
+                    opacity: 0.7;
+                }
+                </style>
             <!-- Left elements -->
 
             <!-- Center elements -->
