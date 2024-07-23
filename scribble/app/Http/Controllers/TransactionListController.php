@@ -129,7 +129,7 @@ class TransactionListController extends Controller
             $newReview->VariantID = request()->VariantID[$i];
             $newReview->TextReview = request()->TextReview[$i];
             $newReview->Rating = request()->Rating[$i];
-            if(request()->file('Image') != null){
+            if(request()->Image[0]->getClientOriginalName() != 'myFile.txt'){
                 $image = request()->Image[$i];
 
                 // Konversi gambar ke dalam base64

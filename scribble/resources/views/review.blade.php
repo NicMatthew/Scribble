@@ -57,7 +57,8 @@
                             </div>
                         </div>
                         <div class="photo-upload">
-                            <input type="file" id="upload-photo-{{ $index }}" name="Image[]" class="upload-input Image-input" accept="image/*">
+                            <input type="hidden" name="ImageIndex[]" value="0">
+                            <input type="file" id="upload-photo-{{ $index }}" name="Image[]" class="upload-input Image-input" accept="image/*" >
                             <label for="upload-photo-{{ $index }}" class="upload-label">
                                 <p>Add Photo</p>
                                 <span class="icon"><img src="/icons/photo-review.svg" alt="Photo Icon"></span>
