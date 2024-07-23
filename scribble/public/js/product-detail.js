@@ -19,6 +19,7 @@ let priceInput = document.getElementById("price-input")
 let priceInput2 = document.getElementById("price-input-2");
 let selectedVariant = -1;
 let hideCounter = 0;
+let lastQuantity = 0;
 
 variants.forEach(variant => {
     let image = document.createElement("img")
@@ -36,6 +37,15 @@ function setVariant(idx, varID) {
         variantOpt[selectedVariant].classList.remove("selected-variant")
     }
 
+    console.log(idx)
+    if (variants[idx].Stock == 0) {
+        document.getElementById("add-to-cart-btn").style = "text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor: not-allowed; background-color: #bdbdbd;"
+        document.getElementById("buy-now-btn").style = "text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor: not-allowed; background-color: #bdbdbd;"
+    } else {
+        document.getElementById("add-to-cart-btn").style = "text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor: pointer;"
+        document.getElementById("buy-now-btn").style = "text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor: pointer;"
+    }
+
     priceInput.value = variants[idx].Price
     priceInput2.value = variants[idx].Price;
     priceDisplay.innerText = "Rp. " + numberWithCommas(variants[idx].Price)
@@ -44,6 +54,7 @@ function setVariant(idx, varID) {
     availableDisp.innerText = variants[idx].Stock + " pieces available"
     quantityDisp.innerText = 1
     selectedVariant = idx
+    lastQuantity = variants[idx].Stock
     setQuantity(0)
 
     variantInput.setAttribute("value", varID)
@@ -52,7 +63,7 @@ function setVariant(idx, varID) {
 
 let tempVar = null
 for (let i = variantOpt.length-1; i >= 0; i--) {
-    if (tempVar == variantOpt[i].innerText || variantOpt[i].innerText == "None") {
+    if (tempVar == variantOpt[i].innerText) {
         variantOpt[i].style = "font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:none; flex-direction: row; align-items:center;"
         hideCounter++
     } else {
@@ -60,7 +71,7 @@ for (let i = variantOpt.length-1; i >= 0; i--) {
     }
 }
 
-if (hideCounter == variantOpt.length) {
+if (variantOpt.length - 1 == hideCounter) {
     document.getElementById("variant-container").style = "display: none"
 }
 
@@ -80,6 +91,7 @@ for (let i = 0; i < variantOpt.length; i++) {
             }
         });
         setVariant(i, varId)
+        console.log(i, varId)
     })
 }
 
@@ -246,17 +258,12 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartBtn.addEventListener("click", function (e) {
         e.preventDefault(); // Mencegah tindakan default dari anchor link
 
-        // Memeriksa status login pengguna dari elemen data
-        const isLoggedIn =
-            document.getElementById("login-status").dataset.loggedIn === "true";
-
-        if (isLoggedIn) {
-            // Pengguna sudah login, arahkan ke halaman keranjang
-            document.forms["add-to-cart-form"].submit();
-        } else {
-            // Pengguna belum login, arahkan ke halaman login
-            window.location.href = "/log-in";
+        if (lastQuantity == 0) {
+            return
         }
+        // Memeriksa status login pengguna dari elemen data
+
+        document.forms["add-to-cart-form"].submit();
     });
 });
 
@@ -266,17 +273,11 @@ document.addEventListener("DOMContentLoaded", function () {
     buyNowBtn.addEventListener("click", function (e) {
         e.preventDefault(); // Mencegah tindakan default dari anchor link
 
-        // Memeriksa status login pengguna dari elemen data
-        const isLoggedIn =
-            document.getElementById("login-status").dataset.loggedIn === "true";
-
-        if (isLoggedIn) {
-            // Pengguna sudah login, arahkan ke halaman keranjang
-            document.forms["buy-now-form"].submit();
-        } else {
-            // Pengguna belum login, arahkan ke halaman login
-            window.location.href = "/log-in";
+        if (lastQuantity == 0) {
+            return
         }
+
+        document.forms["buy-now-form"].submit();
     });
 });
 
