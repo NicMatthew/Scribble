@@ -38,7 +38,7 @@ function setVariant(idx, varID) {
     }
 
     console.log(idx)
-    if (variants[idx].Stock == 0) {
+    if (variants[idx].Stock <= 0) {
         document.getElementById("add-to-cart-btn").style = "text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor: not-allowed; background-color: #bdbdbd;"
         document.getElementById("buy-now-btn").style = "text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor: not-allowed; background-color: #bdbdbd;"
     } else {
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartBtn.addEventListener("click", function (e) {
         e.preventDefault(); // Mencegah tindakan default dari anchor link
 
-        if (lastQuantity == 0) {
+        if (lastQuantity <= 0) {
             return
         }
         // Memeriksa status login pengguna dari elemen data
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buyNowBtn.addEventListener("click", function (e) {
         e.preventDefault(); // Mencegah tindakan default dari anchor link
 
-        if (lastQuantity == 0) {
+        if (lastQuantity <= 0) {
             return
         }
 

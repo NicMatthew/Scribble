@@ -39,6 +39,7 @@
                     </button>
                 </form>
             </div>
+            
             <!-- Center elements -->
 
             <!-- Right elements -->
@@ -49,9 +50,10 @@
                     <img src="/icons/cart.png" style="margin-right: 15px; height: 27px;"/>
                 </a> -->
                  <a  href="{{ route('cart.index') }}" class="text-reset me-3 position-relative" style="display:flex; align-items: center; justify-content:center;">
-                    <img src="/icons/cart.svg" style="margin-right: 18px; height: 30px;"/>
+                    <img src="/icons/cart.svg" class="cart-btn" style="margin-right: 18px; height: 30px;"/>
                     <span class="badge position-absolute" style="background-color: var(--prim-1); color: var(--white); border-style:solid; border-color:var(--prim-1); top: 7px; right: 19px; transform: translate(50%, -50%); border-radius: 50%;">{{ $totalUniqueItemsInCart }}</span>
                 </a>
+                
                 <!-- User -->
                 @if(Auth::check())
                 <a href="{{ route('profile') }}" class="btn rounded-circle custom-btn" data-mdb-ripple-init style="width: auto; height: 35px; display:flex; align-items: center; justify-content: center; background-color: #fff; cursor: pointer; position: relative; outline: none !important; box-shadow: none;">

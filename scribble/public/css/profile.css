@@ -40,9 +40,9 @@
     align-items: center;
 }
 
-.icon img{
+/* .icon img{
     width: 120%;
-}
+} */
 
 .profile-data{
     display: flex;
