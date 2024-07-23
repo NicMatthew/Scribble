@@ -51,7 +51,7 @@
                 </div>
                 <h5>Markers</h5>
             </a>
-            <a class="category" href="{{ route('product-catalog', ['category' => 'Books & Papers']) }}">
+            <a class="category" href="{{ route('product-catalog', ['category' => 'Books and Papers']) }}">
                 <div class="wrapper prim-2">
                     <img src="/images/paper.png">
                 </div>

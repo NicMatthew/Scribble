@@ -85,7 +85,7 @@
                                         </a>
                                     </div>
                                 @endif
-                                @if ($transaction->TransactionStatus != "Cancelled" && $transaction->TransactionStatus != "Finished")
+                                @if ($transaction->TransactionStatus != "Cancelled" && $transaction->TransactionStatus != "Finished" && $transaction->TransactionStatus != "In Delivery")
                                 <div class="cancellation">
                                     <a href="#" class="cancel-btn" id="cancel-btn" value = {{ $transaction->TransactionID }}>
                                         <img src="/icons/cancel-order.svg" alt="tes">

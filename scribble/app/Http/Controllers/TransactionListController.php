@@ -60,10 +60,7 @@ class TransactionListController extends Controller
         return view('transaction-list', compact('transactions'));
     }
     public function transaction_delete(){
-        // jika mau diapus
-        // Transaction::where('TransactionID',request()->TransactionID)->where('UserID',auth()->id())->delete();
-        // TransactionDetail::where('TransactionID',request()->TransactionID)->delete();
-
+        
         Transaction::where('TransactionID',request()->TransactionID)
         ->where('UserID',auth()->id())
         ->update(['TransactionStatus' => 'Cancelled']);
@@ -122,7 +119,7 @@ class TransactionListController extends Controller
         $transaction->ReviewStatus = "Reviewed";
         $transaction->update();
 
-        for ($i=0; $i < count(request()->ProductID); $i++) { 
+        for ($i=0; $i < count(request()->ProductID); $i++) {
             # code...
             $newReview = new Review();
             $newReview->ProductID = request()->ProductID[$i];
@@ -140,12 +137,12 @@ class TransactionListController extends Controller
             }
             // dd($newReview->Image);
             $newReview->UserID = auth()->id();
-            
-            
+
+
             $newReview->save();
         }
         return redirect()->route('transaction-list');
-        
+
         // dd('test');
     }
 }

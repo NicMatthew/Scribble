@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-
+const modal = document.getElementById("modal");
+const message = document.getElementById("message-container");
 document.getElementById("submit-button").addEventListener("click", function () {
     var check = 0;
     textreview = document.querySelectorAll(".review-text");
@@ -63,8 +64,8 @@ document.getElementById("submit-button").addEventListener("click", function () {
     });
 
     if (check != 0) {
-        // harus diganti modal
-        alert("Please fill all review form");
+        modal.classList.add("active");
+        message.classList.add("active");
     } else {
         // alert('mantap')
         document.forms["form-submit"].submit();
@@ -111,4 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
     reviewTextarea.addEventListener("input", function () {
         additionalClassDiv.style.display = "none";
     });
+});
+
+
+document.getElementById("cancel-btn").addEventListener("click", (e) => {
+    modal.classList.remove("active");
+    message.classList.remove("active");
 });

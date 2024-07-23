@@ -20,17 +20,25 @@ use Illuminate\Support\Facades\Auth;
 class ProductController extends Controller
 {
     public function checkWishlist($products) {
-        foreach($products as $product) {
-            $wish = Wishlist::where('UserID', Auth::user()->UserID)
-            ->where('ProductID', $product->ProductID)
-            ->first();
+        if (Auth::check()) {
+            foreach($products as $product) {
 
-            if ($wish != null) {
-                $product->inWishlist = true;
-            } else {
+                $wish = Wishlist::where('UserID', Auth::user()->UserID)
+                ->where('ProductID', $product->ProductID)
+                ->first();
+
+                if ($wish != null) {
+                    $product->inWishlist = true;
+                } else {
+                    $product->inWishlist = null;
+                }
+            }
+        } else {
+            foreach($products as $product) {
                 $product->inWishlist = null;
             }
         }
+
         return $products;
     }
 
@@ -47,29 +55,16 @@ class ProductController extends Controller
     }
     public function showProductDetail($productID) {
         $selectedProduct = Product::where("ProductID", $productID)->first();
-
-        if(Auth::check()){
-            $wish = Wishlist::where('UserID', Auth::user()->UserID)
-            ->where('ProductID', $selectedProduct->ProductID)
-            ->first();
-
-            if ($wish != null) {
-                $selectedProduct->inWishlist = true;
-            } else {
-                $selectedProduct->inWishlist = null;
-            }
-        }
+        $selectedProduct = [$selectedProduct];
+        $selectedProduct = $this->checkWishlist($selectedProduct);
+        $selectedProduct = $selectedProduct[0];
 
         $variants = ProductEntry::join("variants", "variants.VariantID", "=", "product_entries.VariantID")
                                 ->join("product_images", "product_images.VariantID", "=", "product_entries.VariantID")
                                 ->where("product_images.ProductID", $productID)
                                 ->where("product_entries.ProductID", $productID)
-                                ->get()
-                                // ->sortBy('VariantName')
-                                ;
+                                ->get();
 
-        // dd($variants);
-        // $variants = collect($variants);
         $reviews = Review::where('ProductID', $productID)
                     ->with('reviewer') // Eager load the reviewer information
                     ->get();
@@ -82,7 +77,7 @@ class ProductController extends Controller
         }
 
         $products = Product::with(['images', 'entries']) // Eager load images and entries
-                            ->get();
+                            ->get()->random(10);
 
         // Add the first image and the minimum price to the main product object
         foreach ($products as $product) {
@@ -92,9 +87,6 @@ class ProductController extends Controller
             // Adding the minimum price
             $product->Price = $product->entries->min('Price');
         };
-
-
-        // dd($products);
 
         // Get wishlist product IDs
         $wishlistProductIDs=null;
@@ -106,10 +98,10 @@ class ProductController extends Controller
 
         return view("product-detail", compact("selectedProduct", "variants", "products","wishlistProductIDs", "reviews", "averageRating", "reviewCount"));
     }
-   
+
 
     public function showAllProducts(Request $request)
-    {   
+    {
         $selected = null;
         $search = $request->search;
         $category_select = $request->category;
@@ -134,9 +126,8 @@ class ProductController extends Controller
                 ->where("NameSubCategory", "=", $subcategory_select);
         }
 
-        $query->with(['images', 'entries']);
-
         if ($sorting != null && $sorting != "") {
+            $query->join("product_entries", "product_entries.ProductID", "=", "products.ProductID");
             if ($sorting == "Lowest Price") {
                 $query->orderBy('Price', 'asc');
             } elseif ($sorting == "Highest Price") {
@@ -162,11 +153,7 @@ class ProductController extends Controller
         $subcategories = SubCategory::all();
 
         $user = Auth::user();
-        if ($user == null) {
-            return redirect()->route('log-in');
-        }
 
-        $wishlistProductIDs = Wishlist::where('UserID', $user->UserID)->pluck('ProductID')->toArray();
         $products = $this->checkWishlist($products);
 
         // Manually paginate the results
@@ -178,14 +165,11 @@ class ProductController extends Controller
             'query' => $request->query(),
         ]);
 
-        return view('product-catalog', compact('paginatedProducts', 'search', 'categories', 'subcategories', 'category_select', 'subcategory_select', 'sorting', 'wishlistProductIDs'));
+        return view('product-catalog', compact('paginatedProducts', 'search', 'categories', 'subcategories', 'category_select', 'subcategory_select', 'sorting'));
     }
 
         public function toggleWishlist(Request $request)
         {
-            if(auth()->check() == false){
-                return redirect()->route('log-in');
-            }
             $user = Auth::user();
             $productId = $request->input('product_id');
 
@@ -195,8 +179,6 @@ class ProductController extends Controller
                 Wishlist::where('UserID', $user->UserID)
                         ->where('ProductID', $productId)
                         ->delete();
-            // if ($wishlistItem) {
-            //     $wishlistItem->delete();
             } else {
                 $NewWishlist = new Wishlist();
                 $NewWishlist->UserID = $user->UserID;
@@ -229,16 +211,4 @@ class ProductController extends Controller
 
         return view('wishlist', compact('wishlistProducts'));
     }
-
-    // public function removeFromWishlist(Request $request)
-    // {
-    //     $user = Auth::user();
-    //     $productId = $request->input('product_id');
-
-    //     Wishlist::where('UserID', $user->UserID)->where('ProductID', $productId)->delete();
-
-    //     return redirect()->to($request->url);
-    // }
-
-
 }

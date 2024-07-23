@@ -31,13 +31,15 @@ class AdminController extends Controller
         $categories = Category::all();
         $subcategories = SubCategory::all();
         $product = null;
+        $totalProduct = count(Product::all());
         // dd($products);
       
         return view('/admin/product-admin',
         [
             'products' =>$products,
             'subcategories' => $subcategories,
-            "product_edit" => $product
+            "product_edit" => $product,
+            'totalProduct' => $totalProduct
         ]);
     }
     public function product_add(){
@@ -130,14 +132,17 @@ class AdminController extends Controller
         ->join('variants','variants.VariantID','=','product_entries.VariantID')
         ->join('sub_categories','sub_categories.SubCategoryProductID','=','products.SubCategoryProductID')
         ->join('categories','categories.CategoryProductID','=','sub_categories.CategoryProductID')
-        ->get();
-        $categories = Category::all();
+        ->select('products.*', 'variants.*', 'sub_categories.NameSubCategory', 'categories.NameCategory','product_entries.Stock','product_entries.Price') // Select required fields
+        ->paginate(10);
+        $totalProduct = count(Product::all());
+        
         $subcategories = SubCategory::all();
         // dd($product);
         return view('/admin/product-admin',
         [
             'products' =>$products,
             'subcategories' => $subcategories,
+            'totalProduct'=> $totalProduct,
             "product_edit" => $product
         ]);
 
@@ -228,7 +233,7 @@ class AdminController extends Controller
 
         $sales = TransactionDetail::join("products", "products.ProductID", "=", "transaction_details.ProductID")
                                     ->select("NameProduct", "products.ProductID", DB::raw("sum(Quantity) as SalesQuantity"))
-                                    ->groupBy("products.ProductID")
+                                    ->groupBy("products.ProductID", "products.NameProduct")
                                     ->get();
 
         foreach ($sales as $sale) {
