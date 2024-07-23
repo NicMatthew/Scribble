@@ -80,7 +80,15 @@
             </a>
         </div>
     </div>
-
+    <div class="modal">
+        <div class="message-container" id="message-container">
+            <img src="/icons/reminder-delete.svg">
+            <div class="alert-message">Rating is empty!</div>
+            <div class="btn-container">
+                <div class="cancel-btn" id="cancel-btn">OK</div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
