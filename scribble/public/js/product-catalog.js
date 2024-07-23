@@ -16,8 +16,6 @@ categories = Array.prototype.slice.call(categories)
 subcategories = Array.prototype.slice.call(subcategories);
 sort = Array.prototype.slice.call(sort);
 
-console.log(categories)
-
 categories.forEach(category => {
     category.addEventListener("click", (e) => {
         form.children[0].setAttribute('value', category.innerHTML)

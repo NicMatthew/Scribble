@@ -60,27 +60,46 @@ Route::get('/buy-now', [ShippingController::class, 'buyNow'])->name('buy.now');
 Route::get('/payment-qr', [PaymentController::class, "qr"])->name("payment");
 Route::post('/payment/successful', [PaymentController::class, "paymentSuccess"])->name("paymentSuccess");
 
-Route::get('/order-admin', [OrderAdminController::class, 'index']);
-Route::post('/order-admin/update/{id}', [OrderAdminController::class, 'updateStatus'])->name("order-admin-update");
+// Route::get('/order-admin', [OrderAdminController::class, 'index']);
+// Route::post('/order-admin/update/{id}', [OrderAdminController::class, 'updateStatus'])->name("order-admin-update");
 
 Route::get('/wishlist', [ProductController::class, 'showWishlist'])->name('wishlist-index');
 
 Route::post('/wishlist-toggle', [ProductController::class, 'toggleWishlist'])->name('wishlist-toggle');
 
-//Product Admin Routing
-Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
-Route::get("/product-admin/find", [AdminController::class, "product_find"])->name("product-find");
-Route::post("/product-admin/edit", [AdminController::class, "product_edit"])->name("product-edit");
-Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
-Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
-Route::get('/product-admin/delete', [AdminController::class, "product_delete"])->name('product_delete');
+// //Product Admin Routing
+// Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
+// Route::get("/product-admin/find", [AdminController::class, "product_find"])->name("product-find");
+// Route::post("/product-admin/edit", [AdminController::class, "product_edit"])->name("product-edit");
+// Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
+// Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
+// Route::get('/product-admin/delete', [AdminController::class, "product_delete"])->name('product_delete');
 
-//Dashboard Admin Routing
-Route::get('/dashboard', [AdminController::class, "dashboard"])->name("admin-dashboard");
-Route::get('/dashboard/discount/add', [AdminController::class, "addDiscount"])->name("add-discount");
-Route::get('/dashboard/discount/delete', [AdminController::class, "deleteDiscount"])->name("delete-discount");
-Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
-Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");
+// //Dashboard Admin Routing
+// Route::get('/dashboard', [AdminController::class, "dashboard"])->name("admin-dashboard");
+// Route::get('/dashboard/discount/add', [AdminController::class, "addDiscount"])->name("add-discount");
+// Route::get('/dashboard/discount/delete', [AdminController::class, "deleteDiscount"])->name("delete-discount");
+// Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
+// Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/order-admin', [OrderAdminController::class, 'index']);
+    Route::post('/order-admin/update/{id}', [OrderAdminController::class, 'updateStatus'])->name("order-admin-update");
+
+    // Product Admin Routing
+    Route::get("/product-admin", [AdminController::class, "product_admin"])->name("product_admin");
+    Route::get("/product-admin/find", [AdminController::class, "product_find"])->name("product-find");
+    Route::post("/product-admin/edit", [AdminController::class, "product_edit"])->name("product-edit");
+    Route::post("/product-admin", [AdminController::class, "product_add"])->name("product_add");
+    Route::post('/product-admin/update', [AdminController::class, "product_update"])->name('product_update');
+    Route::get('/product-admin/delete', [AdminController::class, "product_delete"])->name('product_delete');
+
+    // Dashboard Admin Routing
+    Route::get('/dashboard', [AdminController::class, "dashboard"])->name("admin-dashboard");
+    Route::get('/dashboard/discount/add', [AdminController::class, "addDiscount"])->name("add-discount");
+    Route::get('/dashboard/discount/delete', [AdminController::class, "deleteDiscount"])->name("delete-discount");
+    Route::post('/dashboard/banner/store', [AdminController::class, "storeBanner"])->name("admin-store-banner");
+    Route::get('/dashboard/banner/delete/{id}', [AdminController::class, "removeBanner"])->name("admin-remove-banner");
+});
 
 Route::post("/make-order", [PaymentController::class, "makeOrder"])->name("make-order");
 Route::get("/orders/{transactionID}/retry-payment", [PaymentController::class, 'retryPayment'])->name('retry-payment');
