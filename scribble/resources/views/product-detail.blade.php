@@ -73,7 +73,7 @@
                         <div class="check-out">
                             <div id="add-to-cart-btn" class="btn mr-2" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
                                 <img src="/icons/cart-product-detail.svg" alt="">
-                                <p class="mb-0 ml-2 b3" style="font-weight:bold; color:white">Add to Cart</p>
+                                <p class="mb-0 ml-2 b3" style="color:white">Add to Cart</p>
                             </div>
                             <form action="{{ route('cart.add') }}" method="POST" id="add-to-cart-form" style="display: none" name="add-to-cart-form">
                                 @csrf
@@ -84,7 +84,7 @@
                                 <input type="text" name="var" value="" id="variant-input">
                             </form>
                             <div id="buy-now-btn" href="" class="btn-2 mr-3" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor:pointer;">
-                                <p class="mb-0 b3" style="font-weight:bold ;color:white">Buy Now</p>
+                                <p class="mb-0 b3" style="color:white">Buy Now</p>
                             </div>
                             <form action="{{ route('buy.now') }}" method="GET" id="buy-now-form" style="display: none;">
                                 <input type="hidden" name="productIDs[]" value="{{ $selectedProduct->ProductID }}">
