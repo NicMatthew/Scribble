@@ -234,9 +234,10 @@ table .head {
 .del-add-button {
     display: flex;
     flex-direction: row;
+    gap: 50px;
     width: 55%;
     align-items: center;
-    /* justify-content: space-around; */
+    justify-content: center;
 }
 
 /* Pagination */
