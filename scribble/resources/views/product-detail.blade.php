@@ -38,13 +38,13 @@
                         </div>
                         <div class="rating-sell mb-1 mt-0" style="display: flex; align-items:center">
                             <div class="rating mb-0">
-                                @for($i = 0; $i < $selectedProduct->Rating; $i++)
+                                <?php for ($i = 0; $i < $averageRating; $i++): ?>
                                     <img src="/icons/star.svg">
-                                @endfor
-                                @for($i = 0; $i < 5 - $selectedProduct->Rating; $i++)
+                                <?php endfor; ?>
+                                <?php for ($i = 0; $i < 5 - $averageRating; $i++): ?>
                                     <img src="/icons/star-empty.svg">
-                                @endfor
-                            </div>
+                                <?php endfor; ?>
+                            </div>                            
                             <div class="review-sold" style="display: flex; align-items:center">
                                 <p class="mb-0 b3">({{$reviewCount}} reviews) | 0 Sold- yang ini blom</p>
                             </div>
@@ -137,6 +137,7 @@
                                         <img src="/icons/chevron-down.svg" class="mr-3" alt="down">
                                     </div>
                                     <ul class="dropdown-filter-content">
+                                        <li class="b3" style="display: flex; align-items:center" data-star="all"><a href="#" style="text-decoration:none">All reviews</a></li>
                                         <li class="b3" style="display: flex; align-items:center" data-star="5"><img src="/icons/star.svg"  style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">5 Star</a></li>
                                         <li class="b3" style="display: flex; align-items:center" data-star="4"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a  href="#" style="text-decoration:none">4 Star</a></li>
                                         <li class="b3" style="display: flex; align-items:center" data-star="3"><img src="/icons/star.svg" style="width: fit-content"; class="mr-1"><a href="#" style="text-decoration:none">3 Star</a></li>
