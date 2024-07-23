@@ -291,14 +291,26 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             var selectedStar = item.getAttribute('data-star');
 
-            document.getElementById('sortText').textContent = selectedStar + ' Star';
+            // Update sortText based on selected star
+            if (selectedStar === "all") {
+                document.getElementById('sortText').textContent = "All reviews";
+                document.getElementById('sortIcon').style.display = 'none'; // Hide star icon
+            } else {
+                document.getElementById('sortText').textContent = selectedStar + ' Star';
+                document.getElementById('sortIcon').src = '/icons/star.svg'; // Show star icon
+                document.getElementById('sortIcon').style.display = 'inline'; // Ensure star icon is visible
+            }
+
+
+            // Update sortIcon
             document.getElementById('sortIcon').src = '/icons/star.svg'; // Assuming star.svg is your star icon
-            // Hide all reviews
+
+            // Hide or show reviews based on selected star rating
             var reviews = document.querySelectorAll('.review');
             reviews.forEach(function(review) {
                 var reviewRating = review.getAttribute('data-rating');
 
-                // Toggle visibility based on selected star rating
+                // Toggle visibility based on selected star rating or "all"
                 if (selectedStar === reviewRating || selectedStar === 'all') {
                     review.style.display = 'block';
                 } else {
