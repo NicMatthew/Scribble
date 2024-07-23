@@ -77,7 +77,7 @@ class ProductController extends Controller
         }
 
         $products = Product::with(['images', 'entries']) // Eager load images and entries
-                            ->get();
+                            ->get()->random(10);
 
         // Add the first image and the minimum price to the main product object
         foreach ($products as $product) {
@@ -179,8 +179,6 @@ class ProductController extends Controller
                 Wishlist::where('UserID', $user->UserID)
                         ->where('ProductID', $productId)
                         ->delete();
-            // if ($wishlistItem) {
-            //     $wishlistItem->delete();
             } else {
                 $NewWishlist = new Wishlist();
                 $NewWishlist->UserID = $user->UserID;

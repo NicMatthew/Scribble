@@ -37,9 +37,7 @@ class AddressController extends Controller
     public function editAddress()
     {
         // $addressId = $request->addressID;
-        // dd(request()->all());
         $address = Address::find(request()->addressID);
-        // dd($address);
 
         $address->AddressName = request()->address_name;
         $address->RecipientName = request()->recipient_name;

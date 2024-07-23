@@ -46,13 +46,13 @@
                                 @endfor
                             </div>
                             <div class="review-sold" style="display: flex; align-items:center">
-                                <p class="mb-0 b3">({{$reviewCount}} reviews) | 0 Sold- yang ini blom</p>
+                                <p class="mb-0 b3">({{$reviewCount}} reviews) | 0 Sold</p>
                             </div>
                         </div>
                         <div class="price-product mb-1 b2" style="display: flex; align-items:center">
                             <p class="mb-0" id="price-display"></p>
                         </div>
-                        <div class="variant mb-2 mt-1" style="display: flex; align-items:center">
+                        <div class="variant mb-2 mt-1" style="display: flex; align-items:center" id="variant-container">
                             <p class="mb-0 mr-1 b3" style="width: 14%; color: rgba(117,117,117,0.75);">Variant : </p>
                             <div class="var-opt">
                                 @foreach ($variants as $variant)
@@ -83,9 +83,9 @@
                                 <input type="number" name="user_id" value="{{ auth()->id() }}">
                                 <input type="text" name="var" value="" id="variant-input">
                             </form>
-                            <a id="buy-now-btn" href="" class="btn-2 mr-3" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center;">
+                            <div id="buy-now-btn" href="" class="btn-2 mr-3" style="text-decoration: none; padding: 20px 25px; border-radius: 15px; display:flex; flex-direction: row; align-items:center; cursor:pointer;">
                                 <p class="mb-0 b3" style="font-weight:bold ;color:white">Buy Now</p>
-                            </a>
+                            </div>
                             <form action="{{ route('buy.now') }}" method="GET" id="buy-now-form" style="display: none;">
                                 <input type="hidden" name="productIDs[]" value="{{ $selectedProduct->ProductID }}">
                                 <input type="hidden" name="quantities[]" value="" id="quantity-input-2">
@@ -171,7 +171,7 @@
                                     </div>
                                 @endif
                             </div>
-                        @endforeach   
+                        @endforeach
                         @else
                         <p class="product-desc mb-0">No review written for this product.</p>
                     @endif

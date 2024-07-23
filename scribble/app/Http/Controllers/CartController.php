@@ -37,24 +37,6 @@ class CartController extends Controller
         return view('cart', compact('cartItems'));
     }
 
-
-    // public function index()
-    // {
-    //     $user_id = Auth::id();
-    //     $cartItems = CartDetail::where('UserID', $user_id)
-    //                 ->with('product', 'user', 'variant.entry')
-    //                 ->get();
-
-    //     foreach ($cartItems as $item) {
-    //         $productImages = ProductImage::where('ProductID', $item->ProductID)
-    //                         ->where('VariantID', $item->VariantID)
-    //                         ->get();
-
-    //         $item->product->images = $productImages;
-    //     }
-    //     return view('cart', compact('cartItems'));
-    // }
-
     public function addToCart(Request $request)
     {
         $product_id = $request->input('product_id');

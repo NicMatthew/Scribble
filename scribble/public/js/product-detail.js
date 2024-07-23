@@ -18,6 +18,7 @@ let variantInput2 = document.getElementById("variant-input-2");
 let priceInput = document.getElementById("price-input")
 let priceInput2 = document.getElementById("price-input-2");
 let selectedVariant = -1;
+let hideCounter = 0;
 
 variants.forEach(variant => {
     let image = document.createElement("img")
@@ -53,9 +54,14 @@ let tempVar = null
 for (let i = variantOpt.length-1; i >= 0; i--) {
     if (tempVar == variantOpt[i].innerText || variantOpt[i].innerText == "None") {
         variantOpt[i].style = "font-family:helvetica; text-decoration: none; padding: 12px 20px; border-radius: 15px; display:none; flex-direction: row; align-items:center;"
+        hideCounter++
     } else {
         tempVar = variantOpt[i].innerText
     }
+}
+
+if (hideCounter == variantOpt.length) {
+    document.getElementById("variant-container").style = "display: none"
 }
 
 variantOpt = document.querySelectorAll(".variantOpt")
@@ -127,6 +133,7 @@ arrowIcons.forEach((icon) => {
         let firstImgWidth = firstImg.clientWidth + 7;
         carousel.scrollLeft +=
             icon.id == "left" ? -firstImgWidth : firstImgWidth;
+        showHideIcons()
         setTimeout(() => showHideIcons(), 60);
     });
 });
@@ -183,6 +190,7 @@ let isDragging2 = false, startX2, startScrollLeft2;
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         carousel2.scrollLeft += btn.id === "left-2" ? -firstCardWidth : firstCardWidth;
+        toggleArrowVisibility()
     })
 });
 
@@ -191,17 +199,41 @@ const dragStart2 = (e) => {
     carousel2.classList.add("dragging2");
     startX2 = e.pageX;
     startScrollLeft2 = carousel2.scrollLeft;
+    toggleArrowVisibility()
 }
 
 const dragging2 = (e) => {
     if (!isDragging2) return;
     carousel2.scrollLeft = startScrollLeft2 - (e.pageX - startX2);
+    toggleArrowVisibility()
 }
 
 const dragStop2 = () => {
     isDragging2 = false;
     carousel2.classList.remove("dragging2");
+    toggleArrowVisibility()
 };
+
+function toggleArrowVisibility() {
+    const scrollLeft = carousel2.scrollLeft;
+    const scrollWidth = carousel2.scrollWidth;
+    const clientWidth = carousel2.clientWidth;
+
+    // Show/hide left arrow
+    if (scrollLeft === 0) {
+        document.getElementById("left-2").style.display = "none";
+    } else {
+        document.getElementById("left-2").style.display = "block";
+    }
+
+    // Show/hide right arrow
+    if (scrollLeft + clientWidth >= scrollWidth) {
+        document.getElementById("right-2").style.display = "none";
+    } else {
+        document.getElementById("right-2").style.display = "block";
+    }
+}
+toggleArrowVisibility()
 
 carousel2.addEventListener("mousedown", dragStart2);
 carousel2.addEventListener("mousemove", dragging2);

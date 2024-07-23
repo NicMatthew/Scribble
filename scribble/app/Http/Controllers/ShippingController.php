@@ -19,7 +19,6 @@ class ShippingController extends Controller
 {
     public function index(Request $request)
     {
-        //dd($request->all()); // Ini akan menampilkan semua data yang dikirimkan dalam request
         // Ambil data dari request
         $variants = $request->input('variants', []);
         $quantities = $request->input('quantities', []);
@@ -29,13 +28,6 @@ class ShippingController extends Controller
         // Buat array untuk menyimpan data produk yang dipilih
         $selectedProducts = [];
 
-        // foreach ($productIDs as $index => $productID) {
-        //     $selectedProducts[] = [
-        //         'productID' => $productID,
-        //         'variantID' => $variants[$index],
-        //         'quantity' => $quantities[$index],
-        //     ];
-        // }
         foreach ($productIDs as $index => $productID) {
             // Ambil data produk dari database berdasarkan product_id dan variant_id
             $product = Product::where('products.ProductID', $productID)
@@ -70,17 +62,11 @@ class ShippingController extends Controller
         $voucherShipment = VoucherShipment::all();
         $address = Address::find($addressID);
 
-        // dd($selectedProducts);
-
-        // dd($selectedProducts);
-        // Kirim data ke Blade view shipping.blade.php
         return view('shipping',compact('selectedProducts','voucherProduct','voucherShipment', "address"));
-        // return view('shipping');
     }
 
     public function buyNow(Request $request)
     {
-        // dd($request->all());
         // Ambil data produk yang dibeli
         $productID = $request->input('productIDs');
         $quantity = $request->input('quantities');
