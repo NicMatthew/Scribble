@@ -62,7 +62,7 @@
                         @foreach ($products as $key => $product)
                             <tr class="data">
                                 {{-- <div class="hide">{{ $count =  $count + 1  }}</div> --}}
-                                <td>{{ $key+1 }}</td>
+                                <td>{{$products->firstItem() + $key }}</td>
                                 <td>{{ $product->ProductID }}</td>
                                 <td class="prod-name">{{ $product->NameProduct }}</td>
                                 <td>{{ $product->NameCategory }}</td>
