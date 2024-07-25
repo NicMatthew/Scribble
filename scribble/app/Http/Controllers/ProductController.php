@@ -53,7 +53,7 @@ class ProductController extends Controller
             $product->Price = $product->entries->min('Price');
             $averageRating = Review::where('ProductID', $product->ProductID)
                                ->avg('Rating');
-            
+
 
             // Calculate stars logic
             $fullStars = floor($averageRating);
@@ -88,7 +88,42 @@ class ProductController extends Controller
         return $products;
     }
 
-    
+    protected function setProductCard($products) {
+        foreach ($products as $product) {
+            // Adding the first image
+            $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
+
+            // Adding the minimum price
+            $product->Price = $product->entries->min('Price');
+
+            $averageRating = Review::where('ProductID', $product->ProductID)
+                               ->avg('Rating');
+
+            // Calculate full stars, half star, and empty stars
+            $fullStars = floor($averageRating);
+            $halfStar = ($averageRating - $fullStars) >= 0.5;
+            $emptyStars = 5 - ceil($averageRating);
+
+            // Ensure fullStars, halfStar, and emptyStars are integers
+            // $fullStars = (int) $fullStars;
+            // $emptyStars = (int) $emptyStars;
+
+            // Store star ratings in the product object
+            $product->stars = [
+                'fullStars' => $fullStars,
+                'halfStar' => $halfStar,
+                'emptyStars' => $emptyStars
+            ];
+
+                // Fetch total quantity sold
+            $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+            ->sum('Quantity');
+
+            // Store total quantity sold in product object
+            $product->totalQuantitySold = $totalQuantitySold;
+        }
+        return $products;
+    }
 
     public function showProductDetail($productID) {
         $selectedProduct = Product::where("ProductID", $productID)->first();
@@ -105,7 +140,7 @@ class ProductController extends Controller
         $reviews = Review::where('ProductID', $productID)
                     ->with('reviewer') // Eager load the reviewer information
                     ->get();
-        
+
         $totalQuantitySold = TransactionDetail::where('ProductID', $productID)
                     ->sum('Quantity');
 
@@ -127,13 +162,7 @@ class ProductController extends Controller
                             ->get()->random(10);
 
         // Add the first image and the minimum price to the main product object
-        foreach ($products as $product) {
-            // Adding the first image
-            $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
-
-            // Adding the minimum price
-            $product->Price = $product->entries->min('Price');
-        };
+        $products = $this->setProductCard($products);
 
         // Get wishlist product IDs
         $wishlistProductIDs=null;
@@ -184,6 +213,8 @@ class ProductController extends Controller
                 $products = $products->sortBy("Price");
             } elseif ($sorting == "Highest Price") {
                 $products = $products->sortByDesc("Price");
+            } elseif ($sorting == "Top Sales") {
+                $products = $products->sortByDesc("totalQuantitySold");
             }
         }
 
