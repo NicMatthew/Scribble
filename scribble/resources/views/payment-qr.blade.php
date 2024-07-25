@@ -39,7 +39,7 @@
             </div>
             <div class="container-payment-qr">
                 <div class="payment-qr-img">
-                    <img  src="/images/payment-qr.svg" alt="" id="qr">
+                    <img  src="" alt="" id="qr">
                 </div>
                 <div class="container-payment-info">
                     <div class="container-total-payment">

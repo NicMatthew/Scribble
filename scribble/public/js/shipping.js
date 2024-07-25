@@ -94,9 +94,14 @@ function setPrice() {
     }
 
 
+
     discountPrice.innerText = "Rp. " + numberWithCommas(tempDiscount)
     totalPrice.innerText = "Rp. " + numberWithCommas(tempSub - tempDiscount + 5000)
     totalPriceInput.value = tempSub - tempDiscount + 5000
+    if(totalPriceInput.value < 0 ){
+        totalPrice.innerText = "Rp. 0"
+        totalPriceInput.value = 0
+    }
 }
 
 for (let i = 0; i < vouchersProduct.length; i++) {
