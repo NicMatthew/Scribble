@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
-use Illuminate\Http\Request;
+use App\Models\Review;
 use App\Models\Product;
 use App\Models\Wishlist;
+use Illuminate\Http\Request;
+use App\Models\TransactionDetail;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -48,6 +50,32 @@ class HomeController extends Controller
 
             // Adding the minimum price
             $product->Price = $product->entries->min('Price');
+
+            $averageRating = Review::where('ProductID', $product->ProductID)
+                               ->avg('Rating');
+
+            // Calculate full stars, half star, and empty stars
+            $fullStars = floor($averageRating);
+            $halfStar = ($averageRating - $fullStars) >= 0.5;
+            $emptyStars = 5 - ceil($averageRating);
+
+            // Ensure fullStars, halfStar, and emptyStars are integers
+            // $fullStars = (int) $fullStars;
+            // $emptyStars = (int) $emptyStars;
+
+            // Store star ratings in the product object
+            $product->stars = [
+                'fullStars' => $fullStars,
+                'halfStar' => $halfStar,
+                'emptyStars' => $emptyStars
+            ];
+
+                // Fetch total quantity sold
+            $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+            ->sum('Quantity');
+
+            // Store total quantity sold in product object
+            $product->totalQuantitySold = $totalQuantitySold;
         }
         // if(auth())
 

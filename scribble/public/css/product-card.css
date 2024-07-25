@@ -117,3 +117,8 @@
     color: var(--prim-1);
     font-size: 1.2rem;
 }
+
+.star-empty, .half-empty, .full{
+    width: 15px;
+    height: 15px;
+}

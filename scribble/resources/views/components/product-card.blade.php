@@ -32,30 +32,24 @@
                     <div class="rating">
                         {{-- @dump($product) --}}
                         <div class="rating mb-0">
-                            @if (!is_null($product->stars) && ($product->stars['fullStars'] > 0 || $product->stars['halfStar'] || $product->stars['emptyStars'] > 0))
-                            {{-- Full stars --}}
-                            @for ($i = 0; $i < $product->stars['fullStars']; $i++)
-                                <img src="/icons/star.svg">
-                            @endfor
-            
-                            {{-- Half star if applicable --}}
-                            @if ($product->stars['halfStar'])
-                                <img src="/icons/star-half.svg">
+                            @if ($product->stars !=null && $product->stars['fullStars'] > 0)
+                                @for ($i = 0; $i < $product->stars['fullStars']; $i++)
+                                    <img src="/icons/star.svg" alt="Star" class="full">
+                                @endfor
+                                @if ($product->stars['halfStar'])
+                                    <img src="/icons/star-half.svg" alt="Half Star" class="half-empty">
+                                @endif
+                                @for ($i = 0; $i < $product->stars['emptyStars']; $i++)
+                                    <img src="/icons/star-empty.svg" alt="Empty Star" class="star-empty">
+                                @endfor
+                            @else
+                                @for ($i = 0; $i < 5; $i++)
+                                    <img src="/icons/star-empty.svg" alt="Empty Star" class="star-empty">
+                                @endfor
                             @endif
-            
-                            {{-- Empty stars --}}
-                            @for ($i = 0; $i < $product->stars['emptyStars']; $i++)
-                                <img src="/icons/star-empty.svg">
-                            @endfor
-                        @else
-                            {{-- Display 5 empty stars if no stars data available --}}
-                            @for ($i = 0; $i < 5; $i++)
-                                <img src="/icons/star-empty.svg">
-                            @endfor
-                        @endif
                         </div>
                     </div>
-                    <h5 class="sell">{{ $product->totalQuantitySold }} Sold</h5>
+                    <h5 class="sell"> {{ $product->totalQuantitySold }} Sold</h5>
                 </div>
                 <div class="price">
                     <h4>Rp. {{ number_format($product-> Price, 0, ',','.')}}</h4>
