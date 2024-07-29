@@ -102,16 +102,4 @@ closePreview.addEventListener("click", (e) =>{
     bannerPreview.classList.remove("show")
 })
 
-let choose = document.getElementById("ChooseType");
-let category = document.getElementById("CategoryProductVoucher")
-console.log(choose.options[choose.selectedIndex].text)
-choose.addEventListener('change', (e) => {
-    if (choose.options[choose.selectedIndex].text == "Shipment") {
-        category.classList.add('hide')
-
-    } else {
-        category.classList.remove('hide')
-    }
-    
-})
 
