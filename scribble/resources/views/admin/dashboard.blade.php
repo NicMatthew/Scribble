@@ -128,16 +128,6 @@
                         <option value="Total Payment">Total Payment</option>
                     </select>
                 </div>
-                <div class="input-wrapper" id="CategoryProductVoucher">
-                    <div class="input-name">Discount category product</div>
-                    <select class="input-field" name="DiscountCategory">
-                        <option value="" disabled selected>Choose Category Product</option>
-                        @foreach ($categories as $category)
-                            <option value="{{$category->CategoryProductID}}">{{$category->NameCategory}}</option>
-                        @endforeach
-
-                    </select>
-                </div>
                 <div class="add-new-disc" id="add-new-disc">Add Discount</div>
             </form>
         </div>

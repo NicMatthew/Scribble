@@ -27,13 +27,13 @@ class AdminController extends Controller
         ->select('products.*', 'variants.*', 'sub_categories.NameSubCategory', 'categories.NameCategory','product_entries.Stock','product_entries.Price') // Select required fields
         ->paginate(10); // Pagination with 10 items per page
         // ->get();
-        
+
         $categories = Category::all();
         $subcategories = SubCategory::all();
         $product = null;
         $totalProduct = count(Product::all());
         // dd($products);
-      
+
         return view('/admin/product-admin',
         [
             'products' =>$products,
@@ -135,7 +135,7 @@ class AdminController extends Controller
         ->select('products.*', 'variants.*', 'sub_categories.NameSubCategory', 'categories.NameCategory','product_entries.Stock','product_entries.Price') // Select required fields
         ->paginate(10);
         $totalProduct = count(Product::all());
-        
+
         $subcategories = SubCategory::all();
         // dd($product);
         return view('/admin/product-admin',
@@ -178,15 +178,16 @@ class AdminController extends Controller
         $ProductID = request()->ProductID;
         $VariantID = Variant::where("VariantName",request()->VariantName)->get()->first()->VariantID;
         // dd($VariantID);
-        ProductEntry::where("VariantID",$VariantID)->where("ProductID",$ProductID)->delete();
+        ProductEntry::where("VariantID",$VariantID)->where("ProductID",$ProductID)->first()->delete();
         // Cek masih ada product ato engga
         $testProduct = ProductEntry::where("ProductID",$ProductID)->get();
-        if($testProduct == null){
+        // dd(count($testProduct));
+        if(count($testProduct)== 0){
             Product::where("ProductID",$ProductID)->delete();
         }
         // cek msh ada variant ato engga
         $testVariant = ProductEntry::where("VariantID",$VariantID)->get();
-        if($testProduct == null){
+        if(count($testVariant) == 0){
             Variant::where("VariantID",$VariantID)->delete();
         }
 
@@ -260,7 +261,6 @@ class AdminController extends Controller
             $newVoucherProduct->StartDate = request()->StartDate;
             $newVoucherProduct->EndDate = request()->EndDate;
             $newVoucherProduct->Value = request()->DiscountValue;
-            $newVoucherProduct->DiscountCategory = request()->DiscountCategory;
             $newVoucherProduct->save();
         }
 

@@ -23,7 +23,8 @@
 
         <div class="second-section">
             <div class="left">
-                <p class="b3">Scribble is a leading online provider of exceptional quali     ty stationery designed to inspire and empower individuals across various endeavors. </p>
+                <p class="b3">Scribble is a leading online provider of exceptional quali
+                    ty stationery designed to inspire and empower individuals across various endeavors. </p>
                 <p class="b3">we curate a comprehensive collection encompassing a diverse range of products, from school, office to profesional supplies. Whether you are a seasoned professional seeking to enhance your productivity or a budding artist yearning to express your creativity, our meticulously selected stationery caters to your unique needs. </p>
             </div>
             <p class="h2">Who We Are?</p>
