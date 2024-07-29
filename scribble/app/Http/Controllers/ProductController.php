@@ -77,6 +77,7 @@ class ProductController extends Controller
 
             // Fetch total quantity sold
             $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+                                                ->where('TransactionStatus', '!=', 'Cancelled')
                                                 ->sum('Quantity');
 
             // Store total quantity sold in product object
@@ -104,10 +105,6 @@ class ProductController extends Controller
             $halfStar = ($averageRating - $fullStars) >= 0.5;
             $emptyStars = 5 - ceil($averageRating);
 
-            // Ensure fullStars, halfStar, and emptyStars are integers
-            // $fullStars = (int) $fullStars;
-            // $emptyStars = (int) $emptyStars;
-
             // Store star ratings in the product object
             $product->stars = [
                 'fullStars' => $fullStars,
@@ -115,8 +112,9 @@ class ProductController extends Controller
                 'emptyStars' => $emptyStars
             ];
 
-                // Fetch total quantity sold
+            // Fetch total quantity sold
             $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+            ->where('TransactionStatus', '!=', 'Cancelled')
             ->sum('Quantity');
 
             // Store total quantity sold in product object
@@ -142,6 +140,7 @@ class ProductController extends Controller
                     ->get();
 
         $totalQuantitySold = TransactionDetail::where('ProductID', $productID)
+                    ->where('TransactionStatus', '!=', 'Cancelled')
                     ->sum('Quantity');
 
 
@@ -284,6 +283,33 @@ class ProductController extends Controller
             $product->ProductImage = $product->images->first()->Image ?? '/path/to/default-image.jpg';
             $product->Price = $product->entries->min('Price');
             $product->inWishlist = true;
+
+            $averageRating = Review::where('ProductID', $product->ProductID)
+                               ->avg('Rating');
+
+            // Calculate full stars, half star, and empty stars
+            $fullStars = floor($averageRating);
+            $halfStar = ($averageRating - $fullStars) >= 0.5;
+            $emptyStars = 5 - ceil($averageRating);
+
+            // Ensure fullStars, halfStar, and emptyStars are integers
+            // $fullStars = (int) $fullStars;
+            // $emptyStars = (int) $emptyStars;
+
+            // Store star ratings in the product object
+            $product->stars = [
+                'fullStars' => $fullStars,
+                'halfStar' => $halfStar,
+                'emptyStars' => $emptyStars
+            ];
+
+                // Fetch total quantity sold
+            $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+            ->where('TransactionStatus', '!=', 'Cancelled')
+            ->sum('Quantity');
+
+            // Store total quantity sold in product object
+            $product->totalQuantitySold = $totalQuantitySold;
         }
 
         return view('wishlist', compact('wishlistProducts'));
