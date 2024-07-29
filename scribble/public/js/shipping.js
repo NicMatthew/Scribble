@@ -35,13 +35,17 @@ function closeOverlay() {
 }
 
 function displaySelVoucher() {
-    if (selectedProduct == null) {
+    if (selectedProduct == null && selectedShipment != null) {
         voucherSel.innerHTML = selectedShipment.querySelector(".voucher-name").innerHTML
-    } else if(selectedShipment == null) {
+        return
+    } else if(selectedShipment == null && selectedProduct != null) {
         voucherSel.innerHTML = selectedProduct.querySelector(".voucher-name").innerHTML
-    } else {
+        return
+    } else if (selectedProduct != null && selectedShipment != null) {
         voucherSel.innerHTML = selectedProduct.querySelector(".voucher-name").innerHTML + ", " + selectedShipment.querySelector(".voucher-name").innerHTML
+        return
     }
+    voucherSel.innerHTML = "Voucher"
 }
 
 function resetDimm(vouchers) {
@@ -82,7 +86,7 @@ function setPrice() {
     tempDiscount = 0
 
     if (val1 < 1) {
-        tempDiscount += tempSub * val1
+        tempDiscount += (tempSub * val1)
     } else {
         tempDiscount += val1
     }
@@ -93,8 +97,7 @@ function setPrice() {
         tempDiscount += val2
     }
 
-
-
+    tempDiscount = parseInt(tempDiscount)
     discountPrice.innerText = "Rp. " + numberWithCommas(tempDiscount)
     totalPrice.innerText = "Rp. " + numberWithCommas(tempSub - tempDiscount + 5000)
     totalPriceInput.value = tempSub - tempDiscount + 5000
@@ -112,10 +115,12 @@ for (let i = 0; i < vouchersProduct.length; i++) {
             selectedProduct = null
             resetDimm(vouchersProduct)
             setPrice()
+            displaySelVoucher()
             return
         }
         if (selectedProduct != null) {
             selectedProduct.firstElementChild.classList.remove("selected-voucher")
+            selectedProduct = null
         }
 
         const voucherId = voucher.firstElementChild.getAttribute("value").split(";")[0]
@@ -141,11 +146,13 @@ for (let i = 0; i < vouchersShipment.length; i++) {
             resetDimm(vouchersShipment)
             setPrice()
             voucherShipmentID.value = null
+            displaySelVoucher()
             return
         }
 
         if (selectedShipment != null) {
             selectedShipment.firstElementChild.classList.remove("selected-voucher")
+            selectedShipment = null
         }
 
         const voucherId = voucher.firstElementChild.getAttribute("value").split(";")[0]

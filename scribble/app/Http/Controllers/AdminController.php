@@ -234,6 +234,7 @@ class AdminController extends Controller
         $sales = TransactionDetail::join("products", "products.ProductID", "=", "transaction_details.ProductID")
                                     ->select("NameProduct", "products.ProductID", DB::raw("sum(Quantity) as SalesQuantity"))
                                     ->groupBy("products.ProductID", "products.NameProduct")
+                                    ->where('TransactionStatus', '!=', 'Cancelled')
                                     ->get();
 
         foreach ($sales as $sale) {
