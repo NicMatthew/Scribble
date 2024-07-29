@@ -233,6 +233,7 @@ class AdminController extends Controller
         $totalSales = Transaction::all()->sum("TotalPrice");
 
         $sales = TransactionDetail::join("products", "products.ProductID", "=", "transaction_details.ProductID")
+                                    ->join("transactions", "transactions.TransactionID", "=", "transaction_details.TransactionID")
                                     ->select("NameProduct", "products.ProductID", DB::raw("sum(Quantity) as SalesQuantity"))
                                     ->groupBy("products.ProductID", "products.NameProduct")
                                     ->where('TransactionStatus', '!=', 'Cancelled')

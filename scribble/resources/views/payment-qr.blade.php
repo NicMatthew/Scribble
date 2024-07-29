@@ -67,7 +67,7 @@
         <div class="modal" id="modal" style="display: none;">
             <div class="message-container" id="message-container">
                 <img src="/icons/reminder-delete.svg">
-                <div class="alert-message">Otp code is wrong!</div>
+                <div class="alert-message">OTP code is wrong!</div>
                 <div class="btn-container">
                     <div class="cancel-btn" id="cancel-btn">Try Again</div>
                 </div>

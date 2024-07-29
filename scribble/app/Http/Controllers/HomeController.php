@@ -72,6 +72,7 @@ class HomeController extends Controller
 
                 // Fetch total quantity sold
             $totalQuantitySold = TransactionDetail::where('ProductID', $product->ProductID)
+            ->join("transactions", "transactions.TransactionID", "=", "transaction_details.TransactionID")
             ->where('TransactionStatus', '!=', 'Cancelled')
             ->sum('Quantity');
 
