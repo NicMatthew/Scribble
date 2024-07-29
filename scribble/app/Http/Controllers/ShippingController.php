@@ -101,8 +101,8 @@ class ShippingController extends Controller
                 ]
             ];
         }
-        $voucherProduct = VoucherProduct::all();
-        $voucherShipment = VoucherShipment::all();
+        $voucherProduct = VoucherProduct::where("EndDate", ">=", now())->where("StartDate", "<=", now())->get();
+        $voucherShipment = VoucherShipment::where("EndDate", ">=", now())->where("StartDate", "<=", now())->get();
         $address = Address::find($addressID);
 
         // Redirect ke halaman shipping dengan data produk yang dibeli
