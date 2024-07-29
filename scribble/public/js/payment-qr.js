@@ -2,6 +2,8 @@ let submitButton = document.getElementById("submit-button")
 let overlay = document.getElementById("overlay")
 let qr = document.getElementById("qr")
 let otp = null
+let modal = document.getElementById("modal");
+let cancelBtn = document.getElementById("cancel-btn");
 
 function randomizeOTP() {
     otp = Math.round(Math.random()*1000000)
@@ -14,7 +16,8 @@ function checkOTP() {
     if (inputOtp == otp) {
         otpTrue()
     } else {
-        alert("Wrong OTP code!")
+        // alert("Wrong OTP code!")
+        showModal()
         randomizeOTP()
     }
 }
@@ -26,5 +29,16 @@ function otpTrue() {
     }, 3000)
 }
 
-submitButton.addEventListener("click", (e)=>checkOTP());
-randomizeOTP()
+function showModal() {
+    modal.style.display = "flex";
+}
+
+function hideModal() {
+    modal.style.display = "none";
+}
+
+submitButton.addEventListener("click", (e) => checkOTP());
+cancelBtn.addEventListener("click", (e) => hideModal());
+randomizeOTP();
+// submitButton.addEventListener("click", (e)=>checkOTP());
+// randomizeOTP()
