@@ -260,7 +260,6 @@ class AdminController extends Controller
             $newVoucherProduct->StartDate = request()->StartDate;
             $newVoucherProduct->EndDate = request()->EndDate;
             $newVoucherProduct->Value = request()->DiscountValue;
-            $newVoucherProduct->DiscountCategory = request()->DiscountCategory;
             $newVoucherProduct->save();
         }
 
