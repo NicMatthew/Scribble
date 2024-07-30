@@ -98,7 +98,7 @@ input[type=date]:invalid::-webkit-datetime-edit {
     padding-bottom: 1.5vh;
     text-align: center;
     font-family: Helvetica;
-    font-weight: bold;
+    /* font-weight: bold; */
     cursor: pointer;
 }
 
