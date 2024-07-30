@@ -213,6 +213,8 @@ function goToShippingPage() {
     });
 
     // Submit form
-    document.body.appendChild(form)
-    form.submit();
+    if (checkedProducts.length > 0) {
+        document.body.appendChild(form)
+        form.submit();
+    }
 }

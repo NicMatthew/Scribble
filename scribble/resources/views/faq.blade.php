@@ -36,7 +36,7 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers"">
-                    <p>You can make a purchase by adding products to your shopping cart and following the steps on the checkout page to complete your payment.</p>  
+                    <p>You can make a purchase by adding products to your shopping cart and following the steps on the checkout page to complete your payment.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(1)">
@@ -44,7 +44,7 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers"">
-                    <p>Yes, you can cancel your order when the status is still packaged or paid, provided it has not been shipped yet. Please contact us for assistance or.</p>  
+                    <p>Yes, you can cancel your order when the status is still packaged or paid, provided it has not been shipped yet. Please contact us for assistance or.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(2)">
@@ -52,7 +52,7 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can enter your discount code during the checkout process in the designated field. The discount will be applied to your total amount or shipping fee.</p>  
+                    <p>You can enter your discount code during the checkout process in the designated field. The discount will be applied to your total amount or shipping fee.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(3)">
@@ -60,15 +60,15 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>No, it is not available. Customer should wait for the product to be restocked.</p>  
+                    <p>No, it is not available. Customer should wait for the product to be restocked.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(4)">
                     <p>What should I do if I encounter an issue with my payment?</p>
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
-                <div class="faq-answers"> 
-                    <p>If you encounter any issues with your payment, please contact our customer service team immediately for assistance.<p>  
+                <div class="faq-answers">
+                    <p>If you encounter any issues with your payment, please contact our customer service team immediately for assistance.<p>
                 </div>
 
             </div>
@@ -79,7 +79,7 @@
                     <img src="\icons\chevron-down-green.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>Delivery times vary depending on your location. Typically, it takes 3-5 business days for domestic orders and 7-14 business days for international orders.</p>  
+                    <p>Delivery times vary depending on your location. Typically, it takes 3-5 business days for domestic orders and 7-14 business days for international orders.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(6)">
@@ -87,7 +87,7 @@
                     <img src="\icons\chevron-down-green.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>If your order hasn't arrived within the expected delivery time, please contact our customer service team for assistance.</p>  
+                    <p>If your order hasn't arrived within the expected delivery time, please contact our customer service team for assistance.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(7)">
@@ -95,7 +95,7 @@
                     <img src="\icons\chevron-down-green.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>Currently, we do not offer scheduled delivery times. However, you can track your order and get an estimated delivery date.</p>  
+                    <p>Currently, we do not offer scheduled delivery times. However, you can track your order and get an estimated delivery date.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(8)">
@@ -103,7 +103,7 @@
                     <img src="\icons\chevron-down-green.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>No, we currently are only available in Indonesia.</p>  
+                    <p>No, we currently are only available in Indonesia.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(9)">
@@ -111,7 +111,7 @@
                     <img src="\icons\chevron-down-green.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>If your order is marked as delivered but you haven't received it, please check with your neighbors or contact the carrier. If you still can't locate your order, contact our customer service team for assistance    .</p>  
+                    <p>If your order is marked as delivered but you haven't received it, please check with your neighbors or contact the carrier. If you still can't locate your order, contact our customer service team for assistance    .</p>
                 </div>
 
             </div>
@@ -122,7 +122,7 @@
                     <img src="\icons\chevron-down-yellow.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can create an account by clicking on the "Sign Up" button on our homepage and filling out the required information.</p>  
+                    <p>You can create an account by clicking on the "Sign Up" button on our homepage and filling out the required information.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(11)">
@@ -130,7 +130,7 @@
                     <img src="\icons\chevron-down-yellow.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can update your account information by logging into your account and navigating to the "Profile" and then "Edit Profile" section.</p>  
+                    <p>You can update your account information by logging into your account and navigating to the "Profile" and then "Edit Profile" section.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(12)">
@@ -139,7 +139,7 @@
                 </div>
                 <div class="faq-answers">
                     <p>Yes, we take your privacy and security seriously. We use advanced encryption and security measures to protect your personal information.
-                    </p>  
+                    </p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(13)">
@@ -147,7 +147,7 @@
                     <img src="\icons\chevron-down-yellow.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>If you wish to delete your account, please contact our customer service team for assistance.</p>  
+                    <p>If you wish to delete your account, please contact our customer service team for assistance.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(14)">
@@ -155,7 +155,7 @@
                     <img src="\icons\chevron-down-yellow.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can change your email address by logging into your account and updating your email information, navigate to the "Profile" button and then "Edit Profile" section.   </p>  
+                    <p>You can change your email address by logging into your account and updating your email information, navigate to the "Profile" button and then "Edit Profile" section.   </p>
                 </div>
 
             </div>
@@ -166,7 +166,7 @@
                     <img src="\icons\chevron-down-pink.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can add items to your wishlist by clicking the "Heart" button on the product page</p>  
+                    <p>You can add items to your wishlist by clicking the "Heart" button on the product page</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(16)">
@@ -174,7 +174,7 @@
                     <img src="\icons\chevron-down-pink.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can view your wishlist by logging into your account and navigating to the "Profile" button an then to the "Wishlist" section.</p>  
+                    <p>You can view your wishlist by logging into your account and navigating to the "Profile" button an then to the "Wishlist" section.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(17)">
@@ -182,7 +182,7 @@
                     <img src="\icons\chevron-down-pink.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>Yes, you can easily move items from your wishlist to your cart by clicking the product and then click the "Add to Cart" button.</p>  
+                    <p>Yes, you can easily move items from your wishlist to your cart by clicking the product and then click the "Add to Cart" button.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(18)">
@@ -190,7 +190,7 @@
                     <img src="\icons\chevron-down-pink.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>No, adding items to your wishlist does not reserve them. We recommend moving items to your cart and completing the purchase to ensure availability.</p>  
+                    <p>No, adding items to your wishlist does not reserve them. We recommend moving items to your cart and completing the purchase to ensure availability.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(19)">
@@ -198,7 +198,7 @@
                     <img src="\icons\chevron-down-pink.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>You can remove items from your wishlist by clicking the 'Remove' button next to the item in your wishlist section.</p>  
+                    <p>You can remove items from your wishlist by clicking the 'Remove' button next to the item in your wishlist section.</p>
                 </div>
 
             </div>
@@ -208,14 +208,15 @@
                     <p>How do I contact Scribble customer service?</p>
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
-                <div class="faq-answers">You can contact our customer service team via email at scribble@gmail.com          </div>
+                <div class="faq-answers">
+                    <p>You can contact our customer service team via email at scribble@gmail.com</p>          </div>
 
                 <div class="faq-questions" onclick="clickQuestion(21)">
                     <p>Where can I find information about promotions and discounts?</p>
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>Information about promotions and discounts can be found on our homepage.</p>  
+                    <p>Information about promotions and discounts can be found on our homepage.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(22)">
@@ -223,7 +224,7 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>No, you can't change the language. Our website is only available in English.</p>  
+                    <p>No, you can't change the language. Our website is only available in English.</p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(23)">
@@ -231,7 +232,7 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>If you encounter technical issues on our website, please clear your browser cache and try again. If the problem persists, contact our customer service team for assistance.  </p>  
+                    <p>If you encounter technical issues on our website, please clear your browser cache and try again. If the problem persists, contact our customer service team for assistance.  </p>
                 </div>
 
                 <div class="faq-questions" onclick="clickQuestion(24)">
@@ -239,7 +240,7 @@
                     <img src="\icons\chevron-down-blue.svg" alt="">
                 </div>
                 <div class="faq-answers">
-                    <p>Product reviews can be found on the product detail pages. Scroll down to the 'Reviews' section to read what other customers have to say..</p>  
+                    <p>Product reviews can be found on the product detail pages. Scroll down to the 'Reviews' section to read what other customers have to say..</p>
                 </div>
 
             </div>

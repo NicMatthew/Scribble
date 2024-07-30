@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CartDetail;
+use App\Models\ProductEntry;
 use App\Models\ProductImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -59,7 +60,14 @@ class CartController extends Controller
             $NewcartDetail->Quantity = $quantity;
             $NewcartDetail->save();
         } else {
-            $quantity = $quantity + $cartDetail->Quantity;
+            $maxQuantity = ProductEntry::where("ProductID", $product_id)->where("VariantID", $variant_id)->first()->quantity;
+
+            if ($quantity + $cartDetail->Quantity <= $maxQuantity) {
+                $quantity = $quantity + $cartDetail->Quantity;
+            } else {
+                $quantity = $cartDetail->Quantity;
+            }
+
             CartDetail::where('ProductID', $product_id)
                 ->where('VariantID', $variant_id)
                 ->where('UserID', $user_id)

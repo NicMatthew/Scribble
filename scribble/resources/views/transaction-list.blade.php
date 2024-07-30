@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Transaction List | Scribblec</title>
+    <title>Transaction List | Scribble</title>
     <link rel="shortcut icon" href="/images/simple_logo.svg">
     <link rel="stylesheet" href="/css/variable.css">
     <link rel="stylesheet" href="/css/transaction-list.css">

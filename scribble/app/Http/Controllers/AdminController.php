@@ -230,7 +230,7 @@ class AdminController extends Controller
         $banners = Banner::all();
         $voucherProduct = VoucherProduct::all();
         $voucherShipment = VoucherShipment::all();
-        $totalSales = Transaction::all()->sum("TotalPrice");
+        $totalSales = Transaction::where("TransactionStatus", "!=", "Cancelled")->sum("TotalPrice");
 
         $sales = TransactionDetail::join("products", "products.ProductID", "=", "transaction_details.ProductID")
                                     ->join("transactions", "transactions.TransactionID", "=", "transaction_details.TransactionID")

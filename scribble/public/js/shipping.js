@@ -92,7 +92,9 @@ function setPrice() {
     }
 
     if (val2 < 1) {
-        tempDiscount += (tempSub * val2)
+        tempDiscount += (5000 * val2)
+    } else if (val2 > 5000) {
+        val2 = 5000
     } else {
         tempDiscount += val2
     }

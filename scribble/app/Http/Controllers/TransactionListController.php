@@ -45,7 +45,7 @@ class TransactionListController extends Controller
 
             if ($transaction->TransactionStatus == "Paid") {
                 $transaction->statusColor = "bnw";
-            } else if ($transaction->TransactionStatus == "In Packaging") {
+            } else if ($transaction->TransactionStatus == "Packaged") {
                 $transaction->statusColor = "yellow";
             } else if ($transaction->TransactionStatus == "In Delivery") {
                 $transaction->statusColor = "blue";
@@ -60,7 +60,7 @@ class TransactionListController extends Controller
         return view('transaction-list', compact('transactions'));
     }
     public function transaction_delete(){
-        
+
         Transaction::where('TransactionID',request()->TransactionID)
         ->where('UserID',auth()->id())
         ->update(['TransactionStatus' => 'Cancelled']);
