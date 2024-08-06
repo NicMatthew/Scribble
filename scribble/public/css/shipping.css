@@ -247,6 +247,7 @@ body {
 }
 
 .select-voucher {
+    margin-top: 20px;
     display: none;
     flex-direction: column;
     width: 600px;
@@ -272,7 +273,6 @@ body {
     left: 0px;
     display: none;
     justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
     transition: 0.3s ease-in-out;
