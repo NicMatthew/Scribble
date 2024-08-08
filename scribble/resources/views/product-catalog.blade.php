@@ -92,7 +92,7 @@
             <input type="text" name="category" value="">
         @endif
         <input type="text" name="sub_category" value="{{$subcategory_select}}">
-        <input type="text" name="search" value="{{ $search }}">
+        {{-- <input type="text" name="search" value="{{ $search }}"> --}}
         <input type="text" name="sorting" value="{{$sorting}}">
     </form>
 </body>
